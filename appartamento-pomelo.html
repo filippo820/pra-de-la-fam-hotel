@@ -185,7 +185,57 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
       </div>
     </div>
   </div>
-</section>
+
+      <section class="pdf-gallery r">
+        <p class="pdf-gallery__title">Galleria foto</p>
+        <div class="pdf-gallery__grid">
+
+          <div class="pdf-gallery__item" data-src="img/pomelo-01.jpg" data-caption="">
+            <img src="img/pomelo-01.jpg" alt="foto" loading="eager">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/pomelo-02.jpg" data-caption="">
+            <img src="img/pomelo-02.jpg" alt="foto" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/pomelo-03.jpg" data-caption="">
+            <img src="img/pomelo-03.jpg" alt="foto" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/pomelo-04.jpg" data-caption="">
+            <img src="img/pomelo-04.jpg" alt="foto" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/pomelo-05.jpg" data-caption="">
+            <img src="img/pomelo-05.jpg" alt="foto" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/pomelo-06.jpg" data-caption="">
+            <img src="img/pomelo-06.jpg" alt="foto" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/pomelo-07.jpg" data-caption="">
+            <img src="img/pomelo-07.jpg" alt="foto" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+        </div>
+      </section>
+      <div class="pdf-lightbox" role="dialog" aria-modal="true">
+        <button class="pdf-lightbox__close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        <div class="pdf-lightbox__stage">
+          <button class="pdf-lightbox__btn pdf-lightbox__prev"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <div class="pdf-lightbox__img-wrap"><img src="" alt=""/></div>
+          <button class="pdf-lightbox__btn pdf-lightbox__next"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+        <div class="pdf-lightbox__footer"><span class="pdf-lightbox__counter"></span><span class="pdf-lightbox__caption"></span></div>
+        <div class="pdf-lightbox__thumbs"></div>
+      </div></section>
 
 <div class="room-body">
   <div class="room-grid">
@@ -344,6 +394,35 @@ const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
 },{threshold:.07});
 document.querySelectorAll('.r').forEach(el=>io.observe(el));
+
+(function(){
+  var gallery=document.querySelector('.pdf-gallery');
+  if(!gallery)return;
+  var items=Array.from(gallery.querySelectorAll('.pdf-gallery__item[data-src]'));
+  var photos=items.map(function(el){return{src:el.dataset.src,caption:el.dataset.caption||'',thumb:el.querySelector('img')?el.querySelector('img').src:el.dataset.src}});
+  var lb=document.querySelector('.pdf-lightbox');
+  if(!lb)return;
+  var lbImg=lb.querySelector('.pdf-lightbox__img-wrap img');
+  var lbPrev=lb.querySelector('.pdf-lightbox__prev');
+  var lbNext=lb.querySelector('.pdf-lightbox__next');
+  var lbClose=lb.querySelector('.pdf-lightbox__close');
+  var lbCounter=lb.querySelector('.pdf-lightbox__counter');
+  var lbThumbs=lb.querySelector('.pdf-lightbox__thumbs');
+  var cur=0;
+  photos.forEach(function(p,i){var th=document.createElement('div');th.className='pdf-lightbox__thumb';th.innerHTML='<img src="'+p.thumb+'" alt="" loading="lazy">';th.addEventListener('click',function(){go(i)});lbThumbs.appendChild(th)});
+  function updateThumbs(){var ts=lbThumbs.querySelectorAll('.pdf-lightbox__thumb');ts.forEach(function(t,i){t.classList.toggle('is-active',i===cur)});if(ts[cur])ts[cur].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}
+  function go(idx){cur=(idx+photos.length)%photos.length;lbImg.classList.add('is-loading');var ni=new Image();ni.onload=function(){lbImg.src=photos[cur].src;lbImg.alt=photos[cur].caption||'';lbImg.classList.remove('is-loading')};ni.src=photos[cur].src;lbCounter.textContent=(cur+1)+' / '+photos.length;updateThumbs()}
+  function open(idx){cur=idx;go(cur);lb.classList.add('is-open');document.body.style.overflow='hidden'}
+  function close(){lb.classList.remove('is-open');document.body.style.overflow=''}
+  items.forEach(function(el,i){el.addEventListener('click',function(){open(i)})});
+  lbPrev&&lbPrev.addEventListener('click',function(){go(cur-1)});
+  lbNext&&lbNext.addEventListener('click',function(){go(cur+1)});
+  lbClose&&lbClose.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('is-open'))return;if(e.key==='ArrowLeft')go(cur-1);if(e.key==='ArrowRight')go(cur+1);if(e.key==='Escape')close()});
+  var tx=0;lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40)dx<0?go(cur+1):go(cur-1)});
+})();
+
 </script>
 </body>
 </html>

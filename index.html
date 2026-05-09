@@ -58,7 +58,7 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 
 /* ── HERO with parallax ── */
 .hero{position:relative;height:100svh;min-height:640px;display:grid;place-items:end;overflow:hidden}
-.hbg{position:absolute;inset:-10%;background:var(--mid);will-change:transform}
+.hbg{position:absolute;inset:-10%;background:var(--mid) center/cover no-repeat;will-change:transform}
 .hov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,21,32,.1) 0%,rgba(11,21,32,.02) 30%,rgba(11,21,32,.82) 100%)}
 .hc{position:relative;z-index:2;width:100%;padding:0 clamp(1.5rem,5vw,5rem) clamp(5rem,9vh,9rem);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2.5rem}
 .hl{opacity:0;transform:translateY(40px);animation:fadeup .9s var(--ease) .3s forwards}
@@ -402,7 +402,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hbg" id="hbg"></div>
+  <div class="hbg" id="hbg" style="background-image:url('img/hero-bg.jpg')"></div>
   <div class="hov"></div>
   <!-- weather widget -->
   
@@ -573,10 +573,8 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     </div>
     <div class="r d2">
       <div class="lim-float-img">
-        <!-- FOTO LIMONAIA: sostituisci con <img src="img/limonaia.jpg" alt="Limonaia" loading="lazy"/> -->
-        <div style="aspect-ratio:4/3;background:rgba(247,244,239,.06);display:flex;align-items:center;justify-content:center;border-radius:2px">
-          <span style="font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,239,.2)">Foto in arrivo</span>
-        </div>
+        <!-- FOTO LIMONAIA: sostituisci con <img src="img/esterno-01.jpg" alt="Limonaia" loading="lazy"/> -->
+        <img src="img/esterno-01.jpg" alt="Limonaia del Prà de la Fam" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:2px" loading="lazy"/>
       </div>
       <div class="lim-products">
         <div class="lim-prod"><div class="lim-prod-ico">🍋</div><div class="lim-prod-name">Limoni sotto sale</div><div class="lim-prod-desc">Con peperoncino o pepe. Per insalate, pesce o carni crude</div></div>
@@ -611,8 +609,8 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div><p class="sec-idx">05 — Dove siamo</p><h2 class="sec-title">La nostra<br><em>proprietà</em></h2></div>
     <p class="sec-meta">Esplora la struttura: hotel, appartamenti, limonaia, sentieri e parcheggio. Passa sopra i punti per scoprire i dettagli.</p>
   </div>
-  <div class="r d1" style="position:relative;border-radius:2px;overflow:visible;box-shadow:var(--shadow-float)" id="mapWrap" style="background-image:url('mappa_aerea.jpg');background-size:cover;background-position:center">
-    <img src="mappa_aerea.jpg"
+  <div class="r d1" style="position:relative;border-radius:2px;overflow:visible;box-shadow:var(--shadow-float)" id="mapWrap" style="background-image:url('img/mappa_aerea.jpg');background-size:cover;background-position:center">
+    <img src="img/mappa_aerea.jpg"
          alt="Vista aerea Prà de la Fam"
          style="width:100%;display:block;border-radius:2px;filter:brightness(0.95) saturate(1.08)"
          id="mapImg"/>

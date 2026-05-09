@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pomelo — Prà de la Fam · Lago di Garda</title>
+<meta name="description" content="Un tempo dimora del giardiniere delle limonaie, oggi raffinato appartamento con vista lago e ingresso privato. Prà de la Fam, Tignale, Lago di Garda."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0b1520;--mid:#2e4a62;--steel:#4a6580;
+  --bone:#f7f4ef;--warm:#ede8df;
+  --gold:#b8934a;--gold2:#d4b06a;--gold3:#f0d898;
+  --white:#ffffff;
+  --ease:cubic-bezier(.22,.68,0,1.2);
+  --shadow-float:0 20px 60px rgba(11,21,32,.18),0 4px 16px rgba(11,21,32,.1);
+  --shadow-hover:0 32px 80px rgba(11,21,32,.24),0 8px 24px rgba(11,21,32,.14);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bone);color:var(--ink);overflow-x:hidden}
+@media(hover:none){#cr,body{cursor:auto}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,4vw,4rem);height:68px;background:rgba(247,244,239,.96);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid rgba(11,21,32,.08)}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-mark{width:38px;height:38px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;font-size:.85rem;box-shadow:0 2px 14px rgba(11,21,32,.22)}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:.03em}
+.nav-back{font-size:.68rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem}
+.nav-back:hover{color:var(--ink)}
+.nav-back::before{content:'←';font-size:.8rem}
+.nav-cta{display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:var(--bone);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.3rem;border-radius:2px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--mid)}
+
+/* HERO */
+.room-hero{position:relative;height:72vh;min-height:480px;overflow:hidden;display:grid;place-items:end}
+.room-hbg{position:absolute;inset:-8%;background:url('img/pomelo.jpg') center/cover no-repeat;will-change:transform}
+.room-hov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,21,32,.08) 0%,rgba(11,21,32,.04) 40%,rgba(11,21,32,.75) 100%)}
+.room-hc{position:relative;z-index:2;width:100%;padding:0 clamp(1.5rem,5vw,5rem) clamp(3rem,6vh,6rem);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem}
+.room-hl{opacity:0;animation:fadeup .8s var(--ease) .2s forwards}
+.room-hr{opacity:0;animation:fadeup .8s var(--ease) .4s forwards}
+@keyframes fadeup{to{opacity:1;transform:none}}
+.room-eyebrow{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(247,244,239,.55);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.room-eyebrow::before{content:'';display:block;width:22px;height:1px;background:var(--gold2)}
+.room-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:300;line-height:.92;color:var(--white);letter-spacing:-.015em}
+.room-h1 em{font-style:italic;color:var(--gold3)}
+.room-meta-box{background:rgba(11,21,32,.5);backdrop-filter:blur(20px);border:1px solid rgba(247,244,239,.12);padding:1.2rem 1.6rem;border-radius:2px;display:flex;gap:2rem}
+.room-stat{display:flex;flex-direction:column;gap:.2rem}
+.room-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--white);line-height:1}
+.room-stat-lbl{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,244,239,.4)}
+.room-stat-sep{width:1px;background:rgba(247,244,239,.12)}
+
+/* BODY */
+.room-body{max-width:1200px;margin:0 auto;padding:clamp(3rem,7vw,7rem) clamp(1.5rem,5vw,5rem)}
+.room-grid{display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:start}
+@media(max-width:900px){.room-grid{grid-template-columns:1fr;gap:3rem}}
+
+/* DESCRIPTION */
+.room-type-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.room-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:1.8rem}
+.room-subtitle em{font-style:italic;color:var(--gold)}
+.room-desc{font-size:.85rem;font-weight:300;line-height:2;color:var(--steel);margin-bottom:2rem}
+.room-floor{font-size:.7rem;letter-spacing:.1em;color:var(--steel);opacity:.7;margin-bottom:2.5rem;display:flex;align-items:center;gap:.5rem}
+.room-floor::before{content:'📍';font-size:.8rem}
+.accessibility-note{background:rgba(184,147,74,.08);border-left:3px solid var(--gold);padding:.9rem 1.2rem;font-size:.78rem;color:var(--steel);line-height:1.7;margin-bottom:2rem;border-radius:0 2px 2px 0}
+
+/* GALLERY */
+.pdf-gallery{padding:0 0 2.5rem}
+.pdf-gallery__title{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.pdf-gallery__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pdf-gallery__grid .pdf-gallery__item:first-child{grid-column:span 2;grid-row:span 2}
+.pdf-gallery__item{position:relative;overflow:hidden;border-radius:2px;background:var(--warm);cursor:pointer;aspect-ratio:4/3}
+.pdf-gallery__item:first-child{aspect-ratio:unset}
+.pdf-gallery__item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s cubic-bezier(.25,.46,.45,.94)}
+.pdf-gallery__item:hover img{transform:scale(1.06)}
+.pdf-gallery__item::after{content:'';position:absolute;inset:0;background:rgba(11,21,32,0);transition:background .3s ease;pointer-events:none}
+.pdf-gallery__item:hover::after{background:rgba(11,21,32,.2)}
+.pdf-gallery__zoom{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.7);opacity:0;transition:opacity .3s,transform .3s;z-index:2;pointer-events:none}
+.pdf-gallery__item:hover .pdf-gallery__zoom{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.pdf-gallery__zoom svg{width:32px;height:32px;fill:none;stroke:#fff;stroke-width:2;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+/* LIGHTBOX */
+.pdf-lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,8,5,.96);flex-direction:column;align-items:center;justify-content:center}
+.pdf-lightbox.is-open{display:flex}
+.pdf-lightbox__stage{position:relative;width:100%;max-width:1100px;padding:0 72px;display:flex;align-items:center;justify-content:center}
+.pdf-lightbox__img-wrap{width:100%;max-height:78vh;display:flex;align-items:center;justify-content:center}
+.pdf-lightbox__img-wrap img{max-width:100%;max-height:78vh;object-fit:contain;border-radius:2px;box-shadow:0 24px 80px rgba(0,0,0,.7);transition:opacity .2s}
+.pdf-lightbox__img-wrap img.is-loading{opacity:0}
+.pdf-lightbox__btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;z-index:2}
+.pdf-lightbox__btn:hover{background:rgba(255,255,255,.18)}
+.pdf-lightbox__btn svg{width:20px;height:20px;stroke:#fff;stroke-width:2;fill:none}
+.pdf-lightbox__prev{left:12px}.pdf-lightbox__next{right:12px}
+.pdf-lightbox__close{position:fixed;top:20px;right:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;z-index:10}
+.pdf-lightbox__close:hover{background:rgba(255,255,255,.22)}
+.pdf-lightbox__close svg{width:18px;height:18px;stroke:#fff;stroke-width:2;fill:none}
+.pdf-lightbox__footer{margin-top:16px;display:flex;align-items:center;gap:16px;color:rgba(255,255,255,.55);font-size:.82rem;letter-spacing:.06em}
+.pdf-lightbox__thumbs{display:flex;gap:6px;margin-top:14px;max-width:90vw;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.pdf-lightbox__thumbs::-webkit-scrollbar{display:none}
+.pdf-lightbox__thumb{width:54px;height:40px;flex-shrink:0;border-radius:2px;overflow:hidden;cursor:pointer;opacity:.4;border:2px solid transparent;transition:opacity .2s,border-color .2s}
+.pdf-lightbox__thumb:hover{opacity:.75}
+.pdf-lightbox__thumb.is-active{opacity:1;border-color:var(--gold)}
+.pdf-lightbox__thumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:768px){
+  .pdf-gallery__grid{grid-template-columns:repeat(2,1fr)}
+  .pdf-gallery__grid .pdf-gallery__item:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}
+  .pdf-lightbox__stage{padding:0 44px}
+  .pdf-lightbox__thumbs{display:none}
+}
+
+/* SIDEBAR */
+.room-sidebar{position:sticky;top:90px}
+.book-card{background:var(--white);box-shadow:var(--shadow-float);padding:2rem;border-radius:2px}
+.book-card-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:.4rem}
+.book-card-sub{font-size:.72rem;font-weight:300;color:var(--steel);margin-bottom:1.8rem;line-height:1.6}
+.book-card-stats{display:flex;gap:1.2rem;margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid rgba(11,21,32,.08)}
+.bcs{display:flex;flex-direction:column;gap:.15rem}
+.bcs-val{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ink);font-weight:400}
+.bcs-lbl{font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:var(--steel);opacity:.6}
+.book-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--gold);color:var(--ink);font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 1.5rem;text-decoration:none;border-radius:2px;transition:background .25s,transform .2s,box-shadow .25s;box-shadow:0 6px 28px rgba(184,147,74,.38);margin-bottom:.8rem}
+.book-btn:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 36px rgba(184,147,74,.48)}
+.book-btn-secondary{display:flex;align-items:center;justify-content:center;gap:.5rem;background:transparent;color:var(--steel);font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.75rem 1.5rem;text-decoration:none;border-radius:2px;border:1px solid rgba(11,21,32,.15);transition:all .2s}
+.book-btn-secondary:hover{border-color:var(--ink);color:var(--ink)}
+
+/* SERVICES */
+.services-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ink);margin-bottom:1.5rem;padding-top:2.5rem;border-top:1px solid rgba(11,21,32,.08)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.6rem}
+.svc-item{display:flex;align-items:center;gap:.55rem;background:var(--warm);padding:.55rem .85rem;border-radius:2px}
+.svc-ico{font-size:.95rem;flex-shrink:0}
+.svc-label{font-size:.65rem;letter-spacing:.06em;color:var(--steel);line-height:1.3}
+
+/* SCROLL REVEAL */
+.r{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}
+.r.in{opacity:1;transform:none}
+
+/* FOOTER STRIP */
+.room-footer-strip{background:var(--ink);padding:clamp(2rem,5vw,4rem) clamp(1.5rem,5vw,5rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;margin-top:5rem}
+.rfs-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:300;color:var(--white)}
+.rfs-text em{font-style:italic;color:var(--gold3)}
+.rfs-links{display:flex;gap:1rem;flex-wrap:wrap}
+.rfs-link{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,244,239,.45);text-decoration:none;transition:color .2s}
+.rfs-link:hover{color:var(--gold2)}
+.rfs-book{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--ink);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.6rem;border-radius:2px;text-decoration:none;transition:background .2s}
+.rfs-book:hover{background:var(--gold2)}
+</style>
+</head>
+<body>
+
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-mark">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#f0d898" stroke-width="1.2"/><path d="M9 5v4l2.5 2.5" stroke="#f0d898" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </div>
+    <span class="nav-brand">Prà de la Fam</span>
+  </a>
+  <a href="index.html#appartamenti" class="nav-back">Appartamentoi</a>
+  <a href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="nav-cta">Prenota →</a>
+</nav>
+
+<section class="room-hero">
+  <div class="room-hbg" id="rhbg" style="background-image:url(img/pomelo.jpg)"></div>
+  <div class="room-hov"></div>
+  <div class="room-hc">
+    <div class="room-hl">
+      <p class="room-eyebrow">Prà de la Fam · Appartamento</p>
+      <h1 class="room-h1">Pomelo</h1>
+    </div>
+    <div class="room-hr">
+      <div class="room-meta-box">
+        <div class="room-stat">
+          <span class="room-stat-val">35m²</span>
+          <span class="room-stat-lbl">Superficie</span>
+        </div>
+        <div class="room-stat-sep"></div>
+        <div class="room-stat">
+          <span class="room-stat-val">2</span>
+          <span class="room-stat-lbl">Ospiti max</span>
+        </div>
+        <div class="room-stat-sep"></div>
+        <div class="room-stat">
+          <span class="room-stat-val">🌊</span>
+          <span class="room-stat-lbl">Vista lago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="room-body">
+  <div class="room-grid">
+    <div>
+      <!-- GALLERIA FOTO -->
+      <section class="pdf-gallery r">
+        <p class="pdf-gallery__title">Galleria foto</p>
+        <div class="pdf-gallery__grid">
+
+          <div class="pdf-gallery__item" data-src="img/appartamento-pomelo/01.jpg" data-caption="Camera da letto con travi a vista">
+            <img src="img/appartamento-pomelo/01.jpg" alt="Appartamento Pomelo — camera da letto" loading="eager">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/appartamento-pomelo/02.jpg" data-caption="Vista sul Lago di Garda dalla camera">
+            <img src="img/appartamento-pomelo/02.jpg" alt="Appartamento Pomelo — vista lago" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/appartamento-pomelo/03.jpg" data-caption="L'atmosfera della camera">
+            <img src="img/appartamento-pomelo/03.jpg" alt="Appartamento Pomelo — dettaglio camera" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/appartamento-pomelo/04.jpg" data-caption="Soggiorno con angolo pranzo">
+            <img src="img/appartamento-pomelo/04.jpg" alt="Appartamento Pomelo — soggiorno" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/appartamento-pomelo/05.jpg" data-caption="Cucina attrezzata e zona living">
+            <img src="img/appartamento-pomelo/05.jpg" alt="Appartamento Pomelo — cucina" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/appartamento-pomelo/06.jpg" data-caption="Bagno con doccia, bidet e travi a vista">
+            <img src="img/appartamento-pomelo/06.jpg" alt="Appartamento Pomelo — bagno" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+          <div class="pdf-gallery__item" data-src="img/appartamento-pomelo/07.jpg" data-caption="Doccia con piastrelle bordeaux">
+            <img src="img/appartamento-pomelo/07.jpg" alt="Appartamento Pomelo — doccia" loading="lazy">
+            <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LIGHTBOX -->
+      <div class="pdf-lightbox" role="dialog" aria-modal="true" aria-label="Galleria foto">
+        <button class="pdf-lightbox__close" aria-label="Chiudi"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        <div class="pdf-lightbox__stage">
+          <button class="pdf-lightbox__btn pdf-lightbox__prev" aria-label="Precedente"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <div class="pdf-lightbox__img-wrap"><img src="" alt=""/></div>
+          <button class="pdf-lightbox__btn pdf-lightbox__next" aria-label="Successiva"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+        <div class="pdf-lightbox__footer">
+          <span class="pdf-lightbox__counter"></span>
+          <span class="pdf-lightbox__caption"></span>
+        </div>
+        <div class="pdf-lightbox__thumbs"></div>
+      </div>
+
+      <div class="r d1">
+        <p class="room-type-tag">Appartamento · Prà de la Fam</p>
+        <h2 class="room-subtitle">L'antica dimora del giardiniere, rinata</h2>
+        <p class="room-floor">Piano terra · Ingresso privato</p>
+        <p class="room-desc">Un tempo dimora del giardiniere delle limonaie, Pomelo è oggi un raffinato appartamento di circa 35 m² che unisce il fascino storico al comfort moderno. Dispone di ingresso privato, zona giorno con angolo cottura attrezzato, camera matrimoniale luminosa con vista sul Lago di Garda e bagno moderno. A pochi passi dalla spiaggia, Pomelo offre un soggiorno intimo e sereno, ideale per chi cerca natura, silenzio e romanticismo in un contesto autentico e suggestivo.</p>
+        
+      </div>
+
+      <div class="r d2">
+        <h3 class="services-title">Servizi inclusi</h3>
+        <div class="services-grid">
+          <div class="svc-item"><span class="svc-ico">🌊</span><span class="svc-label">Vista lago</span></div>
+<div class="svc-item"><span class="svc-ico">❄️</span><span class="svc-label">Aria condizionata</span></div>
+<div class="svc-item"><span class="svc-ico">📶</span><span class="svc-label">Wi-Fi gratuito</span></div>
+<div class="svc-item"><span class="svc-ico">🍷</span><span class="svc-label">Minibar</span></div>
+<div class="svc-item"><span class="svc-ico">📺</span><span class="svc-label">Televisione</span></div>
+<div class="svc-item"><span class="svc-ico">💨</span><span class="svc-label">Asciugacapelli</span></div>
+<div class="svc-item"><span class="svc-ico">🧴</span><span class="svc-label">Kit cortesia</span></div>
+<div class="svc-item"><span class="svc-ico">🚿</span><span class="svc-label">Doccia</span></div>
+<div class="svc-item"><span class="svc-ico">🚪</span><span class="svc-label">Bagno privato</span></div>
+<div class="svc-item"><span class="svc-ico">🐾</span><span class="svc-label">Animali ammessi</span></div>
+<div class="svc-item"><span class="svc-ico">🚭</span><span class="svc-label">Non fumatore</span></div>
+<div class="svc-item"><span class="svc-ico">🍳</span><span class="svc-label">Angolo cottura</span></div>
+<div class="svc-item"><span class="svc-ico">🛎️</span><span class="svc-label">Biancheria inclusa</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-sidebar r d2">
+      <div class="book-card">
+        <h3 class="book-card-title">Pomelo</h3>
+        <p class="book-card-sub">Un tempo dimora del giardiniere delle limonaie, oggi raffinato appartamento con vista lago e ingresso privato.</p>
+        <div class="book-card-stats">
+          <div class="bcs"><span class="bcs-val">35 m²</span><span class="bcs-lbl">Superficie</span></div>
+          <div class="bcs"><span class="bcs-val">2 pers.</span><span class="bcs-lbl">Capacità</span></div>
+        </div>
+        <a href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="book-btn">Verifica disponibilità →</a>
+        <a href="tel:+390365799890" class="book-btn-secondary">📞 Chiama: 0365 799890</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="room-footer-strip">
+  <p class="rfs-text">Prà de la Fam —<br><em>Lago di Garda</em></p>
+  <div class="rfs-links">
+    <a href="index.html#hotel" class="rfs-link">Camere</a>
+    <a href="index.html#appartamenti" class="rfs-link">Appartamenti</a>
+    <a href="index.html#limonaia" class="rfs-link">Limonaia</a>
+    <a href="index.html#contatti" class="rfs-link">Contatti</a>
+  </div>
+  <a href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="rfs-book">Prenota ora →</a>
+</div>
+
+<script>
+const rhbg = document.getElementById('rhbg');
+window.addEventListener('scroll', () => {
+  if(rhbg && window.scrollY < window.innerHeight * 1.2)
+    rhbg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+}, {passive:true});
+
+
+
+// LIGHTBOX
+(function(){
+  var gallery=document.querySelector('.pdf-gallery');
+  if(!gallery)return;
+  var items=Array.from(gallery.querySelectorAll('.pdf-gallery__item[data-src]'));
+  var photos=items.map(function(el){return{src:el.dataset.src,caption:el.dataset.caption||'',thumb:el.querySelector('img')?el.querySelector('img').src:el.dataset.src}});
+  var lb=document.querySelector('.pdf-lightbox');
+  var lbImg=lb.querySelector('.pdf-lightbox__img-wrap img');
+  var lbPrev=lb.querySelector('.pdf-lightbox__prev');
+  var lbNext=lb.querySelector('.pdf-lightbox__next');
+  var lbClose=lb.querySelector('.pdf-lightbox__close');
+  var lbCounter=lb.querySelector('.pdf-lightbox__counter');
+  var lbCaption=lb.querySelector('.pdf-lightbox__caption');
+  var lbThumbs=lb.querySelector('.pdf-lightbox__thumbs');
+  var current=0;
+  photos.forEach(function(p,i){var th=document.createElement('div');th.className='pdf-lightbox__thumb';th.innerHTML='<img src="'+p.thumb+'" alt="" loading="lazy">';th.addEventListener('click',function(){goTo(i)});lbThumbs.appendChild(th)});
+  function updateThumbs(){var ts=lbThumbs.querySelectorAll('.pdf-lightbox__thumb');ts.forEach(function(t,i){t.classList.toggle('is-active',i===current)});if(ts[current])ts[current].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'})}
+  function goTo(idx){current=(idx+photos.length)%photos.length;lbImg.classList.add('is-loading');var ni=new Image();ni.onload=function(){lbImg.src=photos[current].src;lbImg.alt=photos[current].caption||'Foto '+(current+1);lbImg.classList.remove('is-loading')};ni.src=photos[current].src;lbCounter.textContent=(current+1)+' / '+photos.length;lbCaption.textContent=photos[current].caption;updateThumbs()}
+  function open(idx){current=idx;goTo(current);lb.classList.add('is-open');document.body.style.overflow='hidden'}
+  function close(){lb.classList.remove('is-open');document.body.style.overflow=''}
+  items.forEach(function(el,i){el.addEventListener('click',function(){open(i)})});
+  lbPrev.addEventListener('click',function(){goTo(current-1)});
+  lbNext.addEventListener('click',function(){goTo(current+1)});
+  lbClose.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('is-open'))return;if(e.key==='ArrowLeft')goTo(current-1);if(e.key==='ArrowRight')goTo(current+1);if(e.key==='Escape')close()});
+  var tx=0;lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)dx<0?goTo(current+1):goTo(current-1)});
+})();
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.07});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

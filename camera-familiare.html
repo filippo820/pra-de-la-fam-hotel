@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Camera Familiare — Prà de la Fam · Lago di Garda</title>
+<meta name="description" content="Camera doppia comunicante con stanza a castello — ideale per famiglie con bambini. Prà de la Fam, Tignale, Lago di Garda."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0b1520;--mid:#2e4a62;--steel:#4a6580;
+  --bone:#f7f4ef;--warm:#ede8df;
+  --gold:#b8934a;--gold2:#d4b06a;--gold3:#f0d898;
+  --white:#ffffff;
+  --ease:cubic-bezier(.22,.68,0,1.2);
+  --shadow-float:0 20px 60px rgba(11,21,32,.18),0 4px 16px rgba(11,21,32,.1);
+  --shadow-hover:0 32px 80px rgba(11,21,32,.24),0 8px 24px rgba(11,21,32,.14);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bone);color:var(--ink);overflow-x:hidden}
+@media(hover:none){#cr,body{cursor:auto}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,4vw,4rem);height:68px;background:rgba(247,244,239,.96);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid rgba(11,21,32,.08)}
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-mark{width:38px;height:38px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;font-size:.85rem;box-shadow:0 2px 14px rgba(11,21,32,.22)}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:.03em}
+.nav-back{font-size:.68rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem}
+.nav-back:hover{color:var(--ink)}
+.nav-back::before{content:'←';font-size:.8rem}
+.nav-cta{display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:var(--bone);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.3rem;border-radius:2px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--mid)}
+
+/* HERO */
+.room-hero{position:relative;height:72vh;min-height:480px;overflow:hidden;display:grid;place-items:end}
+.room-hbg{position:absolute;inset:-8%;background:url('img/camera-familiare.jpg') center/cover no-repeat;will-change:transform}
+.room-hov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,21,32,.08) 0%,rgba(11,21,32,.04) 40%,rgba(11,21,32,.75) 100%)}
+.room-hc{position:relative;z-index:2;width:100%;padding:0 clamp(1.5rem,5vw,5rem) clamp(3rem,6vh,6rem);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem}
+.room-hl{opacity:0;animation:fadeup .8s var(--ease) .2s forwards}
+.room-hr{opacity:0;animation:fadeup .8s var(--ease) .4s forwards}
+@keyframes fadeup{to{opacity:1;transform:none}}
+.room-eyebrow{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(247,244,239,.55);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.room-eyebrow::before{content:'';display:block;width:22px;height:1px;background:var(--gold2)}
+.room-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:300;line-height:.92;color:var(--white);letter-spacing:-.015em}
+.room-h1 em{font-style:italic;color:var(--gold3)}
+.room-meta-box{background:rgba(11,21,32,.5);backdrop-filter:blur(20px);border:1px solid rgba(247,244,239,.12);padding:1.2rem 1.6rem;border-radius:2px;display:flex;gap:2rem}
+.room-stat{display:flex;flex-direction:column;gap:.2rem}
+.room-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--white);line-height:1}
+.room-stat-lbl{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,244,239,.4)}
+.room-stat-sep{width:1px;background:rgba(247,244,239,.12)}
+
+/* BODY */
+.room-body{max-width:1200px;margin:0 auto;padding:clamp(3rem,7vw,7rem) clamp(1.5rem,5vw,5rem)}
+.room-grid{display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:start}
+@media(max-width:900px){.room-grid{grid-template-columns:1fr;gap:3rem}}
+
+/* DESCRIPTION */
+.room-type-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.room-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:1.8rem}
+.room-subtitle em{font-style:italic;color:var(--gold)}
+.room-desc{font-size:.85rem;font-weight:300;line-height:2;color:var(--steel);margin-bottom:2rem}
+.room-floor{font-size:.7rem;letter-spacing:.1em;color:var(--steel);opacity:.7;margin-bottom:2.5rem;display:flex;align-items:center;gap:.5rem}
+.room-floor::before{content:'📍';font-size:.8rem}
+.accessibility-note{background:rgba(184,147,74,.08);border-left:3px solid var(--gold);padding:.9rem 1.2rem;font-size:.78rem;color:var(--steel);line-height:1.7;margin-bottom:2rem;border-radius:0 2px 2px 0}
+
+/* GALLERY */
+.room-gallery{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:2.5rem}
+.room-gallery-main{grid-column:1/-1;aspect-ratio:16/8;overflow:hidden;border-radius:2px}
+.room-gallery-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}
+.room-gallery-main:hover img{transform:scale(1.03)}
+.room-gallery-thumb{aspect-ratio:4/3;overflow:hidden;border-radius:2px;background:var(--warm)}
+.room-gallery-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}
+.room-gallery-thumb:hover img{transform:scale(1.05)}
+
+/* SIDEBAR */
+.room-sidebar{position:sticky;top:90px}
+.book-card{background:var(--white);box-shadow:var(--shadow-float);padding:2rem;border-radius:2px}
+.book-card-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--ink);margin-bottom:.4rem}
+.book-card-sub{font-size:.72rem;font-weight:300;color:var(--steel);margin-bottom:1.8rem;line-height:1.6}
+.book-card-stats{display:flex;gap:1.2rem;margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid rgba(11,21,32,.08)}
+.bcs{display:flex;flex-direction:column;gap:.15rem}
+.bcs-val{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ink);font-weight:400}
+.bcs-lbl{font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:var(--steel);opacity:.6}
+.book-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--gold);color:var(--ink);font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 1.5rem;text-decoration:none;border-radius:2px;transition:background .25s,transform .2s,box-shadow .25s;box-shadow:0 6px 28px rgba(184,147,74,.38);margin-bottom:.8rem}
+.book-btn:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 36px rgba(184,147,74,.48)}
+.book-btn-secondary{display:flex;align-items:center;justify-content:center;gap:.5rem;background:transparent;color:var(--steel);font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.75rem 1.5rem;text-decoration:none;border-radius:2px;border:1px solid rgba(11,21,32,.15);transition:all .2s}
+.book-btn-secondary:hover{border-color:var(--ink);color:var(--ink)}
+
+/* SERVICES */
+.services-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--ink);margin-bottom:1.5rem;padding-top:2.5rem;border-top:1px solid rgba(11,21,32,.08)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.6rem}
+.svc-item{display:flex;align-items:center;gap:.55rem;background:var(--warm);padding:.55rem .85rem;border-radius:2px}
+.svc-ico{font-size:.95rem;flex-shrink:0}
+.svc-label{font-size:.65rem;letter-spacing:.06em;color:var(--steel);line-height:1.3}
+
+/* SCROLL REVEAL */
+.r{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}
+.r.in{opacity:1;transform:none}
+
+/* FOOTER STRIP */
+.room-footer-strip{background:var(--ink);padding:clamp(2rem,5vw,4rem) clamp(1.5rem,5vw,5rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;margin-top:5rem}
+.rfs-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:300;color:var(--white)}
+.rfs-text em{font-style:italic;color:var(--gold3)}
+.rfs-links{display:flex;gap:1rem;flex-wrap:wrap}
+.rfs-link{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,244,239,.45);text-decoration:none;transition:color .2s}
+.rfs-link:hover{color:var(--gold2)}
+.rfs-book{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--ink);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.6rem;border-radius:2px;text-decoration:none;transition:background .2s}
+.rfs-book:hover{background:var(--gold2)}
+</style>
+</head>
+<body>
+
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-mark">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#f0d898" stroke-width="1.2"/><path d="M9 5v4l2.5 2.5" stroke="#f0d898" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </div>
+    <span class="nav-brand">Prà de la Fam</span>
+  </a>
+  <a href="index.html#hotel" class="nav-back">Camerai</a>
+  <a href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="nav-cta">Prenota →</a>
+</nav>
+
+<section class="room-hero">
+  <div class="room-hbg" id="rhbg" style="background-image:url(img/camera-familiare.jpg)"></div>
+  <div class="room-hov"></div>
+  <div class="room-hc">
+    <div class="room-hl">
+      <p class="room-eyebrow">Prà de la Fam · Camera</p>
+      <h1 class="room-h1">Camera Familiare</h1>
+    </div>
+    <div class="room-hr">
+      <div class="room-meta-box">
+        <div class="room-stat">
+          <span class="room-stat-val">29m²</span>
+          <span class="room-stat-lbl">Superficie</span>
+        </div>
+        <div class="room-stat-sep"></div>
+        <div class="room-stat">
+          <span class="room-stat-val">4</span>
+          <span class="room-stat-lbl">Ospiti max</span>
+        </div>
+        <div class="room-stat-sep"></div>
+        <div class="room-stat">
+          <span class="room-stat-val">🌊</span>
+          <span class="room-stat-lbl">Vista lago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="room-body">
+  <div class="room-grid">
+    <div>
+      <div class="room-gallery r">
+        <div class="room-gallery-main">
+          <img src="img/camera-familiare.jpg" alt="Camera Familiare" loading="eager"/>
+        </div>
+        <div class="room-gallery-thumb">
+          <img src="img/camera-familiare.jpg" alt="Camera Familiare — vista" loading="lazy"/>
+        </div>
+        <div class="room-gallery-thumb" style="background:var(--warm);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);opacity:.5">Foto in arrivo</span>
+        </div>
+      </div>
+
+      <div class="r d1">
+        <p class="room-type-tag">Camera · Prà de la Fam</p>
+        <h2 class="room-subtitle">Due camere comunicanti per tutta la famiglia</h2>
+        <p class="room-floor">Primo e secondo piano</p>
+        <p class="room-desc">Situata al primo o al secondo piano dell'hotel, la camera familiare è composta da una camera doppia comunicante con una camera dotata di letto a castello, ideale per famiglie con bambini. Gli spazi sono stati recentemente ristrutturati con arredi moderni e accoglienti. La camera doppia offre una suggestiva vista sul lago, mentre la seconda camera si affaccia sul versante del monte, garantendo tranquillità e privacy. Il bagno è spazioso, completo di ampia doccia, asciugacapelli e linea di cortesia. La camera è dotata di tutti i comfort: aria condizionata, TV a schermo piatto, minibar, Wi-Fi gratuito e kit di benvenuto. È incluso l'accesso al parcheggio privato dell'hotel.</p>
+        
+      </div>
+
+      <div class="r d2">
+        <h3 class="services-title">Servizi inclusi</h3>
+        <div class="services-grid">
+          <div class="svc-item"><span class="svc-ico">🌊</span><span class="svc-label">Vista lago</span></div>
+<div class="svc-item"><span class="svc-ico">❄️</span><span class="svc-label">Aria condizionata</span></div>
+<div class="svc-item"><span class="svc-ico">📶</span><span class="svc-label">Wi-Fi gratuito</span></div>
+<div class="svc-item"><span class="svc-ico">🧊</span><span class="svc-label">Frigo vuoto a disposizione</span></div>
+<div class="svc-item"><span class="svc-ico">📺</span><span class="svc-label">Televisione</span></div>
+<div class="svc-item"><span class="svc-ico">💨</span><span class="svc-label">Asciugacapelli</span></div>
+<div class="svc-item"><span class="svc-ico">🧴</span><span class="svc-label">Kit cortesia</span></div>
+<div class="svc-item"><span class="svc-ico">🚿</span><span class="svc-label">Doccia</span></div>
+<div class="svc-item"><span class="svc-ico">🚪</span><span class="svc-label">Bagno privato</span></div>
+<div class="svc-item"><span class="svc-ico">🥐</span><span class="svc-label">Colazione inclusa</span></div>
+<div class="svc-item"><span class="svc-ico">🐾</span><span class="svc-label">Animali ammessi</span></div>
+<div class="svc-item"><span class="svc-ico">🚭</span><span class="svc-label">Non fumatore</span></div>
+<div class="svc-item"><span class="svc-ico">🚗</span><span class="svc-label">Parcheggio gratuito</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="room-sidebar r d2">
+      <div class="book-card">
+        <h3 class="book-card-title">Camera Familiare</h3>
+        <p class="book-card-sub">Camera doppia comunicante con stanza a castello — ideale per famiglie con bambini.</p>
+        <div class="book-card-stats">
+          <div class="bcs"><span class="bcs-val">29 m²</span><span class="bcs-lbl">Superficie</span></div>
+          <div class="bcs"><span class="bcs-val">4 pers.</span><span class="bcs-lbl">Capacità</span></div>
+        </div>
+        <a href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="book-btn">Verifica disponibilità →</a>
+        <a href="tel:+390365799890" class="book-btn-secondary">📞 Chiama: 0365 799890</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="room-footer-strip">
+  <p class="rfs-text">Prà de la Fam —<br><em>Lago di Garda</em></p>
+  <div class="rfs-links">
+    <a href="index.html#hotel" class="rfs-link">Camere</a>
+    <a href="index.html#appartamenti" class="rfs-link">Appartamenti</a>
+    <a href="index.html#limonaia" class="rfs-link">Limonaia</a>
+    <a href="index.html#contatti" class="rfs-link">Contatti</a>
+  </div>
+  <a href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="rfs-book">Prenota ora →</a>
+</div>
+
+<script>
+const rhbg = document.getElementById('rhbg');
+window.addEventListener('scroll', () => {
+  if(rhbg && window.scrollY < window.innerHeight * 1.2)
+    rhbg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+}, {passive:true});
+
+
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.07});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

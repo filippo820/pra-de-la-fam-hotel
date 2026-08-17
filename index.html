@@ -345,7 +345,6 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 
 
 
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
 
 
 
@@ -361,16 +360,17 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 
 
 
-.msg-avatar{width:26px;height:26px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;margin-top:.1rem}
-.msg-bubble{padding:.65rem .85rem;font-size:.78rem;font-weight:300;line-height:1.65;border-radius:0}
-.bot .msg-bubble{background:var(--warm);color:var(--ink)}
-.user .msg-bubble{background:var(--ink);color:var(--bone)}
-.msg-bubble a{color:var(--gold);text-decoration:underline}
 
 
 
 
-@keyframes typing{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+
+
+
+
+
+
+
 
 
 
@@ -944,31 +944,6 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   </div>
 </footer>
 
-<!-- CHATBOT TOGGLE -->
-
-
-<!-- CHATBOT PANEL -->
-
-      <div>
-        <div data-i18n="t65ab6b74c2" class="chat-hname">Assistente Prà de la Fam</div>
-        
-      </div>
-    </div>
-    <button class="chat-close" onclick="toggleChat()">✕</button>
-  </div>
-  
-      <div data-i18n="tdba5b63698" class="msg-bubble">Ciao! Sono l'assistente del Prà de la Fam. Posso aiutarti con informazioni sull'hotel, gli appartamenti, la limonaia, i servizi e i prodotti dello shop. Come posso aiutarti? 😊</div>
-    </div>
-  </div>
-  
-  <div class="chat-input-area">
-    <textarea class="chat-input" id="chat-input" placeholder="Scrivi un messaggio..." rows="1" onkeydown="chatKey(event)" oninput="autoResize(this)"></textarea>
-    <button class="chat-send" onclick="sendChat()">
-      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
-    </button>
-  </div>
-</div>
-
 <!-- LIGHTBOX -->
 <div id="lb"><button id="lb-close" onclick="closeLb()">✕</button><img id="lb-img" src="" alt=""/></div>
 
@@ -1189,5 +1164,6 @@ function pdlfApplica(ok){
 <!-- ══ pdlf-i18n ══ le cinque lingue -->
 <script src="i18n.js" defer></script>
 <script src="meteo.js" defer></script>
+<script src="chat.js" defer></script>
 </body>
 </html>

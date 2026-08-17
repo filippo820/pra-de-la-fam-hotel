@@ -9,6 +9,12 @@
 # Con il repo collegato quel disallineamento non puo' piu' succedere — quello
 # che si vede qui e' quello che va online.
 
+# L'assistente e' una funzione, non una pagina: la chiave Anthropic non puo'
+# stare nel sito, che e' pubblico. Estensione .mjs perche' qui non c'e' un
+# package.json che dichiari i moduli, e il file usa "export default".
+[functions]
+  directory = "netlify/functions"
+
 [[headers]]
   for = "/img/*"
   [headers.values]

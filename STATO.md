@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **17 agosto 2026** (sera)
+Aggiornato: **17 agosto 2026** (notte)
 
 ---
 
@@ -108,15 +108,42 @@ risponde il riquadro non compare: un buco visibile è peggio di un'assenza. I no
 dei giorni seguono la lingua senza traduzioni nuove.
 
 
+### Assistente
+Un riquadro in basso a destra, su tutte e dieci le pagine. Risponde in cinque
+lingue, **solo con quello che il sito dice**: il materiale è `kb.json`, estratto
+dalle pagine stesse (non riscritto a mano — una copia diverge al primo cambio di
+prezzo, e diverge in silenzio).
+
+⚠️ **La regola che conta: non sa se c'è posto.** Disponibilità e tariffe stanno nel
+motore di prenotazione. Un assistente che stima la disponibilità di una camera fa
+un danno vero — qualcuno prenota un viaggio su una frase falsa. Rimanda al tasto
+Prenota o al telefono, sempre.
+
+Il pannello che c'era **era troncato**: mancavano il pulsante e il `<div>` che
+apre il riquadro, e le funzioni `toggleChat`/`chatKey`/`sendChat`/`autoResize`
+non esistevano. **Cinque dei sette `</div>` di troppo erano suoi:** rifacendolo
+intero l'HTML è passato da 7 a 2.
+
+Il costo massimo di una domanda è noto in partenza: istruzioni ~7.900 gettoni
+(marcate come riutilizzabili, quindi si pagano per intero solo la prima volta),
+storia al massimo 4.000 caratteri, risposta 380 gettoni. La chiave sta in una
+funzione Netlify, mai nel sito.
+
+⚠️ **Il tetto d'uso qui è parziale.** Le funzioni Netlify sono senza stato e
+replicate: il contatore vede solo le richieste capitate sulla stessa istanza.
+Tengono davvero i tetti su lunghezza e risposta. Se il sito prendesse traffico
+vero, il tetto solido si fa nel database — su Colgo la funzione esiste già.
+
+
 ---
 
 ## ⬜ Aperto
 
 ### Da fare, in ordine di quanto pesa
-1. **Chatbot.** Il pannello esiste già nell'HTML (`Assistente Prà de la Fam`,
-   campo di scrittura, messaggio di benvenuto) ma **mancano le funzioni**
-   `toggleChat`, `chatKey`, `sendChat`, `autoResize`. Deve anche rispondere su
-   cosa fare nei dintorni e portare al tasto Prenota.
+1. 🔑 **La chiave dell'assistente, da mettere a mano.** Netlify →
+   `pradelafam` → Site configuration → Environment variables →
+   `ANTHROPIC_API_KEY`. **Finché non c'è, il riquadro si apre ma risponde
+   «Qualcosa non ha funzionato».** È l'unica cosa che manca per farlo parlare.
 2. **Ospitare i caratteri tipografici sul nostro server.** Oggi arrivano da
    Google e questo espone l'indirizzo IP dei visitatori — è scritto nella cookie
    policy come miglioramento in programma.
@@ -124,9 +151,9 @@ dei giorni seguono la lingua senza traduzioni nuove.
    `alpradelafam.com`. Da cambiare **il giorno del passaggio**, non prima.
 
 ### Difetti noti, non ancora risolti
-- **`index.html` ha 7 `</div>` di troppo.** Non introdotti da noi: verificato
-  contro il commit di partenza. Probabilmente lo stesso troncamento che ha
-  portato via il blocco JavaScript.
+- **`index.html` ha 2 `</div>` di troppo** (erano 7: cinque erano del pannello
+  chat troncato, spariti rifacendolo). Non introdotti da noi: verificato contro
+  il commit di partenza.
 - **`closeLb` è chiamata ma non esiste**, per un lightbox che in home non c'è:
   residuo di codice tolto.
 - **Immagini senza descrizione** (`alt`) nelle gallerie delle sottopagine: 7 per

@@ -66,10 +66,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bone);color:var(--ink);ov
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,4vw,4rem);height:68px;background:rgba(247,244,239,.96);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid rgba(11,21,32,.08)}
+.nav-logo-img{height:44px;width:auto;display:block}
 .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
 .nav-mark{width:38px;height:38px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;font-size:.85rem;box-shadow:0 2px 14px rgba(11,21,32,.22)}
 .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:.03em}
-.nav-back{font-size:.68rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem}
+.nav-back{margin-left:1.5rem;font-size:.68rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem}
 .nav-back:hover{color:var(--ink)}
 .nav-back::before{content:'←';font-size:.8rem}
 .nav-cta{display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:var(--bone);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.3rem;border-radius:2px;text-decoration:none;transition:background .2s}
@@ -184,6 +185,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .rfs-link:hover{color:var(--gold2)}
 .rfs-book{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--ink);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.6rem;border-radius:2px;text-decoration:none;transition:background .2s}
 .rfs-book:hover{background:var(--gold2)}
+
+/* Sul telefono i quattro pezzi della barra non ci stanno: gia' prima il tasto
+   Prenota usciva dallo schermo di 63px. Il link «← Camere» sparisce perche' e'
+   un doppione — il marchio porta alla stessa pagina — e il marchio si stringe. */
+@media(max-width:640px){
+  nav{padding:0 1rem}
+  .nav-back{display:none}
+  .nav-logo-img{height:36px}
+}
 </style>
 </head>
 <body>
@@ -191,10 +201,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <div class="nav-mark">
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#f0d898" stroke-width="1.2"/><path d="M9 5v4l2.5 2.5" stroke="#f0d898" stroke-width="1.2" stroke-linecap="round"/></svg>
-    </div>
-    <span class="nav-brand">Prà de la Fam</span>
+    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam"/>
   </a>
   <a data-i18n="tafb272106a" href="index.html#appartamenti" class="nav-back">Appartamenti</a>
   <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>

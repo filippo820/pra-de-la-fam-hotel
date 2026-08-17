@@ -135,6 +135,28 @@ Tengono davvero i tetti su lunghezza e risposta. Se il sito prendesse traffico
 vero, il tetto solido si fa nel database — su Colgo la funzione esiste già.
 
 
+### Il marchio in alto a sinistra
+C'era **solo in home**. Le nove sottopagine mostravano un **orologio** — un'icona
+generica, non il logo — e privacy e cookie non avevano niente in cima. Ora il
+logo vero è su tutte e dodici le pagine, e porta alla home.
+
+In home stava **incollato dentro l'HTML come base64, due volte**: viaggiava a
+ogni visita e non poteva finire in cache. Diventato un file, `index.html` è
+passato da **330 KB a 84 KB**. Il file è ritagliato sull'inchiostro (la tela
+originale aveva un quinto di vuoto) e sta a 266×132 — tre volte i 44px a cui si
+vede, quindi nitido anche sui telefoni migliori.
+
+⚠️ **Sul telefono la barra traboccava, e non per colpa nostra**: a 390px il tasto
+Prenota usciva dallo schermo di 63px già prima. Sotto i 640px ora sparisce il
+link «← Camere» (è un doppione — il marchio porta alla stessa pagina) e il
+marchio si stringe a 36px. Misurato: rientra sia a 390 che a 360.
+
+📐 **Trappola trovata qui:** `style="height:44px"` scritto sul tag **batte
+qualsiasi regola del foglio**, media query compresi. La prima versione della
+regola per il telefono era codice morto e sembrava funzionare. Le misure stanno
+nel CSS, non in linea.
+
+
 ---
 
 ## ⬜ Aperto

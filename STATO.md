@@ -173,6 +173,36 @@ di KB, e l'`index.html` è diverso. Modificarla non pubblica niente. Il sito ver
 che divergevano, ancora aperta sulla bottega.
 
 
+### La barra «Verifica disponibilità» ora funziona
+Era **finta**: `<a href="#">` senza una riga di codice dietro. Chi metteva le
+date credeva di aver iniziato a prenotare, premeva, e la pagina restava ferma.
+
+📐 **I nomi dei parametri non sono indovinati.** Sono letti nel codice del motore
+(`secure-reservation.cloud`, il bundle Angular) e poi **verificati a schermo**:
+
+| parametro | cosa vuole |
+|---|---|
+| `fromDate` / `toDate` | `yyyy-MM-dd` — la funzione interna è `dateToQueryParam(d) = d.toFormat("yyyy-MM-dd")`, cioè esattamente quello che `<input type="date">.value` restituisce già |
+| `rooms` | camere separate da `;`, ospiti da `,` · `A` = adulto, un numero = bambino di quell'età · `A,A` = una camera due adulti · massimo 5 camere |
+| `portal` / `lang` | già in uso nei tasti Prenota |
+
+Prova: `…&fromDate=2026-10-02&toDate=2026-10-05&rooms=A,A,A` apre il motore su
+**«02 Ven → 05 Lun · 1 Camera 3»**. Funziona anche in tedesco.
+
+Aggiunto anche: **non si può più chiedere una data passata** (`min` = oggi) e se
+la partenza precede l'arrivo si sposta da sola al giorno dopo, invece di
+rifiutare. Evento `cerca_disponibilita` in Analytics, con o senza date.
+
+⚠️ **Il bottone resta un link vero**, con l'indirizzo già scritto nell'HTML:
+funziona col tasto destro e con «apri in nuova scheda», e se `cerca.js` non si
+caricasse porterebbe comunque al motore — senza date, cioè come fanno tutti gli
+altri tasti Prenota. Non torna a essere un bottone morto.
+
+⬜ Resta il formato `mm/dd/yyyy` nei campi: **non è un difetto dell'HTML**, lo
+decide la lingua del sistema operativo del visitatore. Cambiarlo richiede un
+calendario scritto da noi.
+
+
 ---
 
 ## ⬜ Aperto
@@ -209,8 +239,9 @@ che divergevano, ancora aperta sulla bottega.
   pagina. Accessibilità e Google.
 - **Netlify riscrive l'HTML** in fase di pubblicazione: gli attributi
   `onmouseover` arrivano con le virgolette rotte. Da guardare.
-- **Le date della barra prenotazione** mostrano `mm/dd/yyyy`, formato americano
-  su un sito italiano.
+- **Le date della barra prenotazione** mostrano `mm/dd/yyyy`: lo decide la
+  lingua del sistema operativo di chi guarda, non l'HTML. Serve un calendario
+  scritto da noi.
 
 ---
 

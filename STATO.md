@@ -405,6 +405,33 @@ spazi fra nome, descrizione e etichette accorciati. Carta da 489 a 474px con la
 stessa foto.
 
 
+### Le prime righe sotto l'header: riprodotto e chiuso
+Segnalato «home, telefono, sopra il meteo» — cioè la riga dell'indirizzo. Alle
+altezze di prova non succedeva mai; **succede alle altezze vere di Safari**, che
+si mangia un centinaio di pixel con le sue barre. Riprodotto a **375×553** e
+**360×640**: l'indirizzo finiva **8px sotto la barra**.
+
+**Causa.** L'apertura era alta *esattamente* quanto lo schermo, con il contenuto
+ancorato in basso. Se il blocco cresce — ed è cresciuto quando il meteo è
+entrato nel flusso — il testo esce **dall'alto** e scivola sotto la barra di
+navigazione. Non c'era nessun limite a impedirlo.
+
+**Correzione strutturale:** l'apertura ora **cresce** (`height:auto` +
+`min-height:100svh`) e il contenuto tiene sempre libera la fascia della barra
+(`padding-top`). Così è il layout a garantirlo, non l'altezza dello schermo.
+Provato su otto formati — da 553 a 844px di altezza: nessuno copre più niente.
+
+Sotto i 620px di altezza l'apertura **non ci sta comunque** e scorre: meglio
+scorrere che nascondere. Lì il titolo si stringe ancora, così il primo bottone
+resta visibile senza scorrere.
+
+📐 **Quinta volta con la stessa trappola.** Il blocco «schermi molto bassi»,
+scritto *prima* di quello «schermi corti», non faceva niente: i due si
+sovrappongono e a parità di peso vince l'ultimo. Il titolo misurava 46,4px dove
+ne avevo chiesti 38,4. **Se una regola sembra non fare effetto, misurare il
+valore calcolato — non guardare la schermata.**
+
+
 ---
 
 ## ⬜ Aperto

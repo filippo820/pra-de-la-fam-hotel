@@ -460,6 +460,16 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   .apt-name{margin-bottom:.3rem}
   .apt-desc{margin-bottom:.7rem;line-height:1.65}
   .apt-feats{gap:.35rem;margin-bottom:.7rem}
+  /* ⚠️ L'APERTURA NON PUO' PIU' MANGIARSI LE PRIME RIGHE.
+     Era alta esattamente quanto lo schermo, con il contenuto ancorato in
+     basso: se il blocco cresceva — ed e' cresciuto quando il meteo e'
+     entrato nel flusso — il testo usciva DALL'ALTO e finiva sotto la barra
+     di navigazione. Su Safari, che si mangia un centinaio di pixel con le
+     sue barre, l'indirizzo spariva per 8px: riprodotto a 375×553 e 360×640.
+     Ora l'apertura CRESCE se serve (height:auto + min-height) e il
+     contenuto tiene sempre libera la fascia della barra. */
+  .hero{height:auto;min-height:100svh}
+  .hc{padding-top:calc(68px + 14px)}
 }
 /* Schermi CORTI: con il meteo nel flusso il blocco non ci stava piu' e finiva
    sotto la barra di navigazione (misurato: partiva da 30px con la barra alta
@@ -472,6 +482,18 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   #pdlf-meteo{margin-top:.45rem;margin-bottom:0}
   .hdesc{margin-bottom:.9rem;line-height:1.75}
   .hc{gap:.9rem}
+}
+
+/* Schermi MOLTO bassi. ⚠️ STA DOPO il blocco dei 760px APPOSTA: i due si
+   sovrappongono e a parita' di peso vince l'ultimo scritto. Messo prima,
+   non faceva niente — quinta volta con questa trappola.
+   Schermi MOLTO bassi (Safari con tutte le sue barre): l'apertura non ci sta
+   comunque e scorre — meglio scorrere che nascondere. Qui si stringe ancora
+   il titolo, cosi' i due bottoni sono quasi tutti visibili senza scorrere. */
+@media(max-width:640px) and (max-height:620px){
+  .hh1{font-size:2.4rem}
+  .hdesc{font-size:.86rem;line-height:1.6;margin-bottom:.8rem}
+  .hc{padding-top:calc(68px + 10px)}
 }
 </style>
 </head>

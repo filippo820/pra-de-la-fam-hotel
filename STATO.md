@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **17 agosto 2026**
+Aggiornato: **17 agosto 2026** (sera)
 
 ---
 
@@ -69,26 +69,58 @@ camera).
 - il punto Pomelo sulla mappa diceva ancora «Matrimoniale»: da quest'anno è
   appartamento
 
+### Anteprime social
+Un'immagine **1200×630 per ogni pagina** (chi condivide la Tripla deve vedere la
+Tripla), più `og:title`, `og:description` e `canonical` — che mancavano ovunque.
+Verificato **con il JavaScript spento**, che è come lo vedono WhatsApp e Facebook.
+
+⚠️ **L'anteprima resta in italiano** anche per chi vede il sito in tedesco: chi la
+genera non esegue il JavaScript. Tradurla richiederebbe una pagina per lingua.
+
+### Privacy e cookie
+Quattro pagine nuove (due per sito). **Ogni cookie elencato è stato osservato in un
+browser**, non copiato da un modello: prima del consenso nessun cookie, dopo
+«Accetta» `_ga` e `_ga_M29PYB9NDX` a 400 giorni, dopo «Solo necessari» nessuno.
+
+Scritte anche due cose che un modello tacerebbe: **Google viene contattato anche
+prima del consenso** (ping senza cookie del Consent Mode: nessun dato sul
+dispositivo, ma l'IP arriva comunque) e **i caratteri tipografici sono caricati dai
+server di Google**, il che espone l'IP.
+
+Titolare: **FAM S.r.l.**, confermata dall'utente.
+
+I link all'informativa stanno **fuori** dal testo tradotto del banner: dentro
+sarebbero spariti al primo cambio lingua.
+
+### Meteo
+In alto a destra nell'hero: oggi e i quattro giorni dopo, da Open-Meteo (gratuita,
+senza chiave).
+
+⚠️ **Le coordinate sono la cosa importante di quel file.** Tignale paese sta in
+montagna, il Prà sta sul lago: chiedendo il meteo per «Tignale» l'API risponde con
+un punto a **1147 m** — alla prova 21,6° contro i 28,0° della riva. Le coordinate
+finali (`45.7250, 10.7150`) sono state trovate provandone una decina finché la
+quota risposta non è stata da riva (70 m). Se un giorno mostrasse temperature
+stranamente basse, il primo sospettato è quella riga.
+
+La richiesta parte **127 ms dopo** il caricamento della pagina. Se l'API non
+risponde il riquadro non compare: un buco visibile è peggio di un'assenza. I nomi
+dei giorni seguono la lingua senza traduzioni nuove.
+
+
 ---
 
 ## ⬜ Aperto
 
 ### Da fare, in ordine di quanto pesa
-1. **`og:image` su tutte le pagine** (hotel e bottega). Oggi un link condiviso
-   su WhatsApp arriva nudo, senza anteprima. Per un hotel, dove il link lo gira
-   l'ospite agli amici, è il canale più naturale che c'è.
-2. **Pagine privacy e cookie.** Il banner della bottega rimanda a
-   `/privacy.html` e `/cookie.html` che **danno 404**; sul sito hotel non
-   esistono affatto. Il consenso viene raccolto davvero, ma l'informativa è
-   incompleta.
-3. **Meteo** in alto a destra — nel codice della home c'è già un segnaposto
-   `<!-- weather widget -->`. Open-Meteo è gratuito e non chiede registrazione.
-   Va caricato dopo il resto, per non aggiungere attesa.
-4. **Chatbot.** Il pannello esiste già nell'HTML (`Assistente Prà de la Fam`,
+1. **Chatbot.** Il pannello esiste già nell'HTML (`Assistente Prà de la Fam`,
    campo di scrittura, messaggio di benvenuto) ma **mancano le funzioni**
    `toggleChat`, `chatKey`, `sendChat`, `autoResize`. Deve anche rispondere su
    cosa fare nei dintorni e portare al tasto Prenota.
-5. **Il link della bottega «← Torna al sito principale»** punta ad
+2. **Ospitare i caratteri tipografici sul nostro server.** Oggi arrivano da
+   Google e questo espone l'indirizzo IP dei visitatori — è scritto nella cookie
+   policy come miglioramento in programma.
+3. **Il link della bottega «← Torna al sito principale»** punta ad
    `alpradelafam.com`. Da cambiare **il giorno del passaggio**, non prima.
 
 ### Difetti noti, non ancora risolti

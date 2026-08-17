@@ -234,6 +234,64 @@ sopra i 750px di altezza, e sugli schermi corti si recuperano ~50px stringendo
 gli spazi vuoti (non i testi).
 
 
+### Contrasti e corpi del testo — misurati, non guardati
+Nasce da una segnalazione precisa: «le scritte bianche su quella foto azzurra
+non si leggono». Era vero, e molto peggio del previsto.
+
+**Come sono stati misurati.** Per il testo sopra una foto non esiste uno sfondo
+da leggere nel CSS: lo sfondo è l'immagine. La pagina viene fotografata **due
+volte alla stessa altezza — con il testo e senza** — e il contrasto si calcola
+fra il colore della scritta e i pixel che stanno esattamente sotto le lettere.
+Strumento in scratchpad (`misura.mjs`), non versionato.
+
+📐 **Ci sono voluti tre tentativi falliti, e ognuno insegna qualcosa:**
+1. prendere il pixel peggiore di **tutto il riquadro** includeva gli angoli
+   arrotondati, cioè pixel FUORI dal bottone → «1:1» su un bottone dorato con
+   testo scuro, impossibile;
+2. fotografare a fette richiede coordinate, e le coordinate sbagliano con lo
+   scorrimento morbido, la parallasse e le immagini pigre che arrivano fra uno
+   scatto e l'altro;
+3. la versione buona **ritaglia ogni elemento con la fotocamera del browser**:
+   niente coordinate, niente errori.
+**Quando un numero è impossibile, il primo sospettato è lo strumento.**
+
+**Trovato e corretto:**
+
+| | prima | dopo |
+|---|---|---|
+| titolo dell'apertura, telefono | **1,52:1** | 5,60 |
+| «Al Prà» in oro, telefono | **1,19:1** | 4,27 |
+| riga d'indirizzo sotto il titolo | **1,86:1** | 5,13 |
+| descrizione dell'apertura | **2,67:1** | 7,64 |
+| riquadro meteo sul cielo | 3,29:1 | 9,22 |
+| **oro del marchio su crema** | **2,62:1** ovunque | 4,72 / 3,66 |
+| testo schede appartamento | 3,03:1 | 6,92 |
+| piè di pagina (38% di chiaro) | 3,37:1 | 5,7 |
+
+L'oro `#b8934a` su crema dà **2,62:1**: sotto il minimo per un testo (4,5), e
+sotto anche quello per il testo grande (3). Era usato per i numeri di sezione,
+**il corsivo dentro ogni titolo**, le etichette dei contatti, i link di privacy
+e cookie. Due nuovi colori, entrambi scelti dal calcolo e non a occhio:
+`--gold-testo:#846934` (4,72 su crema) e `--gold-titolo:#9a7a3c` (3,66, solo per
+il corsivo grande). **`--gold` resta invariato dove sta su fondo scuro**, dove
+dà 6,40:1 e va benissimo.
+
+**Corpi del testo.** Il testo che si legge davvero stava a **13px**, contro i 16
+di riferimento: portato a 15. Restano sotto i 12px le etichette in maiuscoletto
+(«SCORRI», «CAMERA», i numeri di sezione) — è una scelta editoriale diffusa e non
+sono testo di lettura, ma **sono ancora il 52% delle scritte** e vale la pena
+decidere se tenerle così.
+
+⚠️ **Un falso allarme dichiarato:** `.book-cta-title` risulta 2,87:1 anche dopo i
+fix. Verificato a mano: è bianco su fondo scuro, **16,76:1**. È lo strumento che
+sbaglia su quell'elemento, non la pagina.
+
+### Il meteo si apre al tocco
+Sul telefono i giorni non ci stanno in fila e restava un numero solo. Ora il
+riquadro si apre toccandolo. **Le previsioni partivano già da domani** — oggi non
+è mai stato mostrato: verificato contro i dati dell'API.
+
+
 ---
 
 ## ⬜ Aperto

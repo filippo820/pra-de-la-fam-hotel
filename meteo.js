@@ -63,6 +63,12 @@
      solo il numero: senza una parola accanto non si capisce se sia la
      temperatura di adesso, la massima di oggi o quella di domani. */
   var ORA = { it: 'adesso', en: 'now', de: 'jetzt', fr: 'maintenant', es: 'ahora' };
+  var APRI = { it: 'Prossimi giorni', en: 'Next days', de: 'Nächste Tage',
+               fr: 'Prochains jours', es: 'Próximos días' };
+  /* Sul telefono non c'e' spazio per i giorni: si toccano. Su schermo grande
+     stanno gia' in fila e il tocco non serve — le regole che li nascondono
+     vivono solo dentro @media(max-width:760px). */
+  var stretto = function () { return window.matchMedia('(max-width:760px)').matches; };
 
   function lingua() {
     var l = document.documentElement.lang || 'it';
@@ -82,14 +88,37 @@
         '<span class="mt-gt">' + Math.round(dati.daily.temperature_2m_max[i]) + '°' +
         '<i>' + Math.round(dati.daily.temperature_2m_min[i]) + '°</i></span></div>';
     }
+    var aperto = box.classList.contains('aperto');
     box.innerHTML =
-      '<div class="mt-ora">' + icona(dati.current.weather_code, 26) +
-      '<span class="mt-t">' + Math.round(dati.current.temperature_2m) + '°</span>' +
-      '<span class="mt-ora-et">' + (ORA[document.documentElement.lang] || ORA.it) + '</span></div>' +
-      '<div class="mt-gg">' + righe + '</div>';
+      '<button type="button" class="mt-ora" aria-controls="mt-gg">' +
+        icona(dati.current.weather_code, 26) +
+        '<span class="mt-t">' + Math.round(dati.current.temperature_2m) + '°</span>' +
+        '<span class="mt-ora-et">' + (ORA[document.documentElement.lang] || ORA.it) + '</span>' +
+        '<svg class="mt-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" ' +
+        'stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" ' +
+        'aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>' +
+      '</button>' +
+      '<div class="mt-gg" id="mt-gg">' + righe + '</div>';
     box.hidden = false;
     box.setAttribute('aria-label',
-      'Meteo a Prà de la Fam: ' + Math.round(dati.current.temperature_2m) + " gradi adesso");
+      'Meteo a Prà de la Fam: ' + Math.round(dati.current.temperature_2m) + ' gradi adesso');
+
+    var tasto = box.querySelector('.mt-ora');
+    tasto.setAttribute('aria-label',
+      Math.round(dati.current.temperature_2m) + '° ' + (ORA[document.documentElement.lang] || ORA.it) +
+      ' — ' + (APRI[document.documentElement.lang] || APRI.it));
+    function stato() {
+      if (stretto()) tasto.setAttribute('aria-expanded', box.classList.contains('aperto') ? 'true' : 'false');
+      else tasto.removeAttribute('aria-expanded');   // su schermo grande sono gia' visibili
+    }
+    tasto.addEventListener('click', function () {
+      if (!stretto()) return;
+      box.classList.toggle('aperto');
+      stato();
+    });
+    if (aperto) box.classList.add('aperto');
+    stato();
+    window.addEventListener('resize', stato);
   }
 
   function carica() {

@@ -432,6 +432,27 @@ ne avevo chiesti 38,4. **Se una regola sembra non fare effetto, misurare il
 valore calcolato — non guardare la schermata.**
 
 
+### Contenuto rialzato · campi data induriti per iOS
+**Rialzato.** La guardia contro la barra, messa sul *contenuto*, faceva scendere
+il testo di un centinaio di pixel — e la mia `height:100svh` **sovrascriveva** la
+regola che accorcia l'apertura sui telefoni alti (86svh). Ora la guardia sta
+sull'**apertura** (`padding-top:72px`, border-box) e la misura è `min-height:86svh`:
+il testo torna esattamente dov'era (89px su iPhone 14 pieno) e l'apertura può
+comunque crescere quando serve. Otto formati: l'indirizzo sta sempre fra 72 e
+89px, mai sotto i 68 della barra.
+
+**Campi data.** I riquadri Arrivo/Partenza che si sovrappongono **non si
+riproducono su Chromium**: i contenitori non si toccano a nessuna delle sette
+larghezze provate, e il testo non deborda in nessuna delle tre lingue provate.
+La causa nota su iOS è che `<input type="date"><` ha una **larghezza minima
+imposta dal sistema**, e sia le caselle della griglia sia i campi partono da
+`min-width:auto`: senza `min-width:0` non possono rimpicciolire e sbordano.
+Applicato `min-width:0` alle caselle **e ai campi**, più `max-width:100%` e un
+corpo leggermente più piccolo.
+⚠️ **Non è verificato sul dispositivo:** è la correzione giusta per quella
+causa, ma la conferma può darla solo un iPhone vero.
+
+
 ---
 
 ## ⬜ Aperto

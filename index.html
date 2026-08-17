@@ -441,7 +441,14 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   .avail-bar-label{display:none}
   .avail-inputs{display:contents}
   .avail-input{min-width:0}
-  .avail-input input,.avail-input select{width:100%;box-sizing:border-box}
+  /* ⚠️ min-width:0 NON e' decorativo. Su iOS <input type="date"> ha una
+     larghezza minima imposta dal sistema, e sia i riquadri della griglia
+     sia i campi stessi partono da min-width:auto: senza questo non possono
+     rimpicciolire, sbordano dalla loro casella e i due riquadri Arrivo e
+     Partenza SI SOVRAPPONGONO. Su Chromium non si vede. */
+  .avail-input{min-width:0}
+  .avail-input input,.avail-input select{width:100%;min-width:0;max-width:100%;
+                                         box-sizing:border-box;font-size:.78rem}
   .avail-btn{justify-content:center;padding:.6rem 1rem}
   /* Su uno schermo corto il testo dell'apertura finiva sotto la barra di
      navigazione: il blocco misurava 630px in 667 di schermo, con 68 gia'
@@ -468,8 +475,16 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
      sue barre, l'indirizzo spariva per 8px: riprodotto a 375×553 e 360×640.
      Ora l'apertura CRESCE se serve (height:auto + min-height) e il
      contenuto tiene sempre libera la fascia della barra. */
-  .hero{height:auto;min-height:100svh}
-  .hc{padding-top:calc(68px + 14px)}
+  /* La guardia contro la barra sta sull'APERTURA, non sul contenuto: cosi'
+     il testo resta ancorato in basso com'era — mettendola sul contenuto
+     scendeva di un centinaio di pixel — e non puo' comunque salire oltre
+     la fascia della barra, perche' quella fascia e' fuori dal riquadro. */
+  /* min-height, non height: l'apertura resta corta come prima sui telefoni
+     alti (86svh, cosi' la sezione dopo si affaccia) ma CRESCE quando il
+     contenuto non ci sta. La versione con height:100svh sovrascriveva la
+     regola dell'86% e faceva scendere il testo di un centinaio di pixel. */
+  .hero{height:auto;min-height:86svh;padding-top:72px;box-sizing:border-box}
+  .hc{padding-top:0}
 }
 /* Schermi CORTI: con il meteo nel flusso il blocco non ci stava piu' e finiva
    sotto la barra di navigazione (misurato: partiva da 30px con la barra alta
@@ -493,7 +508,6 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 @media(max-width:640px) and (max-height:620px){
   .hh1{font-size:2.4rem}
   .hdesc{font-size:.86rem;line-height:1.6;margin-bottom:.8rem}
-  .hc{padding-top:calc(68px + 10px)}
 }
 </style>
 </head>

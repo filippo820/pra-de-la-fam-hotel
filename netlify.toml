@@ -1,0 +1,20 @@
+# Netlify pubblica questa cartella cosi' com'e': e' un sito statico, non c'e'
+# niente da compilare.
+[build]
+  publish = "."
+  command = ""
+
+# Il vecchio deploy fu fatto trascinando la cartella, e la copia online aveva
+# nove foto che in locale non c'erano: ripubblicare le avrebbe cancellate.
+# Con il repo collegato quel disallineamento non puo' piu' succedere — quello
+# che si vede qui e' quello che va online.
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

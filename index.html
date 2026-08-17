@@ -446,7 +446,8 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 <section class="hero" id="hero">
   <div class="hbg" id="hbg" style="background-image:url('img/hero-bg.jpg')"></div>
   <div class="hov"></div>
-  <!-- weather widget -->
+  <!-- meteo: riempito da meteo.js dopo il caricamento della pagina -->
+    <div id="pdlf-meteo" hidden role="complementary"></div>
   
   <div class="hc">
     <div class="hl">
@@ -1127,6 +1128,33 @@ document.querySelectorAll('.r').forEach(el=>_io.observe(el));
 .pdlf-btn-yes{background:#b8934a;color:#f7f4ef}
 .pdlf-btn-no{background:transparent;color:#0b1520;border-color:#c8bfae}
 @media(max-width:640px){#pdlf-banner{flex-direction:column;gap:18px;padding:22px 20px}.pdlf-actions{width:100%}}
+
+    /* ── Meteo del Pra' (17/08/2026) ────────────────────────────────────
+       In alto a destra nell'hero, sopra la foto. Parte nascosto e compare
+       solo quando i dati arrivano: se l'API non risponde non resta una
+       cornice vuota, che sarebbe peggio di un'assenza. */
+    #pdlf-meteo{position:absolute;top:104px;right:34px;z-index:5;color:#fff;
+      display:flex;align-items:center;gap:20px;padding:12px 18px;border-radius:3px;
+      background:rgba(11,21,32,.34);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
+      border:1px solid rgba(255,255,255,.16);font-size:.78rem;letter-spacing:.02em;
+      text-shadow:0 1px 3px rgba(0,0,0,.35)}
+    #pdlf-meteo[hidden]{display:none}
+    .mt-ora{display:flex;align-items:center;gap:9px}
+    .mt-t{font-size:1.5rem;font-weight:300;line-height:1}
+    .mt-gg{display:flex;gap:15px;padding-left:18px;border-left:1px solid rgba(255,255,255,.2)}
+    .mt-g{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:34px}
+    .mt-gn{font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;opacity:.72}
+    .mt-gt{font-size:.72rem;font-weight:400}
+    .mt-gt i{font-style:normal;opacity:.55;margin-left:4px}
+    .mt-ico{opacity:.92;flex-shrink:0}
+    @media(max-width:1100px){ .mt-gg{gap:11px} .mt-g{min-width:30px} }
+    /* Sul telefono resta solo la temperatura di adesso: cinque giorni in
+       360px sarebbero illeggibili, e l'hero deve restare l'hero. */
+    @media(max-width:760px){
+      #pdlf-meteo{top:78px;right:16px;gap:0;padding:8px 12px}
+      .mt-gg{display:none}
+      .mt-t{font-size:1.15rem}
+    }
 </style>
 <div id="pdlf-overlay" hidden>
   <div id="pdlf-banner" role="dialog" aria-label="Consenso cookie">
@@ -1160,5 +1188,6 @@ function pdlfApplica(ok){
 </script>
 <!-- ══ pdlf-i18n ══ le cinque lingue -->
 <script src="i18n.js" defer></script>
+<script src="meteo.js" defer></script>
 </body>
 </html>

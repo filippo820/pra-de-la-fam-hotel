@@ -189,20 +189,27 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .apt-scroll-track::-webkit-scrollbar{display:none}
 .apt-scroll-track::after{content:'';display:block;min-width:clamp(1.5rem,5vw,5rem);flex-shrink:0}
 /* floating cards */
-.apt{background:var(--white);border:none;overflow:hidden;flex:0 0 clamp(280px,38vw,420px);scroll-snap-align:start;box-shadow:var(--shadow-float);transform:translateY(0) scale(1);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.apt{background:var(--white);border:none;overflow:hidden;display:flex;flex-direction:column;flex:0 0 clamp(280px,38vw,420px);scroll-snap-align:start;box-shadow:var(--shadow-float);transform:translateY(0) scale(1);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
 .apt:hover{transform:translateY(-10px) scale(1.01);box-shadow:var(--shadow-hover)}
-.apt.wide{flex:0 0 clamp(340px,55vw,640px)}
-.apt-img{position:relative;overflow:hidden}
-.apt.wide .apt-img{aspect-ratio:16/7}
-.apt:not(.wide) .apt-img{aspect-ratio:4/3}
+/* Tutte della stessa larghezza: «wide» faceva due formati diversi e le
+   foto ne uscivano alte 149px contro 210. */
+.apt.wide{flex:0 0 clamp(280px,38vw,420px)}
+/* Proporzione fissa: senza, l'altezza della foto seguiva quella
+   dell'immagine e ogni carta veniva diversa. */
+.apt-img{position:relative;overflow:hidden;aspect-ratio:4/3;flex:none}
 .apt-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}
 .apt:hover .apt-img img{transform:scale(1.06)}
 .apt-badge{position:absolute;top:.8rem;left:.8rem;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(11,21,32,.82);color:var(--bone);padding:.26rem .7rem;border-radius:0;backdrop-filter:blur(4px)}
 .apt-badge.gold{background:var(--gold);color:var(--ink)}
-.apt-body{padding:1.4rem 1.6rem 1.7rem}
+.apt-body{padding:1.4rem 1.6rem 1.7rem;flex:1;display:flex;flex-direction:column}
+.apt-body .apt-book{margin-top:auto;align-self:flex-start}
 .apt-cat{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);font-weight:500;margin-bottom:.35rem}
 .apt-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;line-height:1.15}
-.apt-desc{font-size:.84rem;font-weight:300;line-height:1.8;color:rgba(247,244,239,.62);margin-bottom:1rem}
+/* ⚠️ Il testo qui e' scuro su carta BIANCA. Una correzione precedente
+   l'aveva schiarito credendo il fondo scuro — misura sbagliata, perche'
+   le carte scorrono di lato e lo strumento leggeva la sezione dietro.
+   Risultato: 1.10:1, illeggibile. #4a6580 su bianco da' 6.06:1. */
+.apt-desc{font-size:.84rem;font-weight:300;line-height:1.8;color:var(--steel);margin-bottom:1rem}
 .apt-feats{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
 .apt-feat{font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem;border-radius:0}
 .apt-book{font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.44rem 1.05rem;border-radius:0;text-decoration:none;background:var(--ink);color:var(--bone);border:none;transition:all .2s;display:inline-block}
@@ -448,6 +455,11 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
        rgba(11,21,32,.68) 52%,rgba(11,21,32,.82) 78%,rgba(11,21,32,.92) 100%)}
   .htag{margin-bottom:.7rem}
   .hdesc{margin-bottom:1.1rem}
+  /* meno bianco dentro le carte degli appartamenti */
+  .apt-body{padding:1rem 1.05rem 1.15rem}
+  .apt-name{margin-bottom:.3rem}
+  .apt-desc{margin-bottom:.7rem;line-height:1.65}
+  .apt-feats{gap:.35rem;margin-bottom:.7rem}
 }
 /* Schermi CORTI: con il meteo nel flusso il blocco non ci stava piu' e finiva
    sotto la barra di navigazione (misurato: partiva da 30px con la barra alta

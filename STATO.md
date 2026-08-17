@@ -381,6 +381,30 @@ niente**. A parità di peso vince l'ultima. Ora sta nel blocco in fondo al
 foglio, dove ho già imparato che devono stare.
 
 
+### Carte appartamenti: stessa misura, meno bianco — e un guasto mio riparato
+🔴 **La descrizione degli appartamenti era invisibile: 1,10:1.** L'avevo
+"corretta" io il giorno prima, credendo che quelle carte fossero su fondo scuro.
+**Sono bianche.** La misura era sbagliata perché le carte scorrono di lato e lo
+strumento leggeva la sezione scura dietro invece della carta. Ripristinato
+`--steel`: **6,06:1**.
+📐 **Regola:** un elemento che scorre fuori dallo schermo non si misura da fermo.
+E una correzione di contrasto va confermata guardando il fondo **dichiarato**
+dell'elemento, non solo il numero che esce dallo strumento.
+
+**Tutte della stessa misura.** Clementina e Bergamotto erano `wide`: più larghe
+(640 contro 420) e con la foto **panoramica** (`aspect-ratio:16/7` → 184px contro
+315). Ora larghezza unica e proporzione unica 4/3. Scarto misurato: **0px sul
+telefono**, 4px su computer (arrotondamento). I bottoni «Prenota» sono allineati
+fra le carte (`margin-top:auto`).
+
+⚠️ La foto doveva anche essere bloccata (`flex:none`): nelle carte con la
+descrizione più lunga l'immagine **cedeva spazio al testo** e tornava diversa.
+
+**Meno bianco sul telefono:** margini interni da 1,4/1,6/1,7rem a 1/1,05/1,15, e
+spazi fra nome, descrizione e etichette accorciati. Carta da 489 a 474px con la
+stessa foto.
+
+
 ---
 
 ## ⬜ Aperto

@@ -1,0 +1,987 @@
+{
+ "_nota": "Frammenti brevi. Chi non compare qui resta in italiano: nomi propri (Prà de la Fam, Tignale, Bergamotto...), misure (16 m²), indirizzi, email, nomi degli ospiti nelle recensioni.",
+ "02 — Gli appartamenti": {
+  "en": "02 — The apartments",
+  "de": "02 — Die Apartments",
+  "fr": "02 — Les appartements",
+  "es": "02 — Los apartamentos"
+ },
+ "03 — Ecomuseo": {
+  "en": "03 — Ecomuseum",
+  "de": "03 — Ökomuseum",
+  "fr": "03 — Écomusée",
+  "es": "03 — Ecomuseo"
+ },
+ "05 — Dove siamo": {
+  "en": "05 — Where we are",
+  "de": "05 — Wo wir sind",
+  "fr": "05 — Où nous sommes",
+  "es": "05 — Dónde estamos"
+ },
+ "2 pers.": {
+  "en": "2 guests",
+  "de": "2 Pers.",
+  "fr": "2 pers.",
+  "es": "2 pers."
+ },
+ "3 pers.": {
+  "en": "3 guests",
+  "de": "3 Pers.",
+  "fr": "3 pers.",
+  "es": "3 pers."
+ },
+ "4 pers.": {
+  "en": "4 guests",
+  "de": "4 Pers.",
+  "fr": "4 pers.",
+  "es": "4 pers."
+ },
+ "3 posti letto": {
+  "en": "3 beds",
+  "de": "3 Betten",
+  "fr": "3 couchages",
+  "es": "3 camas"
+ },
+ "2025 · Polonia": {
+  "en": "2025 · Poland",
+  "de": "2025 · Polen",
+  "fr": "2025 · Pologne",
+  "es": "2025 · Polonia"
+ },
+ "Accetta": {
+  "en": "Accept",
+  "de": "Akzeptieren",
+  "fr": "Accepter",
+  "es": "Aceptar"
+ },
+ "Solo necessari": {
+  "en": "Essential only",
+  "de": "Nur notwendige",
+  "fr": "Nécessaires uniquement",
+  "es": "Solo necesarias"
+ },
+ "Cookie &amp; Privacy": {
+  "en": "Cookies &amp; Privacy",
+  "de": "Cookies &amp; Datenschutz",
+  "fr": "Cookies &amp; confidentialité",
+  "es": "Cookies y privacidad"
+ },
+ "Cookie Policy": {
+  "en": "Cookie Policy",
+  "de": "Cookie-Richtlinie",
+  "fr": "Politique de cookies",
+  "es": "Política de cookies"
+ },
+ "Al Prà": {
+  "en": "Al Prà",
+  "de": "Al Prà",
+  "fr": "Al Prà",
+  "es": "Al Prà"
+ },
+ "Alloggi": {
+  "en": "Accommodation",
+  "de": "Unterkünfte",
+  "fr": "Hébergements",
+  "es": "Alojamientos"
+ },
+ "Amazon Merch": {
+  "en": "Amazon Merch",
+  "de": "Amazon Merch",
+  "fr": "Amazon Merch",
+  "es": "Amazon Merch"
+ },
+ "Angolo cottura": {
+  "en": "Kitchenette",
+  "de": "Kochnische",
+  "fr": "Coin cuisine",
+  "es": "Cocina americana"
+ },
+ "Animali ammessi": {
+  "en": "Pets allowed",
+  "de": "Haustiere erlaubt",
+  "fr": "Animaux acceptés",
+  "es": "Se admiten mascotas"
+ },
+ "App. Bergamotto": {
+  "en": "Bergamotto Apt.",
+  "de": "Apt. Bergamotto",
+  "fr": "App. Bergamotto",
+  "es": "Apt. Bergamotto"
+ },
+ "App. Calamondino": {
+  "en": "Calamondino Apt.",
+  "de": "Apt. Calamondino",
+  "fr": "App. Calamondino",
+  "es": "Apt. Calamondino"
+ },
+ "App. Clementina": {
+  "en": "Clementina Apt.",
+  "de": "Apt. Clementina",
+  "fr": "App. Clementina",
+  "es": "Apt. Clementina"
+ },
+ "App. Kumquat": {
+  "en": "Kumquat Apt.",
+  "de": "Apt. Kumquat",
+  "fr": "App. Kumquat",
+  "es": "Apt. Kumquat"
+ },
+ "App. Pomelo": {
+  "en": "Pomelo Apt.",
+  "de": "Apt. Pomelo",
+  "fr": "App. Pomelo",
+  "es": "Apt. Pomelo"
+ },
+ "Appartamenti": {
+  "en": "Apartments",
+  "de": "Apartments",
+  "fr": "Appartements",
+  "es": "Apartamentos"
+ },
+ "appartamenti": {
+  "en": "apartments",
+  "de": "Apartments",
+  "fr": "appartements",
+  "es": "apartamentos"
+ },
+ "Appartamento": {
+  "en": "Apartment",
+  "de": "Apartment",
+  "fr": "Appartement",
+  "es": "Apartamento"
+ },
+ "Aria condizionata": {
+  "en": "Air conditioning",
+  "de": "Klimaanlage",
+  "fr": "Climatisation",
+  "es": "Aire acondicionado"
+ },
+ "Arrampicata": {
+  "en": "Climbing",
+  "de": "Klettern",
+  "fr": "Escalade",
+  "es": "Escalada"
+ },
+ "Arrivo": {
+  "en": "Check-in",
+  "de": "Anreise",
+  "fr": "Arrivée",
+  "es": "Entrada"
+ },
+ "Partenza": {
+  "en": "Check-out",
+  "de": "Abreise",
+  "fr": "Départ",
+  "es": "Salida"
+ },
+ "Asciugacapelli": {
+  "en": "Hairdryer",
+  "de": "Haartrockner",
+  "fr": "Sèche-cheveux",
+  "es": "Secador de pelo"
+ },
+ "Attività": {
+  "en": "Activities",
+  "de": "Aktivitäten",
+  "fr": "Activités",
+  "es": "Actividades"
+ },
+ "Bagno privato": {
+  "en": "Private bathroom",
+  "de": "Eigenes Bad",
+  "fr": "Salle de bain privée",
+  "es": "Baño privado"
+ },
+ "Benvenuti": {
+  "en": "Welcome",
+  "de": "Willkommen",
+  "fr": "Bienvenue",
+  "es": "Bienvenidos"
+ },
+ "Biancheria inclusa": {
+  "en": "Linen included",
+  "de": "Bettwäsche inklusive",
+  "fr": "Linge inclus",
+  "es": "Ropa de cama incluida"
+ },
+ "Bottega del Prà": {
+  "en": "Bottega del Prà",
+  "de": "Bottega del Prà",
+  "fr": "Bottega del Prà",
+  "es": "Bottega del Prà"
+ },
+ "Camera": {
+  "en": "Room",
+  "de": "Zimmer",
+  "fr": "Chambre",
+  "es": "Habitación"
+ },
+ "Camere": {
+  "en": "Rooms",
+  "de": "Zimmer",
+  "fr": "Chambres",
+  "es": "Habitaciones"
+ },
+ "camere": {
+  "en": "rooms",
+  "de": "Zimmer",
+  "fr": "chambres",
+  "es": "habitaciones"
+ },
+ "Camerai": {
+  "en": "Rooms",
+  "de": "Zimmer",
+  "fr": "Chambres",
+  "es": "Habitaciones"
+ },
+ "Camera Doppia": {
+  "en": "Double Room",
+  "de": "Doppelzimmer",
+  "fr": "Chambre Double",
+  "es": "Habitación Doble"
+ },
+ "Camera Doppia Economy": {
+  "en": "Economy Double Room",
+  "de": "Doppelzimmer Economy",
+  "fr": "Chambre Double Economy",
+  "es": "Habitación Doble Economy"
+ },
+ "Camera Familiare": {
+  "en": "Family Room",
+  "de": "Familienzimmer",
+  "fr": "Chambre Familiale",
+  "es": "Habitación Familiar"
+ },
+ "Camera Tripla": {
+  "en": "Triple Room",
+  "de": "Dreibettzimmer",
+  "fr": "Chambre Triple",
+  "es": "Habitación Triple"
+ },
+ "Doppia Standard": {
+  "en": "Standard Double",
+  "de": "Doppelzimmer Standard",
+  "fr": "Double Standard",
+  "es": "Doble Estándar"
+ },
+ "Doppia Economy": {
+  "en": "Economy Double",
+  "de": "Doppelzimmer Economy",
+  "fr": "Double Economy",
+  "es": "Doble Economy"
+ },
+ "Familiare": {
+  "en": "Family",
+  "de": "Familie",
+  "fr": "Familiale",
+  "es": "Familiar"
+ },
+ "Tripla": {
+  "en": "Triple",
+  "de": "Dreibett",
+  "fr": "Triple",
+  "es": "Triple"
+ },
+ "Canyoning": {
+  "en": "Canyoning",
+  "de": "Canyoning",
+  "fr": "Canyoning",
+  "es": "Barranquismo"
+ },
+ "Capacità": {
+  "en": "Capacity",
+  "de": "Belegung",
+  "fr": "Capacité",
+  "es": "Capacidad"
+ },
+ "Cerca →": {
+  "en": "Search →",
+  "de": "Suchen →",
+  "fr": "Rechercher →",
+  "es": "Buscar →"
+ },
+ "Colazione": {
+  "en": "Breakfast",
+  "de": "Frühstück",
+  "fr": "Petit-déjeuner",
+  "es": "Desayuno"
+ },
+ "Colazione inclusa": {
+  "en": "Breakfast included",
+  "de": "Frühstück inklusive",
+  "fr": "Petit-déjeuner inclus",
+  "es": "Desayuno incluido"
+ },
+ "Come arrivare": {
+  "en": "How to get here",
+  "de": "Anfahrt",
+  "fr": "Comment venir",
+  "es": "Cómo llegar"
+ },
+ "Comfort essenziale, posizione imbattibile": {
+  "en": "Essential comfort, unbeatable location",
+  "de": "Das Wesentliche, unschlagbare Lage",
+  "fr": "Le confort essentiel, un emplacement imbattable",
+  "es": "Confort esencial, ubicación inmejorable"
+ },
+ "Contatti": {
+  "en": "Contact",
+  "de": "Kontakt",
+  "fr": "Contact",
+  "es": "Contacto"
+ },
+ "Controlla disponibilità →": {
+  "en": "Check availability →",
+  "de": "Verfügbarkeit prüfen →",
+  "fr": "Vérifier les disponibilités →",
+  "es": "Ver disponibilidad →"
+ },
+ "Verifica disponibilità →": {
+  "en": "Check availability →",
+  "de": "Verfügbarkeit prüfen →",
+  "fr": "Vérifier les disponibilités →",
+  "es": "Ver disponibilidad →"
+ },
+ "Cucina": {
+  "en": "Kitchen",
+  "de": "Küche",
+  "fr": "Cuisine",
+  "es": "Cocina"
+ },
+ "Cucina attrezzata": {
+  "en": "Fully equipped kitchen",
+  "de": "Voll ausgestattete Küche",
+  "fr": "Cuisine équipée",
+  "es": "Cocina equipada"
+ },
+ "Doccia": {
+  "en": "Shower",
+  "de": "Dusche",
+  "fr": "Douche",
+  "es": "Ducha"
+ },
+ "Dove": {
+  "en": "Where",
+  "de": "Wo",
+  "fr": "Où",
+  "es": "Dónde"
+ },
+ "Dove siamo": {
+  "en": "Where we are",
+  "de": "Wo wir sind",
+  "fr": "Où nous sommes",
+  "es": "Dónde estamos"
+ },
+ "siamo": {
+  "en": "we are",
+  "de": "wir sind",
+  "fr": "nous sommes",
+  "es": "estamos"
+ },
+ "Eccezionale.": {
+  "en": "Exceptional.",
+  "de": "Außergewöhnlich.",
+  "fr": "Exceptionnel.",
+  "es": "Excepcional."
+ },
+ "Favoloso": {
+  "en": "Fabulous",
+  "de": "Fabelhaft",
+  "fr": "Fabuleux",
+  "es": "Fabuloso"
+ },
+ "Ecomuseo Limonaia": {
+  "en": "Lemon House Ecomuseum",
+  "de": "Ökomuseum Zitronenhaus",
+  "fr": "Écomusée de la Limonaia",
+  "es": "Ecomuseo de la Limonaia"
+ },
+ "Email": {
+  "en": "Email",
+  "de": "E-Mail",
+  "fr": "E-mail",
+  "es": "Correo"
+ },
+ "Telefono": {
+  "en": "Phone",
+  "de": "Telefon",
+  "fr": "Téléphone",
+  "es": "Teléfono"
+ },
+ "Indirizzo": {
+  "en": "Address",
+  "de": "Adresse",
+  "fr": "Adresse",
+  "es": "Dirección"
+ },
+ "Famiglia Parisini": {
+  "en": "The Parisini family",
+  "de": "Familie Parisini",
+  "fr": "La famille Parisini",
+  "es": "La familia Parisini"
+ },
+ "Famiglie": {
+  "en": "Families",
+  "de": "Familien",
+  "fr": "Familles",
+  "es": "Familias"
+ },
+ "Frigo vuoto a disposizione": {
+  "en": "Empty fridge available",
+  "de": "Leerer Kühlschrank verfügbar",
+  "fr": "Réfrigérateur vide à disposition",
+  "es": "Nevera vacía a disposición"
+ },
+ "Frigorifero": {
+  "en": "Fridge",
+  "de": "Kühlschrank",
+  "fr": "Réfrigérateur",
+  "es": "Nevera"
+ },
+ "Galleria foto": {
+  "en": "Photo gallery",
+  "de": "Fotogalerie",
+  "fr": "Galerie photos",
+  "es": "Galería de fotos"
+ },
+ "Giardino": {
+  "en": "Garden",
+  "de": "Garten",
+  "fr": "Jardin",
+  "es": "Jardín"
+ },
+ "Giardino privato": {
+  "en": "Private garden",
+  "de": "Privatgarten",
+  "fr": "Jardin privé",
+  "es": "Jardín privado"
+ },
+ "Golf Bogliaco": {
+  "en": "Bogliaco Golf",
+  "de": "Golf Bogliaco",
+  "fr": "Golf de Bogliaco",
+  "es": "Golf Bogliaco"
+ },
+ "Hotel — 10 Camere": {
+  "en": "Hotel — 10 Rooms",
+  "de": "Hotel — 10 Zimmer",
+  "fr": "Hôtel — 10 chambres",
+  "es": "Hotel — 10 habitaciones"
+ },
+ "I nostri": {
+  "en": "Our",
+  "de": "Unsere",
+  "fr": "Nos",
+  "es": "Nuestros"
+ },
+ "Le nostre": {
+  "en": "Our",
+  "de": "Unsere",
+  "fr": "Nos",
+  "es": "Nuestras"
+ },
+ "La nostra": {
+  "en": "Our",
+  "de": "Unser",
+  "fr": "Notre",
+  "es": "Nuestra"
+ },
+ "In hotel → Scopri": {
+  "en": "At the hotel → Discover",
+  "de": "Im Hotel → Entdecken",
+  "fr": "À l'hôtel → Découvrir",
+  "es": "En el hotel → Descubre"
+ },
+ "Ingresso privato": {
+  "en": "Private entrance",
+  "de": "Separater Eingang",
+  "fr": "Entrée privée",
+  "es": "Entrada privada"
+ },
+ "Kit cortesia": {
+  "en": "Toiletries",
+  "de": "Pflegeset",
+  "fr": "Produits d'accueil",
+  "es": "Kit de aseo"
+ },
+ "La Limonaia": {
+  "en": "The Limonaia",
+  "de": "Die Limonaia",
+  "fr": "La Limonaia",
+  "es": "La Limonaia"
+ },
+ "La Limonaia · Ecomuseo": {
+  "en": "The Limonaia · Ecomuseum",
+  "de": "Die Limonaia · Ökomuseum",
+  "fr": "La Limonaia · Écomusée",
+  "es": "La Limonaia · Ecomuseo"
+ },
+ "Limonaia": {
+  "en": "Limonaia",
+  "de": "Limonaia",
+  "fr": "Limonaia",
+  "es": "Limonaia"
+ },
+ "La Mappa": {
+  "en": "The Map",
+  "de": "Die Karte",
+  "fr": "Le Plan",
+  "es": "El Mapa"
+ },
+ "La natura": {
+  "en": "Nature",
+  "de": "Die Natur",
+  "fr": "La nature",
+  "es": "La naturaleza"
+ },
+ "Letto matrimoniale": {
+  "en": "Double bed",
+  "de": "Doppelbett",
+  "fr": "Lit double",
+  "es": "Cama de matrimonio"
+ },
+ "Limoncino": {
+  "en": "Limoncino liqueur",
+  "de": "Limoncino-Likör",
+  "fr": "Limoncino",
+  "es": "Limoncino"
+ },
+ "Limoni sotto sale": {
+  "en": "Salt-cured lemons",
+  "de": "Zitronen in Salz",
+  "fr": "Citrons au sel",
+  "es": "Limones en sal"
+ },
+ "Marmellate bio": {
+  "en": "Organic jams",
+  "de": "Bio-Marmeladen",
+  "fr": "Confitures bio",
+  "es": "Mermeladas bio"
+ },
+ "Microonde": {
+  "en": "Microwave",
+  "de": "Mikrowelle",
+  "fr": "Micro-ondes",
+  "es": "Microondas"
+ },
+ "Minibar": {
+  "en": "Minibar",
+  "de": "Minibar",
+  "fr": "Minibar",
+  "es": "Minibar"
+ },
+ "Nella storica limonaia": {
+  "en": "In the historic lemon house",
+  "de": "Im historischen Zitronenhaus",
+  "fr": "Dans la limonaia historique",
+  "es": "En la histórica limonaia"
+ },
+ "Non fumatore": {
+  "en": "Non-smoking",
+  "de": "Nichtraucher",
+  "fr": "Non-fumeur",
+  "es": "No fumadores"
+ },
+ "Olio EVO biologico": {
+  "en": "Organic extra virgin olive oil",
+  "de": "Bio-Olivenöl extra vergine",
+  "fr": "Huile d'olive extra vierge bio",
+  "es": "Aceite de oliva virgen extra ecológico"
+ },
+ "Olio EVO del Garda": {
+  "en": "Garda extra virgin olive oil",
+  "de": "Garda-Olivenöl extra vergine",
+  "fr": "Huile d'olive extra vierge du Garda",
+  "es": "Aceite de oliva virgen extra del Garda"
+ },
+ "Ospiti": {
+  "en": "Guests",
+  "de": "Gäste",
+  "fr": "Personnes",
+  "es": "Huéspedes"
+ },
+ "Ospiti max": {
+  "en": "Max guests",
+  "de": "Max. Gäste",
+  "fr": "Personnes max",
+  "es": "Huéspedes máx."
+ },
+ "degli ospiti": {
+  "en": "from our guests",
+  "de": "unserer Gäste",
+  "fr": "de nos clients",
+  "es": "de nuestros huéspedes"
+ },
+ "Parcheggio gratuito": {
+  "en": "Free parking",
+  "de": "Kostenlose Parkplätze",
+  "fr": "Parking gratuit",
+  "es": "Aparcamiento gratuito"
+ },
+ "Porta il lago": {
+  "en": "Take the lake",
+  "de": "Nimm den See",
+  "fr": "Emportez le lac",
+  "es": "Llévate el lago"
+ },
+ "con te.": {
+  "en": "home with you.",
+  "de": "mit nach Hause.",
+  "fr": "avec vous.",
+  "es": "contigo."
+ },
+ "Prenota online": {
+  "en": "Book online",
+  "de": "Online buchen",
+  "fr": "Réserver en ligne",
+  "es": "Reservar online"
+ },
+ "Prenota ora": {
+  "en": "Book now",
+  "de": "Jetzt buchen",
+  "fr": "Réserver",
+  "es": "Reservar ahora"
+ },
+ "Prenota ora →": {
+  "en": "Book now →",
+  "de": "Jetzt buchen →",
+  "fr": "Réserver →",
+  "es": "Reservar ahora →"
+ },
+ "Prenota una camera →": {
+  "en": "Book a room →",
+  "de": "Zimmer buchen →",
+  "fr": "Réserver une chambre →",
+  "es": "Reservar habitación →"
+ },
+ "Prenota →": {
+  "en": "Book →",
+  "de": "Buchen →",
+  "fr": "Réserver →",
+  "es": "Reservar →"
+ },
+ "prenotare?": {
+  "en": "book?",
+  "de": "buchen?",
+  "fr": "réserver ?",
+  "es": "reservar?"
+ },
+ "Pronto a": {
+  "en": "Ready to",
+  "de": "Bereit zu",
+  "fr": "Prêt à",
+  "es": "¿Listo para"
+ },
+ "Primo e secondo piano": {
+  "en": "First and second floor",
+  "de": "Erster und zweiter Stock",
+  "fr": "Premier et deuxième étage",
+  "es": "Primera y segunda planta"
+ },
+ "Pulizia finale": {
+  "en": "Final cleaning",
+  "de": "Endreinigung",
+  "fr": "Ménage de fin de séjour",
+  "es": "Limpieza final"
+ },
+ "Recensioni": {
+  "en": "Reviews",
+  "de": "Bewertungen",
+  "fr": "Avis",
+  "es": "Opiniones"
+ },
+ "Riviera dei Limoni": {
+  "en": "Riviera dei Limoni",
+  "de": "Riviera dei Limoni",
+  "fr": "Riviera dei Limoni",
+  "es": "Riviera dei Limoni"
+ },
+ "Scoperto privato": {
+  "en": "Private terrace",
+  "de": "Private Freifläche",
+  "fr": "Terrasse privée",
+  "es": "Terraza privada"
+ },
+ "Scopri": {
+  "en": "Discover",
+  "de": "Entdecken",
+  "fr": "Découvrir",
+  "es": "Descubrir"
+ },
+ "Scopri gli appartamenti": {
+  "en": "Discover the apartments",
+  "de": "Apartments entdecken",
+  "fr": "Découvrir les appartements",
+  "es": "Descubre los apartamentos"
+ },
+ "Scopri la Bottega →": {
+  "en": "Visit the Bottega →",
+  "de": "Zur Bottega →",
+  "fr": "Découvrir la Bottega →",
+  "es": "Descubre la Bottega →"
+ },
+ "Seguici": {
+  "en": "Follow us",
+  "de": "Folgen Sie uns",
+  "fr": "Suivez-nous",
+  "es": "Síguenos"
+ },
+ "Servizi inclusi": {
+  "en": "Included services",
+  "de": "Inklusivleistungen",
+  "fr": "Services inclus",
+  "es": "Servicios incluidos"
+ },
+ "Shop": {
+  "en": "Shop",
+  "de": "Shop",
+  "fr": "Boutique",
+  "es": "Tienda"
+ },
+ "Spazio esterno": {
+  "en": "Outdoor space",
+  "de": "Außenbereich",
+  "fr": "Espace extérieur",
+  "es": "Espacio exterior"
+ },
+ "Strada Gargnano–Riva del Garda": {
+  "en": "Gargnano–Riva del Garda road",
+  "de": "Straße Gargnano–Riva del Garda",
+  "fr": "Route Gargnano–Riva del Garda",
+  "es": "Carretera Gargnano–Riva del Garda"
+ },
+ "Superficie": {
+  "en": "Size",
+  "de": "Fläche",
+  "fr": "Surface",
+  "es": "Superficie"
+ },
+ "T-Shirt & Felpe": {
+  "en": "T-shirts & Sweatshirts",
+  "de": "T-Shirts & Sweatshirts",
+  "fr": "T-shirts & Sweats",
+  "es": "Camisetas y sudaderas"
+ },
+ "Tazze & Accessori": {
+  "en": "Mugs & Accessories",
+  "de": "Tassen & Accessoires",
+  "fr": "Mugs & Accessoires",
+  "es": "Tazas y accesorios"
+ },
+ "Telo & Infradito": {
+  "en": "Beach towel & Flip-flops",
+  "de": "Strandtuch & Flip-Flops",
+  "fr": "Serviette & Tongs",
+  "es": "Toalla y chanclas"
+ },
+ "Televisione": {
+  "en": "Television",
+  "de": "Fernseher",
+  "fr": "Télévision",
+  "es": "Televisión"
+ },
+ "Terrazza": {
+  "en": "Terrace",
+  "de": "Terrasse",
+  "fr": "Terrasse",
+  "es": "Terraza"
+ },
+ "Territorio": {
+  "en": "The area",
+  "de": "Die Umgebung",
+  "fr": "La région",
+  "es": "El territorio"
+ },
+ "Territorio &": {
+  "en": "Area &",
+  "de": "Umgebung &",
+  "fr": "Région &",
+  "es": "Territorio y"
+ },
+ "Territorio & Sport": {
+  "en": "Area & Sport",
+  "de": "Umgebung & Sport",
+  "fr": "Région & Sport",
+  "es": "Territorio y deporte"
+ },
+ "Trekking & MTB": {
+  "en": "Hiking & MTB",
+  "de": "Wandern & MTB",
+  "fr": "Randonnée & VTT",
+  "es": "Senderismo y BTT"
+ },
+ "Un albergo con": {
+  "en": "A hotel with",
+  "de": "Ein Hotel mit",
+  "fr": "Un hôtel avec",
+  "es": "Un hotel con"
+ },
+ "posizione ideale.": {
+  "en": "the perfect location.",
+  "de": "idealer Lage.",
+  "fr": "un emplacement idéal.",
+  "es": "una ubicación ideal."
+ },
+ "Vela": {
+  "en": "Sailing",
+  "de": "Segeln",
+  "fr": "Voile",
+  "es": "Vela"
+ },
+ "Visita ecomuseopradelafam.com →": {
+  "en": "Visit ecomuseopradelafam.com →",
+  "de": "Besuchen Sie ecomuseopradelafam.com →",
+  "fr": "Visitez ecomuseopradelafam.com →",
+  "es": "Visita ecomuseopradelafam.com →"
+ },
+ "Vista giardino": {
+  "en": "Garden view",
+  "de": "Gartenblick",
+  "fr": "Vue jardin",
+  "es": "Vista al jardín"
+ },
+ "Vista lago": {
+  "en": "Lake view",
+  "de": "Seeblick",
+  "fr": "Vue lac",
+  "es": "Vista al lago"
+ },
+ "Vista montagna": {
+  "en": "Mountain view",
+  "de": "Bergblick",
+  "fr": "Vue montagne",
+  "es": "Vista a la montaña"
+ },
+ "Wi-Fi gratuito": {
+  "en": "Free Wi-Fi",
+  "de": "Kostenloses WLAN",
+  "fr": "Wi-Fi gratuit",
+  "es": "Wi-Fi gratis"
+ },
+ "WiFi": {
+  "en": "WiFi",
+  "de": "WLAN",
+  "fr": "Wi-Fi",
+  "es": "WiFi"
+ },
+ "Windsurf & Kitesurf": {
+  "en": "Windsurfing & Kitesurfing",
+  "de": "Windsurfen & Kitesurfen",
+  "fr": "Planche à voile & Kitesurf",
+  "es": "Windsurf y kitesurf"
+ },
+ "Lago di Garda": {
+  "en": "Lake Garda",
+  "de": "Gardasee",
+  "fr": "Lac de Garde",
+  "es": "Lago de Garda"
+ },
+ "Hotel & Appartamenti": {
+  "en": "Hotel & Apartments",
+  "de": "Hotel & Apartments",
+  "fr": "Hôtel & Appartements",
+  "es": "Hotel y apartamentos"
+ },
+ "de la Fam.": {
+  "en": "de la Fam.",
+  "de": "de la Fam.",
+  "fr": "de la Fam.",
+  "es": "de la Fam."
+ },
+ "del Prà.": {
+  "en": "del Prà.",
+  "de": "del Prà.",
+  "fr": "del Prà.",
+  "es": "del Prà."
+ },
+ "proprietà": {
+  "en": "property",
+  "de": "Anwesen",
+  "fr": "propriété",
+  "es": "propiedad"
+ },
+ "📞 Chiama: 0365 799890": {
+  "en": "📞 Call: +39 0365 799890",
+  "de": "📞 Anrufen: +39 0365 799890",
+  "fr": "📞 Appeler : +39 0365 799890",
+  "es": "📞 Llamar: +39 0365 799890"
+ },
+ "📋 Booking.com": {
+  "en": "📋 Booking.com",
+  "de": "📋 Booking.com",
+  "fr": "📋 Booking.com",
+  "es": "📋 Booking.com"
+ },
+ "220 recensioni verificate · Booking.com": {
+  "en": "220 verified reviews · Booking.com",
+  "de": "220 verifizierte Bewertungen · Booking.com",
+  "fr": "220 avis vérifiés · Booking.com",
+  "es": "220 opiniones verificadas · Booking.com"
+ },
+ "Apri su Google Maps →": {
+  "en": "Open in Google Maps →",
+  "de": "In Google Maps öffnen →",
+  "fr": "Ouvrir dans Google Maps →",
+  "es": "Abrir en Google Maps →"
+ },
+ "Assistente Prà de la Fam": {
+  "en": "Prà de la Fam assistant",
+  "de": "Prà de la Fam Assistent",
+  "fr": "Assistant Prà de la Fam",
+  "es": "Asistente Prà de la Fam"
+ },
+ "Ampie vetrate, luce lago, giardino scoperto": {
+  "en": "Large windows, lake light, open garden",
+  "de": "Große Fenster, Seelicht, offener Garten",
+  "fr": "Grandes baies vitrées, lumière du lac, jardin",
+  "es": "Grandes ventanales, luz del lago, jardín"
+ },
+ "Ariosa, moderna, vista lago o montagna": {
+  "en": "Airy, modern, lake or mountain view",
+  "de": "Luftig, modern, See- oder Bergblick",
+  "fr": "Lumineuse, moderne, vue lac ou montagne",
+  "es": "Amplia, moderna, vista al lago o a la montaña"
+ },
+ "01 — La nostra storia": {
+  "en": "01 — Our story",
+  "de": "01 — Unsere Geschichte",
+  "fr": "01 — Notre histoire",
+  "es": "01 — Nuestra historia"
+ },
+ "04 — Sport & Natura": {
+  "en": "04 — Sport & Nature",
+  "de": "04 — Sport & Natur",
+  "fr": "04 — Sport & Nature",
+  "es": "04 — Deporte y naturaleza"
+ },
+ "06 — Cosa dicono di noi": {
+  "en": "06 — What guests say",
+  "de": "06 — Was Gäste sagen",
+  "fr": "06 — Ce qu'ils en disent",
+  "es": "06 — Lo que dicen de nosotros"
+ },
+ "07 — Bottega del Prà": {
+  "en": "07 — Bottega del Prà",
+  "de": "07 — Bottega del Prà",
+  "fr": "07 — Bottega del Prà",
+  "es": "07 — Bottega del Prà"
+ },
+ "08 — Vieni a trovarci": {
+  "en": "08 — Come and see us",
+  "de": "08 — Besuchen Sie uns",
+  "fr": "08 — Venez nous voir",
+  "es": "08 — Ven a visitarnos"
+ },
+ "La": {
+  "en": "The",
+  "de": "Die",
+  "fr": "La",
+  "es": "La"
+ },
+ "Prà de la Fam —": {
+  "en": "Prà de la Fam —",
+  "de": "Prà de la Fam —",
+  "fr": "Prà de la Fam —",
+  "es": "Prà de la Fam —"
+ }
+}

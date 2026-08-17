@@ -45,13 +45,15 @@
 
   var css = document.createElement('style');
   css.textContent = [
-    '#pdlf-chat-btn{position:fixed;right:24px;bottom:24px;z-index:400;width:56px;height:56px;border-radius:50%;',
+    // il pulsante non deve finire sopra la barra «Verifica disponibilita»:
+    // --barra la dichiara la home, altrove var() ripiega su 0
+    '#pdlf-chat-btn{position:fixed;right:24px;bottom:calc(24px + var(--barra, 0px));z-index:400;width:56px;height:56px;border-radius:50%;',
     'display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;',
     'background:#0b1520;color:#f0d898;box-shadow:0 10px 32px rgba(11,21,32,.4);transition:transform .18s}',
     '#pdlf-chat-btn:hover{transform:translateY(-2px)}',
     // padding:0 e' una difesa, non un vezzo: nel sito c'e' section{padding:120px 32px}
     // e un riquadro con 120px di vuoto in cima e' gia' successo una volta
-    '#pdlf-chat{padding:0;margin:0;position:fixed;right:24px;bottom:96px;z-index:401;width:376px;max-width:calc(100vw - 32px);',
+    '#pdlf-chat{padding:0;margin:0;position:fixed;right:24px;bottom:calc(96px + var(--barra, 0px));z-index:401;width:376px;max-width:calc(100vw - 32px);',
     'height:auto;min-height:270px;max-height:calc(100vh - 150px);display:none;flex-direction:column;',
     'background:#f7f4ef;border-radius:4px;box-shadow:0 24px 70px rgba(11,21,32,.34);overflow:hidden;',
     'font-family:\'DM Sans\',\'Josefin Sans\',system-ui,sans-serif}',
@@ -82,8 +84,8 @@
     'display:flex;align-items:center;justify-content:center;flex-shrink:0}',
     '.pc-inv:disabled{opacity:.4;cursor:default}',
     '.pc-nota{font-size:.66rem;line-height:1.5;color:rgba(11,21,32,.42);margin-top:8px;text-align:center}',
-    '@media(max-width:760px){#pdlf-chat{right:12px;left:12px;bottom:88px;width:auto;max-width:none;max-height:calc(100vh - 150px)}',
-    '#pdlf-chat-btn{right:16px;bottom:16px;width:50px;height:50px}}'
+    '@media(max-width:760px){#pdlf-chat{right:12px;left:12px;bottom:calc(88px + var(--barra, 0px));width:auto;max-width:none;max-height:calc(100vh - 150px)}',
+    '#pdlf-chat-btn{right:16px;bottom:calc(16px + var(--barra, 0px));width:50px;height:50px}}'
   ].join('');
   document.head.appendChild(css);
 

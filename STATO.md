@@ -203,6 +203,37 @@ decide la lingua del sistema operativo del visitatore. Cambiarlo richiede un
 calendario scritto da noi.
 
 
+### Il telefono: la barra si mangiava un terzo dello schermo
+Segnalato guardando il sito dal telefono. Misurato, era peggio di come si
+vedeva: la barra «Verifica disponibilità» è **fissa in fondo allo schermo** e il
+corpo della pagina non le lasciava spazio.
+
+| | prima | dopo |
+|---|---|---|
+| altezza della barra sul telefono | **225px** (quattro righe) — il 34% di un iPhone SE, sempre | **121px**, griglia 2×2 |
+| «Prenota ora» e «Scopri gli appartamenti» | **coperti dalla barra** | visibili |
+| piè di pagina | telefono, email, «Come arrivare» **sotto la barra** — anche su computer | libero |
+| meteo sul telefono | solo «24°», senza dire di cosa | «24° **adesso**» ×5 lingue |
+| apertura | quasi tutta cielo sui telefoni alti | accorciata a 86svh **solo sopra i 750px di schermo** |
+
+L'etichetta «VERIFICA DISPONIBILITÀ» sparisce sul telefono: i campi hanno già la
+propria. Il pulsante della chat si alza sopra la barra (`var(--barra, 0px)`, che
+sulle altre pagine ripiega a zero perché la barra non c'è).
+
+📐 **Trappola, presa due volte nella stessa sessione:** a parità di peso, nei
+fogli di stile **vince l'ultima regola scritta**. Il blocco per il telefono stava
+più in alto di `.hero`, `.hc`, `.htag` e `.hdesc` e non faceva niente — pur
+sembrando applicato. Ora sta **in fondo al foglio**, con un commento che spiega
+perché. Stessa famiglia dello `style="height:44px"` in linea che batteva il
+media query: **se una regola sembra non fare effetto, misurare, non guardare.**
+
+📐 **E una scoperta contro-intuitiva:** accorciare l'apertura *peggiorava* le
+cose su uno schermo corto — il testo finiva sotto la barra di navigazione. Il
+blocco misurava 630px su 667 di schermo. Per questo l'accorciamento vale solo
+sopra i 750px di altezza, e sugli schermi corti si recuperano ~50px stringendo
+gli spazi vuoti (non i testi).
+
+
 ---
 
 ## ⬜ Aperto
@@ -239,8 +270,9 @@ calendario scritto da noi.
   pagina. Accessibilità e Google.
 - **Netlify riscrive l'HTML** in fase di pubblicazione: gli attributi
   `onmouseover` arrivano con le virgolette rotte. Da guardare.
-- **Le date della barra prenotazione** mostrano `mm/dd/yyyy`: lo decide la
-  lingua del sistema operativo di chi guarda, non l'HTML. Serve un calendario
+- **Le date mostrano `mm/dd/yyyy`** su un dispositivo in inglese e `gg/mm/aaaa`
+  su uno in italiano: lo decide la lingua del sistema operativo di chi guarda,
+  non l'HTML. Per imporre il formato italiano a tutti serve un calendario
   scritto da noi.
 
 ---

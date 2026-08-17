@@ -59,6 +59,11 @@
            'aria-hidden="true">' + (D[tipo(c)] || D['nuvoloso']) + '</svg>';
   }
 
+  /* SUL TELEFONO le previsioni dei giorni successivi sono nascoste e resta
+     solo il numero: senza una parola accanto non si capisce se sia la
+     temperatura di adesso, la massima di oggi o quella di domani. */
+  var ORA = { it: 'adesso', en: 'now', de: 'jetzt', fr: 'maintenant', es: 'ahora' };
+
   function lingua() {
     var l = document.documentElement.lang || 'it';
     return { it: 'it-IT', en: 'en-GB', de: 'de-DE', fr: 'fr-FR', es: 'es-ES' }[l] || 'it-IT';
@@ -79,7 +84,8 @@
     }
     box.innerHTML =
       '<div class="mt-ora">' + icona(dati.current.weather_code, 26) +
-      '<span class="mt-t">' + Math.round(dati.current.temperature_2m) + '°</span></div>' +
+      '<span class="mt-t">' + Math.round(dati.current.temperature_2m) + '°</span>' +
+      '<span class="mt-ora-et">' + (ORA[document.documentElement.lang] || ORA.it) + '</span></div>' +
       '<div class="mt-gg">' + righe + '</div>';
     box.hidden = false;
     box.setAttribute('aria-label',

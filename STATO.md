@@ -157,6 +157,22 @@ regola per il telefono era codice morto e sembrava funzionare. Le misure stanno
 nel CSS, non in linea.
 
 
+
+**Una misura sola, e lo stesso file.** I marchi si vedevano di grandezze diverse
+e la causa non era il numero nel CSS: erano **due file diversi**. Quello della
+bottega ha molto vuoto attorno alla scritta — l'inchiostro riempiva il **60,3%**
+dell'altezza contro il **90,9%** di quello dell'hotel — quindi a parità di
+riquadro (46px contro 44) il marchio si vedeva **31% più piccolo**. Ora un file
+solo su entrambi i siti, **44px su computer e 36px sul telefono**, tutte e
+quindici le pagine. La bottega ci guadagna anche in peso: 110 → 49 KB.
+
+⚠️ **La cartella `pradelafam-shop` in `Sito Prà` è una copia vecchia e non è un
+repo git**: il suo `logo.png` pesa 2,4 MB mentre quello pubblicato ne pesa 110
+di KB, e l'`index.html` è diverso. Modificarla non pubblica niente. Il sito vero
+è `github.com/filippo820/pradelafam-shop` — è la stessa trappola delle tre copie
+che divergevano, ancora aperta sulla bottega.
+
+
 ---
 
 ## ⬜ Aperto

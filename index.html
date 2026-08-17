@@ -81,6 +81,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bone);color:var(--ink);ov
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,4vw,4rem);height:68px;background:rgba(247,244,239,.92);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid rgba(11,21,32,.08)}
 nav.scrolled{background:rgba(247,244,239,.99)}
+.nav-logo-img{height:44px;width:auto;display:block}
 .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
 .nav-mark{width:38px;height:38px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;font-size:.85rem;box-shadow:0 2px 14px rgba(11,21,32,.22)}
 .nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:.03em}
@@ -96,6 +97,7 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .nav-cta{display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:var(--bone);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.3rem;border-radius:2px;text-decoration:none;transition:background .2s;margin-left:.6rem}
 .nav-cta:hover{background:var(--mid)}
 @media(max-width:900px){.nav-center{display:none}}
+@media(max-width:640px){.nav-logo-img{height:36px}}
 @media(max-width:560px){.nav-right .lang-btn,.nav-right .lang-sep{display:none}}
 
 /* ── HERO with parallax ── */
@@ -419,7 +421,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 <!-- NAV -->
 <nav id="nav">
   <a class="nav-logo" href="#hero" style="display:flex;align-items:center;gap:.4rem">
-    <img src="img/logo.png" alt="Prà de la Fam" style="height:44px;width:auto;display:block"/>
+    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam"/>
     <sup style="font-size:.55rem;font-family:'DM Sans',sans-serif;color:var(--steel);letter-spacing:.05em;margin-top:-1rem">™</sup><span style="display:block;font-family:'DM Sans',sans-serif;font-size:.6rem;font-weight:400;color:var(--steel);letter-spacing:.08em;text-transform:uppercase;margin-top:.1rem">Hotel &amp; Appartamenti</span>
   </a>
   <div class="nav-center">

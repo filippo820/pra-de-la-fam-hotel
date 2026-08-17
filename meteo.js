@@ -70,6 +70,25 @@
      vivono solo dentro @media(max-width:760px). */
   var stretto = function () { return window.matchMedia('(max-width:760px)').matches; };
 
+  /* DOVE STA IL RIQUADRO, secondo la larghezza:
+     · telefono → NEL FLUSSO, subito sotto la riga dell'indirizzo. Appoggiato
+       sopra il titolo urtava le lettere in quattro lingue su cinque.
+     · schermo grande → figlio dell'apertura, appoggiato in alto a destra.
+     Questo va fatto QUI e non nel foglio di stile: un elemento assoluto si
+     ancora al primo antenato posizionato, e .hc lo e' — lasciandolo dentro,
+     su computer finiva a meta' pagina invece che in alto. */
+  function sistema() {
+    var box = document.getElementById('pdlf-meteo');
+    var hero = document.querySelector('.hero');
+    var riga = document.querySelector('.htag');
+    if (!box || !hero || !riga) return;
+    var voluto = stretto() ? riga.parentNode : hero;
+    if (box.parentNode !== voluto) {
+      if (stretto()) riga.insertAdjacentElement('afterend', box);
+      else hero.appendChild(box);
+    }
+  }
+
   function lingua() {
     var l = document.documentElement.lang || 'it';
     return { it: 'it-IT', en: 'en-GB', de: 'de-DE', fr: 'fr-FR', es: 'es-ES' }[l] || 'it-IT';
@@ -139,8 +158,14 @@
       .catch(function () { /* silenzio: meglio niente che una cornice vuota */ });
   }
 
+  var quando = null;
+  window.addEventListener('resize', function () {
+    clearTimeout(quando); quando = setTimeout(sistema, 150);
+  });
+
   // dopo il caricamento della pagina, e con calma
   function avvia() {
+    sistema();
     if (window.requestIdleCallback) requestIdleCallback(carica, { timeout: 2500 });
     else setTimeout(carica, 1200);
   }

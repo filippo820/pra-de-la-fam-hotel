@@ -348,6 +348,39 @@ capo, ma **con la freccia attaccata alla parola**. Vale in tutte e cinque le
 lingue senza altro lavoro.
 
 
+### Il meteo sotto la riga dell'indirizzo
+Richiesto due volte, e la seconda ha richiesto di cambiare approccio.
+
+**Appoggiarlo lì non si poteva.** Subito sotto quella riga comincia il titolo:
+misurando il riquadro contro l'inchiostro vero delle righe, urtava in **quattro
+lingue su cinque** (il tedesco «Willkommen» arriva a 322px). Provato anche in
+fondo all'apertura: lì urtava i bottoni in francese e spagnolo. Su un telefono
+l'apertura è **una colonna sola** — non esiste una fascia destra libera, e
+qualunque riquadro appoggiato prima o poi tocca qualcosa.
+
+**Soluzione: nel flusso.** Il riquadro è un blocco allineato a destra fra
+l'indirizzo e il titolo. Così non può urtare niente, in nessuna lingua e a
+nessuna larghezza — è il layout a garantirlo, non una misura fortunata.
+
+Due conseguenze da gestire, entrambe trovate misurando:
+- **costa una cinquantina di pixel** e sugli schermi corti il blocco finiva
+  sotto la barra di navigazione → sotto i 760px di altezza il titolo scende a
+  2,9rem e gli spazi si accorciano;
+- **aprendolo spingeva il titolo** e l'indirizzo finiva sotto la barra → i
+  giorni ora **scendono sopra** il titolo invece di spingerlo.
+
+📐 **Lo spostamento lo fa il codice, non il foglio di stile** (`meteo.js`,
+`sistema()`): un elemento assoluto si ancora al primo antenato posizionato, e
+`.hc` lo è — lasciandolo dentro il flusso del testo, su computer finiva a metà
+pagina invece che in alto a destra. Su schermo grande torna figlio
+dell'apertura.
+
+📐 **Quarta volta con la stessa trappola:** la regola che rimpicciolisce il
+titolo sugli schermi corti, scritta sopra la regola base `.hh1`, **non faceva
+niente**. A parità di peso vince l'ultima. Ora sta nel blocco in fondo al
+foglio, dove ho già imparato che devono stare.
+
+
 ---
 
 ## ⬜ Aperto

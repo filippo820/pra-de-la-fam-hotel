@@ -436,7 +436,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
      arrivo/partenza sopra, ospiti/Cerca sotto — e l'etichetta sparisce
      perche' i campi hanno gia' la loro. */
   :root{--barra:130px}   /* misurata 125 dopo l'ingrandimento delle etichette */
-  .avail-bar{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .55rem;
+  /* Lo stacco fra le due colonne era di 8px: su un telefono sono un millimetro
+     e mezzo, e i due riquadri sembrano toccarsi al centro. Portato a 16px. */
+  .avail-bar{display:grid;grid-template-columns:1fr 1fr;gap:.45rem 1rem;
              padding:.6rem .9rem calc(.6rem + env(safe-area-inset-bottom,0px));align-items:end}
   .avail-bar-label{display:none}
   .avail-inputs{display:contents}

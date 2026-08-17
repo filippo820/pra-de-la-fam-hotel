@@ -326,6 +326,28 @@ sparivano perché quel contenitore ha `style="display:flex"` scritto sul tag, ch
 batte il foglio. Serve `!important`.
 
 
+### Meteo più basso · lingua verificata · la freccia non va più a capo
+**Meteo.** Su computer da 104 a 128px. Sul telefono lo spazio è quasi nullo — la
+barra finisce a 68 e la riga d'indirizzo comincia a 130 — quindi scende solo a
+84 e si stringe (padding 6→4) per non toccarla: restano 2px.
+
+**Lingua del browser — provata, non dedotta.** Dieci browser diversi:
+`it-IT en-GB en-US de-DE de-AT fr-FR es-ES es-MX pl-PL nl-NL`. Tutti corretti:
+le varianti regionali (`de-AT`, `es-MX`) prendono la lingua base, le lingue non
+gestite (`pl`, `nl`) tornano all'italiano invece di restare vuote, e in ogni
+caso viaggiano insieme **i testi, i nomi dei giorni del meteo e il `lang=` del
+motore di prenotazione**. Verificato anche che **una scelta salvata batte il
+browser**: browser tedesco + scelta «fr» → dopo il ricaricamento resta francese.
+
+**La freccia.** «Prenota →» andava a capo sul telefono, lasciando la freccia da
+sola sotto. Le **106 frecce** del sito (HTML + dizionario delle traduzioni) ora
+sono legate all'ultima parola con uno **spazio unificatore**: non si spezza mai.
+Meglio di `white-space:nowrap`, che avrebbe fatto traboccare i bottoni lunghi
+(«Controlla disponibilità →») sugli schermi stretti — quelli vanno ancora a
+capo, ma **con la freccia attaccata alla parola**. Vale in tutte e cinque le
+lingue senza altro lavoro.
+
+
 ---
 
 ## ⬜ Aperto

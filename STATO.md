@@ -140,10 +140,21 @@ vero, il tetto solido si fa nel database — su Colgo la funzione esiste già.
 ## ⬜ Aperto
 
 ### Da fare, in ordine di quanto pesa
-1. 🔑 **La chiave dell'assistente, da mettere a mano.** Netlify →
-   `pradelafam` → Site configuration → Environment variables →
-   `ANTHROPIC_API_KEY`. **Finché non c'è, il riquadro si apre ma risponde
-   «Qualcosa non ha funzionato».** È l'unica cosa che manca per farlo parlare.
+1. 🔑 **La chiave dell'assistente è rifiutata.** Netlify → `pradelafam` → Site
+   configuration → Environment variables → `ANTHROPIC_API_KEY`. Una variabile
+   **c'è già**, ma Anthropic la respinge: chiedendo al sito pubblicato, la
+   funzione risponde `guasto: authentication_error` (se mancasse del tutto
+   direbbe `chiave assente` — sono due cose diverse). Probabile chiave vecchia,
+   revocata, o incollata con uno spazio. **Finché non è valida il riquadro si
+   apre ma dice «Qualcosa non ha funzionato».** È l'unica cosa che manca.
+
+   Per rileggere la diagnosi dopo averla cambiata, senza aprire il sito:
+   ```bash
+   curl -s -X POST https://pradelafam.netlify.app/api/chat \
+     -H 'content-type: application/json' \
+     -H 'origin: https://pradelafam.netlify.app' \
+     -d '{"messaggi":[{"ruolo":"persona","testo":"Che camere avete?"}]}'
+   ```
 2. **Ospitare i caratteri tipografici sul nostro server.** Oggi arrivano da
    Google e questo espone l'indirizzo IP dei visitatori — è scritto nella cookie
    policy come miglioramento in programma.

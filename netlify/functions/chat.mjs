@@ -179,10 +179,14 @@ export default async (req) => {
     });
     const d = await r.json();
     const testo = d?.content?.[0]?.text?.trim();
-    if (!testo) return rispondi({ risposta: GUASTO[lingua] });
+    // Se non arriva testo, DIRE PERCHE'. Il tipo d'errore dell'API non e' un
+    // segreto (authentication_error, rate_limit_error...) e senza di lui un
+    // guasto e' indistinguibile da un altro: e' gia' costato tempo una volta.
+    // Il messaggio dell'API non si ripete: puo' contenere dettagli nostri.
+    if (!testo) return rispondi({ risposta: GUASTO[lingua], guasto: d?.error?.type || ('http ' + r.status) });
     return rispondi({ risposta: semplifica(testo) });
   } catch (e) {
-    return rispondi({ risposta: GUASTO[lingua] });
+    return rispondi({ risposta: GUASTO[lingua], guasto: 'rete' });
   }
 };
 

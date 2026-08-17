@@ -192,9 +192,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
    Prenota usciva dallo schermo di 63px. Il link «← Camere» sparisce perche' e'
    un doppione — il marchio porta alla stessa pagina — e il marchio si stringe. */
 @media(max-width:640px){
-  nav{padding:0 1rem}
-  .nav-back{display:none}
-  .nav-logo-img{height:36px}
+  nav{padding:0 .9rem}
+  /* «← Camere» era sparito per far stare la barra: era l'unica via d'uscita
+     dalla pagina, e restava solo il marchio. Ora le lingue stanno nel
+     pannello del menu e lo spazio c'e'. */
+  .nav-back{margin-left:.9rem;font-size:.62rem}
+  .nav-logo-img{height:34px}
 }
 </style>
 </head>
@@ -533,6 +536,7 @@ function pdlfApplica(ok){
 </script>
 <!-- ══ pdlf-i18n ══ le cinque lingue -->
 <script src="i18n.js" defer></script>
+<script src="menu.js" defer></script>
 <script src="chat.js" defer></script>
 </body>
 </html>

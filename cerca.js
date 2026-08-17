@@ -51,6 +51,24 @@
   dal.min = oggi;
   al.min = piu(oggi, 1);
 
+  /* DATE PROPOSTE. I campi vuoti costringono a due passaggi di calendario
+     prima ancora di sapere se c'e' posto. Si propone il primo fine settimana
+     utile — venerdi'→domenica, il soggiorno piu' comune qui — e restano
+     modificabili come prima: e' un punto di partenza, non una scelta fatta
+     al posto dell'ospite. Se qualcuno ha gia' scritto qualcosa non si tocca
+     niente. */
+  function primoVenerdi() {
+    var d = new Date(); d.setHours(12, 0, 0, 0);
+    d.setDate(d.getDate() + 1);                       // mai oggi
+    while (d.getDay() !== 5) d.setDate(d.getDate() + 1);
+    return giorno(d);
+  }
+  if (!dal.value && !al.value) {
+    var v = primoVenerdi();
+    dal.value = v;
+    al.value = piu(v, 2);                             // due notti
+  }
+
   function aggiorna() {
     // la partenza non puo' precedere o coincidere con l'arrivo: invece di
     // rifiutare, si sposta al giorno dopo — e' quello che l'ospite intende

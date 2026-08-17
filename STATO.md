@@ -292,6 +292,40 @@ riquadro si apre toccandolo. **Le previsioni partivano già da domani** — oggi
 è mai stato mostrato: verificato contro i dati dell'API.
 
 
+### Menu del telefono, ritorno indietro, date proposte
+Tre segnalazioni in fila, e la prima era grossa.
+
+**Sul telefono non c'era né il menu né le lingue.** Sotto i 900px le otto voci
+sono nascoste e **non esisteva nessun pulsante per riaprirle**: la barra aveva
+solo marchio e «Prenota». Sotto i 560px sparivano anche le cinque lingue — un
+ospite tedesco poteva cambiare lingua solo scorrendo fino in fondo a una pagina
+di quindicimila pixel. Ora c'è un pannello a tutto schermo: le voci, le lingue e
+i contatti.
+
+**Il ritorno indietro dalle sottopagine: difetto introdotto da noi.** Per far
+stare la barra sul telefono avevamo nascosto «← Camere», e restava solo il
+marchio — che nessuno legge come «indietro». Ora le lingue stanno nel pannello e
+lo spazio c'è: il ritorno è di nuovo visibile. Il pannello nelle sottopagine
+prende le voci dalla striscia in fondo (Camere · Appartamenti · Limonaia ·
+Contatti), che ha già gli stessi link: **non inventa niente**.
+
+**La ricerca propone le date.** I campi vuoti costringevano a due passaggi di
+calendario prima di sapere se c'era posto. Ora propone il **primo venerdì utile →
+domenica**, due notti, restando modificabili.
+
+📐 **Il pannello è un `<div>`, non un `<nav>` — e la prima versione lo era.**
+Nel foglio c'è `nav{position:fixed;height:68px}` scritto sull'**elemento**, e un
+pannello a tutto schermo chiamato `<nav>` se la prende: era alto **117px invece
+di 844**, cioè solo il suo stesso margine interno. È la stessa trappola del
+pannello della chat, che era un `<section>` e si prendeva
+`section{padding:120px}`. **Terza volta in questo sito che una regola su un nome
+di elemento morde un componente nuovo.**
+
+📐 **E la terza volta dello `style` sul tag:** le lingue delle sottopagine non
+sparivano perché quel contenitore ha `style="display:flex"` scritto sul tag, che
+batte il foglio. Serve `!important`.
+
+
 ---
 
 ## ⬜ Aperto

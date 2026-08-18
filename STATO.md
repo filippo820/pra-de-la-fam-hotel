@@ -572,6 +572,34 @@ Dizionario finale: **104 KB, en 247 · de 248 · fr 242 · es 231** testi tradot
 andata persa: le uniche tre sparite erano del pannello chat rimosso.
 
 
+### «I sentieri dimenticati» — il Territorio recuperato
+Sul sito era ridotto a mezza riga dentro la scheda Trekking: «percorsi militari
+storici panoramici». Sul vecchio sito c'è il racconto per intero, ed è la cosa
+più caratteristica del posto: la rete di sentieri militari **dimenticati dalla
+cartografia**, la batteria di artiglieria sul Monte Castello, le linee difensive
+lungo il Dosso Piemp fino al Passo della Puria, e come ci si arriva.
+
+Nessun altro hotel del Garda ha una rete di trincee dietro casa.
+
+⚠️ **Non ho aggiunto una data.** Sono con ogni probabilità opere della Grande
+Guerra, ma il vecchio sito non lo dice e non volevo mettere in bocca alla
+struttura una cosa che nessuno ha scritto. Se la data è certa, si aggiunge in
+una riga.
+
+### «Come arrivare» è una scheda che si apre
+Chiusa occupa **56px sul telefono invece di 1137**, e 67 invece di 569 su
+computer. Si apre col dito e **col tasto Invio**.
+
+📐 È un `<details>`, non un finto accordion in JavaScript: funziona da tastiera
+di suo, funziona anche senza JavaScript, e **il testo resta nel documento** —
+quindi Google lo legge lo stesso. Verificato: a scheda chiusa, «Rovereto Sud» è
+comunque dentro la pagina.
+
+⚠️ **`marca.py` non marca dentro un `<summary>`**: la riga «In auto, in treno,
+in aereo» sarebbe rimasta in italiano nelle altre quattro lingue. Impronta messa
+a mano (`sha1` del testo italiano, primi 10 caratteri) e traduzione aggiunta.
+
+
 ---
 
 ## ⬜ Aperto

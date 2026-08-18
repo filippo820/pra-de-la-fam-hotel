@@ -245,6 +245,12 @@
   "es": "En coche",
   "fr": "En voiture"
  },
+ "In auto, in treno, in aereo": {
+  "de": "Mit Auto, Zug oder Flugzeug",
+  "en": "By car, by train, by plane",
+  "es": "En coche, en tren, en avión",
+  "fr": "En voiture, en train, en avion"
+ },
  "In treno": {
   "de": "Mit dem Zug",
   "en": "By train",

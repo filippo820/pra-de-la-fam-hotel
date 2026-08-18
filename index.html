@@ -497,7 +497,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
      alti (86svh, cosi' la sezione dopo si affaccia) ma CRESCE quando il
      contenuto non ci sta. La versione con height:100svh sovrascriveva la
      regola dell'86% e faceva scendere il testo di un centinaio di pixel. */
-  .hero{height:auto;min-height:86svh;padding-top:72px;box-sizing:border-box}
+  /* 96 e non 72: la barra e' alta 68, e con 72 la riga dell'indirizzo le
+     restava incollata sotto (4px). Cosi' respira. */
+  .hero{height:auto;min-height:86svh;padding-top:96px;box-sizing:border-box}
   .hc{padding-top:0}
 }
 /* Schermi CORTI: con il meteo nel flusso il blocco non ci stava piu' e finiva

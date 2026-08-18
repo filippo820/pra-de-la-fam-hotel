@@ -197,6 +197,12 @@
   "es": "Hotel y apartamentos en el lago de Garda.",
   "fr": "Hôtel et appartements sur le lac de Garde."
  },
+ "I sentieri dimenticati": {
+  "de": "Die vergessenen Pfade",
+  "en": "The forgotten trails",
+  "es": "Los senderos olvidados",
+  "fr": "Les sentiers oubliés"
+ },
  "Il Circolo Vela Gargnano organizza regate ogni stagione. La tradizionale Centomiglia è l'evento velico più atteso del Garda.": {
   "de": "Der Circolo Vela Gargnano veranstaltet jede Saison Regatten. Die traditionelle Centomiglia ist das meisterwartete Segelereignis am Gardasee.",
   "en": "Circolo Vela Gargnano holds regattas every season. The traditional Centomiglia is the most awaited sailing event on Lake Garda.",
@@ -449,6 +455,12 @@
   "es": "Sin colorantes ni conservantes, antigua destilería local",
   "fr": "Sans colorants ni conservateurs, ancienne distillerie locale"
  },
+ "Si raggiungono seguendo le vecchie strade militari rimaste in quota: con un mezzo si arriva fin dove le sterrate sono transitabili, poi si prosegue a piedi o in mountain bike sui sentieri di arroccamento.": {
+  "de": "Erreichbar sind sie über die alten Militärstraßen, die in der Höhe geblieben sind: mit dem Fahrzeug kommt man so weit, wie die Schotterwege befahrbar sind, danach geht es zu Fuß oder mit dem Mountainbike auf den alten Zustiegspfaden weiter.",
+  "en": "You reach them along the old military roads still up on the heights: you can drive as far as the dirt tracks allow, then carry on on foot or by mountain bike along the old approach paths.",
+  "es": "Se llega por las viejas carreteras militares que quedan en altura: con el vehículo se avanza hasta donde las pistas son transitables, y luego se sigue a pie o en bicicleta de montaña por los antiguos senderos de acceso.",
+  "fr": "On les rejoint par les anciennes routes militaires restées en altitude : on roule jusqu’où les pistes sont praticables, puis on continue à pied ou en VTT sur les vieux sentiers d’accès."
+ },
  "Situata al primo o al secondo piano dell'hotel, la camera familiare è composta da una camera doppia comunicante con una camera dotata di letto a castello, ideale per famiglie con bambini. Gli spazi sono stati recentemente ristrutturati con arredi moderni e accoglienti. La camera doppia offre una suggestiva vista sul lago, mentre la seconda camera si affaccia sul versante del monte, garantendo tranquillità e privacy. Il bagno è spazioso, completo di ampia doccia, asciugacapelli e linea di cortesia. La camera è dotata di tutti i comfort: aria condizionata, TV a schermo piatto, minibar, Wi-Fi gratuito e kit di benvenuto. È incluso l'accesso al parcheggio privato dell'hotel.": {
   "de": "Im ersten oder zweiten Stock des Hotels besteht das Familienzimmer aus einem Doppelzimmer mit Verbindungstür zu einem Zimmer mit Etagenbett — ideal für Familien mit Kindern. Die Räume wurden kürzlich modern und einladend renoviert. Das Doppelzimmer bietet einen eindrucksvollen Seeblick, das zweite Zimmer liegt zum Berg hin und sorgt für Ruhe und Privatsphäre. Das Bad ist geräumig, mit großer Dusche, Haartrockner und Pflegelinie. Das Zimmer verfügt über allen Komfort: Klimaanlage, Flachbild-TV, Minibar, kostenloses WLAN und Willkommensset. Der Zugang zum hoteleigenen Parkplatz ist inbegriffen.",
   "en": "On the first or second floor of the hotel, the family room is made up of a double room connecting to a room with bunk beds, ideal for families with children. The spaces have recently been renovated with modern, welcoming furnishings. The double room enjoys a striking lake view, while the second room faces the mountainside, ensuring quiet and privacy. The bathroom is spacious, with a large shower, hairdryer and toiletries. The room has every comfort: air conditioning, flat-screen TV, minibar, free Wi-Fi and a welcome kit. Access to the hotel's private parking is included.",
@@ -497,6 +509,12 @@
   "es": "En dos niveles: dormitorio doble y baño en la planta baja, zona de estar con cocina en la buhardilla. Interiores en piedra vista con característica escalera voladiza.",
   "fr": "Sur deux niveaux : chambre double et salle de bain au rez-de-chaussée, séjour avec cuisine sous les combles. Intérieurs en pierre apparente avec escalier en porte-à-faux caractéristique."
  },
+ "Tignale fa parte del Parco Alto Garda Bresciano, e oltre ai sentieri del parco conserva una rete fittissima di sentieri militari — ormai dimenticati dalla cartografia — che collegano trincee, ricoveri e appostamenti in galleria, casematte. Quasi sempre nei punti più panoramici del territorio.": {
+  "de": "Tignale liegt im Park Alto Garda Bresciano und bewahrt neben den Parkwegen ein dichtes Netz von Militärpfaden — von den Karten längst vergessen — die Schützengräben, Unterstände, Stollenstellungen und Kasematten verbinden. Fast immer an den aussichtsreichsten Stellen.",
+  "en": "Tignale lies within the Alto Garda Bresciano park, and beyond the park trails it keeps a dense web of military paths — by now forgotten by the maps — linking trenches, shelters and tunnel emplacements, casemates. Almost always at the most panoramic spots.",
+  "es": "Tignale forma parte del parque Alto Garda Bresciano y, además de los senderos del parque, conserva una red densísima de senderos militares — ya olvidados por los mapas — que unen trincheras, refugios y puestos en galería, casamatas. Casi siempre en los puntos más panorámicos.",
+  "fr": "Tignale fait partie du parc Alto Garda Bresciano et, au-delà des sentiers du parc, conserve un réseau très dense de sentiers militaires — désormais oubliés des cartes — reliant tranchées, abris, postes en galerie et casemates. Presque toujours aux endroits les plus panoramiques."
+ },
  "Tignale · Via Gardesana, 7 · Porto di Tignale · Lago di Garda": {
   "de": "Tignale · Via Gardesana, 7 · Porto di Tignale · Gardasee",
   "en": "Tignale · Via Gardesana, 7 · Porto di Tignale · Lake Garda",
@@ -538,6 +556,12 @@
   "en": "Once the home of the lemon houses' gardener, today a refined apartment with lake view and private entrance.",
   "es": "Antigua vivienda del jardinero de las limonaie, hoy un refinado apartamento con vista al lago y entrada privada.",
   "fr": "Autrefois demeure du jardinier des limonaie, aujourd'hui un appartement raffiné avec vue lac et entrée privée."
+ },
+ "Una batteria di artiglieria, con le sue trincee e i bunker di protezione, è dislocata su tutto il Monte Castello, vicino al santuario e sulle pendici settentrionali. Le linee difensive, di cui restano tracce ben visibili, proseguono lungo il Dosso Piemp — presso il Rifugio degli Alpini — fino al Passo della Puria e ai confini del comune.": {
+  "de": "Eine Artilleriebatterie mit Schützengräben und Schutzbunkern zieht sich über den ganzen Monte Castello, nahe der Wallfahrtskirche und an den Nordhängen. Die Verteidigungslinien, deren Reste gut sichtbar geblieben sind, verlaufen weiter über den Dosso Piemp — beim Rifugio degli Alpini — bis zum Passo della Puria und zur Gemeindegrenze.",
+  "en": "An artillery battery, with its trenches and protective bunkers, is spread across Monte Castello, near the sanctuary and on the northern slopes. The defensive lines, whose remains are still clearly visible, run along the Dosso Piemp — by the Rifugio degli Alpini — as far as the Passo della Puria and the edge of the municipality.",
+  "es": "Una batería de artillería, con sus trincheras y búnkeres de protección, se extiende por todo el Monte Castello, cerca del santuario y en las laderas septentrionales. Las líneas defensivas, cuyos restos siguen bien visibles, continúan a lo largo del Dosso Piemp — junto al Rifugio degli Alpini — hasta el Passo della Puria y los confines del municipio.",
+  "fr": "Une batterie d’artillerie, avec ses tranchées et ses bunkers de protection, s’étend sur tout le Monte Castello, près du sanctuaire et sur les versants nord. Les lignes défensives, dont les vestiges restent bien visibles, se poursuivent le long du Dosso Piemp — près du Rifugio degli Alpini — jusqu’au Passo della Puria et aux limites de la commune."
  },
  "Usiamo cookie analitici per capire come viene usato il sito e migliorarlo. Nessun dato viene ceduto a terzi per scopi pubblicitari.": {
   "de": "Wir verwenden Analyse-Cookies, um zu verstehen, wie die Seite genutzt wird, und sie zu verbessern. Es werden keine Daten zu Werbezwecken an Dritte weitergegeben.",

@@ -248,6 +248,16 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .lim-float-img:hover img{transform:scale(1.04)}
 
 /* ── TERRITORIO ── */
+/* I SENTIERI DIMENTICATI — recuperati dal vecchio sito, dove c'era il racconto
+   per intero e qui era ridotto a mezza riga («percorsi militari storici
+   panoramici»). E' la cosa piu' caratteristica del territorio: nessun altro
+   hotel del Garda ha una rete di trincee dietro casa. */
+.terr-storia{margin-top:4rem;padding-top:2.8rem;border-top:1px solid rgba(11,21,32,.12)}
+.terr-storia-griglia{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;margin-top:1.4rem}
+.terr-txt{font-size:.95rem;font-weight:300;line-height:1.9;color:var(--steel)}
+.terr-storia-griglia .terr-txt:first-child{grid-column:1/-1;font-size:1.05rem;color:var(--ink)}
+@media(max-width:800px){.terr-storia-griglia{grid-template-columns:1fr;gap:1.5rem}
+                        .terr-storia{margin-top:2.8rem;padding-top:2rem}}
 .sport-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem}
 .sport-c{background:var(--white);padding:2.4rem 2.2rem;border:none;box-shadow:var(--shadow-float);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .sport-c:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}
@@ -809,6 +819,15 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div class="sport-c"><span class="sport-ico">🏊</span><h3 data-i18n="tb31b676916" class="sport-name">Canyoning</h3><p data-i18n="t5e16e39fef" class="sport-desc">Canyon Adventures — specialisti del Canyoning sul Garda da oltre 20 anni. Canyon del Garda e Valle di Ledro.</p></div>
     <div class="sport-c"><span class="sport-ico">⛳</span><h3 data-i18n="td075d0c609" class="sport-name">Golf Bogliaco</h3><p data-i18n="t75efd8f58e" class="sport-desc">Fondato nel 1912, 18 buche di grande tradizione tra Gargnano e Toscolano Maderno. Terzo golf club in Italia.</p></div>
     <div class="sport-c"><span class="sport-ico">🏔️</span><h3 data-i18n="t04268fbc76" class="sport-name">Arrampicata</h3><p data-i18n="tac18715e60" class="sport-desc">Torrentismo e arrampicata sul muro di roccia con cascata alle spalle del Prà. Per i più temerari.</p></div>
+  </div>
+
+  <div class="terr-storia r d2">
+    <p data-i18n="t342c9c14f0" class="cinfo-label">I sentieri dimenticati</p>
+    <div class="terr-storia-griglia">
+      <p data-i18n="tc3244756f3" class="terr-txt">Tignale fa parte del Parco Alto Garda Bresciano, e oltre ai sentieri del parco conserva una rete fittissima di sentieri militari — ormai dimenticati dalla cartografia — che collegano trincee, ricoveri e appostamenti in galleria, casematte. Quasi sempre nei punti più panoramici del territorio.</p>
+      <p data-i18n="t6b0e874d96" class="terr-txt">Una batteria di artiglieria, con le sue trincee e i bunker di protezione, è dislocata su tutto il Monte Castello, vicino al santuario e sulle pendici settentrionali. Le linee difensive, di cui restano tracce ben visibili, proseguono lungo il Dosso Piemp — presso il Rifugio degli Alpini — fino al Passo della Puria e ai confini del comune.</p>
+      <p data-i18n="t75b631c58e" class="terr-txt">Si raggiungono seguendo le vecchie strade militari rimaste in quota: con un mezzo si arriva fin dove le sterrate sono transitabili, poi si prosegue a piedi o in mountain bike sui sentieri di arroccamento.</p>
+    </div>
   </div>
 </section>
 

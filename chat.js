@@ -49,7 +49,12 @@
     // --barra la dichiara la home, altrove var() ripiega su 0
     '#pdlf-chat-btn{position:fixed;right:24px;bottom:calc(24px + var(--barra, 0px));z-index:400;width:56px;height:56px;border-radius:50%;',
     'display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;',
-    'background:#0b1520;color:#f0d898;box-shadow:0 10px 32px rgba(11,21,32,.4);transition:transform .18s}',
+    // ⚠️ L'ANELLO CHIARO NON E' UN ORNAMENTO. Il cerchio scuro su una foto
+    // scura si staccava solo 1.84:1 — sotto il minimo di 3:1 per un comando —
+    // e sull'apertura spariva. Con corpo scuro E anello chiaro almeno uno dei
+    // due stacca sempre: l'anello sui fondi scuri, il corpo su quelli chiari.
+    'background:#0b1520;color:#f0d898;border:2.5px solid rgba(247,244,239,.94);',
+    'box-shadow:0 6px 22px rgba(11,21,32,.5);transition:transform .18s}',
     '#pdlf-chat-btn:hover{transform:translateY(-2px)}',
     // padding:0 e' una difesa, non un vezzo: nel sito c'e' section{padding:120px 32px}
     // e un riquadro con 120px di vuoto in cima e' gia' successo una volta

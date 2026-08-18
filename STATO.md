@@ -480,6 +480,26 @@ schermo vero non è un ripiego — è **la misura**. Da quella sono usciti i 15p
 troppo in due minuti, dopo un'ora di prove al buio.
 
 
+### L'assistente: due problemi diversi
+**«Non si fa vedere».** Misurato: sull'apertura il pulsante si staccava dallo
+sfondo **1,84:1** — cerchio scuro su foto scura, sotto il minimo di **3:1** per un
+comando. Aggiunto un **anello chiaro**: corpo scuro *e* anello chiaro, così almeno
+uno dei due stacca sempre. Provato a sette punti di scorrimento: il peggiore ora
+è **6,12:1**.
+
+📐 **La prima misura era falsa** perché mediava anello e corpo insieme e su fondo
+grigio dava 1,45. Un comando a due colori si misura **un colore alla volta**:
+basta che uno stacchi.
+
+🔑 **«Non fa domande».** Non è un difetto del sito: la chiave Anthropic su Netlify
+è **ancora rifiutata**. La funzione risponde `guasto: authentication_error` —
+significa che una variabile c'è ma Anthropic non la accetta (se mancasse direbbe
+`chiave assente`). Il riquadro si apre, mostra il benvenuto e i tre spunti, ma a
+ogni domanda risponde «Qualcosa non ha funzionato».
+**Netlify → `pradelafam` → Site configuration → Environment variables →
+`ANTHROPIC_API_KEY`.** È l'unica cosa che manca per farlo parlare.
+
+
 ---
 
 ## ⬜ Aperto

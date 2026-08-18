@@ -189,7 +189,7 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .apt-scroll-track::-webkit-scrollbar{display:none}
 .apt-scroll-track::after{content:'';display:block;min-width:clamp(1.5rem,5vw,5rem);flex-shrink:0}
 /* floating cards */
-.apt{background:var(--white);border:none;overflow:hidden;display:flex;flex-direction:column;flex:0 0 clamp(280px,38vw,420px);scroll-snap-align:start;box-shadow:var(--shadow-float);transform:translateY(0) scale(1);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.apt{position:relative;background:var(--white);border:none;overflow:hidden;display:flex;flex-direction:column;flex:0 0 clamp(280px,38vw,420px);scroll-snap-align:start;box-shadow:var(--shadow-float);transform:translateY(0) scale(1);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
 .apt:hover{transform:translateY(-10px) scale(1.01);box-shadow:var(--shadow-hover)}
 /* Tutte della stessa larghezza: «wide» faceva due formati diversi e le
    foto ne uscivano alte 149px contro 210. */
@@ -204,6 +204,14 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .apt-body{padding:1.4rem 1.6rem 1.7rem;flex:1;display:flex;flex-direction:column}
 .apt-body .apt-book{margin-top:auto;align-self:flex-start}
 .apt-cat{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);font-weight:500;margin-bottom:.35rem}
+/* LINK ESTESO. La scheda era cliccabile con un onclick: col mouse funzionava,
+   ma Google non la seguiva (cinque pagine invisibili ai motori), il Tab non
+   ci arrivava e il tasto destro non apriva niente. Ora il nome e' un link
+   vero e il suo ::after copre tutta la scheda. «Prenota» resta sopra. */
+.apt-link{color:inherit;text-decoration:none}
+.apt-link::after{content:'';position:absolute;inset:0;z-index:1}
+.apt-link:focus-visible::after{outline:2px solid var(--gold-testo);outline-offset:-3px}
+.apt-body .apt-book{position:relative;z-index:2}
 .apt-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;line-height:1.15}
 /* ⚠️ Il testo qui e' scuro su carta BIANCA. Una correzione precedente
    l'aveva schiarito credendo il fondo scuro — misura sbagliata, perche'
@@ -689,46 +697,46 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <p data-i18n="t6d55b5df46" class="sec-meta" style="color:rgba(247,244,239,.55)">La vecchia limonaia del Prà si arricchisce di cinque appartamenti mono o bilocali arredati con gusto ed eleganza.</p>
   </div>
   <div class="apt-scroll-track r d2" id="apt-track">
-      <article class="apt wide" onclick="location.href='appartamento-clementina.html'" style="cursor:pointer">
+      <article class="apt wide">
         <div class="apt-img" style="overflow:hidden"><img src="img/clementina.jpg" alt="Appartamento Clementina" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 data-i18n="t73df17558b" class="apt-name">Clementina</h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t73df17558b" href="appartamento-clementina.html">Clementina</a></h3>
           <p data-i18n="t36cd9798d3" class="apt-desc">Cucina attrezzata, arredamento in legno. Vista lago e giardino.</p>
           <div data-i18n="t6bafccbf5c" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Cucina</span><span class="apt-feat">Giardino</span><span class="apt-feat">A/C</span></div>
-          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book" onclick="event.stopPropagation()">Prenota →</a>
+          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
-      <article class="apt" onclick="location.href='appartamento-calamondino.html'" style="cursor:pointer">
+      <article class="apt">
         <div class="apt-img" style="overflow:hidden"><img src="img/calamondino.jpg" alt="Appartamento Calamondino" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 data-i18n="t24e1b918b6" class="apt-name">Calamondino</h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t24e1b918b6" href="appartamento-calamondino.html">Calamondino</a></h3>
           <p data-i18n="tb6c4ca4ea6" class="apt-desc">Ampie vetrate sul lago, cucina attrezzata, giardino con scoperto privato. Arredamento in legno.</p>
           <div data-i18n="t6bafccbf5c" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Cucina</span><span class="apt-feat">Giardino</span><span class="apt-feat">A/C</span></div>
-          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book" onclick="event.stopPropagation()">Prenota →</a>
+          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
-      <article class="apt" onclick="location.href='appartamento-kumquat.html'" style="cursor:pointer">
+      <article class="apt">
         <div class="apt-img" style="overflow:hidden"><img src="img/kumquat.jpg" alt="Appartamento Kumquat" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 data-i18n="t0f1cc1941b" class="apt-name">Kumquat</h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t0f1cc1941b" href="appartamento-kumquat.html">Kumquat</a></h3>
           <p data-i18n="tf5795ea6fe" class="apt-desc">Vista da Malcesine a Sirmione, giardino privato con sdraio. Angolo cottura, bagno con doccia.</p>
           <div data-i18n="t6bafccbf5c" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Cucina</span><span class="apt-feat">Giardino</span><span class="apt-feat">A/C</span></div>
-          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book" onclick="event.stopPropagation()">Prenota →</a>
+          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
-      <article class="apt" onclick="location.href='appartamento-pomelo.html'" style="cursor:pointer">
+      <article class="apt">
         <div class="apt-img" style="overflow:hidden"><img src="img/pomelo.jpg" alt="Appartamento Pomelo" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 data-i18n="tc8fa544fbc" class="apt-name">Pomelo</h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="tc8fa544fbc" href="appartamento-pomelo.html">Pomelo</a></h3>
           <p data-i18n="td122cacdeb" class="apt-desc">L'antica dimora del giardiniere. Ingresso privato, vista lago, angolo cottura. A pochi passi dalla spiaggia.</p>
           <div data-i18n="t8e20ae8c0a" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Ingresso privato</span><span class="apt-feat">Angolo cottura</span><span class="apt-feat">A/C</span></div>
-          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book" onclick="event.stopPropagation()">Prenota →</a>
+          <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
       <article class="apt wide" style="cursor:default;opacity:.55;filter:grayscale(.4)">
         <div class="apt-img" style="overflow:hidden"><img src="img/bergamotto.jpg" alt="Appartamento Bergamotto" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge" style="background:var(--steel)">Non disponibile</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 data-i18n="t3579b6ebf9" class="apt-name">Bergamotto</h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t3579b6ebf9" href="appartamento-bergamotto.html">Bergamotto</a></h3>
           <p data-i18n="t861e60c1c5" class="apt-desc">Su due livelli: camera matrimoniale e bagno al piano terra, zona giorno con cucina in mansarda. Interni in pietra a vista con scala a sbalzo caratteristica.</p>
           <div data-i18n="t376351c53f" class="apt-feats"><span class="apt-feat">A/C</span><span class="apt-feat">Cucina</span><span class="apt-feat">WiFi</span><span class="apt-feat">Letto matrimoniale</span></div>
           <span class="apt-book" style="background:var(--steel);cursor:default;opacity:.7">Non disponibile</span>
@@ -1036,11 +1044,11 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       <p data-i18n="t251c5c5589" class="footer-col-title">Alloggi</p>
       <div class="footer-links">
         <a data-i18n="t294fe37686" href="#hotel">Hotel — 10 Camere</a>
-        <a data-i18n="te292d68d63" href="#appartamenti">App. Bergamotto</a>
-        <a data-i18n="t7494b2bbce" href="#appartamenti">App. Calamondino</a>
-        <a data-i18n="t1d07da6684" href="#appartamenti">App. Clementina</a>
-        <a data-i18n="td1f30cb50f" href="#appartamenti">App. Kumquat</a>
-        <a data-i18n="t839b196b5c" href="#appartamenti">App. Pomelo</a>
+        <a data-i18n="te292d68d63" href="appartamento-bergamotto.html">App. Bergamotto</a>
+        <a data-i18n="t7494b2bbce" href="appartamento-calamondino.html">App. Calamondino</a>
+        <a data-i18n="t1d07da6684" href="appartamento-clementina.html">App. Clementina</a>
+        <a data-i18n="td1f30cb50f" href="appartamento-kumquat.html">App. Kumquat</a>
+        <a data-i18n="t839b196b5c" href="appartamento-pomelo.html">App. Pomelo</a>
       </div>
     </div>
     <div>

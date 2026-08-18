@@ -500,6 +500,29 @@ ogni domanda risponde «Qualcosa non ha funzionato».
 `ANTHROPIC_API_KEY`.** È l'unica cosa che manca per farlo parlare.
 
 
+### Le cinque schede appartamento sono link veri
+Erano `<article onclick="location.href=…">`: col mouse funzionavano, ma **Google
+non le seguiva** — cinque pagine con foto e descrizioni invisibili ai motori — il
+**Tab non ci arrivava** e il tasto destro non apriva niente.
+
+**Non si poteva avvolgere la scheda in un `<a>`:** dentro c'è già il link
+«Prenota», e un link dentro un link è HTML non valido. Usato il **link esteso**:
+il nome è un `<a>` vero e il suo `::after` copre tutta la scheda; «Prenota» sta
+sopra e continua a portare al motore.
+
+⚠️ **`data-i18n` è andato sull'`<a>`, non sull'`<h3>`.** La traduzione sostituisce
+l'`innerHTML` dell'elemento marcato: lasciandolo sull'`h3` avrebbe **cancellato il
+link** al primo cambio di lingua. Verificato passando a tedesco e tornando: i
+cinque link restano.
+
+Sistemati anche i cinque link del piè di pagina, che dicevano «App. Bergamotto» e
+portavano alla sezione generica.
+
+⬜ Restano i punti della **mappa della proprietà**, che usano `data-href`: per un
+visitatore funzionano, per Google no. Le schede e il piede ora danno comunque una
+strada seguibile a tutte e cinque le pagine.
+
+
 ---
 
 ## ⬜ Aperto

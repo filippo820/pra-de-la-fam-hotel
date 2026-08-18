@@ -107,3 +107,23 @@
   }
   aggiorna();
 })();
+
+/* ══════════════════════════════════════════════════════════════════════
+   Chi arriva con il link «Come arrivare» deve TROVARE le indicazioni, non
+   una riga chiusa da premere. La scheda sta al 94% della pagina: se dopo
+   tutto quello scorrimento chiedesse un altro tocco sarebbe una presa in
+   giro. Aperta anche quando il link e' gia' nell'indirizzo al caricamento.
+   ══════════════════════════════════════════════════════════════════════ */
+(function () {
+  function apri() {
+    if (location.hash !== '#come-arrivare') return;
+    var d = document.getElementById('come-arrivare');
+    if (d) { d.open = true; d.scrollIntoView({ block: 'start' }); }
+  }
+  window.addEventListener('hashchange', apri);
+  // due volte: subito, e di nuovo a immagini caricate — altrimenti la pagina
+  // cresce sotto i piedi e lo scorrimento finisce nel posto sbagliato
+  window.addEventListener('load', apri);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apri);
+  else apri();
+})();

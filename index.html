@@ -325,6 +325,23 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .info-text{font-size:.84rem;font-weight:300;line-height:1.8;color:var(--steel)}
 
 /* ── CONTATTI ── */
+/* COME ARRIVARE — recuperata dal vecchio sito, dove c'era per intero e qui
+   mancava del tutto. Riscritta in tondo (l'originale era tutto maiuscolo) e
+   corretta dove sbagliava: «Riva di Trento» non esiste, e' Riva del Garda;
+   sull'A22 non c'e' un'uscita «Rovereto Est», per Riva si esce a Rovereto Sud.
+   Tolte le frequenze delle navette aeroportuali: erano di quindici anni fa. */
+.arrivo{grid-column:1/-1;margin-top:3.5rem;padding-top:2.6rem;border-top:1px solid rgba(11,21,32,.1)}
+.arrivo-griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem;margin-top:1.4rem}
+.arrivo-tit{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:.7rem}
+.arrivo-da{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-testo);margin:1.2rem 0 .35rem}
+.arrivo-voce .arrivo-da:first-of-type{margin-top:0}
+.arrivo-txt{font-size:.9rem;font-weight:300;line-height:1.85;color:var(--steel);margin-bottom:.7rem}
+.arrivo-txt strong{font-weight:500;color:var(--ink)}
+.arrivo-nota{margin-top:2rem;font-size:.9rem;font-weight:300;line-height:1.8;color:var(--ink);
+             border-left:2px solid var(--gold-testo);padding-left:1rem}
+.arrivo-gps{margin-top:1rem;font-size:.72rem;letter-spacing:.1em;color:var(--steel)}
+@media(max-width:800px){.arrivo-griglia{grid-template-columns:1fr;gap:2rem}
+                        .arrivo{margin-top:2.6rem;padding-top:2rem}}
 .contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
 @media(max-width:800px){.contact-inner{grid-template-columns:1fr;gap:3rem}}
 .cinfo-label{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);margin-bottom:.5rem}
@@ -1026,7 +1043,38 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       </div>
     </div>
   </div>
-</section>
+
+    <div class="arrivo r d2">
+      <p data-i18n="t888a00e0c1" class="cinfo-label">Come arrivare</p>
+      <div class="arrivo-griglia">
+
+        <div class="arrivo-voce">
+          <h3 data-i18n="tf1c8b4462a" class="arrivo-tit">In auto</h3>
+          <p data-i18n="td4b6fcbd5b" class="arrivo-da">Da est</p>
+          <p data-i18n="ta3eb0373a9" class="arrivo-txt">Autostrada A4, uscita Desenzano, direzione Salò: circa 15 km. Da Salò si prosegue verso Riva del Garda sulla Gardesana, la SS 45 bis; passata Gargnano, ancora 4 km fino al Porto di Tignale.</p>
+          <p data-i18n="t303af58209" class="arrivo-da">Da ovest</p>
+          <p data-i18n="tbf9a913713" class="arrivo-txt">Autostrada A4, uscita Brescia Est, direzione Salò: circa 20 km. Da lì come sopra.</p>
+          <p data-i18n="t67275fe941" class="arrivo-da">Da nord</p>
+          <p data-i18n="t380557569e" class="arrivo-txt">Autostrada del Brennero A22, uscita Rovereto Sud, direzione Riva del Garda, poi Gardesana verso Brescia per una ventina di chilometri.</p>
+        </div>
+
+        <div class="arrivo-voce">
+          <h3 data-i18n="tef84d416a9" class="arrivo-tit">In treno</h3>
+          <p data-i18n="t6f4a1eab99" class="arrivo-txt">Le stazioni comode sono Brescia e Desenzano–Sirmione, sulla linea Milano–Venezia. Da Brescia gli autobus lungo la Gardesana sono più frequenti, da Desenzano più radi. Si scende alla fermata Porto di Tignale.</p>
+          <p data-i18n="t0aae14be2b" class="arrivo-txt">Arrivando da nord: stazione di Rovereto, autobus fino a Riva del Garda e da lì la linea per Gargnano.</p>
+        </div>
+
+        <div class="arrivo-voce">
+          <h3 data-i18n="t85057929c4" class="arrivo-tit">In aereo</h3>
+          <p data-i18n="ta9faca02a1" class="arrivo-txt">Dal più vicino al più lontano: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Milano Linate, Venezia e Milano Malpensa.</p>
+          <p data-i18n="t5be0bd6124" class="arrivo-txt">Tutti collegati in treno o in autobus con le stazioni di Brescia, Desenzano e Verona, da cui si prosegue lungo la Gardesana.</p>
+        </div>
+
+      </div>
+      <p data-i18n="t6ea05b015c" class="arrivo-nota">La Gardesana è stretta e piena di gallerie, ma è una delle strade più panoramiche d’Italia: prendetevi il tempo di guardarla.</p>
+      <p data-i18n="t0d9be8ccf0" class="arrivo-gps">GPS 45°43.684′N · 10°43.176′E</p>
+    </div>
+  </section>
 
 <!-- FOOTER -->
 <footer>
@@ -1066,14 +1114,14 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       <div class="footer-links">
         <a href="tel:+390365799890">(+39) 0365 799890</a>
         <a href="mailto:info@alpradelafam.com">info@alpradelafam.com</a>
-        <a data-i18n="t888a00e0c1" href="https://maps.google.com/?q=Al+Pra+Hotel+Tignale" target="_blank">Come arrivare</a>
+        <a data-i18n="t888a00e0c1" href="#contatti">Come arrivare</a>
         <a data-i18n="tff12d938aa" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank">Prenota online</a>
         <a data-i18n="te6e178ccc8" href="https://www.alpradelafam.com/wp/cookie-policy/" target="_blank">Cookie Policy</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy" style="margin-right:14px"><a href="privacy.html" style="color:inherit">Privacy</a> · <a href="cookie.html" style="color:inherit">Cookie</a></span><span class="footer-copy">© 2026 AlPraDeLaFam.com · Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · P.IVA 03375820986</span>
+    <span class="footer-copy" style="margin-right:14px"><a data-i18n="tcf01481f62" href="privacy.html" style="color:inherit">Privacy</a> · <a data-i18n="te4f81994fe" href="cookie.html" style="color:inherit">Cookie</a></span><span class="footer-copy">© 2026 AlPraDeLaFam.com · Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · P.IVA 03375820986</span>
     <div class="footer-lang">
       <button class="flb active" onclick="setLang('it')">IT</button>
       <button class="flb" onclick="setLang('en')">EN</button>

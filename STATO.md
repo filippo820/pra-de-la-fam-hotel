@@ -523,6 +523,55 @@ visitatore funzionano, per Google no. Le schede e il piede ora danno comunque un
 strada seguibile a tutte e cinque le pagine.
 
 
+### «Come arrivare» — il primo pezzo recuperato dal vecchio sito
+Era la mancanza più grossa per chi sta per prenotare: sul vecchio WordPress c'è
+una pagina intera, qui non c'era nulla. Ora è una sezione dentro **Contatti**:
+auto, treno, aereo, più la nota sulla Gardesana e le coordinate GPS.
+
+**Riscritta, non copiata.** L'originale era tutto in maiuscolo e conteneva
+errori che non aveva senso propagare:
+- «Riva di Trento» **non esiste** → Riva del Garda;
+- sull'A22 **non c'è un'uscita «Rovereto Est»**: per Riva si esce a Rovereto Sud;
+- refusi: «AUTOSTADA», «LINATE EMALPENSA», «OGNI LES 20 MIN».
+
+⚠️ **Tolte le distanze in chilometri degli aeroporti.** Il vecchio sito dava
+Verona 60, Montichiari 45, Milano 100: sono misure che non ho potuto verificare
+e che mi sembrano ottimistiche (Malpensa a 100 km è quasi certamente sbagliato).
+Gli aeroporti sono elencati **dal più vicino al più lontano**, senza numeri.
+Meglio nessun numero che uno sbagliato a chi sta prenotando un transfer.
+Se servono i km, vanno misurati e me li si passa.
+
+Tolte anche le frequenze delle navette aeroportuali: erano di quindici anni fa.
+
+✅ Le coordinate GPS del vecchio sito sono state **verificate**: cadono a 492 m
+da quelle usate per il meteo, cioè lo stesso posto.
+
+Tradotta in tutte e cinque le lingue (15 frammenti nuovi).
+
+### 🔴 Rifacendo il dizionario l'ho azzerato — e come non succeda più
+`marca.py` scrive in `it.json` **solo gli elementi che ha marcato in quella
+passata**. Rilanciandolo su un sito già marcato, `it.json` è sceso da 341 testi a
+89; poi `costruisci.py` l'ha letto e ha riscritto `i18n.js` **da 96 KB a 3** —
+cioè il sito senza traduzioni. Ripristinato da git.
+
+📐 **La fonte di verità non è l'ultima passata di marca.py: è l'HTML.** Scritto
+`strumenti/raccogli.py`, che ricostruisce `it.json` leggendo tutti gli elementi
+`[data-i18n]` delle pagine. **Va lanciato sempre fra `marca.py` e
+`costruisci.py`.** (`it.json` non è mai stato in git: adesso c'è lo strumento che
+lo rigenera, che è meglio.)
+
+⚠️ **Seconda trappola, dentro la prima:** `raccogli.py` normalizza gli spazi, e
+`\s` in Python **comprende lo spazio unificatore**. Quindi nelle chiavi dei
+frammenti lo spazio unificatore diventa normale. Le chiavi delle traduzioni
+devono avere lo spazio **normale**, i valori quello **unificatore** — altrimenti
+o non combaciano, o la freccia torna a staccarsi nelle quattro lingue. Sistemato
+in entrambi i file, verificato: 0 valori con lo spazio sbagliato.
+
+Dizionario finale: **104 KB, en 247 · de 248 · fr 242 · es 231** testi tradotti
+(prima 235 · 237 · 231 · 219). Verificato che nessuna traduzione preesistente sia
+andata persa: le uniche tre sparite erano del pannello chat rimosso.
+
+
 ---
 
 ## ⬜ Aperto

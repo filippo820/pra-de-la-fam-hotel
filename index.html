@@ -451,6 +451,18 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   .avail-input{min-width:0}
   .avail-input input,.avail-input select{width:100%;min-width:0;max-width:100%;
                                          box-sizing:border-box;font-size:.78rem}
+  /* ⚠️ FERMO DURO. Su iPhone <input type="date"> pretende una larghezza
+     minima sua: misurato dalla foto di uno schermo vero, 212px dove la
+     colonna ne dava 197 — sbordava di 15 e spingeva «Partenza» FUORI dallo
+     schermo. Non era una sovrapposizione, era un traboccamento.
+     overflow:hidden sul riquadro fa da fermo: qualunque cosa il campo
+     pretenda, non puo' piu' spostare quello accanto.
+     Il margine interno del campo si stringe per lasciare spazio alla data,
+     che iOS scrive «21 ago 2026» — piu' larga di «21/08/2026». */
+  .avail-input{overflow:hidden}
+  .avail-input input[type="date"]{-webkit-appearance:none;appearance:none;
+                                  padding-left:.5rem;padding-right:.35rem}
+  .avail-input input[type="date"]::-webkit-date-and-time-value{text-align:left;margin:0}
   .avail-btn{justify-content:center;padding:.6rem 1rem}
   /* Su uno schermo corto il testo dell'apertura finiva sotto la barra di
      navigazione: il blocco misurava 630px in 667 di schermo, con 68 gia'

@@ -453,6 +453,33 @@ corpo leggermente più piccolo.
 causa, ma la conferma può darla solo un iPhone vero.
 
 
+### I campi data che «si sovrapponevano»: era un traboccamento
+Chiuso grazie a una **foto di uno schermo vero** (iPhone Pro Max), dopo che due
+motori, cinque profili, sette larghezze, tre lingue, cinque dimensioni di testo e
+l'orientamento orizzontale non l'avevano riprodotto.
+
+**Misurato dalla foto:** il campo era largo **212px dove la colonna ne dava 197**.
+Non si sovrapponevano: **«Partenza» usciva dallo schermo a destra**, e il bordo di
+«Arrivo» gli finiva addosso. È la larghezza minima che iOS impone a
+`<input type="date">` — e che nessun motore da scrivania riproduce, perché
+disegna quel controllo in un altro modo.
+
+⚠️ **La foto era di una pagina in cache:** lo stacco misurato era 9px, cioè quello
+di prima delle correzioni pubblicate 19 minuti prima. Su iPhone conviene sempre
+chiedere una **finestra privata** prima di dare per buono un difetto.
+
+**Fermo duro:** `overflow:hidden` sul riquadro. Provato forzando il campo a
+pretendere 212 e 260px: i riquadri restano nella loro colonna, allineati con
+«Ospiti» e «Cerca» sotto, e **niente esce dallo schermo**. Al massimo si perde il
+bordo destro del campo — molto meglio di un campo fuori pagina.
+Aggiunti anche `-webkit-appearance:none` e margini interni più stretti, perché
+iOS scrive la data come «21 ago 2026», più larga di «21/08/2026».
+
+📐 **Regola:** quando un difetto non si riproduce in nessun motore, la foto dello
+schermo vero non è un ripiego — è **la misura**. Da quella sono usciti i 15px di
+troppo in due minuti, dopo un'ora di prove al buio.
+
+
 ---
 
 ## ⬜ Aperto

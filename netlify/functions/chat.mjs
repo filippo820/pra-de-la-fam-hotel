@@ -154,6 +154,14 @@ export default async (req) => {
   while (puliti.length > 1 && puliti.reduce((a, m) => a + m.content.length, 0) > MAX_TOTALE) puliti.shift();
   if (!puliti.length || puliti[puliti.length - 1].role !== 'user') return rispondi({ errore: 'vuoto' }, 400);
 
+  // ── diagnosi temporanea: solo i NOMI delle variabili, mai i valori ──
+  if (new URL(req.url).searchParams.get('diagnosi') === 'si') {
+    return rispondi({ variabili: Object.keys(process.env)
+      .filter(k => /anthropic|ai_|gateway|openai|gemini/i.test(k)).sort(),
+      chiaveLunga: (process.env.ANTHROPIC_API_KEY || '').length,
+      chiaveInizia: (process.env.ANTHROPIC_API_KEY || '').slice(0, 7) });
+  }
+
   const CHIAVE = process.env.ANTHROPIC_API_KEY;
   if (!CHIAVE) return rispondi({ risposta: GUASTO[lingua], guasto: 'chiave assente' });
 

@@ -2,3 +2,6 @@
 *.bak
 *.bak.html
 IMG_*.PNG
+
+# Local Netlify folder
+.netlify

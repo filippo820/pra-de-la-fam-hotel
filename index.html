@@ -61,7 +61,9 @@
   /* L'oro del marchio su crema da' 2.62:1 — sotto il minimo per un testo
      (serve 4.5, o 3 se molto grande). Misurato sui pixel veri, non stimato.
      Resta --gold dov'e' su fondo scuro, dove sta a 6.40:1 e va benissimo. */
-  --gold-testo:#846934;    /* 4.72:1 su crema · 5.18 su bianco — testo normale */
+  --gold-testo:#7d6331;    /* 5.17 su crema · 4.65 sul fondo caldo · 5.67 su bianco.
+                              #846934 passava su crema ma non sul fondo caldo della
+                              sezione Territorio (4.25): tarato su UN solo fondo. */
   --gold-titolo:#9a7a3c;   /* 3.66:1 su crema — solo per il corsivo grande dei titoli */
 
   --white:#ffffff;
@@ -88,7 +90,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bone);color:var(--ink);ov
 
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,4vw,4rem);height:68px;background:rgba(247,244,239,.92);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid rgba(11,21,32,.08)}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,4vw,4rem);height:68px;background:rgba(247,244,239,.97);backdrop-filter:blur(24px) saturate(1.5);border-bottom:1px solid rgba(11,21,32,.08)}
 nav.scrolled{background:rgba(247,244,239,.99)}
 .nav-logo-img{height:44px;width:auto;display:block}
 .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
@@ -673,6 +675,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       <h3 data-i18n="t4a7cce2b7a" class="storia-title">Un albergo con<br><em>posizione ideale.</em></h3>
       <p data-i18n="tf297f278b2" class="storia-text">Situato a Tignale, paese caratteristico del Lago di Garda, sulla strada per Riva, a pochi chilometri da Gargnano, il Prà de la Fam vanta una posizione ideale per una vacanza tranquilla o all'insegna dello sport.</p>
       <p data-i18n="ta13fa83e74" class="storia-text">Direttamente a lago, il Prà è immerso nella natura. Alle sue spalle si erge un muro di roccia con un'incantevole cascata e di fronte la vista spazia sul lago blu e sul Monte Baldo. La famiglia Parisini gestisce direttamente la struttura da secoli.</p>
+        <p data-i18n="t8260aa1fca" class="storia-text">La colazione si serve in veranda, all'ombra degli ulivi, e il grande giardino è il posto giusto per stare al sole. La spiaggia è a meno di venti metri.</p>
       <br>
       <a data-i18n="te212539cb8" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="btn-fill">Prenota una camera →</a>
     </div>

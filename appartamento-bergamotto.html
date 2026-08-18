@@ -55,7 +55,7 @@
   --ink:#0b1520;--mid:#2e4a62;--steel:#4a6580;
   --bone:#f7f4ef;--warm:#ede8df;
   --gold:#b8934a;--gold2:#d4b06a;--gold3:#f0d898;
-  --gold-testo:#846934;    /* 4.72:1 su crema — l'oro del marchio da' 2.62, sotto il minimo */
+  --gold-testo:#7d6331;    /* 5.17 su crema · 4.65 sul fondo caldo · 5.67 su bianco */
   --gold-titolo:#9a7a3c;   /* 3.66:1 su crema — solo per il corsivo grande dei titoli */
   --white:#ffffff;
   --ease:cubic-bezier(.22,.68,0,1.2);
@@ -105,6 +105,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .room-type-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-testo);margin-bottom:1rem}
 .room-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:1.8rem}
 .room-subtitle em{font-style:italic;color:var(--gold)}
+/* IL NOME DELL'APPARTAMENTO. Il vecchio sito spiegava ogni agrume fra
+   parentesi sotto il titolo: e' il filo che lega i cinque appartamenti alla
+   limonaia, e qui si era perso del tutto. */
+.room-agrume{font-size:.82rem;font-weight:300;font-style:italic;line-height:1.75;
+             color:var(--steel);border-left:2px solid var(--gold-testo);
+             padding-left:.9rem;margin:-.6rem 0 1.8rem}
 .room-desc{font-size:.85rem;font-weight:300;line-height:2;color:var(--steel);margin-bottom:2rem}
 .room-floor{font-size:.7rem;letter-spacing:.1em;color:var(--steel);opacity:.7;margin-bottom:2.5rem;display:flex;align-items:center;gap:.5rem}
 .room-floor::before{content:'📍';font-size:.8rem}
@@ -235,6 +241,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
         <p data-i18n="t558bacaaaa" class="room-type-tag">Appartamento · Prà de la Fam</p>
         <h2 data-i18n="ta4e82da719" class="room-subtitle">Pietra vista, scala a sbalzo e giardino riservato</h2>
         <p data-i18n="t6649158d5f" class="room-floor">Piano terra + mansarda · Ingresso dal sentiero Oldesio</p>
+<p data-i18n="t373f10061d" class="room-agrume">Gli appartamenti portano il nome di un agrume della limonaia. Il bergamotto dà l’olio essenziale che sta alla base delle acque di colonia.</p>
         <p data-i18n="ta99d92066e" class="room-desc">L'appartamento Bergamotto si sviluppa su due livelli. Al piano terra dispone di una camera da letto matrimoniale e un ampio bagno con doccia. Al piano mansardato si trovano la zona giorno con angolo cucina e la possibilità di aggiungere un terzo posto letto. Gli interni in pietra a vista e la scala a sbalzo che collega i due livelli donano all'ambiente un'atmosfera intima e fresca.</p>
         
       </div>

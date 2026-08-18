@@ -600,6 +600,29 @@ in aereo» sarebbe rimasta in italiano nelle altre quattro lingue. Impronta mess
 a mano (`sha1` del testo italiano, primi 10 caratteri) e traduzione aggiunta.
 
 
+### I nomi degli agrumi e la spiaggia
+**Ogni appartamento spiega il proprio nome.** Sul vecchio sito ogni pagina
+apriva con l'agrume fra parentesi; qui non c'era. Ora una riga in corsivo sotto
+la posizione, su tutte e cinque le pagine — e dice anche **perché** si chiamano
+così: «Gli appartamenti portano il nome di un agrume della limonaia.» È il filo
+che li lega alla limonaia, e si era perso del tutto.
+
+**La spiaggia a meno di venti metri** è entrata nella storia dell'hotel in home,
+insieme alla colazione in veranda e al giardino. È il dato più concreto che il
+vecchio sito aveva e questo non diceva.
+
+Le visite per scolaresche restano fuori, per scelta.
+
+⚠️ **`--gold-testo` era tarato su UN solo fondo.** #846934 passa su crema (4,72)
+ma **non** sul fondo caldo della sezione Territorio (**4,25**), dove è finito «I
+sentieri dimenticati». Portato a **#7d6331**: 5,17 su crema · 4,65 sul caldo ·
+5,67 su bianco. E la barra in alto da `rgba(…,.92)` a `.97`, perché la foto che
+traspariva scuriva il pulsante della lingua attiva (4,39).
+
+📐 **Stessa lezione del 06/08, in un'altra veste:** un colore va misurato su
+**tutti** i fondi su cui compare davvero, non su quello principale.
+
+
 ---
 
 ## ⬜ Aperto

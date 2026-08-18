@@ -107,7 +107,15 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .lang-sep{color:rgba(11,21,32,.18);font-size:.58rem}
 .nav-cta{display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:var(--bone);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.3rem;border-radius:2px;text-decoration:none;transition:background .2s;margin-left:.6rem}
 .nav-cta:hover{background:var(--mid)}
-@media(max-width:900px){.nav-center{display:none}}
+/* Nove voci chiedono 1517px di barra: sotto, andavano a capo e spingevano
+   «Prenota» fuori dallo schermo — misurato. Sotto i 1300 si passa al
+   pulsante del menu, che le contiene tutte piu' le lingue; fra 1300 e
+   1500 la barra si stringe: con questo bastano 1250px e nessuno esce. */
+@media(max-width:1300px){.nav-center{display:none}}
+@media(max-width:1500px){
+  .nav-center{gap:1.15rem}
+  .nav-center a{font-size:.64rem;letter-spacing:.09em}
+}
 @media(max-width:640px){.nav-logo-img{height:36px}}
 @media(max-width:560px){.nav-right .lang-btn,.nav-right .lang-sep{display:none}}
 
@@ -333,6 +341,19 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .info-c{background:var(--white);padding:2.4rem 2rem;box-shadow:var(--shadow-float);transition:transform .4s var(--ease),box-shadow .4s}
 .info-c:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
 .info-ico{font-size:1.4rem;margin-bottom:.9rem;display:block}
+/* CARTE ATTIVE. Erano quattro riquadri di sola lettura: l'indirizzo non
+   apriva la mappa, il numero non si poteva chiamare, «Come arrivare» non
+   portava da nessuna parte. Le prime due usano il link esteso (il titolo e'
+   un <a> e il suo ::after copre la carta); «Contatti» no — li' servono due
+   destinazioni diverse, quindi sono il numero e la mail a essere link. */
+.info-c{position:relative}
+.info-link{color:inherit;text-decoration:none}
+.info-link::after{content:'';position:absolute;inset:0}
+.info-c:has(.info-link){cursor:pointer;transition:transform .25s var(--ease)}
+.info-c:has(.info-link):hover{transform:translateY(-3px)}
+.info-link:focus-visible::after{outline:2px solid var(--gold-testo);outline-offset:4px}
+.info-diretto{color:inherit;text-decoration:none;border-bottom:1px solid rgba(11,21,32,.18)}
+.info-diretto:hover{color:var(--gold-testo);border-bottom-color:currentColor}
 .info-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
 .info-text{font-size:.84rem;font-weight:300;line-height:1.8;color:var(--steel)}
 
@@ -611,6 +632,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <a data-i18n="tcf268eb913" href="#recensioni">Recensioni</a>
     <a data-i18n="t55de887092" href="#shop">Shop</a>
     <a data-i18n="t1afd65f4cd" href="#contatti">Contatti</a>
+    <a data-i18n="t888a00e0c1" href="#come-arrivare">Come arrivare</a>
   </div>
   <div class="nav-right">
     <button class="lang-btn active" onclick="setLang('it')">IT</button><span class="lang-sep">|</span>
@@ -1042,9 +1064,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 <!-- INFO STRIP -->
 <div class="info-strip">
   <div class="info-grid">
-    <div class="info-c r"><span class="info-ico">📍</span><h4 data-i18n="t16f921ca52" class="info-title">Dove siamo</h4><p data-i18n="ta07451d53c" class="info-text">Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Sponda bresciana</p></div>
-    <div class="info-c r d1"><span class="info-ico">📞</span><h4 data-i18n="t1afd65f4cd" class="info-title">Contatti</h4><p class="info-text">Tel. (+39) 0365 799890<br>info@alpradelafam.com</p></div>
-    <div class="info-c r d2"><span class="info-ico">🚗</span><h4 data-i18n="t888a00e0c1" class="info-title">Come arrivare</h4><p data-i18n="ta0fa0d69d8" class="info-text">Strada Gargnano–Riva del Garda. Parcheggio privato gratuito riservato ai clienti.</p></div>
+    <div class="info-c r"><span class="info-ico">📍</span><h4 class="info-title"><a class="info-link" data-i18n="t16f921ca52" href="https://maps.google.com/?q=Pra+de+la+Fam+Tignale+Lago+di+Garda" target="_blank" rel="noopener">Dove siamo</a></h4><p data-i18n="ta07451d53c" class="info-text">Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Sponda bresciana</p></div>
+    <div class="info-c r d1"><span class="info-ico">📞</span><h4 data-i18n="t1afd65f4cd" class="info-title">Contatti</h4><p class="info-text">Tel. <a class="info-diretto" href="tel:+390365799890">(+39) 0365 799890</a><br><a class="info-diretto" href="mailto:info@alpradelafam.com">info@alpradelafam.com</a></p></div>
+    <div class="info-c r d2"><span class="info-ico">🚗</span><h4 class="info-title"><a class="info-link" data-i18n="t888a00e0c1" href="#come-arrivare">Come arrivare</a></h4><p data-i18n="ta0fa0d69d8" class="info-text">Strada Gargnano–Riva del Garda. Parcheggio privato gratuito riservato ai clienti.</p></div>
     <div class="info-c r d3"><span class="info-ico">🌿</span><h4 data-i18n="tf757da1422" class="info-title">La natura</h4><p data-i18n="t838f87a25f" class="info-text">Cascata di roccia alle spalle, lago e Monte Baldo di fronte. Limonaia attiva a due passi.</p></div>
   </div>
 </div>
@@ -1057,30 +1079,6 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <p data-i18n="t2adafad680" class="sec-meta">Per informazioni siamo a tua disposizione.</p>
   </div>
   <div class="contact-inner">
-    <div style="display:flex;flex-direction:column;gap:2.5rem">
-      <div class="r d1"><p data-i18n="t409c8e4975" class="cinfo-label">Indirizzo</p><p data-i18n="tfe2f8469b9" class="cinfo-value">AlPraDeLaFam.com<br>Via Gardesana, 7 · Porto di Tignale<br>25080 Tignale (BS)</p><p class="cinfo-sub">P.IVA: 03375820986</p></div>
-      <div class="r d2"><p data-i18n="t398dc61e6a" class="cinfo-label">Telefono</p><p class="cinfo-value"><a href="tel:+390365799890" class="cinfo-link">(+39) 0365 799890</a></p></div>
-      <div class="r d2"><p data-i18n="t84add5b295" class="cinfo-label">Email</p><p class="cinfo-value"><a href="mailto:info@alpradelafam.com" class="cinfo-link">info@alpradelafam.com</a></p></div>
-      <div class="r d3"><p data-i18n="td96b889af3" class="cinfo-label">Seguici</p>
-        <div class="footer-social">
-          <a class="fs" href="https://www.facebook.com/pradelafam/" target="_blank" style="border-color:rgba(11,21,32,.2);color:var(--ink)">f</a>
-          <a class="fs" href="http://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html" target="_blank" style="border-color:rgba(11,21,32,.2);color:var(--ink)">★</a>
-          <a class="fs" href="mailto:info@alpradelafam.com" style="border-color:rgba(11,21,32,.2);color:var(--ink)">✉</a>
-        </div>
-      </div>
-    </div>
-    <div class="r d2">
-      <div class="cmap">
-        <div><div class="cmap-emoji">🗺️</div><h3 data-i18n="t610f5e52ac" class="cmap-title">Prà de la Fam, Lago di Garda</h3><p data-i18n="tf38421c0d2" class="cmap-sub">Via Gardesana, 7 · Sponda bresciana<br>Strada Gargnano–Riva del Garda</p><a data-i18n="t52fef421c2" href="https://maps.google.com/?q=Pra+de+la+Fam+Tignale+Lago+di+Garda" target="_blank" class="cmap-btn">Apri su Google Maps →</a></div>
-      </div>
-      <div class="book-cta r d3">
-        <h3 data-i18n="t29439a78d2" class="book-cta-title">Pronto a<br><em>prenotare?</em></h3>
-        <p data-i18n="t43d51909d4">Disponibilità in tempo reale con il nostro booking engine. Conferma immediata.</p>
-        <a data-i18n="t7629980224" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="book-now-btn">Controlla disponibilità →</a>
-      </div>
-    </div>
-  </div>
-
     <details class="arrivo r d2" id="come-arrivare">
       <summary class="arrivo-testa">
         <span data-i18n="t888a00e0c1" class="cinfo-label">Come arrivare</span>
@@ -1117,6 +1115,32 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       <p data-i18n="t6ea05b015c" class="arrivo-nota">La Gardesana è stretta e piena di gallerie, ma è una delle strade più panoramiche d’Italia: prendetevi il tempo di guardarla.</p>
       <p data-i18n="t0d9be8ccf0" class="arrivo-gps">GPS 45°43.684′N · 10°43.176′E</p>
     </details>
+
+    <div style="display:flex;flex-direction:column;gap:2.5rem">
+      <div class="r d1"><p data-i18n="t409c8e4975" class="cinfo-label">Indirizzo</p><p data-i18n="tfe2f8469b9" class="cinfo-value">AlPraDeLaFam.com<br>Via Gardesana, 7 · Porto di Tignale<br>25080 Tignale (BS)</p><p class="cinfo-sub">P.IVA: 03375820986</p></div>
+      <div class="r d2"><p data-i18n="t398dc61e6a" class="cinfo-label">Telefono</p><p class="cinfo-value"><a href="tel:+390365799890" class="cinfo-link">(+39) 0365 799890</a></p></div>
+      <div class="r d2"><p data-i18n="t84add5b295" class="cinfo-label">Email</p><p class="cinfo-value"><a href="mailto:info@alpradelafam.com" class="cinfo-link">info@alpradelafam.com</a></p></div>
+      <div class="r d3"><p data-i18n="td96b889af3" class="cinfo-label">Seguici</p>
+        <div class="footer-social">
+          <a class="fs" href="https://www.facebook.com/pradelafam/" target="_blank" style="border-color:rgba(11,21,32,.2);color:var(--ink)">f</a>
+          <a class="fs" href="http://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html" target="_blank" style="border-color:rgba(11,21,32,.2);color:var(--ink)">★</a>
+          <a class="fs" href="mailto:info@alpradelafam.com" style="border-color:rgba(11,21,32,.2);color:var(--ink)">✉</a>
+        </div>
+      </div>
+    </div>
+    <div class="r d2">
+      <div class="cmap">
+        <div><div class="cmap-emoji">🗺️</div><h3 data-i18n="t610f5e52ac" class="cmap-title">Prà de la Fam, Lago di Garda</h3><p data-i18n="tf38421c0d2" class="cmap-sub">Via Gardesana, 7 · Sponda bresciana<br>Strada Gargnano–Riva del Garda</p><a data-i18n="t52fef421c2" href="https://maps.google.com/?q=Pra+de+la+Fam+Tignale+Lago+di+Garda" target="_blank" class="cmap-btn">Apri su Google Maps →</a></div>
+      </div>
+      <div class="book-cta r d3">
+        <h3 data-i18n="t29439a78d2" class="book-cta-title">Pronto a<br><em>prenotare?</em></h3>
+        <p data-i18n="t43d51909d4">Disponibilità in tempo reale con il nostro booking engine. Conferma immediata.</p>
+        <a data-i18n="t7629980224" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="book-now-btn">Controlla disponibilità →</a>
+      </div>
+    </div>
+  </div>
+
+    
   </section>
 
 <!-- FOOTER -->

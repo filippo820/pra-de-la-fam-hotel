@@ -56,7 +56,7 @@
     '.pm-l[aria-current="true"]{background:var(--ink,#0b1520);color:var(--bone,#f7f4ef);border-color:var(--ink,#0b1520)}',
     '.pm-contatti{padding:1.6rem clamp(1.5rem,6vw,2.5rem) 0;display:flex;flex-direction:column;gap:.55rem}',
     '.pm-contatti a{color:var(--gold-testo,#846934);text-decoration:none;font-size:.95rem}',
-    '@media(max-width:900px){#pdlf-menu-btn{display:flex}}',
+    '@media(max-width:1300px){#pdlf-menu-btn{display:flex}}',
     /* Nelle sottopagine le lingue stanno in linea e rubano lo spazio al
        ritorno indietro: sotto i 700px passano nel pannello.
        !important perche' quel div ha lo style scritto SUL TAG, che batte
@@ -136,6 +136,6 @@
   });
   // tornando a schermo grande il menu vero riappare: il pannello non serve piu'
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 900 && pan.classList.contains('aperto')) chiudi();
+    if (window.innerWidth > 1300 && pan.classList.contains('aperto')) chiudi();
   });
 })();

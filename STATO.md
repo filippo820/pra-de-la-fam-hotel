@@ -623,6 +623,35 @@ traspariva scuriva il pulsante della lingua attiva (4,39).
 **tutti** i fondi su cui compare davvero, non su quello principale.
 
 
+### «Come arrivare» trovabile davvero, e le carte in cima attivate
+Nasce dalla domanda «dove l'hai messa?»: se la chiede chi l'ha commissionata,
+un ospite non la trova mai. Era al **94% della pagina**, in fondo a Contatti.
+
+1. **Risalita** dentro Contatti: ora è la prima cosa della sezione, sopra
+   l'indirizzo e la mappa. **88%** invece di 94 — sempre in fondo alla pagina,
+   ma ora è il primo elemento della sezione anziché l'ultimo.
+2. **Nel menu**, nona voce dopo Contatti — e quindi anche nel pannello del
+   telefono, che legge le voci da lì.
+3. **Su tutte e nove le pagine** di camere e appartamenti, in fondo alla colonna
+   del testo: chiusa 67px, aperta 569. Nessuna traduzione nuova: i frammenti
+   sono identici, e l'impronta è la stessa.
+4. **Le carte in cima alla sezione sono attive**: 📍 Dove siamo apre la mappa,
+   🚗 Come arrivare porta alla scheda, 📞 Contatti ha il numero che si chiama e
+   la mail che si apre. Erano quattro riquadri di sola lettura.
+
+⚠️ **Nove voci nel menu non ci stavano:** chiedono **1517px** di barra, e fra
+1000 e 1280 andavano a capo spingendo «Prenota» **fuori dallo schermo**.
+Sotto i **1300** si passa al pulsante del menu (prima era 900); fra 1300 e 1500
+la barra si stringe. Provato a 390, 900, 1200, 1299, 1301, 1366, 1440, 1500,
+1600: una riga sola, niente che esce.
+
+📐 **Due regole morte scoperte e tolte**, invece di lasciarle a mentire: quella
+che nascondeva la scritta accanto al marchio (battuta dallo `style` sul tag) e
+`.cinfo-label` che nelle pagine camera **non esiste** — la targhetta usciva in
+grande, come un titolo qualunque. Copiata la regola vera dalla home. ⚠️ La prima
+estrazione aveva preso per sbaglio una regola di `:hover` con lo stesso nome.
+
+
 ---
 
 ## ⬜ Aperto

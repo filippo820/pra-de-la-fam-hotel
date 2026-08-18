@@ -105,6 +105,55 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .room-type-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-testo);margin-bottom:1rem}
 .room-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:1.8rem}
 .room-subtitle em{font-style:italic;color:var(--gold)}
+/* COME ARRIVARE — recuperata dal vecchio sito, dove c'era per intero e qui
+   mancava del tutto. Riscritta in tondo (l'originale era tutto maiuscolo) e
+   corretta dove sbagliava: «Riva di Trento» non esiste, e' Riva del Garda;
+   sull'A22 non c'e' un'uscita «Rovereto Est», per Riva si esce a Rovereto Sud.
+   Tolte le frequenze delle navette aeroportuali: erano di quindici anni fa. */
+.arrivo{grid-column:1/-1;margin-top:3.5rem;padding-top:2.6rem;border-top:1px solid rgba(11,21,32,.1)}
+/* la targhetta della scheda: la regola vive in home, qui va portata */
+.cinfo-label{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);margin-bottom:.5rem}
+/* SCHEDA APRIBILE. E' un <details>: si apre da tastiera, funziona anche senza
+   JavaScript, e il testo resta nel documento — quindi Google lo legge lo
+   stesso. Chiusa di suo: il blocco intero e' alto oltre mille pixel sul
+   telefono, e non tutti stanno cercando la strada. */
+.arrivo{scroll-margin-top:96px}
+.arrivo[open] .arrivo-chev{transform:rotate(180deg)}
+.arrivo-testa{display:inline-flex;align-items:center;gap:.75rem;cursor:pointer;list-style:none;
+              padding:.2rem 0;user-select:none}
+.arrivo-testa::-webkit-details-marker{display:none}
+.arrivo-testa:hover .cinfo-label,.arrivo-testa:focus-visible .cinfo-label{color:var(--ink)}
+.arrivo-testa .cinfo-label{margin-bottom:0}
+.arrivo-teaser{font-size:.8rem;font-weight:300;color:var(--steel)}
+.arrivo-chev{color:var(--gold-testo);flex-shrink:0;transition:transform .22s}
+.arrivo[open] .arrivo-griglia{margin-top:1.8rem}
+@media(max-width:600px){.arrivo-teaser{display:none}}
+.arrivo-griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem;margin-top:1.4rem}
+.arrivo-tit{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:.7rem}
+.arrivo-da{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-testo);margin:1.2rem 0 .35rem}
+.arrivo-voce .arrivo-da:first-of-type{margin-top:0}
+.arrivo-txt{font-size:.9rem;font-weight:300;line-height:1.85;color:var(--steel);margin-bottom:.7rem}
+.arrivo-txt strong{font-weight:500;color:var(--ink)}
+.arrivo-nota{margin-top:2rem;font-size:.9rem;font-weight:300;line-height:1.8;color:var(--ink);
+             border-left:2px solid var(--gold-testo);padding-left:1rem}
+.arrivo-gps{margin-top:1rem;font-size:.72rem;letter-spacing:.1em;color:var(--steel)}
+@media(max-width:800px){.arrivo-griglia{grid-template-columns:1fr;gap:2rem}
+                        .arrivo{margin-top:2.6rem;padding-top:2rem}}
+/* SCHEDA APRIBILE. E' un <details>: si apre da tastiera, funziona anche senza
+   JavaScript, e il testo resta nel documento — quindi Google lo legge lo
+   stesso. Chiusa di suo: il blocco intero e' alto oltre mille pixel sul
+   telefono, e non tutti stanno cercando la strada. */
+.arrivo{scroll-margin-top:96px}
+.arrivo[open] .arrivo-chev{transform:rotate(180deg)}
+.arrivo-testa{display:inline-flex;align-items:center;gap:.75rem;cursor:pointer;list-style:none;
+              padding:.2rem 0;user-select:none}
+.arrivo-testa::-webkit-details-marker{display:none}
+.arrivo-testa:hover .cinfo-label,.arrivo-testa:focus-visible .cinfo-label{color:var(--ink)}
+.arrivo-testa .cinfo-label{margin-bottom:0}
+.arrivo-teaser{font-size:.8rem;font-weight:300;color:var(--steel)}
+.arrivo-chev{color:var(--gold-testo);flex-shrink:0;transition:transform .22s}
+.arrivo[open] .arrivo-griglia{margin-top:1.8rem}
+@media(max-width:600px){.arrivo-teaser{display:none}}
 .room-desc{font-size:.85rem;font-weight:300;line-height:2;color:var(--steel);margin-bottom:2rem}
 .room-floor{font-size:.7rem;letter-spacing:.1em;color:var(--steel);opacity:.7;margin-bottom:2.5rem;display:flex;align-items:center;gap:.5rem}
 .room-floor::before{content:'📍';font-size:.8rem}
@@ -339,6 +388,42 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
     </div>
   </div>
 </div>
+  <details class="arrivo r d2" id="come-arrivare">
+      <summary class="arrivo-testa">
+        <span data-i18n="t888a00e0c1" class="cinfo-label">Come arrivare</span>
+        <span data-i18n="t52ec2ad3f5" class="arrivo-teaser">In auto, in treno, in aereo</span>
+        <svg class="arrivo-chev" width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+             stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="arrivo-griglia">
+
+        <div class="arrivo-voce">
+          <h3 data-i18n="tf1c8b4462a" class="arrivo-tit">In auto</h3>
+          <p data-i18n="td4b6fcbd5b" class="arrivo-da">Da est</p>
+          <p data-i18n="ta3eb0373a9" class="arrivo-txt">Autostrada A4, uscita Desenzano, direzione Salò: circa 15 km. Da Salò si prosegue verso Riva del Garda sulla Gardesana, la SS 45 bis; passata Gargnano, ancora 4 km fino al Porto di Tignale.</p>
+          <p data-i18n="t303af58209" class="arrivo-da">Da ovest</p>
+          <p data-i18n="tbf9a913713" class="arrivo-txt">Autostrada A4, uscita Brescia Est, direzione Salò: circa 20 km. Da lì come sopra.</p>
+          <p data-i18n="t67275fe941" class="arrivo-da">Da nord</p>
+          <p data-i18n="t380557569e" class="arrivo-txt">Autostrada del Brennero A22, uscita Rovereto Sud, direzione Riva del Garda, poi Gardesana verso Brescia per una ventina di chilometri.</p>
+        </div>
+
+        <div class="arrivo-voce">
+          <h3 data-i18n="tef84d416a9" class="arrivo-tit">In treno</h3>
+          <p data-i18n="t6f4a1eab99" class="arrivo-txt">Le stazioni comode sono Brescia e Desenzano–Sirmione, sulla linea Milano–Venezia. Da Brescia gli autobus lungo la Gardesana sono più frequenti, da Desenzano più radi. Si scende alla fermata Porto di Tignale.</p>
+          <p data-i18n="t0aae14be2b" class="arrivo-txt">Arrivando da nord: stazione di Rovereto, autobus fino a Riva del Garda e da lì la linea per Gargnano.</p>
+        </div>
+
+        <div class="arrivo-voce">
+          <h3 data-i18n="t85057929c4" class="arrivo-tit">In aereo</h3>
+          <p data-i18n="ta9faca02a1" class="arrivo-txt">Dal più vicino al più lontano: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Milano Linate, Venezia e Milano Malpensa.</p>
+          <p data-i18n="t5be0bd6124" class="arrivo-txt">Tutti collegati in treno o in autobus con le stazioni di Brescia, Desenzano e Verona, da cui si prosegue lungo la Gardesana.</p>
+        </div>
+
+      </div>
+      <p data-i18n="t6ea05b015c" class="arrivo-nota">La Gardesana è stretta e piena di gallerie, ma è una delle strade più panoramiche d’Italia: prendetevi il tempo di guardarla.</p>
+      <p data-i18n="t0d9be8ccf0" class="arrivo-gps">GPS 45°43.684′N · 10°43.176′E</p>
+    </details>
 
 <div class="room-footer-strip">
   <p data-i18n="t9324d6f296" class="rfs-text">Prà de la Fam —<br><em>Lago di Garda</em></p>

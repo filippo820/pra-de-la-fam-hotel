@@ -173,7 +173,17 @@ export default async (req) => {
   if (!k) return rispondi({ risposta: GUASTO[lingua], guasto: 'materiale' });
 
   try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
+    /* ⚠️ NON api.anthropic.com. Questo sito ha l'AI Gateway di Netlify
+       attivo: Netlify inietta da solo ANTHROPIC_API_KEY — ma e' un JWT di
+       366 caratteri (comincia per «eyJhbGc»), non una chiave Anthropic
+       («sk-ant-…»), e vale SOLO contro il suo gateway. Mandandola
+       all'indirizzo diretto tornava authentication_error, e sembrava una
+       chiave sbagliata da sostituire: non lo era.
+       Accanto Netlify inietta ANTHROPIC_BASE_URL, che e' dove va la
+       richiesta. Il ripiego resta l'indirizzo vero, per il caso in cui un
+       giorno si usi una chiave propria. */
+    const BASE = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const r = await fetch(BASE.replace(/\/$/, '') + '/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': CHIAVE, 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({

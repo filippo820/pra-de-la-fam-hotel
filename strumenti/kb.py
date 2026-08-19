@@ -44,8 +44,13 @@ for (const [nome, url] of Object.entries(PAG)) {
 console.log(JSON.stringify(out));
 await b.close();
 """
-(S / "_kb.mjs").write_text(JS, encoding="utf-8")
-r = subprocess.run([ "node", str(S / "_kb.mjs") ], capture_output=True, text=True, cwd=S)
+# ⚠️ Per i moduli ES conta DOVE STA IL FILE, non da dove lo lanci: NODE_PATH
+# non serve a niente. Lo script va quindi scritto accanto a node_modules.
+import os
+np = os.environ.get("NODE_PLAYWRIGHT")
+DOVE = pathlib.Path(np) if np else S
+(DOVE / "_kb.mjs").write_text(JS, encoding="utf-8")
+r = subprocess.run(["node", str(DOVE / "_kb.mjs")], capture_output=True, text=True, cwd=DOVE)
 if r.returncode != 0:
     print(r.stderr[:800]); sys.exit(1)
 pagine = json.loads(r.stdout)

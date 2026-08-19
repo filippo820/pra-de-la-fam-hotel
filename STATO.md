@@ -652,6 +652,36 @@ grande, come un titolo qualunque. Copiata la regola vera dalla home. ⚠️ La p
 estrazione aveva preso per sbaglio una regola di `:hover` con lo stesso nome.
 
 
+### Le tre contraddizioni, chiuse
+Risposte del gestore, applicate in tutte e cinque le lingue.
+
+| | prima | ora |
+|---|---|---|
+| camere | il testo diceva «minibar», i servizi «frigo vuoto» | **frigo vuoto** ovunque |
+| Clementina | scheda «vista lago», pagina «vista sulle montagne» | **il lago e le montagne** |
+| Bergamotto | «4 ospiti max», ma il testo descrive 3 posti letto | **3** (scheda, capienza, mappa) |
+
+⚠️ **Trovato mentre correggevo:** Pomelo era l'unico appartamento con la
+targhetta «🍷 Minibar» — ma ha la cucina, come gli altri quattro che dicono
+«Frigorifero». Allineato.
+
+📐 **Cambiare un testo italiano scollega la sua traduzione**: l'impronta è
+calcolata sul testo, quindi cambiarlo crea una chiave nuova e le quattro lingue
+restano sulla vecchia. Vanno riagganciate a mano. ⚠️ Due volte ho corretto la
+**chiave sbagliata**: nel dizionario convivevano vecchia e nuova versione, e
+`[0]` era quella morta. Il segnale è che il sito non cambia pur dicendo
+«sostituita».
+
+⚠️ **E il materiale dell'assistente va rigenerato**: `kb.json` continuava a dire
+«minibar» dopo che il sito non lo diceva più — l'assistente avrebbe ripetuto
+l'errore appena corretto. `strumenti/kb.py` ora accetta `NODE_PLAYWRIGHT` per
+trovare Playwright (per i moduli ES conta **dove sta il file**, non da dove lo
+lanci: `NODE_PATH` non serve a niente).
+
+**Dopo aver toccato un testo del sito, l'ordine è:**
+`marca.py` → `raccogli.py` → riaggancio traduzioni → `costruisci.py` → `kb.py`.
+
+
 ---
 
 ## ⬜ Aperto

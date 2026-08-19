@@ -72,13 +72,26 @@ dicono.
 - L'elenco `ORIGINI` in `netlify/functions/chat.mjs` contiene già i domini
   `alpradelafam.com`: quello è a posto.
 
-### Marchio
-Il sito dice **™** due volte (l'apice accanto al logo in home e l'`alt` del
-logo) e **®** mai. Il marchio è registrato, quindi ™ dichiara meno del diritto:
-va `®`. Manca anche la riga di titolarità, e il piede oggi chiama il marchio
-«AlPraDeLaFam.com», che è un dominio, non il marchio. In attesa di titolare e
-territorio di registrazione — il `®` si usa dove la registrazione esiste, e il
-sito lo leggono anche da fuori.
+### Marchio — fatto
+**Titolare: FAM S.r.l., registrazione italiana.** Il sito diceva ™ e mai ®:
+con una registrazione in mano, ™ dichiara meno del diritto che si ha.
+- ™ → **®** nell'apice accanto al logo in alto e nell'`alt` del logo del piede.
+- Nuova riga nel piede, tradotta in tutte e cinque le lingue
+  (chiave `tcd38f168ec`): «Prà de la Fam® è un marchio registrato in Italia da
+  FAM S.r.l.». **Il territorio è nominato di proposito:** il sito lo leggono
+  anche da fuori, e in Germania un ® senza registrazione locale è contestabile.
+- Il copyright diceva «© 2026 AlPraDeLaFam.com», che è un dominio: ora **FAM
+  S.r.l.**, che è il titolare.
+
+⚠️ **Trovato mentre lo facevo: il piede era illeggibile.** `.footer-copy` era
+bianco al **18%** sul fondo `--ink`: **1,67:1** misurato, dove per un testo da
+10px ne servono 4,5. Non riguardava solo il marchio — erano invisibili anche
+**P.IVA, indirizzo e i link Privacy e Cookie**, che per legge devono essere
+leggibili. Portato a 0.5 → **4,91:1**.
+
+⬜ **Le sottopagine non hanno nessuna riga legale**: il loro piede è la sola
+striscia `room-footer-strip` con quattro link. Niente P.IVA, niente Privacy,
+niente Cookie, niente marchio. Da valutare.
 
 ---
 

@@ -1,0 +1,93 @@
+# ══ Le vecchie URL non muoiono ══
+#
+# Il sito precedente viveva su /<lingua>/<pagina>/ — it_IT, de_DE, fr_FR,
+# en_GB — e rispondeva anche alla forma corta /<pagina>/ e a /wp/<pagina>/.
+# Quegli indirizzi stanno nei risultati di Google, nelle mail gia' mandate e
+# nel link di TripAdvisor: senza queste regole, il giorno dello scambio
+# diventano tutti 404.
+#
+# Il segnaposto :lingua prende un segmento qualsiasi, quindi copre in una
+# riga sola it_IT, de_DE, fr_FR, en_GB, en_US e anche /wp/.
+#
+# Netlify applica una regola solo se il file NON esiste: nulla di questo
+# tocca le pagine vere del sito nuovo.
+#
+# Generato: se cambia una pagina, si cambia qui.
+
+/hotel                                /#hotel                         301
+/hotel/                               /#hotel                         301
+/:lingua/hotel                        /#hotel                         301
+/:lingua/hotel/                       /#hotel                         301
+
+/bergamotto                           /appartamento-bergamotto        301
+/bergamotto/                          /appartamento-bergamotto        301
+/:lingua/bergamotto                   /appartamento-bergamotto        301
+/:lingua/bergamotto/                  /appartamento-bergamotto        301
+
+/calamondino                          /appartamento-calamondino       301
+/calamondino/                         /appartamento-calamondino       301
+/:lingua/calamondino                  /appartamento-calamondino       301
+/:lingua/calamondino/                 /appartamento-calamondino       301
+
+/clementina                           /appartamento-clementina        301
+/clementina/                          /appartamento-clementina        301
+/:lingua/clementina                   /appartamento-clementina        301
+/:lingua/clementina/                  /appartamento-clementina        301
+
+/kumquat                              /appartamento-kumquat           301
+/kumquat/                             /appartamento-kumquat           301
+/:lingua/kumquat                      /appartamento-kumquat           301
+/:lingua/kumquat/                     /appartamento-kumquat           301
+
+/pomelo                               /appartamento-pomelo            301
+/pomelo/                              /appartamento-pomelo            301
+/:lingua/pomelo                       /appartamento-pomelo            301
+/:lingua/pomelo/                      /appartamento-pomelo            301
+
+/la-limonaia                          /#limonaia                      301
+/la-limonaia/                         /#limonaia                      301
+/:lingua/la-limonaia                  /#limonaia                      301
+/:lingua/la-limonaia/                 /#limonaia                      301
+
+/territorio_sport_prodotti            /#territorio                    301
+/territorio_sport_prodotti/           /#territorio                    301
+/:lingua/territorio_sport_prodotti    /#territorio                    301
+/:lingua/territorio_sport_prodotti/   /#territorio                    301
+
+/dove-siamo                           /#come-arrivare                 301
+/dove-siamo/                          /#come-arrivare                 301
+/:lingua/dove-siamo                   /#come-arrivare                 301
+/:lingua/dove-siamo/                  /#come-arrivare                 301
+
+/contatti                             /#contatti                      301
+/contatti/                            /#contatti                      301
+/:lingua/contatti                     /#contatti                      301
+/:lingua/contatti/                    /#contatti                      301
+
+/email                                /#contatti                      301
+/email/                               /#contatti                      301
+/:lingua/email                        /#contatti                      301
+/:lingua/email/                       /#contatti                      301
+
+/cookie-policy                        /cookie                         301
+/cookie-policy/                       /cookie                         301
+/:lingua/cookie-policy                /cookie                         301
+/:lingua/cookie-policy/               /cookie                         301
+
+/news                                 /                               301
+/news/                                /                               301
+/:lingua/news                         /                               301
+/:lingua/news/                        /                               301
+
+/nuovo_sito_web                       /                               301
+/nuovo_sito_web/                      /                               301
+/:lingua/nuovo_sito_web               /                               301
+/:lingua/nuovo_sito_web/              /                               301
+
+# Tutto il resto del vecchio sito (allegati, feed, pagine sparite) alla home.
+/it_IT/*                              /                               301
+/de_DE/*                              /                               301
+/fr_FR/*                              /                               301
+/en_GB/*                              /                               301
+/en_US/*                              /                               301
+/wp/*                                 /                               301

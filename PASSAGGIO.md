@@ -139,6 +139,19 @@ curl -sI https://vecchio.alpradelafam.com | head -3
 e apri `https://vecchio.alpradelafam.com` nel browser: stessa pagina del punto
 1.4, ma con il lucchetto e l'indirizzo giusto.
 
+#### 1.7 — Se qualcosa non torna
+
+| cosa vedi | cosa vuol dire |
+|---|---|
+| Aruba rifiuta il punto finale | scrivilo senza: `pradelafam-archivio.netlify.app` |
+| Aruba non fa scegliere «CNAME» | sei nella pagina sbagliata: serve **Gestione DNS / Record DNS**, non «Nameserver» |
+| `dig` non risponde ancora | è presto: i record nuovi si vedono in pochi minuti, ma possono volerci fino a un'ora |
+| il browser dice «non sicuro» | il certificato non è ancora emesso: aspetta, poi Netlify → Domain management → **Verify DNS configuration** |
+| Netlify dice «check DNS configuration» | il CNAME non è arrivato o è scritto storto: ricontrolla che il Nome sia `vecchio` e non `vecchio.alpradelafam.com` (alcuni pannelli aggiungono il dominio da soli, e verrebbe `vecchio.alpradelafam.com.alpradelafam.com`) |
+
+⚠️ **Il record si AGGIUNGE, non si modifica.** Se ti trovi a cambiare il valore
+di una riga che c'era già, fermati: quella è la riga di qualcos'altro.
+
 **Da qui in poi l'archivio è al sicuro**, indipendentemente da quello che
 succede al vecchio hosting. Solo adesso ha senso passare al punto 2.
 

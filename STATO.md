@@ -15,62 +15,72 @@ prenotazioni.
 |---|---|
 | repo | `github.com/filippo820/pra-de-la-fam-hotel` |
 | pubblicato su | `pradelafam.netlify.app` (deploy automatico a ogni push) |
-| sito ufficiale | `alpradelafam.com` — **vecchio WordPress, non toccato** |
+| sito ufficiale | `alpradelafam.com` — vecchio WordPress **4.3.1 (2015)**, da ritirare |
+| archivio del vecchio | `../vecchio-congelato` — copia statica pronta, non ancora pubblicata |
 | bottega | `github.com/filippo820/pradelafam-shop` → `pradelafam.shop` (già online) |
 
 ---
 
-## Il passaggio al sito nuovo — deciso il 19 agosto 2026
+## Il passaggio al sito nuovo — 19 agosto 2026
 
-**Assetto scelto: il nuovo su un sottodominio, il vecchio resta ufficiale.**
-`nuovo.alpradelafam.com` → Netlify, `www.alpradelafam.com` non si tocca. Sul
-vecchio una striscia invita a provare il nuovo. Rischio zero sulle prenotazioni,
-si torna indietro togliendo il banner. Lo scambio vero si fa quando i numeri lo
-dicono.
+**Assetto scelto: lo scambio, con il vecchio congelato in archivio.**
+Non era la prima idea. Il piano di partenza era tenere il vecchio come sito
+ufficiale e invitare al nuovo da lì, ma due cose l'hanno ribaltato:
 
-### Fatto oggi
-- **`noindex` su tutte e 12 le pagine.** Il sito era `index,follow` con i
+1. ⚠️ **Il vecchio gira su WordPress 4.3.1 — agosto 2015, undici anni**
+   (letto dal sorgente della pagina viva e confermato dalla versione degli
+   asset del tema `tempera`). È il sito ufficiale, pubblico, sul dominio da cui
+   passano le prenotazioni. Non è una cosa su cui investire: è una cosa da
+   ritirare.
+2. **Il vecchio non ha nessun analytics** — verificato sulla pagina viva:
+   niente gtag, niente Tag Manager, niente UA. Solo il plugin cookie che ne
+   *parla*. Non c'è storico da perdere, e non c'è nemmeno un termine di
+   paragone: chi vuole il confronto prima/dopo deve incollare
+   `strumenti/ga-vecchio-sito.html` **prima** dello scambio.
+
+### Fatto
+- **`noindex` su tutte e 12 le pagine del nuovo.** Era `index,follow` con i
   canonical su `pradelafam.netlify.app` e nessun `robots.txt`: un secondo sito
-  con lo stesso contenuto che compete con quello ufficiale su Google.
-  Cercare `pdlf-passaggio` per trovarli tutti. **Vanno tolti il giorno del
-  passaggio, insieme ai canonical.**
-  ⚠️ Non è stato messo un `robots.txt` che vieta la scansione, ed è voluto: se
-  Google non può leggere la pagina non può nemmeno leggere il `noindex`.
-- **Il link «Cookie Policy» del piede** puntava ancora a
-  `alpradelafam.com/wp/cookie-policy/` mentre `cookie.html` esiste: ora è locale.
-  Era l'ultimo rimando al vecchio dentro il sito nuovo.
-- **`strumenti/banner-vecchio-sito.html`** — la striscia da incollare nel
-  WordPress vecchio (footer). Cinque lingue, appare una volta sola, e porta al
-  nuovo con `?utm_source=vecchio-sito`: è l'unico modo di contare quanti passano,
-  visto che il vecchio non misura niente.
-- **`strumenti/ga-vecchio-sito.html`** — GA4 per il vecchio (header), stessa
-  proprietà, consenso agganciato al banner Cookie Law Info già installato.
-  ⚠️ Verificato sul sito vivo: **il vecchio non ha nessun analytics**. Senza
-  queste settimane non ci sarà niente da confrontare dopo il passaggio.
+  con lo stesso contenuto in gara con quello ufficiale. Cercare `pdlf-passaggio`
+  per trovarli. **Vanno tolti il giorno dello scambio, insieme ai canonical.**
+  ⚠️ Nessun `Disallow` in `robots.txt`, ed è voluto: se Google non può leggere
+  la pagina non può nemmeno leggere il `noindex`.
+- **`_redirects`** — la mappa delle vecchie URL. Il vecchio vive su
+  `/<lingua>/<pagina>/` in **quattro lingue** e risponde anche a `/<pagina>/` e
+  `/wp/<pagina>/`. Il segnaposto `:lingua` copre tutti i prefissi in una riga.
+  Verificate in produzione: `/hotel/`, `/it_IT/hotel/`, `/de_DE/clementina/`,
+  `/wp/pomelo/`, `/cookie-policy/` e una pagina inesistente → tutte 301 al posto
+  giusto, e `/camera-doppia` resta 200.
+- **La copia congelata del vecchio**, in
+  `~/Documents/Fam_S.r.l./Sito Prà/vecchio-congelato` (repo git a sé, con il
+  suo README). 56 pagine, 334 asset, `noindex`, striscia d'archivio in cima,
+  modulo contatti e selettore di lingua spenti.
+  ⚠️ **La sitemap del vecchio dichiara solo l'italiano, ma `de_DE`, `fr_FR` e
+  `en_GB` rispondono 200**: sono nella copia per questo.
+- **Il link «Cookie Policy» del piede** puntava ancora al WordPress vecchio
+  mentre `cookie.html` esiste: ora è locale. Era l'ultimo rimando al vecchio
+  rimasto dentro il nuovo.
+- **`strumenti/ga-vecchio-sito.html`** e **`strumenti/banner-vecchio-sito.html`**
+  restano lì: il primo serve se si vuole la misura di riferimento prima dello
+  scambio; il secondo serve solo se si torna all'assetto graduale.
 
-### Da fare, in ordine
-1. Incollare i due frammenti nel WordPress (prima GA, poi il banner).
-2. Aruba → DNS di `alpradelafam.com` → record **CNAME `nuovo` →
-   `pradelafam.netlify.app`**. Netlify → Domain management → Add domain
-   `nuovo.alpradelafam.com` (il certificato lo fa da sé).
-   ⚠️ **Non spostare i nameserver su Netlify:** su questo dominio gira la posta
-   (`info@alpradelafam.com`, Aruba). Si tocca solo quel record, gli MX restano.
-3. Cambiare `NUOVO` nel banner da `pradelafam.netlify.app` a
-   `nuovo.alpradelafam.com`.
-
-### Il giorno dello scambio, quello che va ricordato
-- **WordPress ha gli indirizzi assoluti dentro** (`http://www.alpradelafam.com/…`,
-  nel sorgente). Se il dominio passa al nuovo e il vecchio resta acceso a un
-  altro nome, il vecchio **rimbalza i visitatori sul nuovo**. Per tenerlo
-  davvero consultabile va congelato in copia statica (`wget` e via), non lasciato
-  vivo su Aruba.
-- **Le vecchie URL sono `/it_IT/hotel/`, `/it_IT/clementina/`, `/it_IT/pomelo/`…**
-  Servono i redirect in `netlify.toml` verso le pagine nuove, o muoiono i link
-  da Google, da TripAdvisor e dalle mail già mandate.
-- Togliere `noindex` e correggere i `canonical`.
-- Il link «← Torna al sito principale» della bottega.
-- L'elenco `ORIGINI` in `netlify/functions/chat.mjs` contiene già i domini
-  `alpradelafam.com`: quello è a posto.
+### Il giorno dello scambio, nell'ordine
+1. Pubblicare la copia congelata: Netlify → **Deploy manually**, trascinare
+   `vecchio-congelato`. Poi dominio `vecchio.alpradelafam.com`.
+2. Aruba → DNS di `alpradelafam.com` → `www` e l'apice al sito nuovo, **CNAME
+   `vecchio`** alla copia.
+   ⚠️ **Non spostare i nameserver:** su questo dominio gira la posta
+   (`info@alpradelafam.com`). Si toccano solo quei record, gli MX restano.
+3. Netlify (sito nuovo) → aggiungere il dominio `alpradelafam.com`.
+4. **Togliere il `noindex`** (`pdlf-passaggio`) e **correggere i `canonical`**,
+   che oggi puntano a `pradelafam.netlify.app`.
+5. Aggiungere nel piede del nuovo un rimando discreto all'archivio.
+6. Il link «← Torna al sito principale» della bottega.
+7. La striscia della copia d'archivio punta già a `www.alpradelafam.com`, che
+   da quel momento **è** il sito nuovo: non va toccata.
+8. L'elenco `ORIGINI` in `netlify/functions/chat.mjs` ha già i domini
+   `alpradelafam.com`: a posto.
+9. Solo dopo, e senza fretta: spegnere l'hosting WordPress su Aruba.
 
 ### Marchio — fatto
 **Titolare: FAM S.r.l., registrazione italiana.** Il sito diceva ™ e mai ®:

@@ -59,28 +59,88 @@ L'ordine non è estetico: ogni passo prepara il seguente. In particolare
 frattempo il certificato HTTPS non esiste e chi arriva vede l'avviso rosso
 «sito non sicuro».
 
-### 1 · Pubblicare l'archivio (nessun rischio: è tutto nuovo)
+### 1 · Pubblicare l'archivio
 
-1. Netlify → **Add new site → Deploy manually** → trascina la cartella
-   `~/Documents/Fam_S.r.l./Sito Prà/vecchio-congelato` (35 MB).
-2. Netlify assegna un nome a caso, tipo `sereno-pastello-12345.netlify.app`.
-   **Annotalo**, serve al punto 3.
-3. Nel sito appena creato: **Domain management → Add a domain** →
-   `vecchio.alpradelafam.com`. Netlify dirà che il DNS non punta ancora a lui:
-   è normale, lo sistemiamo subito.
-4. Aruba → pannello del dominio → **Gestione DNS** → aggiungi un record:
+Questo passo **non può rompere niente**: crea un sito nuovo su un indirizzo che
+oggi non esiste. Il sito vero non viene sfiorato. Sono cinque minuti.
 
-   | | |
-   |---|---|
-   | Tipo | **CNAME** |
-   | Nome / Host | `vecchio` |
-   | Valore | `sereno-pastello-12345.netlify.app.` *(il nome del punto 2)* |
+#### 1.1 — Cosa si carica
 
-   È un nome che oggi non esiste: **non può rompere niente.**
-5. Aspetta qualche minuto e prova `https://vecchio.alpradelafam.com`.
-   Deve aprirsi il vecchio sito con la striscia scura in cima.
+Non la cartella: **il file `vecchio-congelato.zip`**, in
+`~/Documents/Fam_S.r.l./Sito Prà/` (28 MB, 617 file).
 
-**A questo punto l'archivio è al sicuro e il sito vero non è stato toccato.**
+⚠️ **Non trascinare la cartella.** Dentro c'è `.git`, cioè la cronologia
+completa del repository: caricandola finirebbe su un server pubblico. Lo zip
+contiene solo il sito — l'ho fatto togliendo `.git`, `README.md` e i
+`.DS_Store`, e verificato che dentro non ci sia nessun file nascosto.
+
+Netlify accetta lo zip esattamente come una cartella, e i file stanno alla
+radice (`_redirects`, `it_IT/`, `de_DE/`, `fr_FR/`, `en_GB/`) — che è la
+condizione perché funzioni.
+
+#### 1.2 — Caricarlo
+
+Netlify → **Add new site** → **Deploy manually** → trascina lo zip nel
+riquadro. Finito il caricamento il sito è già online.
+
+#### 1.3 — Dargli un nome sensato
+
+Netlify gliene assegna uno a caso (`sereno-pastello-12345`). Cambialo:
+**Site configuration → Site details → Change site name** → `pradelafam-archivio`.
+
+Non è pignoleria: quel nome diventa il valore da scrivere su Aruba al passo
+1.5, e fra sei mesi `pradelafam-archivio.netlify.app` si capisce da solo,
+mentre `sereno-pastello-12345` no.
+
+#### 1.4 — Provarlo PRIMA di toccare il DNS
+
+Apri `https://pradelafam-archivio.netlify.app`. Devi vedere:
+
+- la **striscia scura in cima**: «Questa è una copia d'archivio del sito
+  precedente. → Vai al sito di Prà de la Fam»;
+- sotto, il vecchio sito com'era, con le foto;
+- in fondo alla pagina Contatti, al posto del modulo, l'indirizzo mail e il
+  telefono.
+
+Se qui è tutto a posto, il resto è solo indirizzamento. Se qualcosa manca,
+si sistema adesso, con calma, senza che nessuno stia guardando.
+
+#### 1.5 — Collegargli l'indirizzo definitivo
+
+Nel sito appena creato: **Domain management → Add a domain** →
+`vecchio.alpradelafam.com`.
+
+Netlify dirà che il DNS non punta ancora a lui. È **giusto**: gli stiamo
+dicendo in anticipo «fra poco arriveranno visite per questo nome». Senza
+questo avviso non emetterebbe il certificato HTTPS.
+
+Poi Aruba → dominio `alpradelafam.com` → **Gestione DNS** → **aggiungi** un
+record (non modificarne nessuno):
+
+| campo | valore |
+|---|---|
+| Tipo | **CNAME** |
+| Nome / Host | `vecchio` |
+| Valore / Destinazione | `pradelafam-archivio.netlify.app.` |
+| TTL | quello proposto va bene |
+
+Il punto finale dopo `.app` mettilo se Aruba lo accetta; se lo rifiuta,
+scrivilo senza.
+
+#### 1.6 — Verificare
+
+Dopo qualche minuto:
+
+```bash
+dig +short vecchio.alpradelafam.com     # deve arrivare a Netlify
+curl -sI https://vecchio.alpradelafam.com | head -3
+```
+
+e apri `https://vecchio.alpradelafam.com` nel browser: stessa pagina del punto
+1.4, ma con il lucchetto e l'indirizzo giusto.
+
+**Da qui in poi l'archivio è al sicuro**, indipendentemente da quello che
+succede al vecchio hosting. Solo adesso ha senso passare al punto 2.
 
 ### 2 · Dichiarare il dominio sul sito nuovo (ancora nessun effetto)
 

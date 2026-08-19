@@ -1,0 +1,66 @@
+<!--
+  ══ Banner «abbiamo un sito nuovo» — da incollare nel VECCHIO WordPress ══
+
+  Dove: WordPress → Aspetto → Editor del tema → footer.php, subito prima di
+  </body>. Oppure, senza toccare il tema, con un plugin tipo «WPCode» o
+  «Insert Headers and Footers» nel campo «Footer».
+
+  Cosa fa: una striscia in basso, una sola volta per visitatore. Chi dice no
+  non la rivede più (ricordato nel browser, non è un cookie di tracciamento).
+  Chi dice sì arriva sul nuovo con ?utm_source=vecchio-sito: così in GA4 del
+  sito nuovo si vede quanti sono passati di lì — il vecchio sito non ha
+  analytics, quindi questo è l'unico modo di misurarli.
+
+  Da cambiare prima di incollarlo: NUOVO (l'indirizzo del sito nuovo).
+-->
+<script>
+(function () {
+  var NUOVO = 'https://pradelafam.netlify.app';   // ← indirizzo del sito nuovo
+  var CHIAVE = 'pdlf_nuovo_sito_v1';
+
+  try { if (localStorage.getItem(CHIAVE)) return; } catch (e) {}
+
+  var L = (navigator.language || 'it').slice(0, 2).toLowerCase();
+  var T = {
+    it: ['Abbiamo un sito nuovo.', 'Vai al nuovo sito', 'Resto qui'],
+    en: ['We have a new website.', 'Go to the new site', 'Stay here'],
+    de: ['Wir haben eine neue Website.', 'Zur neuen Website', 'Hier bleiben'],
+    fr: ['Nous avons un nouveau site.', 'Aller sur le nouveau site', 'Rester ici'],
+    es: ['Tenemos una web nueva.', 'Ir a la web nueva', 'Quedarme aquí']
+  };
+  var t = T[L] || T.it;
+
+  var b = document.createElement('div');
+  b.setAttribute('role', 'region');
+  b.setAttribute('aria-label', t[0]);
+  b.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:99999;' +
+    'background:#132a3d;color:#fff;padding:14px 18px;' +
+    'font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;' +
+    'display:flex;flex-wrap:wrap;align-items:center;justify-content:center;' +
+    'gap:10px 16px;box-shadow:0 -2px 18px rgba(0,0,0,.28)';
+
+  var testo = document.createElement('span');
+  testo.textContent = t[0];
+  testo.style.cssText = 'margin-right:4px';
+
+  var si = document.createElement('a');
+  si.href = NUOVO + '/?utm_source=vecchio-sito&utm_medium=banner&utm_campaign=passaggio';
+  si.textContent = t[1];
+  si.style.cssText = 'background:#fff;color:#132a3d;padding:9px 18px;border-radius:999px;' +
+    'text-decoration:none;font-weight:600;white-space:nowrap';
+  si.onclick = function () { try { localStorage.setItem(CHIAVE, 'si'); } catch (e) {} };
+
+  var no = document.createElement('button');
+  no.type = 'button';
+  no.textContent = t[2];
+  no.style.cssText = 'background:none;border:1px solid rgba(255,255,255,.45);color:#fff;' +
+    'padding:9px 16px;border-radius:999px;font:inherit;cursor:pointer;white-space:nowrap';
+  no.onclick = function () {
+    try { localStorage.setItem(CHIAVE, 'no'); } catch (e) {}
+    b.remove();
+  };
+
+  b.appendChild(testo); b.appendChild(si); b.appendChild(no);
+  document.body.appendChild(b);
+})();
+</script>

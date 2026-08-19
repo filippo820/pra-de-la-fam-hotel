@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **17 agosto 2026** (notte)
+Aggiornato: **19 agosto 2026**
 
 ---
 
@@ -17,6 +17,68 @@ prenotazioni.
 | pubblicato su | `pradelafam.netlify.app` (deploy automatico a ogni push) |
 | sito ufficiale | `alpradelafam.com` — **vecchio WordPress, non toccato** |
 | bottega | `github.com/filippo820/pradelafam-shop` → `pradelafam.shop` (già online) |
+
+---
+
+## Il passaggio al sito nuovo — deciso il 19 agosto 2026
+
+**Assetto scelto: il nuovo su un sottodominio, il vecchio resta ufficiale.**
+`nuovo.alpradelafam.com` → Netlify, `www.alpradelafam.com` non si tocca. Sul
+vecchio una striscia invita a provare il nuovo. Rischio zero sulle prenotazioni,
+si torna indietro togliendo il banner. Lo scambio vero si fa quando i numeri lo
+dicono.
+
+### Fatto oggi
+- **`noindex` su tutte e 12 le pagine.** Il sito era `index,follow` con i
+  canonical su `pradelafam.netlify.app` e nessun `robots.txt`: un secondo sito
+  con lo stesso contenuto che compete con quello ufficiale su Google.
+  Cercare `pdlf-passaggio` per trovarli tutti. **Vanno tolti il giorno del
+  passaggio, insieme ai canonical.**
+  ⚠️ Non è stato messo un `robots.txt` che vieta la scansione, ed è voluto: se
+  Google non può leggere la pagina non può nemmeno leggere il `noindex`.
+- **Il link «Cookie Policy» del piede** puntava ancora a
+  `alpradelafam.com/wp/cookie-policy/` mentre `cookie.html` esiste: ora è locale.
+  Era l'ultimo rimando al vecchio dentro il sito nuovo.
+- **`strumenti/banner-vecchio-sito.html`** — la striscia da incollare nel
+  WordPress vecchio (footer). Cinque lingue, appare una volta sola, e porta al
+  nuovo con `?utm_source=vecchio-sito`: è l'unico modo di contare quanti passano,
+  visto che il vecchio non misura niente.
+- **`strumenti/ga-vecchio-sito.html`** — GA4 per il vecchio (header), stessa
+  proprietà, consenso agganciato al banner Cookie Law Info già installato.
+  ⚠️ Verificato sul sito vivo: **il vecchio non ha nessun analytics**. Senza
+  queste settimane non ci sarà niente da confrontare dopo il passaggio.
+
+### Da fare, in ordine
+1. Incollare i due frammenti nel WordPress (prima GA, poi il banner).
+2. Aruba → DNS di `alpradelafam.com` → record **CNAME `nuovo` →
+   `pradelafam.netlify.app`**. Netlify → Domain management → Add domain
+   `nuovo.alpradelafam.com` (il certificato lo fa da sé).
+   ⚠️ **Non spostare i nameserver su Netlify:** su questo dominio gira la posta
+   (`info@alpradelafam.com`, Aruba). Si tocca solo quel record, gli MX restano.
+3. Cambiare `NUOVO` nel banner da `pradelafam.netlify.app` a
+   `nuovo.alpradelafam.com`.
+
+### Il giorno dello scambio, quello che va ricordato
+- **WordPress ha gli indirizzi assoluti dentro** (`http://www.alpradelafam.com/…`,
+  nel sorgente). Se il dominio passa al nuovo e il vecchio resta acceso a un
+  altro nome, il vecchio **rimbalza i visitatori sul nuovo**. Per tenerlo
+  davvero consultabile va congelato in copia statica (`wget` e via), non lasciato
+  vivo su Aruba.
+- **Le vecchie URL sono `/it_IT/hotel/`, `/it_IT/clementina/`, `/it_IT/pomelo/`…**
+  Servono i redirect in `netlify.toml` verso le pagine nuove, o muoiono i link
+  da Google, da TripAdvisor e dalle mail già mandate.
+- Togliere `noindex` e correggere i `canonical`.
+- Il link «← Torna al sito principale» della bottega.
+- L'elenco `ORIGINI` in `netlify/functions/chat.mjs` contiene già i domini
+  `alpradelafam.com`: quello è a posto.
+
+### Marchio
+Il sito dice **™** due volte (l'apice accanto al logo in home e l'`alt` del
+logo) e **®** mai. Il marchio è registrato, quindi ™ dichiara meno del diritto:
+va `®`. Manca anche la riga di titolarità, e il piede oggi chiama il marchio
+«AlPraDeLaFam.com», che è un dominio, non il marchio. In attesa di titolare e
+territorio di registrazione — il `®` si usa dove la registrazione esiste, e il
+sito lo leggono anche da fuori.
 
 ---
 

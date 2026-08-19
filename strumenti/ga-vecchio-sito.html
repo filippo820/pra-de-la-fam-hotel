@@ -1,0 +1,60 @@
+<!--
+  ══ Google Analytics 4 per il VECCHIO WordPress ══
+
+  Perche': il vecchio sito non ha nessuna misura — verificato sulla pagina viva:
+  niente gtag, niente Tag Manager, niente UA. Senza queste settimane di traffico
+  non c'e' niente con cui confrontare il sito nuovo il giorno del passaggio.
+
+  E' la stessa proprieta' del sito nuovo e della bottega (G-M29PYB9NDX): in GA4
+  i due si distinguono da soli con la dimensione «Nome host»
+  (www.alpradelafam.com contro pradelafam.netlify.app).
+
+  Dove: WordPress → Aspetto → Editor del tema → header.php, subito prima di
+  </head>. Oppure con un plugin tipo «WPCode» nel campo «Header».
+  ⚠️ Nel campo Header, non nel Footer: il consenso va dichiarato prima del tag.
+
+  Consenso: negato di default. Si concede solo quando il banner Cookie Law Info
+  (v1.9.5, quello gia' installato) registra l'accettazione. Chi non accetta non
+  viene misurato — stesso impianto del sito nuovo.
+-->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M29PYB9NDX"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-M29PYB9NDX', { pdlf_sito: 'vecchio' });
+
+  (function () {
+    function leggi(nome) {
+      var m = document.cookie.match('(^|;)\\s*' + nome + '\\s*=\\s*([^;]+)');
+      return m ? decodeURIComponent(m[2]) : null;
+    }
+    function accettato() {
+      // Cookie Law Info 1.9.x: la casella «non necessari» se il banner e' a
+      // categorie, altrimenti il solo «ho visto e accettato».
+      var c = leggi('cookielawinfo-checkbox-non-necessary');
+      if (c !== null) return c === 'yes';
+      return leggi('viewed_cookie_policy') === 'yes';
+    }
+    var concesso = false;
+    function guarda() {
+      if (concesso || !accettato()) return;
+      concesso = true;
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+    guarda();
+    // Il banner non sempre ricarica la pagina: si ricontrolla per un minuto.
+    var n = 0, t = setInterval(function () {
+      guarda();
+      if (concesso || ++n > 60) clearInterval(t);
+    }, 1000);
+  })();
+</script>

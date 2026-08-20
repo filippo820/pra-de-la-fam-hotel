@@ -166,27 +166,74 @@ continua ad andare sul vecchio finché non tocchiamo Aruba.
 
 ### 3 · Le due righe da cambiare su Aruba
 
-Aruba → dominio `alpradelafam.com` → **Gestione DNS**. Cambiano **due** record:
+#### Dove si va
 
-| nome | prima | dopo |
-|---|---|---|
-| `alpradelafam.com` (lascia il campo Nome **vuoto**, o `@`) | A `89.46.109.26` | **A `75.2.60.5`** |
-| `www` | A `89.46.109.26` | **CNAME `pradelafam.netlify.app.`** |
+**La stessa pagina dove hai aggiunto `vecchio`.** Da lì è uscita la riga di
+storico «19/08/2026 20:44:30 — Aggiunta record CNAME — vecchio».
 
-Due note su cosa sono quei valori:
+Il percorso, se serve rifarlo da zero:
+`admin.aruba.it` → accedi → **Domini** / «I tuoi domini» → `alpradelafam.com`
+→ **Gestione DNS** (a volte «DNS e Server DNS» → «Gestione record DNS»).
 
-- **`75.2.60.5`** è l'indirizzo d'ingresso di Netlify. Non è «il nostro server»:
-  è la porta da cui Netlify smista, e riconosce il sito dal nome che il
-  visitatore ha chiesto — ecco perché il punto 2 va fatto prima.
-  ⓘ Sul nome nudo, senza `www`, le regole del DNS non permettono un CNAME: si
-  è costretti a scrivere un indirizzo numerico. È lo stesso che hai già fatto
-  per `colgo.app`, che infatti punta a `75.2.60.5`.
-- **`pradelafam.netlify.app.`** con il punto finale, se Aruba lo richiede. Per
-  `www` si usa il nome e non il numero: se domani Netlify cambia indirizzo, il
-  nome continua a funzionare da solo.
+⚠️ **Non** la pagina dei **Server DNS / Nameserver**: lì si cambia *chi* tiene
+l'elenco, ed è la cosa che non va toccata mai. Se la pagina giusta è aperta,
+vedi una **tabella di righe** con Tipo / Nome / Valore / TTL.
 
-**Non toccare nient'altro.** MX, `mx`, `mail`, `webmail`, `ftp`, TXT/SPF
-restano esattamente come sono.
+#### Cosa vedrai nella tabella, e cosa NON si tocca
+
+| nome | tipo | oggi | |
+|---|---|---|---|
+| *(vuoto o `@`)* | A | `89.46.109.26` | ← **da cambiare** |
+| `www` | A | `89.46.109.26` | ← **da cambiare** |
+| `vecchio` | CNAME | `pradelafam-archivio.netlify.app.` | fatto ieri, lascia |
+| `mx` `mail` `smtp` `pop3` `imap` `webmail` `autoconfig` | A / CNAME | server Aruba | **la posta — non toccare** |
+| `ftp` | A | `89.46.104.x` | non toccare |
+| *(dominio)* | MX | `10 mx.alpradelafam.com` | **non toccare** |
+| *(dominio)* | TXT | `v=spf1 include:_spf.aruba.it ~all` | **non toccare** |
+
+**Undici righe: due si cambiano, nove restano.** Se ti ritrovi a modificare una
+riga che contiene `62.149.` o `mx`, fermati: quella è la posta.
+
+#### Le due modifiche
+
+**Riga 1 — il dominio nudo.** Nella tabella il campo Nome è **vuoto** oppure `@`
+oppure mostra `alpradelafam.com`. Si modifica **solo il valore**:
+
+```
+tipo A   ·   89.46.109.26   →   75.2.60.5
+```
+
+Il tipo resta `A`. ⓘ Sul nome nudo le regole del DNS non permettono un CNAME:
+per forza un numero. È l'indirizzo d'ingresso di Netlify — lo stesso che hai
+già su `colgo.app`.
+
+**Riga 2 — `www`.** Qui cambia anche il **tipo**, da `A` a `CNAME`:
+
+```
+tipo A      · www · 89.46.109.26
+tipo CNAME  · www · pradelafam.netlify.app.
+```
+
+⚠️ **Molti pannelli non lasciano cambiare il tipo di una riga esistente.** In
+quel caso: **elimina** la riga `www` di tipo A e **aggiungine** una nuova di
+tipo CNAME. Non è pericoloso — è il nome che stiamo comunque spostando.
+
+Se il pannello complica troppo la vita, **c'è un ripiego che funziona**:
+lasciare `www` di tipo **A** e cambiargli solo il valore in `75.2.60.5`, come
+il nome nudo. Netlify risponde lo stesso, perché riconosce il sito dal nome
+chiesto e non dall'indirizzo. È meno elegante — il giorno che Netlify cambia
+numero, il CNAME si aggiornerebbe da solo e l'A no — ma è corretto.
+
+#### Salva, e poi aspetta
+
+Salva **tutte e due** nella stessa sessione. Nel mezzo, per qualche minuto, uno
+dei due nomi può mostrare il sito nuovo e l'altro il vecchio: nessun danno,
+sono due nomi indipendenti.
+
+⏱️ **Aruba mette in coda.** Ieri sera ci ha messo **58 minuti**: mettili in
+conto e non rifare il record perché «non si vede» — creeresti un doppione.
+Il TTL minimo che il pannello concede è 1 ora, quindi anche il ritorno
+indietro, se serve, richiede fino a un'ora.
 
 ### 4 · Aspettare, e guardare
 

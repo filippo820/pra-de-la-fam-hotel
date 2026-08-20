@@ -91,6 +91,24 @@ due (apice e `www`) verso l'IPv6 di Aruba, che **il pannello non mostra e non
 lascia eliminare**: li inietta il servizio di hosting. Conseguenza tuttora
 aperta: **in IPv4 si vede il sito nuovo, in IPv6 il vecchio** — e da telefono,
 in Italia, l'IPv6 è la norma.
+**Provato e documentato il 20/08**: le rimozioni **si possono fare e vengono
+registrate** — Lista modifiche DNS, 13:02:47 (`@`) e 13:02:54 (`www`) — ma i
+record restano pubblicati. La prova che non è lentezza: una modifica di **un
+minuto dopo** (13:03:49, il CNAME di `www`) è attiva da 13:07, stesso lotto di
+pubblicazione, e il seriale non si è più mosso. Il pannello, filtrato su AAAA,
+mostra la tabella **vuota**. Qualcosa li ricrea: sono del servizio di hosting.
+
+⛔ **La «Configurazione guidata del DNS per altri provider» NON va usata.**
+Arrivati al passo «Verifica» dichiara: «I seguenti record andranno a
+**sostituire tutti quelli già presenti nella tabella**» — e i valori sono
+quelli fissi del provider scelto (con Shopify: `A @ 23.227.38.65`, `CNAME www
+shops.myshopify.com`), non modificabili. Confermare avrebbe spento il sito e
+cancellato SPF, DMARC e con ogni probabilità gli MX. I sei preset sono tutti
+così: servono a consegnare il dominio a un altro servizio, non a staccare
+l'hosting.
+
+Testo del ticket già pronto in `../richiesta-aruba-AAAA.txt`, con la
+fotografia della zona in `../zona-alpradelafam-20260820.txt`.
 Da provare: `dig +short alpradelafam.com AAAA` (deve essere vuoto).
 Strade: la **«Configurazione guidata del DNS per altri provider»** in fondo al
 pannello Aruba (da leggere prima di confermare: non deve toccare gli MX),

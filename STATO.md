@@ -1,22 +1,27 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **19 agosto 2026**
+Aggiornato: **20 agosto 2026** — lo scambio è fatto
 
 ---
 
 ## In una riga
 
-Il sito nuovo (costruito a maggio, mai andato online) è ora **collegato a GitHub
-e pubblicato in automatico su `pradelafam.netlify.app`**. Non è ancora il sito
-ufficiale: `alpradelafam.com` resta il vecchio WordPress, e da lì passano le
-prenotazioni.
+**Il sito nuovo è quello ufficiale.** Dal 20 agosto 2026 `alpradelafam.com`
+serve il sito nuovo, in HTTPS, con i rimandi delle vecchie URL attivi. Il
+vecchio WordPress resta consultabile come copia congelata su
+`vecchio.alpradelafam.com`.
+
+⬜ **Manca un pezzo**: due record `AAAA` (IPv6) del dominio puntano ancora al
+vecchio server Aruba, quindi **chi naviga in IPv6 vede ancora il vecchio sito**.
+Non sono eliminabili dal pannello — non compaiono nemmeno, li inietta il
+servizio di hosting. Vedi «Il passaggio».
 
 | | |
 |---|---|
 | repo | `github.com/filippo820/pra-de-la-fam-hotel` |
 | pubblicato su | `pradelafam.netlify.app` (deploy automatico a ogni push) |
-| sito ufficiale | `alpradelafam.com` — vecchio WordPress **4.3.1 (2015)**, da ritirare |
-| archivio del vecchio | `../vecchio-congelato` — copia statica pronta, non ancora pubblicata |
+| sito ufficiale | **`alpradelafam.com` — il sito nuovo**, dal 20/08/2026 |
+| archivio del vecchio | `vecchio.alpradelafam.com` — copia statica, online |
 | bottega | `github.com/filippo820/pradelafam-shop` → `pradelafam.shop` (già online) |
 
 ---
@@ -64,23 +69,37 @@ ufficiale e invitare al nuovo da lì, ma due cose l'hanno ribaltato:
   restano lì: il primo serve se si vuole la misura di riferimento prima dello
   scambio; il secondo serve solo se si torna all'assetto graduale.
 
-### Il giorno dello scambio, nell'ordine
-1. Pubblicare la copia congelata: Netlify → **Deploy manually**, trascinare
-   `vecchio-congelato`. Poi dominio `vecchio.alpradelafam.com`.
-2. Aruba → DNS di `alpradelafam.com` → `www` e l'apice al sito nuovo, **CNAME
-   `vecchio`** alla copia.
-   ⚠️ **Non spostare i nameserver:** su questo dominio gira la posta
-   (`info@alpradelafam.com`). Si toccano solo quei record, gli MX restano.
-3. Netlify (sito nuovo) → aggiungere il dominio `alpradelafam.com`.
-4. **Togliere il `noindex`** (`pdlf-passaggio`) e **correggere i `canonical`**,
-   che oggi puntano a `pradelafam.netlify.app`.
-5. Aggiungere nel piede del nuovo un rimando discreto all'archivio.
-6. Il link «← Torna al sito principale» della bottega.
-7. La striscia della copia d'archivio punta già a `www.alpradelafam.com`, che
-   da quel momento **è** il sito nuovo: non va toccata.
-8. L'elenco `ORIGINI` in `netlify/functions/chat.mjs` ha già i domini
-   `alpradelafam.com`: a posto.
-9. Solo dopo, e senza fretta: spegnere l'hosting WordPress su Aruba.
+### Lo scambio — fatto il 20 agosto 2026
+
+Cronaca, con i tempi veri:
+
+| ora | cosa |
+|---|---|
+| 19/08 20:44 | CNAME `vecchio` salvato → pubblicato alle 21:42 (**58 min**) |
+| 20/08 ~11:40 | apice e `www` portati a `75.2.60.5` → pubblicati alle 12:26 (**44 min**) |
+| 20/08 12:26 | il dominio serve il sito nuovo in HTTP; certificato ancora assente |
+| 20/08 ~13:00 | `www` convertito da A a **CNAME** → `pradelafam.netlify.app` |
+| 20/08 12:28 UTC | **certificato Let's Encrypt emesso**, copre apice e `www` |
+| 20/08 13:29 | tolti i 12 `noindex`, 44 indirizzi riscritti su `alpradelafam.com` |
+
+**La posta non è mai stata toccata**, verificata a ogni passaggio: MX, `mx`,
+`webmail`, SPF invariati.
+
+⚠️ **La trappola della giornata: gli AAAA invisibili.** Avevo elencato i
+record interrogando A, CNAME, MX e TXT — **mai gli AAAA**. Il dominio ne aveva
+due (apice e `www`) verso l'IPv6 di Aruba, che **il pannello non mostra e non
+lascia eliminare**: li inietta il servizio di hosting. Conseguenza tuttora
+aperta: **in IPv4 si vede il sito nuovo, in IPv6 il vecchio** — e da telefono,
+in Italia, l'IPv6 è la norma.
+Da provare: `dig +short alpradelafam.com AAAA` (deve essere vuoto).
+Strade: la **«Configurazione guidata del DNS per altri provider»** in fondo al
+pannello Aruba (da leggere prima di confermare: non deve toccare gli MX),
+oppure una richiesta all'assistenza.
+📐 **Regola: quando si sposta un dominio, si contano anche gli AAAA.**
+
+⬜ Rifiniture rimaste: Search Console sul dominio nuovo, il link «← Torna al
+sito principale» della bottega, un rimando all'archivio nel piede, e — solo
+alla fine — disdire l'hosting WordPress su Aruba (**non** la casella di posta).
 
 ### Marchio — fatto
 **Titolare: FAM S.r.l., registrazione italiana.** Il sito diceva ™ e mai ®:

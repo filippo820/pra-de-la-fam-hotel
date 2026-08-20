@@ -5,3 +5,6 @@ IMG_*.PNG
 
 # Local Netlify folder
 .netlify
+
+# Schermate di lavoro: la cartella verrebbe pubblicata insieme al sito
+screenshots/

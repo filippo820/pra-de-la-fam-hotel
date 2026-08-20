@@ -85,35 +85,35 @@ Cronaca, con i tempi veri:
 **La posta non è mai stata toccata**, verificata a ogni passaggio: MX, `mx`,
 `webmail`, SPF invariati.
 
-⚠️ **La trappola della giornata: gli AAAA invisibili.** Avevo elencato i
-record interrogando A, CNAME, MX e TXT — **mai gli AAAA**. Il dominio ne aveva
-due (apice e `www`) verso l'IPv6 di Aruba, che **il pannello non mostra e non
-lascia eliminare**: li inietta il servizio di hosting. Conseguenza tuttora
-aperta: **in IPv4 si vede il sito nuovo, in IPv6 il vecchio** — e da telefono,
-in Italia, l'IPv6 è la norma.
-**Provato e documentato il 20/08**: le rimozioni **si possono fare e vengono
-registrate** — Lista modifiche DNS, 13:02:47 (`@`) e 13:02:54 (`www`) — ma i
-record restano pubblicati. La prova che non è lentezza: una modifica di **un
-minuto dopo** (13:03:49, il CNAME di `www`) è attiva da 13:07, stesso lotto di
-pubblicazione, e il seriale non si è più mosso. Il pannello, filtrato su AAAA,
-mostra la tabella **vuota**. Qualcosa li ricrea: sono del servizio di hosting.
-
-⛔ **La «Configurazione guidata del DNS per altri provider» NON va usata.**
-Arrivati al passo «Verifica» dichiara: «I seguenti record andranno a
-**sostituire tutti quelli già presenti nella tabella**» — e i valori sono
-quelli fissi del provider scelto (con Shopify: `A @ 23.227.38.65`, `CNAME www
-shops.myshopify.com`), non modificabili. Confermare avrebbe spento il sito e
-cancellato SPF, DMARC e con ogni probabilità gli MX. I sei preset sono tutti
-così: servono a consegnare il dominio a un altro servizio, non a staccare
-l'hosting.
-
-Testo del ticket già pronto in `../richiesta-aruba-AAAA.txt`, con la
-fotografia della zona in `../zona-alpradelafam-20260820.txt`.
-Da provare: `dig +short alpradelafam.com AAAA` (deve essere vuoto).
-Strade: la **«Configurazione guidata del DNS per altri provider»** in fondo al
-pannello Aruba (da leggere prima di confermare: non deve toccare gli MX),
-oppure una richiesta all'assistenza.
+⚠️ **La trappola della giornata: gli AAAA.** Avevo elencato i record
+interrogando A, CNAME, MX e TXT — **mai gli AAAA**. Il dominio ne aveva due
+(apice e `www`) verso l'IPv6 dell'Hosting Linux (`2a00:6d40:4:1::c289:26`,
+lo stesso indirizzo che il pannello hosting mostra come «IPv6» del servizio).
+Finché sono rimasti, **in IPv4 si vedeva il sito nuovo e in IPv6 il vecchio** —
+e da telefono, in Italia, l'IPv6 è la norma.
 📐 **Regola: quando si sposta un dominio, si contano anche gli AAAA.**
+
+⚠️ **E una diagnosi che avevo sbagliato.** Le rimozioni erano registrate nella
+Lista modifiche (13:02:47 e 13:02:54) ma i record restavano pubblicati, mentre
+una modifica di **un minuto dopo** (il CNAME di `www`) era già attiva. Ne avevo
+concluso che l'hosting li ricreasse, e avevo preparato un ticket. **Sbagliato:
+erano solo più lenti.** Sono spariti da soli **58 minuti dopo**, come tutto il
+resto. La lezione non è sulla coda di Aruba — è che *le modifiche di uno stesso
+lotto non escono insieme*, quindi «l'altra è già attiva» non prova niente.
+
+⛔ **La «Configurazione guidata del DNS per altri provider» resta da non usare.**
+Al passo «Verifica» dichiara: «I seguenti record andranno a **sostituire tutti
+quelli già presenti nella tabella**» — con i valori fissi del provider scelto
+(Shopify: `A @ 23.227.38.65`, `CNAME www shops.myshopify.com`), non
+modificabili. Confermare avrebbe spento il sito e cancellato SPF, DMARC e con
+ogni probabilità gli MX. Tutti e sei i preset funzionano così.
+
+**Stato finale verificato il 20/08 alle 14:03:**
+```
+apice   A 75.2.60.5 · nessun AAAA        www  CNAME pradelafam.netlify.app.
+https   200, certificato valido          www  301 → apice
+MX/SPF/DMARC/mx/webmail  invariati       vecchio.alpradelafam.com  online
+```
 
 ⬜ Rifiniture rimaste: Search Console sul dominio nuovo, il link «← Torna al
 sito principale» della bottega, un rimando all'archivio nel piede, e — solo

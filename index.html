@@ -363,7 +363,10 @@ nav.scrolled{background:rgba(247,244,239,.99)}
    corretta dove sbagliava: «Riva di Trento» non esiste, e' Riva del Garda;
    sull'A22 non c'e' un'uscita «Rovereto Est», per Riva si esce a Rovereto Sud.
    Tolte le frequenze delle navette aeroportuali: erano di quindici anni fa. */
-.arrivo{grid-column:1/-1;margin-top:3.5rem;padding-top:2.6rem;border-top:1px solid rgba(11,21,32,.1)}
+/* «Come arrivare» apre la sezione, quindi non le serve un secondo filo
+   sopra: quello dell'intestazione basta. Con entrambi restava una fascia
+   vuota di 170px fra due righe orizzontali. */
+.arrivo{grid-column:1/-1}
 /* SCHEDA APRIBILE. E' un <details>: si apre da tastiera, funziona anche senza
    JavaScript, e il testo resta nel documento — quindi Google lo legge lo
    stesso. Chiusa di suo: il blocco intero e' alto oltre mille pixel sul
@@ -389,7 +392,7 @@ nav.scrolled{background:rgba(247,244,239,.99)}
              border-left:2px solid var(--gold-testo);padding-left:1rem}
 .arrivo-gps{margin-top:1rem;font-size:.72rem;letter-spacing:.1em;color:var(--steel)}
 @media(max-width:800px){.arrivo-griglia{grid-template-columns:1fr;gap:2rem}
-                        .arrivo{margin-top:2.6rem;padding-top:2rem}}
+                        }
 .contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
 @media(max-width:800px){.contact-inner{grid-template-columns:1fr;gap:3rem}}
 .cinfo-label{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);margin-bottom:.5rem}

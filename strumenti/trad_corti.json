@@ -347,6 +347,12 @@
   "es": "Política de cookies",
   "fr": "Politique de cookies"
  },
+ "Cookie policy": {
+  "de": "Cookie-Richtlinie",
+  "en": "Cookie policy",
+  "es": "Política de cookies",
+  "fr": "Politique de cookies"
+ },
  "Cucina": {
   "de": "Küche",
   "en": "Kitchen",
@@ -467,6 +473,12 @@
   "es": "Golf Bogliaco",
   "fr": "Golf de Bogliaco"
  },
+ "Hotel": {
+  "de": "Hotel",
+  "en": "Hotel",
+  "es": "Hotel",
+  "fr": "Hôtel"
+ },
  "Hotel & Appartamenti": {
   "de": "Hotel & Apartments",
   "en": "Hotel & Apartments",
@@ -496,6 +508,12 @@
   "en": "Address",
   "es": "Dirección",
   "fr": "Adresse"
+ },
+ "Informativa privacy": {
+  "de": "Datenschutzerklärung",
+  "en": "Privacy policy",
+  "es": "Política de privacidad",
+  "fr": "Politique de confidentialité"
  },
  "Ingresso privato": {
   "de": "Separater Eingang",

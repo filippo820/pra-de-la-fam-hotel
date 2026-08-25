@@ -911,6 +911,35 @@ di Google su `alpradelafam.com` e su `/faq`. Netlify riscrive l'HTML in fase di
 pubblicazione — è già successo con le virgolette degli `onmouseover` — e un
 blocco JSON rotto non dà errore a schermo: semplicemente non viene letto.
 
+
+### «Hotel» non era mai stato tradotto — 25 agosto 2026
+Segnalato da fuori: nella versione francese «Hotel» compariva senza
+circonflesso. Non era un accento sbagliato in una traduzione: **la parola non
+stava in nessun dizionario**, in nessuna lingua. In inglese, tedesco e spagnolo
+l'italiano coincide con la forma giusta e nessuno se ne accorge; in francese
+vuole `Hôtel`, e il sito serviva l'italiano.
+
+📐 **Il difetto è invisibile per costruzione:** un frammento che manca resta in
+italiano, ed e' la scelta giusta — ma se l'italiano *somiglia* alla lingua di
+arrivo, il buco non si vede finche' non arriva la quinta lingua in cui non
+somiglia. Le lingue vicine nascondono i buchi, non li chiudono.
+
+Due frammenti riparati con una voce sola, perche' `costruisci.py` traduce i
+pezzi di testo e non le stringhe intere: la voce «Hotel» della barra e il
+titolo `Hotel<br><em>Prà de la Fam</em>` della sezione 01.
+
+Cercati subito dopo gli altri della stessa specie, escludendo nomi propri,
+indirizzi e le due recensioni gia' scritte in inglese e in polacco: ne restavano
+**due**, `Informativa privacy` e `Cookie policy`, italiane in tutte e quattro le
+lingue nel piede delle nove pagine di camere e appartamenti. Tradotte.
+
+Dizionario: fr da 334 a **338**, en 339 · de 342 · es 325.
+
+⬜ **Resta il buco grosso, ed e' un'altra cosa:** `privacy.html` e `cookie.html`
+sono **interamente in italiano** in tutte e quattro le lingue — un centinaio di
+frammenti. Un visitatore tedesco legge un'informativa che non capisce, e le due
+pagine sono proprio quelle in cui capire conta.
+
 ---
 
 ## ⬜ Aperto

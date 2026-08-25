@@ -11,10 +11,17 @@ serve il sito nuovo, in HTTPS, con i rimandi delle vecchie URL attivi. Il
 vecchio WordPress resta consultabile come copia congelata su
 `vecchio.alpradelafam.com`.
 
-⬜ **Manca un pezzo**: due record `AAAA` (IPv6) del dominio puntano ancora al
-vecchio server Aruba, quindi **chi naviga in IPv6 vede ancora il vecchio sito**.
-Non sono eliminabili dal pannello — non compaiono nemmeno, li inietta il
-servizio di hosting. Vedi «Il passaggio».
+✅ **Gli `AAAA` non ci sono più.** I due record IPv6 che puntavano al vecchio
+server Aruba sono spariti il 20 agosto (commit `bc8ab89`): erano lenti a
+scomparire, ma non sono stati ricreati. Ricontrollato il 25/08: `dig AAAA
+alpradelafam.com` non risponde niente, l'apice è `A 75.2.60.5`. Chi naviga in
+IPv6 vede il sito nuovo come tutti gli altri. Come ci si è arrivati: «Il
+passaggio».
+
+⚠️ Questo riquadro è rimasto indietro di cinque giorni rispetto al corpo del
+diario, che alla riga «Stato finale verificato» diceva già «nessun AAAA». Un
+riassunto che contraddice il testo sotto è peggio di nessun riassunto: chi legge
+si ferma qui. **Se si chiude una voce, si chiude anche in cima.**
 
 | | |
 |---|---|

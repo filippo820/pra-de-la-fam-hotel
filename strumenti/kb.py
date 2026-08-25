@@ -25,6 +25,7 @@ const PAG = {
   "appartamento Calamondino": "/appartamento-calamondino.html",
   "appartamento Kumquat": "/appartamento-kumquat.html",
   "appartamento Bergamotto": "/appartamento-bergamotto.html",
+  "faq": "/faq.html",
   "privacy": "/privacy.html", "cookie": "/cookie.html",
 };
 const b = await chromium.launch();
@@ -67,6 +68,15 @@ FATTI = {
     "bottega": "La Bottega del Prà (pradelafam.shop) vende olio extravergine biologico, limoni sotto sale, "
                "limoncino, sciroppo di limone, olio agrumato, marmellate e articoli con il logo del Prà. "
                "I prodotti si acquistano in hotel durante il soggiorno.",
+    "orari": "Check-in dalle 14:00 alle 20:00, check-out entro le 10:30. Chi arriva più tardi "
+             "avvisa per telefono: la gestione è familiare e ci si organizza.",
+    "animali": "I cani sono ammessi sia nelle camere sia negli appartamenti. Supplemento: 10 € a "
+               "notte per animale in albergo, 50 € a soggiorno per animale negli appartamenti "
+               "(non a notte). Va segnalato al momento della prenotazione.",
+    "spiaggia": "La spiaggia è a meno di venti metri dal giardino, piccola e libera, non un lido "
+                "attrezzato. Non c'è piscina: si fa il bagno nel lago.",
+    "colazione": "Inclusa per chi dorme in camera, servita in veranda all'ombra degli ulivi. Per gli "
+                 "appartamenti, che hanno la cucina, si può aggiungere a pagamento.",
     "limonaia": "La Limonaia del Prà de la Fam è la più grande e la più a nord d'Europa, con 80 piante adulte. "
                 "È visitabile da Pasqua a ottobre con visita guidata e degustazione. "
                 "Sito dedicato: ecomuseopradelafam.com",

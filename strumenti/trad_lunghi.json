@@ -1,4 +1,34 @@
 {
+ "01 — La strada e l'arrivo": {
+  "de": "01 — Anfahrt und Straße",
+  "en": "01 — Getting here",
+  "es": "01 — La carretera y la llegada",
+  "fr": "01 — La route et l'arrivée"
+ },
+ "02 — La posizione e la limonaia": {
+  "de": "02 — Die Lage und die Zitronengärten",
+  "en": "02 — The setting and the lemon house",
+  "es": "02 — El entorno y el limonar",
+  "fr": "02 — L'emplacement et la limonaia"
+ },
+ "03 — Camere, appartamenti e servizi": {
+  "de": "03 — Zimmer, Apartments und Service",
+  "en": "03 — Rooms, apartments and services",
+  "es": "03 — Habitaciones, apartamentos y servicios",
+  "fr": "03 — Chambres, appartements et services"
+ },
+ "A che ora si fa il check-in e il check-out?": {
+  "de": "Wann sind Check-in und Check-out?",
+  "en": "What time is check-in and check-out?",
+  "es": "¿A qué hora son la entrada y la salida?",
+  "fr": "À quelle heure se font l'arrivée et le départ ?"
+ },
+ "A piedi e in mountain bike si parte direttamente da qui: siamo dentro il Parco Alto Garda Bresciano, e oltre ai sentieri del parco c'è una rete fittissima di sentieri militari — trincee, ricoveri, gallerie e casematte — ormai spariti dalle carte, quasi sempre nei punti più panoramici.": {
+  "de": "Wandern und Mountainbiken beginnen direkt vor der Tür: Wir liegen im Naturpark Alto Garda Bresciano, und neben den Parkwegen gibt es ein dichtes Netz alter Militärpfade — Schützengräben, Unterstände, Stollen und Kasematten —, längst von den Karten verschwunden und fast immer an den schönsten Aussichtspunkten.",
+  "en": "Walking and mountain biking start right at the door: we are inside the Alto Garda Bresciano Park, and beyond the park trails there is a dense network of military paths — trenches, shelters, tunnels and casemates — long gone from the maps, almost always at the most panoramic spots.",
+  "es": "A pie y en bicicleta de montaña se sale directamente desde aquí: estamos dentro del Parque Alto Garda Bresciano y, además de los senderos del parque, hay una red densísima de caminos militares — trincheras, refugios, galerías y casamatas — desaparecidos de los mapas y casi siempre en los puntos más panorámicos.",
+  "fr": "La randonnée et le VTT partent directement d'ici : nous sommes dans le Parc Alto Garda Bresciano et, au-delà des sentiers du parc, il existe un réseau très dense de chemins militaires — tranchées, abris, galeries et casemates — disparus des cartes, presque toujours aux points les plus panoramiques."
+ },
  "Agosto 2024 · Camera Familiare · 3 notti": {
   "de": "August 2024 · Familienzimmer · 3 Nächte",
   "en": "August 2024 · Family Room · 3 nights",
@@ -47,11 +77,29 @@
   "es": "Autopista del Brennero A22, salida Rovereto Sud, dirección Riva del Garda, luego la Gardesana hacia Brescia durante unos veinte kilómetros.",
   "fr": "Autoroute du Brenner A22, sortie Rovereto Sud, direction Riva del Garda, puis la Gardesana vers Brescia sur une vingtaine de kilomètres."
  },
+ "Bagno privato con doccia, asciugacapelli, set di asciugamani, bagnoschiuma e kit cortesia; aria condizionata, Wi-Fi gratuito, televisione e un frigo vuoto a disposizione.": {
+  "de": "Eigenes Bad mit Dusche, Föhn, Handtuchset, Duschgel und Kosmetikset; Klimaanlage, kostenloses WLAN, Fernseher und ein leerer Kühlschrank zur freien Verfügung.",
+  "en": "Private bathroom with shower, hairdryer, towel set, shower gel and courtesy kit; air conditioning, free Wi-Fi, television and an empty fridge at your disposal.",
+  "es": "Baño privado con ducha, secador, juego de toallas, gel de baño y kit de cortesía; aire acondicionado, Wi-Fi gratuito, televisión y una nevera vacía a disposición.",
+  "fr": "Salle de bain privée avec douche, sèche-cheveux, jeu de serviettes, gel douche et kit de courtoisie ; climatisation, Wi-Fi gratuit, télévision et un réfrigérateur vide à disposition."
+ },
  "Bilocale su due livelli con interno in pietra vista, scala a sbalzo e giardino riservato. Il più spazioso della proprietà.": {
   "de": "Zweizimmer-Apartment auf zwei Ebenen mit Sichtstein, freitragender Treppe und eigenem Garten. Das großzügigste des Anwesens.",
   "en": "Two-room apartment over two levels, exposed stone inside, cantilevered staircase and reserved garden. The largest on the property.",
   "es": "Apartamento de dos ambientes en dos niveles, piedra vista, escalera voladiza y jardín reservado. El más espacioso de la propiedad.",
   "fr": "Deux-pièces sur deux niveaux, pierre apparente, escalier en porte-à-faux et jardin réservé. Le plus spacieux de la propriété."
+ },
+ "C'è il parcheggio? Si paga?": {
+  "de": "Gibt es Parkplätze? Kosten sie etwas?",
+  "en": "Is there parking? Is it paid?",
+  "es": "¿Hay aparcamiento? ¿Se paga?",
+  "fr": "Y a-t-il un parking ? Est-il payant ?"
+ },
+ "C'è una cosa che confonde quasi tutti, ed è meglio saperla prima di partire: il paese di Tignale sta in alto, sulla montagna, a qualche chilometro di tornanti dalla riva. Noi siamo giù, sul lago, sulla Gardesana. Le coordinate esatte sono 45°43.684′N · 10°43.176′E.": {
+  "de": "Eines verwirrt fast alle, und man sollte es vor der Abfahrt wissen: Das Dorf Tignale liegt oben am Berg, ein paar Serpentinen-Kilometer vom Ufer entfernt. Wir sind unten, direkt am See, an der Gardesana. Die genauen Koordinaten lauten 45°43.684′N · 10°43.176′E.",
+  "en": "There is one thing that confuses almost everyone, and it is better to know it before setting off: the village of Tignale sits high up on the mountain, a few kilometres of hairpin bends from the shore. We are down below, on the lake, on the Gardesana road. The exact coordinates are 45°43.684′N · 10°43.176′E.",
+  "es": "Hay algo que confunde a casi todos y conviene saberlo antes de salir: el pueblo de Tignale está arriba, en la montaña, a unos kilómetros de curvas desde la orilla. Nosotros estamos abajo, junto al lago, en la Gardesana. Las coordenadas exactas son 45°43.684′N · 10°43.176′E.",
+  "fr": "Une chose déroute presque tout le monde, et mieux vaut le savoir avant de partir : le village de Tignale se trouve en haut, sur la montagne, à quelques kilomètres de lacets de la rive. Nous sommes en bas, au bord du lac, sur la Gardesana. Les coordonnées exactes sont 45°43.684′N · 10°43.176′E."
  },
  "Camera doppia comunicante con stanza a castello — ideale per famiglie con bambini.": {
   "de": "Doppelzimmer mit Verbindungstür zu einem Zimmer mit Etagenbett — ideal für Familien mit Kindern.",
@@ -95,17 +143,83 @@
   "es": "Una cascada de roca detrás, el lago y el Monte Baldo delante. Una limonaia en activo a dos pasos.",
   "fr": "Une cascade de roche derrière, le lac et le Monte Baldo devant. Une limonaia en activité à deux pas."
  },
+ "Che cos'è la Limonaia del Prà de la Fam? Si può visitare?": {
+  "de": "Was ist die Limonaia del Prà de la Fam, und kann man sie besichtigen?",
+  "en": "What is the Limonaia del Prà de la Fam, and can it be visited?",
+  "es": "¿Qué es la Limonaia del Prà de la Fam? ¿Se puede visitar?",
+  "fr": "Qu'est-ce que la Limonaia del Prà de la Fam ? Peut-on la visiter ?"
+ },
+ "Che cosa c'è in camera?": {
+  "de": "Was gibt es im Zimmer?",
+  "en": "What is in the room?",
+  "es": "¿Qué hay en la habitación?",
+  "fr": "Qu'y a-t-il dans la chambre ?"
+ },
+ "Che cosa devo scrivere nel navigatore per arrivare?": {
+  "de": "Was soll ich ins Navi eingeben?",
+  "en": "What should I type into my satnav?",
+  "es": "¿Qué debo poner en el navegador?",
+  "fr": "Que dois-je saisir dans le GPS ?"
+ },
+ "Che cosa si può fare in zona?": {
+  "de": "Was kann man in der Umgebung unternehmen?",
+  "en": "What is there to do nearby?",
+  "es": "¿Qué se puede hacer en la zona?",
+  "fr": "Que peut-on faire dans les environs ?"
+ },
+ "Che cosa si vede da qui, e che cos'è quella limonaia.": {
+  "de": "Was man von hier aus sieht — und was es mit dieser Limonaia auf sich hat.",
+  "en": "What you see from here, and what that lemon house really is.",
+  "es": "Lo que se ve desde aquí y qué es ese limonar.",
+  "fr": "Ce que l'on voit d'ici, et ce qu'est vraiment cette limonaia."
+ },
+ "Che cosa si vede dalla struttura?": {
+  "de": "Was sieht man vom Haus aus?",
+  "en": "What can you see from the property?",
+  "es": "¿Qué se ve desde el alojamiento?",
+  "fr": "Que voit-on depuis l'établissement ?"
+ },
+ "Che differenza c'è fra la vostra limonaia e le altre del Lago di Garda?": {
+  "de": "Worin unterscheidet sich Ihre Limonaia von den anderen am Gardasee?",
+  "en": "How is your lemon house different from the others on Lake Garda?",
+  "es": "¿En qué se diferencia su limonar de los otros del lago de Garda?",
+  "fr": "Quelle différence entre votre limonaia et les autres du lac de Garde ?"
+ },
+ "Che lingue parlate?": {
+  "de": "Welche Sprachen sprechen Sie?",
+  "en": "What languages do you speak?",
+  "es": "¿Qué idiomas hablan?",
+  "fr": "Quelles langues parlez-vous ?"
+ },
  "Ciao! Sono l'assistente del Prà de la Fam. Posso aiutarti con informazioni sull'hotel, gli appartamenti, la limonaia, i servizi e i prodotti dello shop. Come posso aiutarti? 😊": {
   "de": "Hallo! Ich bin der Assistent des Prà de la Fam. Ich helfe gern bei Fragen zum Hotel, den Apartments, der Limonaia, den Leistungen und dem Shop. Wie kann ich helfen? 😊",
   "en": "Hello! I'm the Prà de la Fam assistant. I can help with the hotel, the apartments, the lemon house, our services and the shop. How can I help? 😊",
   "es": "¡Hola! Soy el asistente del Prà de la Fam. Puedo ayudarte con el hotel, los apartamentos, la limonaia, los servicios y la tienda. ¿En qué puedo ayudarte? 😊",
   "fr": "Bonjour ! Je suis l'assistant du Prà de la Fam. Je peux vous renseigner sur l'hôtel, les appartements, la limonaia, les services et la boutique. Comment puis-je vous aider ? 😊"
  },
+ "Com'è la strada? Ho letto che è stretta e piena di gallerie.": {
+  "de": "Wie ist die Straße? Ich habe gelesen, sie sei eng und voller Tunnel.",
+  "en": "What is the road like? I have read it is narrow and full of tunnels.",
+  "es": "¿Cómo es la carretera? He leído que es estrecha y llena de túneles.",
+  "fr": "Comment est la route ? J'ai lu qu'elle était étroite et pleine de tunnels."
+ },
  "Come arrivare": {
   "de": "Anreise",
   "en": "Getting here",
   "es": "Cómo llegar",
   "fr": "Comment venir"
+ },
+ "Come si arriva in auto?": {
+  "de": "Wie komme ich mit dem Auto her?",
+  "en": "How do I get here by car?",
+  "es": "¿Cómo se llega en coche?",
+  "fr": "Comment vient-on en voiture ?"
+ },
+ "Come si prenota? Conviene prenotare dal sito?": {
+  "de": "Wie bucht man? Lohnt es sich, direkt über die Website zu buchen?",
+  "en": "How do I book? Is it better to book on your website?",
+  "es": "¿Cómo se reserva? ¿Conviene reservar desde la web?",
+  "fr": "Comment réserver ? Vaut-il mieux réserver sur le site ?"
  },
  "Con peperoncino o pepe. Per insalate, pesce o carni crude": {
   "de": "Mit Chili oder Pfeffer. Für Salate, Fisch oder rohes Fleisch",
@@ -125,11 +239,23 @@
   "es": "Desde el este",
   "fr": "Depuis l’est"
  },
+ "Da est: autostrada A4, uscita Desenzano, direzione Salò, circa 15 km. Da Salò si prosegue verso Riva del Garda sulla Gardesana, la SS 45 bis; passata Gargnano, ancora 4 km fino al Porto di Tignale.": {
+  "de": "Von Osten: Autobahn A4, Ausfahrt Desenzano, Richtung Salò, rund 15 km. Ab Salò weiter Richtung Riva del Garda auf der Gardesana, der SS 45 bis; nach Gargnano noch 4 km bis Porto di Tignale.",
+  "en": "From the east: A4 motorway, Desenzano exit, towards Salò, about 15 km. From Salò carry on towards Riva del Garda along the Gardesana, the SS 45 bis; after Gargnano, another 4 km to Porto di Tignale.",
+  "es": "Desde el este: autopista A4, salida Desenzano, dirección Salò, unos 15 km. Desde Salò se sigue hacia Riva del Garda por la Gardesana, la SS 45 bis; pasado Gargnano, otros 4 km hasta Porto di Tignale.",
+  "fr": "Depuis l'est : autoroute A4, sortie Desenzano, direction Salò, environ 15 km. De Salò, continuer vers Riva del Garda sur la Gardesana, la SS 45 bis ; après Gargnano, encore 4 km jusqu'à Porto di Tignale."
+ },
  "Da nord": {
   "de": "Von Norden",
   "en": "From the north",
   "es": "Desde el norte",
   "fr": "Depuis le nord"
+ },
+ "Da nord: autostrada del Brennero A22, uscita Rovereto Sud, direzione Riva del Garda, quindi Gardesana verso Brescia per una ventina di chilometri. L'ingresso è sulla Gardesana stessa, con il parcheggio davanti: non c'è nessuna strada di montagna da fare all'ultimo momento.": {
+  "de": "Von Norden: Brennerautobahn A22, Ausfahrt Rovereto Süd, Richtung Riva del Garda, dann auf der Gardesana etwa zwanzig Kilometer Richtung Brescia. Die Einfahrt liegt direkt an der Gardesana, der Parkplatz davor: Es gibt keine Bergstraße, die man zum Schluss noch bewältigen müsste.",
+  "en": "From the north: A22 Brenner motorway, Rovereto Sud exit, towards Riva del Garda, then the Gardesana towards Brescia for about twenty kilometres. The entrance is on the Gardesana itself, with the car park in front: there is no mountain road to tackle at the last minute.",
+  "es": "Desde el norte: autopista del Brennero A22, salida Rovereto Sud, dirección Riva del Garda, y luego la Gardesana hacia Brescia unos veinte kilómetros. La entrada está en la propia Gardesana, con el aparcamiento delante: no hay ninguna carretera de montaña que hacer al final.",
+  "fr": "Depuis le nord : autoroute du Brenner A22, sortie Rovereto Sud, direction Riva del Garda, puis la Gardesana vers Brescia sur une vingtaine de kilomètres. L'entrée donne directement sur la Gardesana, avec le parking devant : aucune route de montagne à affronter au dernier moment."
  },
  "Da ovest": {
   "de": "Von Westen",
@@ -137,11 +263,35 @@
   "es": "Desde el oeste",
   "fr": "Depuis l’ouest"
  },
+ "Da ovest: autostrada A4, uscita Brescia Est, direzione Salò, circa 20 km, e poi come sopra.": {
+  "de": "Von Westen: Autobahn A4, Ausfahrt Brescia Est, Richtung Salò, rund 20 km, dann wie oben.",
+  "en": "From the west: A4 motorway, Brescia Est exit, towards Salò, about 20 km, and then as above.",
+  "es": "Desde el oeste: autopista A4, salida Brescia Est, dirección Salò, unos 20 km, y luego como arriba.",
+  "fr": "Depuis l'ouest : autoroute A4, sortie Brescia Est, direction Salò, environ 20 km, puis comme ci-dessus."
+ },
  "Dal più vicino al più lontano: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Milano Linate, Venezia e Milano Malpensa.": {
   "de": "Vom nächsten zum entferntesten: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Mailand Linate, Venedig und Mailand Malpensa.",
   "en": "From nearest to farthest: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Milan Linate, Venice and Milan Malpensa.",
   "es": "Del más cercano al más lejano: Brescia Montichiari, Verona Villafranca, Bérgamo Orio al Serio, Milán Linate, Venecia y Milán Malpensa.",
   "fr": "Du plus proche au plus lointain : Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Milan Linate, Venise et Milan Malpensa."
+ },
+ "Dal tasto «Prenota» del sito si apre il nostro motore di prenotazione, con la disponibilità in tempo reale e la conferma immediata. In alternativa si può telefonare allo (+39) 0365 799890 o scrivere a info@alpradelafam.com.": {
+  "de": "Über die Schaltfläche «Buchen» auf der Website öffnet sich unser Buchungssystem mit tagesaktueller Verfügbarkeit und sofortiger Bestätigung. Alternativ können Sie unter (+39) 0365 799890 anrufen oder an info@alpradelafam.com schreiben.",
+  "en": "The «Book» button on the site opens our booking engine, with real-time availability and instant confirmation. You can also call (+39) 0365 799890 or write to info@alpradelafam.com.",
+  "es": "Con el botón «Reservar» del sitio se abre nuestro motor de reservas, con disponibilidad en tiempo real y confirmación inmediata. También puede llamar al (+39) 0365 799890 o escribir a info@alpradelafam.com.",
+  "fr": "Le bouton « Réserver » du site ouvre notre moteur de réservation, avec les disponibilités en temps réel et la confirmation immédiate. Vous pouvez aussi appeler le (+39) 0365 799890 ou écrire à info@alpradelafam.com."
+ },
+ "Davanti, il lago aperto e il Monte Baldo sulla sponda veronese: nelle giornate limpide la vista corre da Malcesine fino a Sirmione. Dietro, a pochi metri, si alza un muro di roccia con una cascata.": {
+  "de": "Vorne der offene See und der Monte Baldo am Veroneser Ufer: An klaren Tagen reicht der Blick von Malcesine bis Sirmione. Dahinter erhebt sich wenige Meter entfernt eine Felswand mit einem Wasserfall.",
+  "en": "In front, the open lake and Monte Baldo on the Verona shore: on clear days the view runs from Malcesine all the way to Sirmione. Behind, a few metres away, a rock wall rises with a waterfall.",
+  "es": "Delante, el lago abierto y el Monte Baldo en la orilla veronesa: en los días claros la vista llega de Malcesine hasta Sirmione. Detrás, a pocos metros, se levanta un muro de roca con una cascada.",
+  "fr": "Devant, le lac ouvert et le Monte Baldo sur la rive véronaise : par temps clair, la vue va de Malcesine jusqu'à Sirmione. Derrière, à quelques mètres, s'élève une paroi rocheuse avec une cascade."
+ },
+ "Dipende da quanto vi fermate e da quanto volete cucinare. Le camere sono dieci: Doppia Standard (18 m²), Doppia Economy (16 m²), Tripla (23 m²) e Familiare (29 m²), tutte con bagno privato, aria condizionata, Wi-Fi e colazione inclusa servita in veranda. È la scelta più semplice per due o tre notti.": {
+  "de": "Das hängt davon ab, wie lange Sie bleiben und wie viel Sie kochen möchten. Es gibt zehn Zimmer: Doppelzimmer Standard (18 m²), Doppelzimmer Economy (16 m²), Dreibettzimmer (23 m²) und Familienzimmer (29 m²), alle mit eigenem Bad, Klimaanlage, WLAN und inbegriffenem Frühstück auf der Veranda. Für zwei oder drei Nächte ist das die einfachste Wahl.",
+  "en": "It depends on how long you stay and how much you want to cook. There are ten rooms: Double Standard (18 m²), Double Economy (16 m²), Triple (23 m²) and Family (29 m²), all with private bathroom, air conditioning, Wi-Fi and breakfast included, served on the veranda. It is the simplest choice for two or three nights.",
+  "es": "Depende de cuánto se queden y de cuánto quieran cocinar. Las habitaciones son diez: Doble Estándar (18 m²), Doble Economy (16 m²), Triple (23 m²) y Familiar (29 m²), todas con baño privado, aire acondicionado, Wi-Fi y desayuno incluido servido en la veranda. Es la opción más sencilla para dos o tres noches.",
+  "fr": "Cela dépend de la durée du séjour et de l'envie de cuisiner. Les chambres sont au nombre de dix : Double Standard (18 m²), Double Economy (16 m²), Triple (23 m²) et Familiale (29 m²), toutes avec salle de bain privée, climatisation, Wi-Fi et petit-déjeuner inclus servi sous la véranda. C'est le choix le plus simple pour deux ou trois nuits."
  },
  "Direttamente a lago, il Prà è immerso nella natura. Alle sue spalle si erge un muro di roccia con un'incantevole cascata e di fronte la vista spazia sul lago blu e sul Monte Baldo. La famiglia Parisini gestisce direttamente la struttura da secoli.": {
   "de": "Direkt am Wasser liegt das Prà mitten in der Natur. Dahinter erhebt sich eine Felswand mit einem zauberhaften Wasserfall, davor öffnet sich der Blick über den blauen See und den Monte Baldo. Die Familie Parisini führt das Haus seit Jahrhunderten selbst.",
@@ -161,6 +311,30 @@
   "es": "Disponibilidad en tiempo real con nuestro motor de reservas. Confirmación inmediata.",
   "fr": "Disponibilités en temps réel avec notre moteur de réservation. Confirmation immédiate."
  },
+ "Domande": {
+  "de": "Fragen",
+  "en": "Questions",
+  "es": "Preguntas",
+  "fr": "Questions"
+ },
+ "Domande frequenti": {
+  "de": "Häufige Fragen",
+  "en": "Frequently asked questions",
+  "es": "Preguntas frecuentes",
+  "fr": "Questions fréquentes"
+ },
+ "Dove si trova esattamente il Prà de la Fam?": {
+  "de": "Wo genau liegt Prà de la Fam?",
+  "en": "Where exactly is Prà de la Fam?",
+  "es": "¿Dónde está exactamente Prà de la Fam?",
+  "fr": "Où se trouve exactement le Prà de la Fam ?"
+ },
+ "Dove siamo davvero, e come ci si arriva senza sorprese.": {
+  "de": "Wo wir wirklich liegen — und wie man ohne Überraschungen herkommt.",
+  "en": "Where we really are, and how to get here without surprises.",
+  "es": "Dónde estamos de verdad y cómo llegar sin sorpresas.",
+  "fr": "Où nous sommes vraiment, et comment arriver sans surprises."
+ },
  "Due camere comunicanti per tutta la famiglia": {
   "de": "Zwei Verbindungszimmer für die ganze Familie",
   "en": "Two connecting rooms for the whole family",
@@ -179,11 +353,23 @@
   "es": "Fundado en 1912, 18 hoyos de gran tradición entre Gargnano y Toscolano Maderno. Tercer club de golf de Italia.",
   "fr": "Fondé en 1912, 18 trous de grande tradition entre Gargnano et Toscolano Maderno. Troisième golf club d'Italie."
  },
+ "Fu restaurata nel 1985 con l'intervento della Comunità Montana del Parco Alto Garda Bresciano e oggi è un Ecomuseo, visitabile da Pasqua a ottobre. La proprietà è rimasta della famiglia Parisini, la stessa che gestisce l'albergo.": {
+  "de": "1985 wurde sie mit der Comunità Montana des Parks Alto Garda Bresciano restauriert und ist heute ein Ökomuseum, von Ostern bis Oktober zu besichtigen. Sie ist im Besitz der Familie Parisini geblieben — derselben Familie, die das Hotel führt.",
+  "en": "It was restored in 1985 with the Comunità Montana of the Alto Garda Bresciano Park and is today an Ecomuseum, open to visitors from Easter to October. It has remained the property of the Parisini family, the same family that runs the hotel.",
+  "es": "Fue restaurada en 1985 con la Comunità Montana del Parque Alto Garda Bresciano y hoy es un Ecomuseo, visitable de Pascua a octubre. Sigue siendo propiedad de la familia Parisini, la misma que gestiona el hotel.",
+  "fr": "Elle a été restaurée en 1985 avec la Comunità Montana du Parc Alto Garda Bresciano et constitue aujourd'hui un Écomusée, visitable de Pâques à octobre. Elle est restée la propriété de la famille Parisini, celle-là même qui dirige l'hôtel."
+ },
  "Giugno 2025 · Camera Matrimoniale Economy · 7 notti": {
   "de": "Juni 2025 · Doppelzimmer Economy · 7 Nächte",
   "en": "June 2025 · Economy Double Room · 7 nights",
   "es": "Junio 2025 · Habitación Doble Economy · 7 noches",
   "fr": "Juin 2025 · Chambre Double Economy · 7 nuits"
+ },
+ "Gli aeroporti, dal più vicino al più lontano: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Milano Linate, Venezia e Milano Malpensa, tutti collegati in treno o in autobus con Brescia, Desenzano e Verona.": {
+  "de": "Die Flughäfen, vom nächsten zum entferntesten: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Mailand Linate, Venedig und Mailand Malpensa — alle per Zug oder Bus mit Brescia, Desenzano und Verona verbunden.",
+  "en": "The airports, from nearest to furthest: Brescia Montichiari, Verona Villafranca, Bergamo Orio al Serio, Milan Linate, Venice and Milan Malpensa, all connected by train or coach to Brescia, Desenzano and Verona.",
+  "es": "Los aeropuertos, del más cercano al más lejano: Brescia Montichiari, Verona Villafranca, Bérgamo Orio al Serio, Milán Linate, Venecia y Milán Malpensa, todos conectados en tren o autobús con Brescia, Desenzano y Verona.",
+  "fr": "Les aéroports, du plus proche au plus lointain : Brescia Montichiari, Vérone Villafranca, Bergame Orio al Serio, Milan Linate, Venise et Milan Malpensa, tous reliés en train ou en car à Brescia, Desenzano et Vérone."
  },
  "Gli appartamenti portano il nome di un agrume della limonaia. Il bergamotto dà l’olio essenziale che sta alla base delle acque di colonia.": {
   "de": "Die Apartments tragen den Namen einer Zitrusfrucht aus der Limonaia. Die Bergamotte liefert das ätherische Öl, das die Grundlage des Kölnisch Wassers bildet.",
@@ -215,6 +401,24 @@
   "es": "Los apartamentos llevan el nombre de un cítrico de la limonaia. La clementina es el híbrido de una naranja y una mandarina.",
   "fr": "Les appartements portent le nom d’un agrume de la limonaia. La clémentine est l’hybride d’une orange et d’une mandarine."
  },
+ "Gli appartamenti sono ricavati nella vecchia limonaia: Clementina, Calamondino, Kumquat e Pomelo sono da circa 35 m² per due persone, con cucina attrezzata o angolo cottura, spazio esterno e vista lago; Bergamotto è su due livelli, 65 m², ma al momento non è disponibile.": {
+  "de": "Die Apartments sind in der alten Limonaia entstanden: Clementina, Calamondino, Kumquat und Pomelo bieten rund 35 m² für zwei Personen, mit voll ausgestatteter Küche oder Kochnische, Außenbereich und Seeblick; Bergamotto liegt auf zwei Ebenen, 65 m², ist derzeit aber nicht verfügbar.",
+  "en": "The apartments are carved out of the old lemon house: Clementina, Calamondino, Kumquat and Pomelo are about 35 m² for two people, with a fully equipped kitchen or kitchenette, outdoor space and lake view; Bergamotto is on two levels, 65 m², but is currently not available.",
+  "es": "Los apartamentos están dentro del antiguo limonar: Clementina, Calamondino, Kumquat y Pomelo son de unos 35 m² para dos personas, con cocina equipada o rincón de cocina, espacio exterior y vistas al lago; Bergamotto está en dos niveles, 65 m², pero por ahora no está disponible.",
+  "fr": "Les appartements sont aménagés dans l'ancienne limonaia : Clementina, Calamondino, Kumquat et Pomelo font environ 35 m² pour deux personnes, avec cuisine équipée ou coin cuisine, espace extérieur et vue sur le lac ; Bergamotto se développe sur deux niveaux, 65 m², mais n'est pas disponible actuellement."
+ },
+ "Home": {
+  "de": "Startseite",
+  "en": "Home",
+  "es": "Inicio",
+  "fr": "Accueil"
+ },
+ "Hotel e Appartamenti direttamente sul Lago di Garda, dentro la limonaia storica più a nord d'Europa. Una cascata di roccia alle spalle, il lago blu davanti — dove il tempo si ferma.": {
+  "de": "Hotel und Apartments direkt am Gardasee, in der nördlichsten historischen Limonaia Europas. Im Rücken ein Wasserfall im Fels, vorne der blaue See — wo die Zeit stillsteht.",
+  "en": "Hotel and Apartments right on Lake Garda, inside the northernmost historic lemon house in Europe. A rock waterfall behind, the blue lake in front — where time stands still.",
+  "es": "Hotel y Apartamentos directamente sobre el lago de Garda, dentro del limonar histórico más septentrional de Europa. Una cascada de roca detrás, el lago azul delante: donde el tiempo se detiene.",
+  "fr": "Hôtel et Appartements directement sur le lac de Garde, à l'intérieur de la limonaia historique la plus septentrionale d'Europe. Une cascade de roche derrière, le lac bleu devant — là où le temps s'arrête."
+ },
  "Hotel e Appartamenti direttamente sul Lago di Garda. Immerso nella natura, con una cascata di roccia alle spalle e il lago blu davanti — dove il tempo si ferma.": {
   "de": "Hotel und Apartments direkt am Gardasee. Mitten in der Natur, im Rücken ein Wasserfall im Fels, davor der blaue See — wo die Zeit stehen bleibt.",
   "en": "Hotel and Apartments right on Lake Garda. Surrounded by nature, with a rock waterfall behind and the blue lake in front — where time stands still.",
@@ -239,6 +443,18 @@
   "es": "El Circolo Vela Gargnano organiza regatas cada temporada. La tradicional Centomiglia es el evento de vela más esperado del Garda.",
   "fr": "Le Circolo Vela Gargnano organise des régates chaque saison. La traditionnelle Centomiglia est l'événement à la voile le plus attendu du Garda."
  },
+ "Il check-in è dalle 14:00 alle 20:00, il check-out entro le 10:30.": {
+  "de": "Check-in von 14:00 bis 20:00 Uhr, Check-out bis 10:30 Uhr.",
+  "en": "Check-in is from 2:00 pm to 8:00 pm, check-out by 10:30 am.",
+  "es": "La entrada es de 14:00 a 20:00 y la salida antes de las 10:30.",
+  "fr": "L'arrivée se fait de 14h00 à 20h00, le départ avant 10h30."
+ },
+ "Il lago qui è pulito e profondo; la stagione del bagno va indicativamente da giugno a settembre. La mattina l'acqua è uno specchio, nel pomeriggio si alza il vento — è per questo che il tratto davanti a noi è frequentato da chi fa windsurf e kitesurf.": {
+  "de": "Der See ist hier sauber und tief; die Badesaison reicht etwa von Juni bis September. Morgens liegt das Wasser spiegelglatt, nachmittags kommt der Wind auf — deshalb ist der Abschnitt vor uns bei Windsurfern und Kitesurfern beliebt.",
+  "en": "The lake here is clean and deep; the swimming season runs roughly from June to September. In the morning the water is a mirror, in the afternoon the wind picks up — which is why the stretch in front of us is popular with windsurfers and kitesurfers.",
+  "es": "El lago aquí es limpio y profundo; la temporada de baño va aproximadamente de junio a septiembre. Por la mañana el agua es un espejo, por la tarde se levanta el viento: por eso el tramo que tenemos delante lo frecuentan quienes hacen windsurf y kitesurf.",
+  "fr": "Le lac est ici propre et profond ; la saison de baignade va grosso modo de juin à septembre. Le matin l'eau est un miroir, l'après-midi le vent se lève — c'est pourquoi la portion devant nous est fréquentée par les véliplanchistes et les kitesurfeurs."
+ },
  "Il monolocale Calamondino offre una splendida vista sul lago grazie alle ampie vetrate. Dispone di letto matrimoniale, angolo cottura e bagno con doccia. L'arredamento in legno, le finiture curate e l'attrezzatura funzionale lo rendono particolarmente confortevole, soprattutto nelle mezze stagioni. All'esterno, un ampio giardino privato è perfetto per godersi un aperitivo, pranzare all'aperto o rilassarsi al sole sulle sdraio fornite.": {
   "de": "Das Studio Calamondino bietet dank großer Fenster einen herrlichen Seeblick. Es verfügt über ein Doppelbett, eine Kochnische und ein Bad mit Dusche. Holzmöbel, sorgfältige Details und funktionale Ausstattung machen es besonders komfortabel, vor allem in der Nebensaison. Draußen ist der große Privatgarten perfekt für einen Aperitif, ein Mittagessen im Freien oder zum Entspannen in der Sonne auf den bereitgestellten Liegen.",
   "en": "The Calamondino studio offers a splendid lake view through its large windows. It has a double bed, a kitchenette and a bathroom with shower. Wooden furnishings, careful finishes and functional equipment make it particularly comfortable, especially in the shoulder seasons. Outside, a large private garden is perfect for an aperitivo, lunch in the open air or relaxing in the sun on the deckchairs provided.",
@@ -256,6 +472,12 @@
   "en": "The Kumquat studio has a double bed, a practical kitchenette and a large bathroom with shower. From inside and from the private garden — ideal for an aperitivo, lunch outdoors or a moment of rest on the deckchairs provided — you can enjoy a magnificent view of the lake, from Malcesine all the way to Sirmione.",
   "es": "El estudio Kumquat dispone de cama de matrimonio, una práctica cocina americana y un amplio baño con ducha. Desde el interior y desde el jardín privado — ideal para un aperitivo, una comida al aire libre o un momento de relax en las tumbonas — se disfruta de una magnífica vista del lago, desde Malcesine hasta Sirmione.",
   "fr": "Le studio Kumquat dispose d'un lit double, d'un coin cuisine pratique et d'une grande salle de bain avec douche. De l'intérieur comme du jardin privé — idéal pour un apéritif, un déjeuner en plein air ou un moment de détente sur les transats fournis — on profite d'une vue magnifique sur le lac, de Malcesine jusqu'à Sirmione."
+ },
+ "Il telefono lo alza la famiglia che gestisce la struttura. Chiamate o scrivete: vi diciamo com'è davvero, anche quando la risposta è «quella settimana siamo pieni».": {
+  "de": "Ans Telefon geht die Familie, die das Haus führt. Rufen Sie an oder schreiben Sie: Wir sagen Ihnen, wie es wirklich ist — auch wenn die Antwort lautet «in dieser Woche sind wir ausgebucht».",
+  "en": "The phone is answered by the family that runs the place. Call or write: we will tell you how it really is, even when the answer is «that week we are full».",
+  "es": "El teléfono lo contesta la familia que lleva el alojamiento. Llame o escriba: le diremos cómo es en realidad, incluso cuando la respuesta sea «esa semana estamos llenos».",
+  "fr": "Au téléphone, c'est la famille qui gère l'établissement qui répond. Appelez ou écrivez : nous vous dirons ce qu'il en est vraiment, même quand la réponse est « cette semaine-là, nous sommes complets »."
  },
  "Il vento caratteristico del luogo permette agli amanti del surf, del kitesurf e della vela di divertirsi tutto il giorno.": {
   "de": "Der beständige Wind lässt Surfer, Kitesurfer und Segler den ganzen Tag aufs Wasser.",
@@ -281,11 +503,23 @@
   "es": "En coche, en tren, en avión",
   "fr": "En voiture, en train, en avion"
  },
+ "In pratica: camera per un soggiorno breve e senza pensieri, appartamento per una settimana, per chi viaggia con bambini o per chi vuole farsi la spesa e cucinare.": {
+  "de": "Kurz gesagt: ein Zimmer für einen kurzen, unkomplizierten Aufenthalt, ein Apartment für eine Woche, für Familien mit Kindern oder für alle, die einkaufen und selbst kochen möchten.",
+  "en": "In short: a room for a short, easy stay; an apartment for a week, for families with children, or for anyone who wants to do the shopping and cook.",
+  "es": "En resumen: habitación para una estancia corta y sin complicaciones, apartamento para una semana, para quien viaja con niños o quiere hacer la compra y cocinar.",
+  "fr": "En pratique : la chambre pour un court séjour sans souci, l'appartement pour une semaine, pour les familles avec enfants ou pour qui veut faire ses courses et cuisiner."
+ },
  "In treno": {
   "de": "Mit dem Zug",
   "en": "By train",
   "es": "En tren",
   "fr": "En train"
+ },
+ "Italiano, inglese, tedesco, francese e spagnolo, sia al banco sia su tutto il sito. La famiglia gestisce la struttura di persona: chi risponde al telefono è chi vi accoglierà all'arrivo.": {
+  "de": "Italienisch, Englisch, Deutsch, Französisch und Spanisch — an der Rezeption und auf der gesamten Website. Die Familie führt das Haus persönlich: Wer ans Telefon geht, empfängt Sie auch bei der Ankunft.",
+  "en": "Italian, English, German, French and Spanish, both at the desk and across the whole website. The family runs the place in person: whoever answers the phone is the person who will welcome you on arrival.",
+  "es": "Italiano, inglés, alemán, francés y español, tanto en recepción como en todo el sitio web. La familia gestiona el alojamiento en persona: quien contesta al teléfono es quien le recibirá a su llegada.",
+  "fr": "Italien, anglais, allemand, français et espagnol, à la réception comme sur tout le site. La famille gère l'établissement en personne : celui qui répond au téléphone est celui qui vous accueillera à l'arrivée."
  },
  "L'antica dimora del giardiniere, rinata": {
   "de": "Das alte Haus des Gärtners, wiedererweckt",
@@ -305,6 +539,12 @@
   "es": "El apartamento Bergamotto se desarrolla en dos niveles. En la planta baja hay un dormitorio doble y un amplio baño con ducha. En la buhardilla se encuentran la zona de estar con cocina americana y la posibilidad de añadir una tercera cama. Los interiores en piedra vista y la escalera voladiza que une los dos niveles dan al ambiente una atmósfera íntima y fresca.",
   "fr": "L'appartement Bergamotto se développe sur deux niveaux. Au rez-de-chaussée, une chambre double et une grande salle de bain avec douche. Sous les combles, le séjour avec coin cuisine et la possibilité d'ajouter un troisième couchage. Les intérieurs en pierre apparente et l'escalier en porte-à-faux qui relie les deux niveaux donnent à l'ensemble une atmosphère intime et fraîche."
  },
+ "L'ultimo tratto prima di noi è in galleria: l'ingresso del Prà de la Fam arriva subito dopo, sulla destra se venite da Gargnano.": {
+  "de": "Der letzte Abschnitt vor uns führt durch einen Tunnel: Die Einfahrt zum Prà de la Fam kommt gleich danach, rechts, wenn Sie aus Richtung Gargnano kommen.",
+  "en": "The last stretch before us is a tunnel: the entrance to Prà de la Fam comes right after it, on the right if you are coming from Gargnano.",
+  "es": "El último tramo antes de llegar es un túnel: la entrada del Prà de la Fam está justo después, a la derecha si viene de Gargnano.",
+  "fr": "Le dernier tronçon avant chez nous est un tunnel : l'entrée du Prà de la Fam arrive juste après, sur la droite si vous venez de Gargnano."
+ },
  "La Gardesana è stretta e piena di gallerie, ma è una delle strade più panoramiche d’Italia: prendetevi il tempo di guardarla.": {
   "de": "Die Gardesana ist schmal und voller Tunnel, aber sie ist eine der schönsten Panoramastraßen Italiens: nehmen Sie sich die Zeit, sie anzuschauen.",
   "en": "The Gardesana is narrow and full of tunnels, but it is one of the most scenic roads in Italy: take the time to look at it.",
@@ -322,6 +562,12 @@
   "en": "Breakfast is served on the veranda, in the shade of the olive trees, and the large garden is the right place to sit in the sun. The beach is less than twenty metres away.",
   "es": "El desayuno se sirve en la veranda, a la sombra de los olivos, y el gran jardín es el lugar ideal para estar al sol. La playa está a menos de veinte metros.",
   "fr": "Le petit-déjeuner est servi sous la véranda, à l’ombre des oliviers, et le grand jardin est l’endroit idéal pour rester au soleil. La plage est à moins de vingt mètres."
+ },
+ "La colazione è inclusa?": {
+  "de": "Ist das Frühstück inbegriffen?",
+  "en": "Is breakfast included?",
+  "es": "¿El desayuno está incluido?",
+  "fr": "Le petit-déjeuner est-il inclus ?"
  },
  "La più grande e la più a nord limonaia d'Europa. Visitabile da Pasqua ad Ottobre.": {
   "de": "Das größte und nördlichste Zitronenhaus Europas. Von Ostern bis Oktober zu besichtigen.",
@@ -353,11 +599,23 @@
   "es": "La antigua limonaia del Prà acoge hoy cinco apartamentos de uno o dos ambientes, amueblados con gusto y elegancia.",
   "fr": "L'ancienne limonaia du Prà accueille aujourd'hui cinq appartements studio ou deux-pièces, meublés avec goût et élégance."
  },
+ "La visita è guidata e racconta come funzionavano le limonaie del Garda: i pilastri di pietra, le assi che d'inverno chiudevano la serra, il commercio dei limoni verso il Nord Europa. Alla fine c'è la degustazione dei prodotti che nascono qui: limoni sotto sale, limoncino, sciroppo di limone e olio agrumato. Orari e informazioni sul sito dedicato, ecomuseopradelafam.com.": {
+  "de": "Die Führung erzählt, wie die Zitronengärten des Gardasees funktionierten: die Steinpfeiler, die Bretter, die das Gewächshaus im Winter schlossen, der Zitronenhandel nach Nordeuropa. Zum Abschluss gibt es eine Verkostung der hier entstehenden Produkte: in Salz eingelegte Zitronen, Limoncino, Zitronensirup und Zitrusöl. Zeiten und Informationen auf der eigenen Website ecomuseopradelafam.com.",
+  "en": "The visit is guided and tells how the lemon houses of Lake Garda worked: the stone pillars, the boards that closed the greenhouse in winter, the lemon trade towards Northern Europe. At the end there is a tasting of the products made here: lemons preserved in salt, limoncino, lemon syrup and citrus-infused oil. Times and details on the dedicated website, ecomuseopradelafam.com.",
+  "es": "La visita es guiada y cuenta cómo funcionaban los limonares del lago de Garda: los pilares de piedra, las tablas que cerraban el invernadero en invierno, el comercio de limones hacia el norte de Europa. Al final hay una degustación de los productos que nacen aquí: limones en sal, limoncino, sirope de limón y aceite de cítricos. Horarios e información en la web dedicada, ecomuseopradelafam.com.",
+  "fr": "La visite est guidée et raconte comment fonctionnaient les limonaie du lac de Garde : les piliers de pierre, les planches qui fermaient la serre l'hiver, le commerce des citrons vers l'Europe du Nord. À la fin, une dégustation des produits nés ici : citrons au sel, limoncino, sirop de citron et huile aux agrumes. Horaires et informations sur le site dédié, ecomuseopradelafam.com."
+ },
  "Le camere doppie economy, situate al primo e al secondo piano dell'hotel, sono leggermente più compatte, ma ugualmente confortevoli. Tutte offrono una vista sul Lago di Garda e sono arredate in stile moderno e accogliente. Dotate di aria condizionata, TV, Wi-Fi gratuito e frigo vuoto. Il bagno, recentemente ristrutturato, dispone di doccia, asciugacapelli, set di asciugamani, bagnoschiuma e kit cortesia. Parcheggio riservato gratuito incluso.": {
   "de": "Die Economy-Doppelzimmer im ersten und zweiten Stock sind etwas kompakter, aber ebenso komfortabel. Alle bieten Blick auf den Gardasee und sind modern und einladend eingerichtet. Mit Klimaanlage, TV, kostenlosem WLAN und leerer Kühlschrank. Das kürzlich renovierte Bad verfügt über Dusche, Haartrockner, Handtuchset, Duschgel und Pflegeset. Kostenloser reservierter Parkplatz inklusive.",
   "en": "The economy double rooms, on the first and second floor of the hotel, are slightly more compact but just as comfortable. All of them look out over Lake Garda and are furnished in a modern, welcoming style. They have air conditioning, TV, free Wi-Fi and a empty fridge. The recently renovated bathroom has a shower, hairdryer, towel set, shower gel and toiletries. Free reserved parking included.",
   "es": "Las habitaciones dobles economy, en la primera y segunda planta del hotel, son algo más compactas pero igual de confortables. Todas ofrecen vista al lago de Garda y están amuebladas con un estilo moderno y acogedor. Cuentan con aire acondicionado, TV, Wi-Fi gratuito y nevera vacía. El baño, recientemente reformado, dispone de ducha, secador, juego de toallas, gel y kit de aseo. Aparcamiento reservado gratuito incluido.",
   "fr": "Les chambres doubles economy, au premier et au deuxième étage de l'hôtel, sont un peu plus compactes mais tout aussi confortables. Toutes offrent une vue sur le lac de Garde et sont meublées dans un style moderne et accueillant. Climatisation, TV, Wi-Fi gratuit et réfrigérateur vide. La salle de bain, récemment rénovée, dispose d'une douche, d'un sèche-cheveux, d'un jeu de serviettes, de gel douche et de produits d'accueil. Parking réservé gratuit inclus."
+ },
+ "Le camere hanno vista lago o vista montagna a seconda della posizione nella struttura; gli appartamenti guardano tutti il lago. La colazione si serve in veranda, all'ombra degli ulivi, con il lago davanti.": {
+  "de": "Die Zimmer haben je nach Lage im Haus See- oder Bergblick; die Apartments blicken alle auf den See. Das Frühstück wird auf der Veranda serviert, im Schatten der Olivenbäume, mit dem See vor sich.",
+  "en": "The rooms have a lake or mountain view depending on where they are in the building; the apartments all look onto the lake. Breakfast is served on the veranda, in the shade of the olive trees, with the lake in front of you.",
+  "es": "Las habitaciones tienen vistas al lago o a la montaña según su posición en el edificio; los apartamentos miran todos al lago. El desayuno se sirve en la veranda, a la sombra de los olivos, con el lago delante.",
+  "fr": "Les chambres ont vue sur le lac ou sur la montagne selon leur position dans le bâtiment ; les appartements donnent tous sur le lac. Le petit-déjeuner est servi sous la véranda, à l'ombre des oliviers, face au lac."
  },
  "Le camere triple, situate al primo e al secondo piano dell'hotel, sono state recentemente rinnovate e offrono una splendida vista sul Lago di Garda. Arredate in stile moderno, dispongono di tutti i comfort gratuiti: televisore, aria condizionata, frigo vuoto e connessione Wi-Fi. I bagni, completamente nuovi, sono spaziosi e dotati di doccia, asciugacapelli e set di cortesia.": {
   "de": "Die Dreibettzimmer im ersten und zweiten Stock wurden kürzlich renoviert und bieten einen herrlichen Blick auf den Gardasee. Modern eingerichtet, mit allen Annehmlichkeiten ohne Aufpreis: TV, Klimaanlage, leerer Kühlschrank und WLAN. Die Bäder sind komplett neu, geräumig, mit Dusche, Haartrockner und Pflegeset.",
@@ -370,6 +628,12 @@
   "en": "Real experiences from those who have stayed at Prà de la Fam.",
   "es": "Las experiencias reales de quienes se han alojado en el Prà de la Fam.",
   "fr": "Les expériences réelles de ceux qui ont séjourné au Prà de la Fam."
+ },
+ "Le finestre sono state rifatte tutte: dalla Gardesana, che passa qui davanti, in camera non entra rumore — è una delle cose che gli ospiti citano più spesso. La struttura è per non fumatori.": {
+  "de": "Alle Fenster wurden erneuert: Von der Gardesana, die hier vorbeiführt, dringt kein Lärm ins Zimmer — das erwähnen die Gäste besonders oft. Das Haus ist Nichtraucherhaus.",
+  "en": "All the windows have been replaced: no noise from the Gardesana road that passes in front reaches the rooms — it is one of the things guests mention most often. The property is non-smoking.",
+  "es": "Todas las ventanas se han renovado: desde la Gardesana, que pasa justo delante, no entra ruido en la habitación — es una de las cosas que los huéspedes mencionan más a menudo. El alojamiento es para no fumadores.",
+  "fr": "Toutes les fenêtres ont été refaites : de la Gardesana, qui passe juste devant, aucun bruit n'entre dans les chambres — c'est l'un des points que les clients citent le plus souvent. L'établissement est non-fumeurs."
  },
  "Le stazioni comode sono Brescia e Desenzano–Sirmione, sulla linea Milano–Venezia. Da Brescia gli autobus lungo la Gardesana sono più frequenti, da Desenzano più radi. Si scende alla fermata Porto di Tignale.": {
   "de": "Die günstigen Bahnhöfe sind Brescia und Desenzano–Sirmione an der Linie Mailand–Venedig. Von Brescia fahren die Busse entlang der Gardesana häufiger, von Desenzano seltener. Ausstieg an der Haltestelle Porto di Tignale.",
@@ -401,6 +665,12 @@
   "es": "Mayo 2025 · Habitación Doble Economy",
   "fr": "Mai 2025 · Chambre Double Economy"
  },
+ "Meglio una camera d'albergo o un appartamento?": {
+  "de": "Lieber ein Hotelzimmer oder ein Apartment?",
+  "en": "A hotel room or an apartment — which is better?",
+  "es": "¿Mejor una habitación de hotel o un apartamento?",
+  "fr": "Vaut-il mieux une chambre d'hôtel ou un appartement ?"
+ },
  "Monolocale con ampie vetrate sulla limonaia, cucina attrezzata e scoperto privato.": {
   "de": "Studio mit großen Fenstern zur Limonaia, voll ausgestatteter Küche und privater Freifläche.",
   "en": "Studio with large windows onto the lemon house, fully equipped kitchen and private terrace.",
@@ -418,6 +688,36 @@
   "en": "Studio with double bed, kitchen and private garden with panoramic lake view.",
   "es": "Estudio con cama de matrimonio, cocina y jardín privado con vista panorámica al lago.",
   "fr": "Studio avec lit double, cuisine et jardin privé avec vue panoramique sur le lac."
+ },
+ "Nella stessa proprietà c'è la Limonaia del Prà de la Fam: la più grande e la più a nord d'Europa, ottanta piante ancora in produzione, visitabile da Pasqua a ottobre. È quello che qui non ha nessun altro albergo del Garda — e i cinque appartamenti sono ricavati proprio lì, nella vecchia limonaia.": {
+  "de": "Auf demselben Grundstück liegt die Limonaia del Prà de la Fam: die größte und nördlichste Europas, achtzig Bäume, die noch tragen, von Ostern bis Oktober zu besichtigen. Das hat kein anderes Hotel am Gardasee — und die fünf Apartments sind genau dort entstanden, in der alten Limonaia.",
+  "en": "On the same property stands the Limonaia del Prà de la Fam: the largest and northernmost in Europe, eighty trees still in production, open to visitors from Easter to October. It is the one thing no other hotel on Lake Garda has — and the five apartments are built right there, inside the old lemon house.",
+  "es": "En la misma propiedad está la Limonaia del Prà de la Fam: el limonar más grande y más septentrional de Europa, con ochenta árboles todavía en producción, visitable de Pascua a octubre. Es lo que aquí no tiene ningún otro hotel del Garda, y los cinco apartamentos están hechos justo allí, en el antiguo limonar.",
+  "fr": "Sur la même propriété se trouve la Limonaia del Prà de la Fam : la plus grande et la plus septentrionale d'Europe, quatre-vingts arbres encore en production, visitable de Pâques à octobre. C'est ce qu'aucun autre hôtel du lac de Garde ne possède — et les cinq appartements sont aménagés là, dans l'ancienne limonaia."
+ },
+ "Non abbiamo piscina, e non ci è mai mancata: qui si nuota nel lago.": {
+  "de": "Wir haben keinen Pool, und wir haben ihn nie vermisst: Hier schwimmt man im See.",
+  "en": "We have no swimming pool, and we have never missed it: here you swim in the lake.",
+  "es": "No tenemos piscina, y nunca la hemos echado de menos: aquí se nada en el lago.",
+  "fr": "Nous n'avons pas de piscine, et elle ne nous a jamais manqué : ici, on se baigne dans le lac."
+ },
+ "Non avete trovato la risposta?": {
+  "de": "Ihre Frage war nicht dabei?",
+  "en": "Didn't find your answer?",
+  "es": "¿No ha encontrado la respuesta?",
+  "fr": "Vous n'avez pas trouvé votre réponse ?"
+ },
+ "Non serve prenotarlo né segnalarlo in anticipo: c'è posto per tutti gli ospiti.": {
+  "de": "Sie müssen ihn weder reservieren noch vorher ankündigen: Es ist Platz für alle Gäste.",
+  "en": "There is no need to book it or mention it in advance: there is room for every guest.",
+  "es": "No hace falta reservarlo ni avisar con antelación: hay sitio para todos los huéspedes.",
+  "fr": "Inutile de le réserver ou de le signaler à l'avance : il y a de la place pour tous les clients."
+ },
+ "Non è una limonaia ricostruita per la visita: è viva e in produzione, e dai suoi frutti nascono i limoni sotto sale, il limoncino e lo sciroppo che si assaggiano alla fine del giro.": {
+  "de": "Das ist keine für Besucher wiederaufgebaute Limonaia: Sie lebt und trägt Früchte, aus denen die in Salz eingelegten Zitronen, der Limoncino und der Sirup entstehen, die man am Ende der Führung probiert.",
+  "en": "This is not a lemon house rebuilt for visitors: it is alive and productive, and its fruit becomes the salted lemons, the limoncino and the syrup you taste at the end of the tour.",
+  "es": "No es un limonar reconstruido para la visita: está vivo y en producción, y de sus frutos nacen los limones en sal, el limoncino y el sirope que se prueban al final del recorrido.",
+  "fr": "Ce n'est pas une limonaia reconstituée pour la visite : elle est vivante et en production, et ses fruits deviennent les citrons au sel, le limoncino et le sirop que l'on déguste à la fin du parcours."
  },
  "Olio extravergine biologico, abbigliamento e accessori con il logo del Prà de la Fam. Disponibili in hotel durante il soggiorno.": {
   "de": "Bio-Olivenöl extra vergine, Kleidung und Accessoires mit dem Logo des Prà de la Fam. Während des Aufenthalts im Hotel erhältlich.",
@@ -437,11 +737,35 @@
   "es": "Las rutas salen a pie desde el hotel: senderos del Parque Alto Garda y antiguos caminos militares panorámicos.",
   "fr": "Les départs se font à pied depuis l'hôtel : sentiers du Parc Alto Garda et anciens chemins militaires panoramiques."
  },
+ "Per chi dorme in camera sì, ed è compresa nel prezzo: si serve in veranda, all'ombra degli ulivi, con la vista sul lago.": {
+  "de": "Für Gäste im Zimmer ja, und es ist im Preis enthalten: serviert auf der Veranda, im Schatten der Olivenbäume, mit Blick auf den See.",
+  "en": "For those staying in a room, yes, and it is included in the rate: it is served on the veranda, in the shade of the olive trees, looking out over the lake.",
+  "es": "Para quien duerme en habitación sí, y está incluido en el precio: se sirve en la veranda, a la sombra de los olivos, con vistas al lago.",
+  "fr": "Pour ceux qui dorment en chambre, oui, et il est compris dans le prix : il est servi sous la véranda, à l'ombre des oliviers, avec vue sur le lac."
+ },
+ "Per chi soggiorna qui la differenza pratica è semplice: la limonaia non è una gita da programmare, è il giardino di fianco alla camera. E i cinque appartamenti sono ricavati proprio nella vecchia limonaia, tanto che portano il nome di un agrume: Clementina, Calamondino, Kumquat, Pomelo, Bergamotto.": {
+  "de": "Für unsere Gäste ist der praktische Unterschied einfach: Die Limonaia ist kein Ausflug, den man planen muss, sondern der Garten neben dem Zimmer. Und die fünf Apartments sind genau in der alten Limonaia entstanden — deshalb trägt jedes den Namen einer Zitrusfrucht: Clementina, Calamondino, Kumquat, Pomelo, Bergamotto.",
+  "en": "For anyone staying here the practical difference is simple: the lemon house is not an excursion to plan, it is the garden next to your room. And the five apartments are built inside the old lemon house itself — which is why each one is named after a citrus fruit: Clementina, Calamondino, Kumquat, Pomelo, Bergamotto.",
+  "es": "Para quien se aloja aquí la diferencia práctica es sencilla: el limonar no es una excursión que haya que programar, es el jardín junto a la habitación. Y los cinco apartamentos están hechos dentro del antiguo limonar, tanto que llevan el nombre de un cítrico: Clementina, Calamondino, Kumquat, Pomelo, Bergamotto.",
+  "fr": "Pour qui séjourne ici, la différence pratique est simple : la limonaia n'est pas une excursion à programmer, c'est le jardin à côté de la chambre. Et les cinq appartements sont aménagés dans l'ancienne limonaia, au point de porter chacun le nom d'un agrume : Clementina, Calamondino, Kumquat, Pomelo, Bergamotto."
+ },
+ "Per gli appartamenti no, perché hanno la cucina: chi vuole può però aggiungerla a pagamento. Basta dirlo quando si prenota, o anche il giorno prima alla reception.": {
+  "de": "Für die Apartments nicht, denn sie haben eine Küche: Wer möchte, kann es gegen Aufpreis dazubuchen. Sagen Sie einfach bei der Buchung Bescheid — oder auch am Vortag an der Rezeption.",
+  "en": "Not for the apartments, since they have a kitchen: those who want it can add it for a fee. Just tell us when you book, or even the day before at the desk.",
+  "es": "Para los apartamentos no, porque tienen cocina: quien quiera puede añadirlo pagando. Basta con decirlo al reservar, o incluso el día antes en recepción.",
+  "fr": "Pas pour les appartements, puisqu'ils disposent d'une cuisine : ceux qui le souhaitent peuvent l'ajouter en supplément. Il suffit de le dire à la réservation, ou même la veille à la réception."
+ },
  "Per informazioni siamo a tua disposizione.": {
   "de": "Für Fragen stehen wir Ihnen gern zur Verfügung.",
   "en": "We are here for any question.",
   "es": "Estamos a tu disposición para cualquier información.",
   "fr": "Nous sommes à votre disposition pour toute information."
+ },
+ "Per le giornate tranquille: Gargnano a pochi chilometri, Limone sul Garda e Riva del Garda verso nord, il santuario di Montecastello sopra Tignale.": {
+  "de": "Für ruhigere Tage: Gargnano wenige Kilometer entfernt, Limone sul Garda und Riva del Garda im Norden, die Wallfahrtskirche Montecastello oberhalb von Tignale.",
+  "en": "For quieter days: Gargnano a few kilometres away, Limone sul Garda and Riva del Garda to the north, and the sanctuary of Montecastello above Tignale.",
+  "es": "Para los días tranquilos: Gargnano a pocos kilómetros, Limone sul Garda y Riva del Garda hacia el norte, y el santuario de Montecastello sobre Tignale.",
+  "fr": "Pour les journées tranquilles : Gargnano à quelques kilomètres, Limone sul Garda et Riva del Garda vers le nord, le sanctuaire de Montecastello au-dessus de Tignale."
  },
  "Piano terra + mansarda · Ingresso dal sentiero Oldesio": {
   "de": "Erdgeschoss + Dachgeschoss · Eingang vom Oldesio-Weg",
@@ -461,11 +785,23 @@
   "es": "Piedra vista, escalera voladiza y jardín reservado",
   "fr": "Pierre apparente, escalier en porte-à-faux et jardin réservé"
  },
+ "Poi canyoning nelle forre del Garda e della Valle di Ledro, arrampicata sulla parete dietro l'albergo, e il Golf Bogliaco, fondato nel 1912, terzo golf club d'Italia, fra Gargnano e Toscolano Maderno.": {
+  "de": "Dazu Canyoning in den Schluchten des Gardasees und des Ledrotals, Klettern an der Felswand hinter dem Hotel und der Golf Bogliaco, 1912 gegründet, der drittälteste Golfclub Italiens, zwischen Gargnano und Toscolano Maderno.",
+  "en": "Then canyoning in the gorges of Garda and Valle di Ledro, climbing on the rock face behind the hotel, and Golf Bogliaco, founded in 1912, the third golf club in Italy, between Gargnano and Toscolano Maderno.",
+  "es": "Además, barranquismo en las gargantas del Garda y del Valle de Ledro, escalada en la pared que hay detrás del hotel y el Golf Bogliaco, fundado en 1912, tercer club de golf de Italia, entre Gargnano y Toscolano Maderno.",
+  "fr": "Puis le canyoning dans les gorges du Garda et du Val di Ledro, l'escalade sur la paroi derrière l'hôtel, et le Golf Bogliaco, fondé en 1912, troisième golf club d'Italie, entre Gargnano et Toscolano Maderno."
+ },
  "Posizione fantastica, una piccola perla incastonata sul lago di Garda. Matteo, proprietario e gestore, è una persona gentilissima e ci ha raccontato e consigliato un sacco di cose. Posizione esclusiva, posto bellissimo e affascinante — ci tornerei mille volte. Parcheggio privato e chiuso (ottimo per chi ha la moto come me) e infissi nuovi, zero rumori in camera.": {
   "de": "Fantastische Lage, eine kleine Perle am Gardasee. Matteo, Eigentümer und Gastgeber, ist überaus freundlich und hat uns viel erzählt und empfohlen. Exklusive Lage, ein wunderschöner und bezaubernder Ort — ich würde tausendmal wiederkommen. Privater, abgeschlossener Parkplatz (super für Motorradfahrer wie mich) und neue Fenster: null Lärm im Zimmer.",
   "en": "Fantastic position, a little pearl set on Lake Garda. Matteo, the owner and manager, is extremely kind and told us and recommended so many things. Exclusive location, a beautiful and charming place — I would come back a thousand times. Private, gated parking (great if you ride a motorbike like me) and new windows: no noise at all in the room.",
   "es": "Ubicación fantástica, una pequeña perla en el lago de Garda. Matteo, propietario y gestor, es amabilísimo y nos contó y recomendó un montón de cosas. Ubicación exclusiva, un sitio precioso y con encanto — volvería mil veces. Aparcamiento privado y cerrado (ideal para quien va en moto como yo) y ventanas nuevas: cero ruido en la habitación.",
   "fr": "Emplacement fantastique, une petite perle sur le lac de Garde. Matteo, propriétaire et gérant, est extrêmement gentil et nous a raconté et conseillé énormément de choses. Emplacement exclusif, endroit magnifique et charmant — j'y reviendrais mille fois. Parking privé et fermé (parfait pour les motards comme moi) et fenêtres neuves : aucun bruit dans la chambre."
+ },
+ "Prenotando direttamente parlate con noi e non con un intermediario: le richieste particolari — il cane, la colazione in appartamento, l'arrivo tardi, la camera vicino al giardino — si risolvono in due righe di mail.": {
+  "de": "Wer direkt bucht, spricht mit uns und nicht mit einem Vermittler: Besondere Wünsche — der Hund, Frühstück im Apartment, späte Anreise, ein Zimmer nahe am Garten — klären sich in zwei Zeilen per E-Mail.",
+  "en": "Booking directly means talking to us and not to an intermediary: special requests — the dog, breakfast in the apartment, a late arrival, a room near the garden — are settled in two lines of email.",
+  "es": "Reservando directamente habla con nosotros y no con un intermediario: las peticiones especiales — el perro, el desayuno en el apartamento, la llegada tarde, una habitación cerca del jardín — se resuelven en dos líneas de correo.",
+  "fr": "En réservant en direct, vous parlez avec nous et non avec un intermédiaire : les demandes particulières — le chien, le petit-déjeuner en appartement, l'arrivée tardive, une chambre près du jardin — se règlent en deux lignes de courriel."
  },
  "Prà de la Fam · Appartamento": {
   "de": "Prà de la Fam · Apartment",
@@ -479,11 +815,35 @@
   "es": "Prà de la Fam · Habitación",
   "fr": "Prà de la Fam · Chambre"
  },
+ "Prà de la Fam · Informazioni": {
+  "de": "Prà de la Fam · Informationen",
+  "en": "Prà de la Fam · Information",
+  "es": "Prà de la Fam · Información",
+  "fr": "Prà de la Fam · Informations"
+ },
  "Prà de la Fam, Lago di Garda": {
   "de": "Prà de la Fam, Gardasee",
   "en": "Prà de la Fam, Lake Garda",
   "es": "Prà de la Fam, lago de Garda",
   "fr": "Prà de la Fam, lac de Garde"
+ },
+ "Prà de la Fam® è un marchio registrato in Italia da FAM S.r.l.": {
+  "de": "Prà de la Fam® ist eine in Italien eingetragene Marke der FAM S.r.l.",
+  "en": "Prà de la Fam® is a trademark registered in Italy by FAM S.r.l.",
+  "es": "Prà de la Fam® es una marca registrada en Italia por FAM S.r.l.",
+  "fr": "Prà de la Fam® est une marque déposée en Italie par FAM S.r.l."
+ },
+ "Quello che si chiede al banco prima di prenotare.": {
+  "de": "Was man vor der Buchung an der Rezeption fragt.",
+  "en": "What people ask at the desk before booking.",
+  "es": "Lo que se pregunta en recepción antes de reservar.",
+  "fr": "Ce que l'on demande à la réception avant de réserver."
+ },
+ "Queste sono le domande che ci arrivano davvero al telefono e al banco, con la risposta per esteso — la stessa che daremmo di persona. Se quello che cercate non c'è, chiamateci: rispondiamo noi, non un centralino.": {
+  "de": "Das sind die Fragen, die uns wirklich am Telefon und an der Rezeption gestellt werden, ausführlich beantwortet — genauso, wie wir es persönlich täten. Wenn Ihre Frage fehlt, rufen Sie an: Sie erreichen uns, keine Telefonzentrale.",
+  "en": "These are the questions we really get on the phone and at the desk, answered in full — the same way we would answer in person. If what you are looking for is not here, call us: you get us, not a call centre.",
+  "es": "Estas son las preguntas que nos hacen de verdad por teléfono y en recepción, con la respuesta completa: la misma que daríamos en persona. Si lo que busca no está, llámenos: contestamos nosotros, no una centralita.",
+  "fr": "Voici les questions que l'on nous pose vraiment au téléphone et à la réception, avec la réponse complète — la même que nous donnerions de vive voix. Si ce que vous cherchez n'y est pas, appelez-nous : c'est nous qui répondons, pas un standard."
  },
  "Recentemente rinnovata, con vista lago e tutti i comfort per tre persone.": {
   "de": "Kürzlich renoviert, mit Seeblick und allem Komfort für drei Personen.",
@@ -491,17 +851,77 @@
   "es": "Recientemente renovada, con vista al lago y todo el confort para tres personas.",
   "fr": "Récemment rénovée, avec vue lac et tout le confort pour trois personnes."
  },
+ "Scrivete «Prà de la Fam» oppure «Porto di Tignale». Non scrivete solo «Tignale»: il navigatore vi porta in paese, in cima alla montagna, e da lì dovete riscendere.": {
+  "de": "Geben Sie «Prà de la Fam» oder «Porto di Tignale» ein. Nicht nur «Tignale»: Das Navi führt Sie hinauf ins Dorf auf dem Berg, und von dort müssen Sie wieder hinunter.",
+  "en": "Type «Prà de la Fam» or «Porto di Tignale». Do not type just «Tignale»: the satnav takes you up to the village at the top of the mountain, and from there you have to come back down.",
+  "es": "Escriba «Prà de la Fam» o «Porto di Tignale». No ponga solo «Tignale»: el navegador le lleva al pueblo, en lo alto de la montaña, y desde allí hay que volver a bajar.",
+  "fr": "Saisissez « Prà de la Fam » ou « Porto di Tignale ». N'indiquez pas seulement « Tignale » : le GPS vous emmène au village, en haut de la montagne, et il faut ensuite redescendre."
+ },
+ "Se arrivate più tardi delle 20:00, chiamateci: la struttura è a gestione familiare e ci si organizza, basta saperlo prima. E se arrivate in anticipo, di solito potete già lasciare la macchina nel parcheggio e usare giardino e spiaggia mentre finiamo di preparare la camera.": {
+  "de": "Wenn Sie später als 20:00 Uhr ankommen, rufen Sie an: Das Haus wird familiär geführt, wir richten uns ein — wir müssen es nur vorher wissen. Und wenn Sie früher da sind, können Sie in der Regel schon das Auto abstellen und Garten und Strand nutzen, während wir das Zimmer fertig machen.",
+  "en": "If you are arriving later than 8:00 pm, call us: the place is family-run and we will work it out, we just need to know in advance. And if you arrive early, you can usually leave the car in the car park and use the garden and the beach while we finish preparing the room.",
+  "es": "Si llega más tarde de las 20:00, llámenos: el alojamiento es de gestión familiar y nos organizamos, solo hace falta saberlo antes. Y si llega antes de hora, normalmente puede dejar ya el coche en el aparcamiento y usar el jardín y la playa mientras terminamos de preparar la habitación.",
+  "fr": "Si vous arrivez après 20h00, appelez-nous : l'établissement est familial et nous nous organisons, il suffit de le savoir à l'avance. Et si vous arrivez en avance, vous pouvez en général laisser la voiture au parking et profiter du jardin et de la plage pendant que nous terminons la chambre."
+ },
+ "Se preferite andare sul sicuro, impostate direttamente le coordinate 45°43.684′N · 10°43.176′E, o aprite la nostra posizione su Google Maps dalla pagina dei contatti.": {
+  "de": "Wer ganz sichergehen will, gibt direkt die Koordinaten 45°43.684′N · 10°43.176′E ein oder öffnet unsere Position über die Kontaktseite in Google Maps.",
+  "en": "If you would rather play safe, enter the coordinates 45°43.684′N · 10°43.176′E directly, or open our position on Google Maps from the contacts page.",
+  "es": "Si prefiere ir sobre seguro, introduzca directamente las coordenadas 45°43.684′N · 10°43.176′E, o abra nuestra ubicación en Google Maps desde la página de contactos.",
+  "fr": "Si vous préférez la sécurité, entrez directement les coordonnées 45°43.684′N · 10°43.176′E, ou ouvrez notre position sur Google Maps depuis la page contacts."
+ },
  "Senza coloranti né conservanti, antica distilleria locale": {
   "de": "Ohne Farb- und Konservierungsstoffe, aus einer alten örtlichen Brennerei",
   "en": "No colourings or preservatives, from an old local distillery",
   "es": "Sin colorantes ni conservantes, antigua destilería local",
   "fr": "Sans colorants ni conservateurs, ancienne distillerie locale"
  },
+ "Si acquistano in hotel durante il soggiorno; la vetrina con tutti i prodotti è su pradelafam.shop.": {
+  "de": "Erhältlich sind sie im Hotel während des Aufenthalts; das gesamte Sortiment sehen Sie auf pradelafam.shop.",
+  "en": "They are sold at the hotel during your stay; the full range is on display at pradelafam.shop.",
+  "es": "Se compran en el hotel durante la estancia; el escaparate con todos los productos está en pradelafam.shop.",
+  "fr": "Ils s'achètent à l'hôtel pendant le séjour ; la vitrine avec tous les produits se trouve sur pradelafam.shop."
+ },
+ "Si percorre normalmente in auto, in moto e in camper — ci passano i pullman di linea tutti i giorni — a patto di andare piano e di non avere fretta negli incroci in galleria. Il consiglio che diamo a tutti è di calcolare mezz'ora in più e di fermarsi in una delle piazzole: dall'alto si vede tutto il lago.": {
+  "de": "Sie lässt sich problemlos mit Auto, Motorrad und Wohnmobil befahren — die Linienbusse fahren hier täglich durch —, sofern man langsam fährt und beim Begegnen im Tunnel keine Eile hat. Unser Rat an alle: eine halbe Stunde mehr einplanen und an einer der Haltebuchten anhalten — von dort sieht man den ganzen See.",
+  "en": "It is perfectly drivable by car, motorbike and camper van — the scheduled coaches come through every day — as long as you take it slowly and do not rush when passing inside a tunnel. What we tell everyone is to allow an extra half hour and to stop in one of the lay-bys: from up there you can see the whole lake.",
+  "es": "Se recorre con normalidad en coche, en moto y en autocaravana — los autobuses de línea pasan a diario — siempre que se vaya despacio y sin prisa en los cruces dentro de los túneles. El consejo que damos a todos: calcular media hora más y parar en uno de los apartaderos: desde allí se ve todo el lago.",
+  "fr": "Elle se parcourt normalement en voiture, à moto et en camping-car — les autocars de ligne y passent tous les jours — à condition d'aller doucement et de ne pas être pressé lors des croisements en tunnel. Le conseil que nous donnons à tous : prévoir une demi-heure de plus et s'arrêter dans l'une des aires : de là-haut, on voit tout le lac."
+ },
+ "Si possono comprare i vostri prodotti?": {
+  "de": "Kann man Ihre Produkte kaufen?",
+  "en": "Can I buy your products?",
+  "es": "¿Se pueden comprar sus productos?",
+  "fr": "Peut-on acheter vos produits ?"
+ },
+ "Si possono portare i cani?": {
+  "de": "Sind Hunde erlaubt?",
+  "en": "Are dogs allowed?",
+  "es": "¿Se pueden llevar perros?",
+  "fr": "Les chiens sont-ils acceptés ?"
+ },
+ "Si può arrivare senza auto, in treno o in aereo?": {
+  "de": "Kommt man auch ohne Auto her, mit Zug oder Flugzeug?",
+  "en": "Can I get here without a car, by train or by plane?",
+  "es": "¿Se puede llegar sin coche, en tren o en avión?",
+  "fr": "Peut-on venir sans voiture, en train ou en avion ?"
+ },
+ "Si può fare il bagno? Com'è la spiaggia?": {
+  "de": "Kann man baden? Wie ist der Strand?",
+  "en": "Can you swim? What is the beach like?",
+  "es": "¿Se puede uno bañar? ¿Cómo es la playa?",
+  "fr": "Peut-on se baigner ? Comment est la plage ?"
+ },
  "Si raggiungono seguendo le vecchie strade militari rimaste in quota: con un mezzo si arriva fin dove le sterrate sono transitabili, poi si prosegue a piedi o in mountain bike sui sentieri di arroccamento.": {
   "de": "Erreichbar sind sie über die alten Militärstraßen, die in der Höhe geblieben sind: mit dem Fahrzeug kommt man so weit, wie die Schotterwege befahrbar sind, danach geht es zu Fuß oder mit dem Mountainbike auf den alten Zustiegspfaden weiter.",
   "en": "You reach them along the old military roads still up on the heights: you can drive as far as the dirt tracks allow, then carry on on foot or by mountain bike along the old approach paths.",
   "es": "Se llega por las viejas carreteras militares que quedan en altura: con el vehículo se avanza hasta donde las pistas son transitables, y luego se sigue a pie o en bicicleta de montaña por los antiguos senderos de acceso.",
   "fr": "On les rejoint par les anciennes routes militaires restées en altitude : on roule jusqu’où les pistes sont praticables, puis on continue à pied ou en VTT sur les vieux sentiers d’accès."
+ },
+ "Siamo in Via Gardesana 7, al Porto di Tignale, 25080 Tignale (BS): sponda bresciana del Lago di Garda, sulla strada che collega Gargnano a Riva del Garda. La struttura è direttamente a lago — la spiaggia è a meno di venti metri dal giardino.": {
+  "de": "Wir liegen in der Via Gardesana 7, Porto di Tignale, 25080 Tignale (BS): am Brescianer Ufer des Gardasees, an der Straße von Gargnano nach Riva del Garda. Das Haus liegt direkt am See — der Strand ist keine zwanzig Meter vom Garten entfernt.",
+  "en": "We are at Via Gardesana 7, Porto di Tignale, 25080 Tignale (BS): the Brescia shore of Lake Garda, on the road linking Gargnano to Riva del Garda. The property is right on the lake — the beach is less than twenty metres from the garden.",
+  "es": "Estamos en Via Gardesana 7, Porto di Tignale, 25080 Tignale (BS): orilla bresciana del lago de Garda, en la carretera que une Gargnano con Riva del Garda. El alojamiento está directamente sobre el lago: la playa queda a menos de veinte metros del jardín.",
+  "fr": "Nous sommes Via Gardesana 7, Porto di Tignale, 25080 Tignale (BS) : rive bresciane du lac de Garde, sur la route qui relie Gargnano à Riva del Garda. L'établissement est directement au bord du lac — la plage est à moins de vingt mètres du jardin."
  },
  "Situata al primo o al secondo piano dell'hotel, la camera familiare è composta da una camera doppia comunicante con una camera dotata di letto a castello, ideale per famiglie con bambini. Gli spazi sono stati recentemente ristrutturati con arredi moderni e accoglienti. La camera doppia offre una suggestiva vista sul lago, mentre la seconda camera si affaccia sul versante del monte, garantendo tranquillità e privacy. Il bagno è spazioso, completo di ampia doccia, asciugacapelli e linea di cortesia. La camera è dotata di tutti i comfort: aria condizionata, TV a schermo piatto, frigo vuoto, Wi-Fi gratuito e kit di benvenuto. È incluso l'accesso al parcheggio privato dell'hotel.": {
   "de": "Im ersten oder zweiten Stock des Hotels besteht das Familienzimmer aus einem Doppelzimmer mit Verbindungstür zu einem Zimmer mit Etagenbett — ideal für Familien mit Kindern. Die Räume wurden kürzlich modern und einladend renoviert. Das Doppelzimmer bietet einen eindrucksvollen Seeblick, das zweite Zimmer liegt zum Berg hin und sorgt für Ruhe und Privatsphäre. Das Bad ist geräumig, mit großer Dusche, Haartrockner und Pflegelinie. Das Zimmer verfügt über allen Komfort: Klimaanlage, Flachbild-TV, leerer Kühlschrank, kostenloses WLAN und Willkommensset. Der Zugang zum hoteleigenen Parkplatz ist inbegriffen.",
@@ -550,6 +970,42 @@
   "en": "Over two levels: double bedroom and bathroom on the ground floor, living area with kitchen upstairs. Exposed stone interiors with a distinctive cantilevered staircase.",
   "es": "En dos niveles: dormitorio doble y baño en la planta baja, zona de estar con cocina en la buhardilla. Interiores en piedra vista con característica escalera voladiza.",
   "fr": "Sur deux niveaux : chambre double et salle de bain au rez-de-chaussée, séjour avec cuisine sous les combles. Intérieurs en pierre apparente avec escalier en porte-à-faux caractéristique."
+ },
+ "Sul Garda le limonaie storiche sono molte, ma quasi tutte sono strutture vuote: restano i pilastri e i muri, non le piante. La nostra è ancora coltivata, ed è la più grande e la più settentrionale d'Europa — cresce esattamente al limite climatico oltre il quale un limone all'aperto non ce la fa più.": {
+  "de": "Am Gardasee gibt es viele historische Limonaie, doch fast alle sind leere Bauten: Pfeiler und Mauern stehen noch, die Pflanzen nicht. Unsere wird weiterhin bewirtschaftet und ist die größte und nördlichste Europas — sie wächst genau an der Klimagrenze, jenseits derer eine Zitrone im Freien nicht mehr überlebt.",
+  "en": "Lake Garda has many historic lemon houses, but nearly all of them are empty structures: the pillars and walls remain, the trees do not. Ours is still cultivated, and it is the largest and the northernmost in Europe — it grows exactly at the climatic limit beyond which a lemon tree can no longer live outdoors.",
+  "es": "En el lago de Garda hay muchos limonares históricos, pero casi todos son estructuras vacías: quedan los pilares y los muros, no las plantas. El nuestro sigue cultivado y es el más grande y el más septentrional de Europa: crece justo en el límite climático más allá del cual un limonero ya no aguanta al aire libre.",
+  "fr": "Sur le lac de Garde, les limonaie historiques sont nombreuses, mais presque toutes sont des structures vides : les piliers et les murs restent, pas les arbres. La nôtre est encore cultivée, et c'est la plus grande et la plus septentrionale d'Europe — elle pousse exactement à la limite climatique au-delà de laquelle un citronnier ne tient plus en plein air."
+ },
+ "Sì, i cani sono i benvenuti, sia nelle camere sia negli appartamenti. Il supplemento è di 10 € a notte per animale in albergo e di 50 € a soggiorno per animale negli appartamenti — non a notte: per l'intero soggiorno.": {
+  "de": "Ja, Hunde sind willkommen, sowohl in den Zimmern als auch in den Apartments. Der Aufpreis beträgt 10 € pro Nacht und Tier im Hotel und 50 € pro Aufenthalt und Tier in den Apartments — nicht pro Nacht, sondern für den gesamten Aufenthalt.",
+  "en": "Yes, dogs are welcome, both in the rooms and in the apartments. The supplement is €10 per night per pet in the hotel and €50 per stay per pet in the apartments — not per night: for the whole stay.",
+  "es": "Sí, los perros son bienvenidos, tanto en las habitaciones como en los apartamentos. El suplemento es de 10 € por noche y por animal en el hotel y de 50 € por estancia y por animal en los apartamentos: no por noche, sino por toda la estancia.",
+  "fr": "Oui, les chiens sont les bienvenus, aussi bien en chambre qu'en appartement. Le supplément est de 10 € par nuit et par animal à l'hôtel et de 50 € par séjour et par animal dans les appartements — non pas par nuit : pour tout le séjour."
+ },
+ "Sì, il parcheggio è privato, gratuito e riservato a chi soggiorna, subito davanti alla struttura. È chiuso, quindi va bene anche per le moto — è una delle cose che i motociclisti ci scrivono più spesso nelle recensioni.": {
+  "de": "Ja, der Parkplatz ist privat, kostenlos und den Gästen vorbehalten, direkt vor dem Haus. Er ist geschlossen und eignet sich daher auch für Motorräder — was Motorradfahrer besonders oft in ihren Bewertungen erwähnen.",
+  "en": "Yes, the car park is private, free and reserved for guests, right in front of the building. It is enclosed, so it also works well for motorbikes — one of the things motorcyclists mention most often in their reviews.",
+  "es": "Sí, el aparcamiento es privado, gratuito y reservado a los huéspedes, justo delante del alojamiento. Es cerrado, así que va bien también para las motos: es una de las cosas que más mencionan los moteros en sus reseñas.",
+  "fr": "Oui, le parking est privé, gratuit et réservé aux clients, juste devant l'établissement. Il est fermé, donc parfait aussi pour les motos — c'est l'un des points que les motards citent le plus souvent dans leurs avis."
+ },
+ "Sì. La spiaggia è a meno di venti metri dal giardino, si attraversa il prato e si è in acqua. È una piccola spiaggia libera, non un lido attrezzato: niente file di ombrelloni, niente cancelli.": {
+  "de": "Ja. Der Strand liegt keine zwanzig Meter vom Garten entfernt: über die Wiese, und man ist im Wasser. Es ist ein kleiner freier Strand, kein Strandbad: keine Schirmreihen, keine Schranken.",
+  "en": "Yes. The beach is less than twenty metres from the garden: you cross the lawn and you are in the water. It is a small free beach, not a lido: no rows of parasols, no gates.",
+  "es": "Sí. La playa está a menos de veinte metros del jardín: se cruza el césped y ya se está en el agua. Es una playa pequeña y libre, no un balneario: ni filas de sombrillas ni verjas.",
+  "fr": "Oui. La plage est à moins de vingt mètres du jardin : on traverse la pelouse et on est dans l'eau. C'est une petite plage libre, pas un lido aménagé : ni rangées de parasols, ni portails."
+ },
+ "Sì. Le stazioni comode sono Brescia e Desenzano–Sirmione, sulla linea Milano–Venezia; da lì partono gli autobus che percorrono la Gardesana, più frequenti da Brescia e più radi da Desenzano. Si scende alla fermata «Porto di Tignale», che è davanti a noi.": {
+  "de": "Ja. Praktisch sind die Bahnhöfe Brescia und Desenzano–Sirmione an der Linie Mailand–Venedig; von dort fahren Busse entlang der Gardesana, häufiger ab Brescia, seltener ab Desenzano. Aussteigen an der Haltestelle «Porto di Tignale», die direkt vor uns liegt.",
+  "en": "Yes. The convenient stations are Brescia and Desenzano–Sirmione, on the Milan–Venice line; from there buses run along the Gardesana, more frequent from Brescia and sparser from Desenzano. Get off at the «Porto di Tignale» stop, which is right in front of us.",
+  "es": "Sí. Las estaciones cómodas son Brescia y Desenzano–Sirmione, en la línea Milán–Venecia; desde allí salen los autobuses que recorren la Gardesana, más frecuentes desde Brescia y más escasos desde Desenzano. Se baja en la parada «Porto di Tignale», que está delante de nosotros.",
+  "fr": "Oui. Les gares pratiques sont Brescia et Desenzano–Sirmione, sur la ligne Milan–Venise ; de là partent les bus qui longent la Gardesana, plus fréquents depuis Brescia, plus rares depuis Desenzano. On descend à l'arrêt « Porto di Tignale », juste devant chez nous."
+ },
+ "Sì. Olio extravergine biologico di spremitura a freddo, olio agrumato, limoni sotto sale con peperoncino o pepe, limoncino senza coloranti né conservanti, sciroppo di limone e marmellate biologiche di limone e arance amare, insieme all'abbigliamento e agli accessori con il logo del Prà.": {
+  "de": "Ja. Kaltgepresstes Bio-Olivenöl extra vergine, Zitrusöl, in Salz eingelegte Zitronen mit Chili oder Pfeffer, Limoncino ohne Farb- und Konservierungsstoffe, Zitronensirup und Bio-Marmeladen aus Zitrone und Bitterorange, dazu Kleidung und Accessoires mit dem Logo des Prà.",
+  "en": "Yes. Cold-pressed organic extra virgin olive oil, citrus-infused oil, lemons preserved in salt with chilli or pepper, limoncino with no colourings or preservatives, lemon syrup and organic lemon and bitter orange marmalades, along with clothing and accessories bearing the Prà logo.",
+  "es": "Sí. Aceite de oliva virgen extra ecológico de primera presión en frío, aceite de cítricos, limones en sal con guindilla o pimienta, limoncino sin colorantes ni conservantes, sirope de limón y mermeladas ecológicas de limón y naranja amarga, además de ropa y accesorios con el logotipo del Prà.",
+  "fr": "Oui. Huile d'olive extra vierge biologique pressée à froid, huile aux agrumes, citrons au sel au piment ou au poivre, limoncino sans colorants ni conservateurs, sirop de citron et confitures biologiques de citron et d'orange amère, ainsi que des vêtements et accessoires au logo du Prà."
  },
  "Tignale fa parte del Parco Alto Garda Bresciano, e oltre ai sentieri del parco conserva una rete fittissima di sentieri militari — ormai dimenticati dalla cartografia — che collegano trincee, ricoveri e appostamenti in galleria, casematte. Quasi sempre nei punti più panoramici del territorio.": {
   "de": "Tignale liegt im Park Alto Garda Bresciano und bewahrt neben den Parkwegen ein dichtes Netz von Militärpfaden — von den Karten längst vergessen — die Schützengräben, Unterstände, Stollenstellungen und Kasematten verbinden. Fast immer an den aussichtsreichsten Stellen.",
@@ -605,11 +1061,23 @@
   "es": "Una batería de artillería, con sus trincheras y búnkeres de protección, se extiende por todo el Monte Castello, cerca del santuario y en las laderas septentrionales. Las líneas defensivas, cuyos restos siguen bien visibles, continúan a lo largo del Dosso Piemp — junto al Rifugio degli Alpini — hasta el Passo della Puria y los confines del municipio.",
   "fr": "Une batterie d’artillerie, avec ses tranchées et ses bunkers de protection, s’étend sur tout le Monte Castello, près du sanctuaire et sur les versants nord. Les lignes défensives, dont les vestiges restent bien visibles, se poursuivent le long du Dosso Piemp — près du Rifugio degli Alpini — jusqu’au Passo della Puria et aux limites de la commune."
  },
+ "Una volta qui si sta benissimo anche senza macchina: spiaggia, limonaia e sentieri partono dalla porta. Per girare gli altri paesi del lago, però, l'auto o il battello aiutano.": {
+  "de": "Einmal hier, kommt man auch gut ohne Auto zurecht: Strand, Limonaia und Wanderwege beginnen vor der Tür. Um die anderen Orte am See zu erkunden, helfen allerdings Auto oder Schiff.",
+  "en": "Once you are here you get on perfectly well without a car: beach, lemon house and trails all start at the door. To tour the other lakeside villages, though, a car or the ferry helps.",
+  "es": "Una vez aquí se está muy bien incluso sin coche: playa, limonar y senderos salen de la puerta. Para recorrer los demás pueblos del lago, en cambio, ayudan el coche o el barco.",
+  "fr": "Une fois sur place, on se passe très bien de voiture : plage, limonaia et sentiers partent de la porte. Pour visiter les autres villages du lac, en revanche, la voiture ou le bateau sont utiles."
+ },
  "Usiamo cookie analitici per capire come viene usato il sito e migliorarlo. Nessun dato viene ceduto a terzi per scopi pubblicitari.": {
   "de": "Wir verwenden Analyse-Cookies, um zu verstehen, wie die Seite genutzt wird, und sie zu verbessern. Es werden keine Daten zu Werbezwecken an Dritte weitergegeben.",
   "en": "We use analytics cookies to understand how the site is used and to improve it. No data is shared with third parties for advertising.",
   "es": "Usamos cookies analíticas para entender cómo se usa el sitio y mejorarlo. Ningún dato se cede a terceros con fines publicitarios.",
   "fr": "Nous utilisons des cookies analytiques pour comprendre l'usage du site et l'améliorer. Aucune donnée n'est cédée à des tiers à des fins publicitaires."
+ },
+ "Vi chiediamo solo di segnalarlo quando prenotate, così sappiamo assegnarvi la sistemazione più comoda. Intorno c'è il giardino, la spiaggia è libera e i sentieri del parco partono dalla porta: per un cane è un posto facile.": {
+  "de": "Wir bitten Sie nur, es bei der Buchung anzugeben, damit wir Ihnen die passendste Unterkunft zuweisen können. Ringsum liegt der Garten, der Strand ist frei zugänglich und die Wege des Parks beginnen vor der Tür: für einen Hund ein einfacher Ort.",
+  "en": "We only ask you to tell us when you book, so we can give you the most convenient accommodation. All around there is the garden, the beach is free and the park trails start at the door: for a dog it is an easy place.",
+  "es": "Solo le pedimos que lo indique al reservar, así podemos asignarle el alojamiento más cómodo. Alrededor está el jardín, la playa es libre y los senderos del parque salen de la puerta: para un perro es un sitio fácil.",
+  "fr": "Nous vous demandons simplement de le signaler à la réservation, afin de vous attribuer le logement le plus pratique. Tout autour il y a le jardin, la plage est libre et les sentiers du parc partent de la porte : pour un chien, c'est un endroit facile."
  },
  "Vista da Malcesine a Sirmione, giardino privato": {
   "de": "Blick von Malcesine bis Sirmione, Privatgarten",
@@ -623,12 +1091,36 @@
   "es": "Vista de Malcesine a Sirmione, jardín privado con tumbonas. Cocina americana, baño con ducha.",
   "fr": "Vue de Malcesine à Sirmione, jardin privé avec transats. Coin cuisine, salle de bain avec douche."
  },
+ "Windsurf, kitesurf e vela: il vento del Garda è costante e regolare, e il Circolo Vela Gargnano organizza regate per tutta la stagione, compresa la storica Centomiglia.": {
+  "de": "Windsurfen, Kitesurfen und Segeln: Der Wind am Gardasee ist beständig und regelmäßig, und der Circolo Vela Gargnano veranstaltet die ganze Saison über Regatten, darunter die historische Centomiglia.",
+  "en": "Windsurfing, kitesurfing and sailing: the wind on Lake Garda is steady and reliable, and the Circolo Vela Gargnano holds regattas throughout the season, including the historic Centomiglia.",
+  "es": "Windsurf, kitesurf y vela: el viento del lago de Garda es constante y regular, y el Circolo Vela Gargnano organiza regatas durante toda la temporada, incluida la histórica Centomiglia.",
+  "fr": "Planche à voile, kitesurf et voile : le vent du lac de Garde est constant et régulier, et le Circolo Vela Gargnano organise des régates toute la saison, dont l'historique Centomiglia."
+ },
  "_nota": "Testi lunghi. Restano invariati: misure, indirizzi, nomi propri (Tignale, Monte Baldo, i nomi degli appartamenti), gli indirizzi web, i nomi degli ospiti, e le due recensioni gia' scritte in inglese e in polacco — quelle sono citazioni, riscriverle sarebbe falsificarle.",
+ "dalla reception.": {
+  "de": "an der Rezeption.",
+  "en": "from the front desk.",
+  "es": "desde la recepción.",
+  "fr": "posées à la réception."
+ },
  "È come tornare a casa. Il luogo è incantevole, immerso nella natura e il lago è splendido.": {
   "de": "Es fühlt sich an wie Nachhausekommen. Der Ort ist bezaubernd, mitten in der Natur, und der See ist herrlich.",
   "en": "It feels like coming home. The place is enchanting, surrounded by nature, and the lake is splendid.",
   "es": "Es como volver a casa. El lugar es encantador, rodeado de naturaleza, y el lago es espléndido.",
   "fr": "C'est comme rentrer à la maison. Le lieu est enchanteur, en pleine nature, et le lac est splendide."
+ },
+ "È la limonaia più grande e la più a nord d'Europa, e sta dentro la nostra proprietà: dalla camera ci si arriva a piedi in un minuto. Non è un rudere e non è una ricostruzione — le ottanta piante adulte sono vive e in produzione.": {
+  "de": "Sie ist die größte und nördlichste Limonaia Europas und liegt auf unserem Grundstück: Vom Zimmer aus geht man eine Minute zu Fuß. Sie ist keine Ruine und keine Rekonstruktion — die achtzig ausgewachsenen Bäume leben und tragen Früchte.",
+  "en": "It is the largest and northernmost lemon house in Europe, and it stands inside our property: from your room you reach it on foot in a minute. It is not a ruin and it is not a reconstruction — the eighty mature trees are alive and productive.",
+  "es": "Es el limonar más grande y más septentrional de Europa, y está dentro de nuestra propiedad: desde la habitación se llega a pie en un minuto. No es una ruina ni una reconstrucción: los ochenta árboles adultos están vivos y en producción.",
+  "fr": "C'est la plus grande et la plus septentrionale des limonaie d'Europe, et elle se trouve à l'intérieur de notre propriété : depuis la chambre, on y est en une minute à pied. Ce n'est ni une ruine ni une reconstitution — les quatre-vingts arbres adultes sont vivants et en production."
+ },
+ "È vero, ed è anche il motivo per cui vale il viaggio. La Gardesana Occidentale è scavata nella roccia a picco sul lago: stretta, con molte gallerie, alcune delle quali si aprono sull'acqua. È una delle strade più panoramiche d'Italia.": {
+  "de": "Das stimmt — und genau deshalb lohnt sich die Fahrt. Die Gardesana Occidentale ist in den Fels über dem See geschlagen: eng, mit vielen Tunneln, von denen sich einige direkt zum Wasser hin öffnen. Sie ist eine der schönsten Panoramastraßen Italiens.",
+  "en": "It is true, and it is also why the journey is worth it. The Gardesana Occidentale is carved into the rock above the lake: narrow, with many tunnels, some of which open straight onto the water. It is one of the most scenic roads in Italy.",
+  "es": "Es cierto, y es también el motivo por el que vale la pena el viaje. La Gardesana Occidentale está excavada en la roca sobre el lago: estrecha, con muchos túneles, algunos de los cuales se abren al agua. Es una de las carreteras más panorámicas de Italia.",
+  "fr": "C'est vrai, et c'est aussi ce qui rend le trajet mémorable. La Gardesana Occidentale est taillée dans la roche au-dessus du lac : étroite, avec de nombreux tunnels, dont certains s'ouvrent sur l'eau. C'est l'une des routes les plus panoramiques d'Italie."
  },
  "⚠️ Appartamento temporaneamente non disponibile": {
   "de": "⚠️ Apartment vorübergehend nicht verfügbar",
@@ -641,5 +1133,11 @@
   "en": "⚠️ The apartment is inside the historic lemon house and is reached by a number of steps: it is not suitable for guests with reduced mobility.",
   "es": "⚠️ El apartamento se encuentra en la histórica limonaia y se accede por numerosos escalones: no es adecuado para personas con movilidad reducida.",
   "fr": "⚠️ L'appartement se trouve dans la limonaia historique et s'atteint par de nombreuses marches : il ne convient pas aux personnes à mobilité réduite."
+ },
+ "✉ info@alpradelafam.com": {
+  "de": "✉ info@alpradelafam.com",
+  "en": "✉ info@alpradelafam.com",
+  "es": "✉ info@alpradelafam.com",
+  "fr": "✉ info@alpradelafam.com"
  }
 }

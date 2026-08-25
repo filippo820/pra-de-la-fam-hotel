@@ -84,6 +84,15 @@
 /:lingua/nuovo_sito_web               /                               301
 /:lingua/nuovo_sito_web/              /                               301
 
+# La pagina delle domande e' nuova, non c'era sul vecchio sito: qui stanno solo
+# i nomi con cui la si puo' cercare a mano o linkare da fuori. /faq lo serve
+# Netlify da solo, senza il .html.
+/domande-frequenti                    /faq                            301
+/domande-frequenti/                   /faq                            301
+/:lingua/faq                          /faq                            301
+/:lingua/faq/                         /faq                            301
+/:lingua/domande-frequenti            /faq                            301
+
 # Tutto il resto del vecchio sito (allegati, feed, pagine sparite) alla home.
 /it_IT/*                              /                               301
 /de_DE/*                              /                               301

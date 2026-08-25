@@ -804,6 +804,106 @@ lanci: `NODE_PATH` non serve a niente).
 `marca.py` → `raccogli.py` → riaggancio traduzioni → `costruisci.py` → `kb.py`.
 
 
+
+### Dati strutturati, FAQ e limonaia in prima riga — 25 agosto 2026
+Nasce da una domanda diversa dal solito: non «come ci trova Google», ma **come
+ci racconta un assistente IA**. Chi chiede a un'IA «hotel sul Garda con una
+limonaia» non riceve dieci link: riceve una frase. Quella frase la scrive chi ha
+i dati in una forma leggibile, non chi ha la pagina più bella.
+
+**1 · JSON-LD in home** (`index.html`, subito sotto il canonical). Un solo blocco
+con quattro nodi: `LodgingBusiness` (nome, indirizzo, coordinate 45.72807 ·
+10.71960, telefono, mail, 10 camere, check-in 14:00, check-out 10:30, animali
+ammessi, non fumatori, cinque lingue, servizi, il tasto «prenota» come
+`ReserveAction`), la **`TouristAttraction` della limonaia** dentro
+`containsPlace`, l'`Organization` FAM S.r.l. con la P.IVA, e il `WebSite`.
+Le nove camere e appartamenti sono nodi `HotelRoom` e `Apartment` con metri
+quadri, capienza e servizi veri, presi dalle loro pagine.
+
+⚠️ **Niente voto medio delle recensioni.** L'8,8 di Booking è vero ma le linee
+guida di Google vietano il markup di recensioni raccolte altrove e messe in
+pagina da chi ne è oggetto: è un rischio di penalizzazione per un dato che
+resta comunque visibile nella sezione 06.
+
+⚠️ **Bergamotto è fuori dal JSON-LD**, perché in home è «Non disponibile». Un
+alloggio dichiarato a una macchina è un alloggio che l'IA propone: quando torna
+disponibile va rimesso, e la riga è già pronta accanto agli altri quattro.
+
+**2 · `faq.html`, 19 domande.** Sono le domande della reception, non quelle
+inventate: dove siamo davvero (il paese di Tignale è in alto, noi sul lago),
+cosa scrivere nel navigatore, com'è la Gardesana, il parcheggio chiuso, il
+treno, il bagno e la spiaggia libera, la limonaia e cosa la distingue dalle
+altre del lago, camera o appartamento, colazione, cani, orari, servizi, lingue,
+prodotti. Ogni risposta è discorsiva: è così che le persone parlano alle IA, ed
+è così che le IA ripetono.
+
+📐 **Testo visibile e `FAQPage` escono dallo stesso file.** Le domande stanno in
+`strumenti/faq_dati.py`, la pagina la scrive `strumenti/faq_costruisci.py`. Il
+difetto tipico di questi blocchi è che si corregge la risposta in pagina e ci si
+dimentica del JSON: qui non può succedere. Per cambiare una risposta si tocca
+`faq_dati.py` e si rilancia lo script, poi `raccogli.py` e `costruisci.py`.
+
+📐 Ogni domanda è un `<details>`, come «Come arrivare»: si apre col dito e con
+Invio, funziona senza JavaScript, e **la risposta resta nel documento anche a
+scheda chiusa** — quindi Google e gli assistenti la leggono lo stesso. Un link
+del tipo `/faq#d-…` apre la sua scheda da solo.
+
+**Dalla barra e dal piede.** La voce si chiama **FAQ** e non «Domande
+frequenti»: si scrive uguale in tutte e cinque le lingue, quindi la barra non
+cambia larghezza cambiando lingua. È la decima voce, e le dieci chiedono ~1580px:
+la soglia oltre la quale la barra diventa il pulsante del menu è salita da 1300
+a **1380**. Il link è anche nel piede della home e nella striscia in fondo alle
+nove pagine di camere e appartamenti — che è pure la fonte da cui `menu.js`
+costruisce il menu del telefono.
+
+**3 · La limonaia in prima riga.** Era in sezione 03, cioè dopo camere e
+appartamenti: chi legge solo l'inizio non la incontrava mai. Ora sta nel titolo
+della pagina, nella descrizione, nella frase d'apertura («dentro la limonaia
+storica più a nord d'Europa») e in un paragrafo nuovo della sezione 01 che dice
+la cosa che nessun altro albergo del Garda può dire. In sezione 03 una riga in
+più: **non è una limonaia ricostruita, è viva e in produzione.**
+
+⚠️ La vecchia descrizione diceva «l'unica limonaia attiva del lago». È una
+affermazione che non regge alla prima verifica di chiunque; «la più grande e la
+più a nord d'Europa, ancora attiva» è più forte **ed è vera**.
+
+**Le cinque lingue tenute in riga.** 83 frammenti nuovi tradotti in inglese,
+tedesco, francese e spagnolo: `trad_lunghi.json` da 108 a 191 voci, dizionario
+da en 257 · de 258 · fr 252 · es 241 a **en 338 · de 340 · fr 334 · es 323**.
+`i18n.js` da 112 a 161 KB (29 → 53 KB compresso): 24 KB in più su ogni pagina
+per una pagina sola, ma sono due ordini di grandezza sotto ai megabyte delle
+foto — non vale un secondo dizionario da tenere allineato a mano.
+
+🔴 **Trovato rifacendo il dizionario:** la riga «Prà de la Fam® è un marchio
+registrato…» era tradotta dentro `i18n.js` ma **non stava in nessun
+`trad_*.json`** — qualcuno l'aveva scritta a mano nel file generato. Alla prima
+rigenerazione sarebbe sparita in quattro lingue, in silenzio. Recuperata da git
+e messa nella fonte. È la stessa trappola del 19 agosto: *quello che vive solo
+nel file generato è già perso.*
+
+**L'assistente sa le stesse cose.** `kb.json` ha ora la pagina FAQ e quattro
+fatti nuovi (orari, animali, spiaggia, colazione) che nel sito non c'erano da
+nessuna parte; `strumenti/kb.py` è aggiornato di conseguenza. ⚠️ `kb.py` non è
+stato rilanciato perché qui manca playwright: `kb.json` è stato aggiornato a
+mano, con lo stesso trattamento delle altre pagine. Alla prossima passata vera
+si riallinea da solo. È passato da 29 a 39 KB, cioè ~2.500 parole-macchina in
+più per ogni domanda fatta all'assistente.
+
+**`_redirects`**: `/domande-frequenti` e le forme con la lingua davanti portano
+a `/faq`. Il `.html` lo toglie Netlify da solo, come per le altre pagine.
+
+**Il supplemento per il cane, chiuso lo stesso giorno.** 10 € a notte per animale
+in albergo, **50 € a soggiorno** — non a notte — per animale in appartamento. È
+una distinzione che chi risponde al telefono ripete di continuo, quindi nella
+FAQ è scritta due volte, in italiano e in tutte e quattro le traduzioni: «non a
+notte: per l'intero soggiorno». La cifra sta anche nel servizio «animali
+ammessi» del JSON-LD in home e nel fatto `animali` di `kb.json`.
+
+⬜ **Da controllare dopo la pubblicazione**, in due minuti: il Rich Results Test
+di Google su `alpradelafam.com` e su `/faq`. Netlify riscrive l'HTML in fase di
+pubblicazione — è già successo con le virgolette degli `onmouseover` — e un
+blocco JSON rotto non dà errore a schermo: semplicemente non viene letto.
+
 ---
 
 ## ⬜ Aperto

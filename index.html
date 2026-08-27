@@ -890,11 +890,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--bone);color:var(--ink);ov
    tutto schermo, si vede benissimo, e col dito e' molto meglio del
    nostro. I nomi dei mesi e dei giorni li scrive Intl nella lingua della
    pagina: nessuna chiave da tradurre, tutte e cinque le lingue insieme. */
-@media(hover:hover) and (pointer:fine){
-  /* l'icona resta VISIBILE — e' l'unico segno che il campo si apre — ma
-     non riceve piu' il clic: passa al campo, che apre il calendario nostro */
-  .avail-input input[type="date"]::-webkit-calendar-picker-indicator{pointer-events:none}
-}
+/* ⚠️ LO SCUDO. Chrome apre il calendario di sistema al CLIC sul campo, e
+   preventDefault sul mousedown NON lo ferma: si vedevano due calendari, il
+   nostro verso l'alto e quello di sistema verso il basso, fuori dallo schermo.
+   L'unico fermo certo e' non far arrivare il clic al campo: un velo
+   trasparente sopra, che lo prende lui e apre il calendario nostro.
+   Lo mette il JS. Se il JS non parte non c'e' scudo, il campo torna
+   cliccabile e riappare il calendario di sistema: cioe' com'era prima. */
+.avail-input.con-scudo{position:relative}
+.cal-scudo{position:absolute;inset:0;z-index:2;cursor:pointer}
 .cal-pop{position:fixed;z-index:450;display:none;width:250px;padding:.6rem;
          background:var(--ink);border:1px solid rgba(184,147,74,.35);border-radius:3px;
          box-shadow:0 -14px 44px rgba(0,0,0,.5);

@@ -954,6 +954,17 @@ un elemento del documento, è una finestra del browser. Perciò ora ce n'è uno
 nostro (`cerca.js`, ultimo blocco), disegnato nella pagina e ancorato **sopra**
 il campo. Verificato da aperto: sta tutto dentro la finestra, a 8px dal campo.
 
+🔴 **La prima versione ne lasciava due.** Segnalato subito dopo la pubblicazione:
+si vedevano *entrambi* i calendari, il nostro verso l'alto e quello bianco di
+sistema verso il basso. Il fermo era `preventDefault` sul `mousedown` del campo,
+e **non basta: Chrome apre il calendario di sistema al CLIC**, che parte lo
+stesso. L'unico fermo certo è non far arrivare il clic al campo: uno **scudo**,
+un velo trasparente `position:absolute;inset:0` sopra la casella, che se lo
+prende lui. Verificato con una spia sul campo: zero `click`, zero `mousedown`
+— nemmeno sull'icona del calendario, che sta sotto lo scudo anche lei.
+Lo scudo lo mette il JS: se il JS non parte non c'è scudo, e torna il
+calendario di sistema — cioè com'era prima.
+
 ⚠️ **Solo su computer** (`hover:hover` e `pointer:fine`). Sul telefono il
 calendario di sistema è un pannello grande, si vede benissimo ed è fatto per il
 dito: sostituirlo sarebbe stato un peggioramento. Lì non cambia niente.

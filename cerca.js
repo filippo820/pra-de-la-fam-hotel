@@ -255,10 +255,20 @@
   });
 
   campi.forEach(function (c) {
-    // preventDefault sul mousedown e' quello che tiene chiuso il calendario
-    // di sistema (Chrome, Safari, Firefox). Il fuoco lo diamo noi, cosi' la
-    // data si puo' ancora scrivere da tastiera come prima.
-    c.addEventListener('mousedown', function (e) {
+    /* ⚠️ LO SCUDO. Il primo tentativo era preventDefault sul mousedown del
+       campo: NON BASTA. Chrome apre il calendario di sistema al clic, e il
+       clic parte lo stesso. Si vedevano due calendari insieme — il nostro
+       verso l'alto e quello bianco di sistema verso il basso, mezzo fuori
+       dallo schermo. L'unico fermo certo e' non far arrivare il clic al
+       campo: un velo trasparente sopra la casella se lo prende tutto.
+       Il fuoco lo diamo noi, cosi' la data si scrive ancora da tastiera. */
+    var casella = c.parentNode;
+    casella.classList.add('con-scudo');
+    var scudo = document.createElement('div');
+    scudo.className = 'cal-scudo';
+    scudo.setAttribute('aria-hidden', 'true');
+    casella.appendChild(scudo);
+    scudo.addEventListener('mousedown', function (e) {
       e.preventDefault();
       var eraAperto = (attivo === c);
       c.focus();
@@ -277,7 +287,10 @@
   });
 
   document.addEventListener('mousedown', function (e) {
-    if (attivo && !pop.contains(e.target) && e.target !== attivo) chiudi();
+    // gli scudi si arrangiano da soli (aprono, chiudono, passano da un campo
+    // all'altro): se chiudessimo anche di qui riaprirebbero subito dopo
+    var suUnoScudo = e.target.closest && e.target.closest('.cal-scudo');
+    if (attivo && !pop.contains(e.target) && !suUnoScudo) chiudi();
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && attivo) chiudi(); });
   window.addEventListener('resize', function () { if (attivo) posiziona(); });

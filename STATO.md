@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **20 agosto 2026** — lo scambio è fatto
+Aggiornato: **27 agosto 2026** — il calendario delle date si apre verso l'alto
 
 ---
 
@@ -939,6 +939,33 @@ Dizionario: fr da 334 a **338**, en 339 · de 342 · es 325.
 sono **interamente in italiano** in tutte e quattro le lingue — un centinaio di
 frammenti. Un visitatore tedesco legge un'informativa che non capisce, e le due
 pagine sono proprio quelle in cui capire conta.
+
+### Il calendario si apriva fuori dallo schermo — 27 agosto 2026
+Segnalato: sulla barra «Verifica disponibilità» in fondo alla pagina, aprendo
+Arrivo o Partenza il calendario usciva **verso il basso** e non si vedeva.
+
+📐 **Misurato, non stimato.** La barra è `position:fixed;bottom:0`. Su una
+finestra da 848px il campo Arrivo finisce a **836**: dodici pixel di spazio
+sotto di sé. Il calendario di sistema si apre sotto il campo che lo chiama e ne
+chiede circa **330**. Non c'era niente da riparare nel calendario: era il posto.
+
+**La posizione del calendario di sistema non si governa dalla pagina** — non è
+un elemento del documento, è una finestra del browser. Perciò ora ce n'è uno
+nostro (`cerca.js`, ultimo blocco), disegnato nella pagina e ancorato **sopra**
+il campo. Verificato da aperto: sta tutto dentro la finestra, a 8px dal campo.
+
+⚠️ **Solo su computer** (`hover:hover` e `pointer:fine`). Sul telefono il
+calendario di sistema è un pannello grande, si vede benissimo ed è fatto per il
+dito: sostituirlo sarebbe stato un peggioramento. Lì non cambia niente.
+
+L'`<input type="date">` **resta**: continua a tenere il valore in `yyyy-mm-dd`,
+a rispettare `min`, a compilarsi da tastiera. Scelto un giorno gli si manda un
+evento `change`, così la parte che costruisce il link al motore non sa nemmeno
+che esistiamo — e se il blocco non partisse tornerebbe il calendario di sistema.
+
+Nomi dei mesi e dei giorni da `Intl` su `<html lang>`: **nessun testo italiano
+nuovo**, quindi nessuna chiave `data-i18n` e nessuna traduzione da rifare.
+Provato in tedesco («September 2026 · Mo Di Mi Do Fr Sa So») e in italiano.
 
 ---
 

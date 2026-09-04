@@ -1,0 +1,6 @@
+# Il sito e' interamente pubblico: non c'e' niente da nascondere ai motori.
+# Un Disallow qui impedirebbe anche di leggere i meta robots delle pagine.
+User-agent: *
+Allow: /
+
+Sitemap: https://alpradelafam.com/sitemap.xml

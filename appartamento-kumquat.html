@@ -618,6 +618,10 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
 function pdlfConsenso(ok){
   try { localStorage.setItem('pdlf_consent', ok); } catch(e){}
   pdlfApplica(ok);
+  // La scelta e' un dato: senza, non si sa quanta parte del traffico resta
+  // senza cookie — e quindi quanto vale davvero il numero letto in Analytics.
+  // Parte DOPO pdlfApplica, cosi' chi accetta e' gia' con il consenso concesso.
+  try { gtag('event','consenso',{ scelta: ok ? 'accetta' : 'solo_necessari' }); } catch(e){}
 }
 function pdlfApplica(ok){
   try { gtag('consent','update',{ 'analytics_storage': ok ? 'granted':'denied' }); } catch(e){}

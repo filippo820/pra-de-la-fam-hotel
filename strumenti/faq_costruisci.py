@@ -129,17 +129,23 @@ PAGINA = f'''<!DOCTYPE html>
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prà de la Fam" />
 <meta property="og:locale" content="it_IT" />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:title" content="{TITOLO}" />
 <meta property="og:description" content="{DESCR}" />
 <meta property="og:url" content="{SITO}/faq" />
 <meta property="og:image" content="{SITO}/og/index.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Prà de la Fam — Hotel e Appartamenti sul Lago di Garda · Tignale" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Il Prà de la Fam dall&#x27;alto: la spiaggia sul Lago di Garda, l&#x27;hotel sulla Gardesana e le terrazze della limonaia" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{TITOLO}" />
 <meta name="twitter:description" content="{DESCR}" />
 <meta name="twitter:image" content="{SITO}/og/index.jpg" />
+<meta name="twitter:image:alt" content="Il Prà de la Fam dall&#x27;alto: la spiaggia sul Lago di Garda, l&#x27;hotel sulla Gardesana e le terrazze della limonaia" />
 <link rel="canonical" href="{SITO}/faq" />
 
 <meta name="description" content="{DESCR}"/>

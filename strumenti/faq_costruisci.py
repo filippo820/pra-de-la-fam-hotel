@@ -252,10 +252,10 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 
 <header>
 <nav>
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
-  <a data-i18n="{k('Home')}" href="index.html" class="nav-back">Home</a>
+  <a data-i18n="{k('Home')}" href="/" class="nav-back">Home</a>
   <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
   <a data-i18n="{k('Prenota →')}" href="{BOOK}" target="_blank" class="nav-cta">Prenota →</a>
 </nav>
@@ -293,11 +293,11 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 <footer class="room-footer-strip">
   <p data-i18n="{k('Prà de la Fam —<br><em>Lago di Garda</em>')}" class="rfs-text">Prà de la Fam —<br><em>Lago di Garda</em></p>
   <div class="rfs-links">
-    <a data-i18n="{k('Camere')}" href="index.html#hotel" class="rfs-link">Camere</a>
-    <a data-i18n="{k('Appartamenti')}" href="index.html#appartamenti" class="rfs-link">Appartamenti</a>
-    <a data-i18n="{k('La Limonaia')}" href="index.html#limonaia" class="rfs-link">La Limonaia</a>
-    <a data-i18n="{k('Contatti')}" href="index.html#contatti" class="rfs-link">Contatti</a>
-    <a href="faq.html" class="rfs-link">FAQ</a>
+    <a data-i18n="{k('Camere')}" href="/#hotel" class="rfs-link">Camere</a>
+    <a data-i18n="{k('Appartamenti')}" href="/#appartamenti" class="rfs-link">Appartamenti</a>
+    <a data-i18n="{k('La Limonaia')}" href="/#limonaia" class="rfs-link">La Limonaia</a>
+    <a data-i18n="{k('Contatti')}" href="/#contatti" class="rfs-link">Contatti</a>
+    <a href="/faq" class="rfs-link">FAQ</a>
   </div>
   <a data-i18n="{k('Prenota ora →')}" href="{BOOK}" target="_blank" class="rfs-book">Prenota ora →</a>
 </footer>

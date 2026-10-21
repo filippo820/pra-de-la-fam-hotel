@@ -125,6 +125,7 @@ PAGINA = f'''<!DOCTYPE html>
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="preload" as="image" href="img/limonaia-aerea.jpg" fetchpriority="high"/>
 <title>{TITOLO}</title>
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prà de la Fam" />
@@ -252,7 +253,7 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 <header>
 <nav>
   <a href="index.html" class="nav-logo">
-    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam"/>
+    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
   <a data-i18n="{k('Home')}" href="index.html" class="nav-back">Home</a>
   <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>

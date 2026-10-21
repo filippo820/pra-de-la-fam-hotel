@@ -24,3 +24,12 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# La pagina 404 la serve Netlify da solo, con lo stato giusto, a ogni
+# indirizzo che non esiste: basta che 404.html stia nella radice. Qui si
+# dice solo ai motori di non indicizzarla (c'e' anche il meta robots: questo
+# vale pure per chi legge solo le intestazioni).
+[[headers]]
+  for = "/404.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"

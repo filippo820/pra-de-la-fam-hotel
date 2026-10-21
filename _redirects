@@ -93,6 +93,13 @@
 /:lingua/faq/                         /faq                            301
 /:lingua/domande-frequenti            /faq                            301
 
+# La pagina 404. NON serve una regola: Netlify serve da solo /404.html, con
+# stato 404, a ogni indirizzo che non esiste. Una regola «/*  /404.html  404»
+# in fondo sarebbe ridondante e rischiosa: dovrebbe cedere il passo alle
+# pagine senza .html e alla funzione /api/chat, e non vale la pena scoprire
+# in produzione se lo fa. Le righe qui sotto mandano alla home anche le
+# pagine del vecchio sito che non esistono piu': per quelle niente 404.
+
 # Tutto il resto del vecchio sito (allegati, feed, pagine sparite) alla home.
 /it_IT/*                              /                               301
 /de_DE/*                              /                               301

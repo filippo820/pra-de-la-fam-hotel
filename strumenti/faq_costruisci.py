@@ -28,6 +28,14 @@ def k(t):
 def esc(t):
     return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
+# ── il banner del consenso non e' scritto qui: e' lo stesso blocco di tutte le
+# pagine, e lo si prende da una di esse. Prima mancava, e rigenerando la FAQ
+# il banner dei cookie spariva in silenzio.
+_cd = (BASE / "camera-doppia.html").read_text(encoding="utf-8")
+_i = _cd.index("<!-- ══ pdlf-analytics ══ banner consenso")
+_f = _cd.rindex("</script>", _i, _cd.index('<script src="i18n.js"', _i)) + len("</script>")
+BANNER = _cd[_i:_f]
+
 TITOLO = "Domande frequenti — Prà de la Fam · Hotel sul Lago di Garda · Tignale"
 DESCR = ("Le domande che ci fanno ogni giorno alla reception: come si arriva sulla Gardesana, "
          "il parcheggio, la spiaggia, i cani, gli orari, la limonaia storica del Prà de la Fam.")
@@ -301,6 +309,8 @@ const io=new IntersectionObserver(entries=>{{
 }},{{threshold:.12,rootMargin:'0px 0px -60px 0px'}});
 document.querySelectorAll('.r').forEach(el=>io.observe(el));
 </script>
+
+{BANNER}
 
 <script src="i18n.js" defer></script>
 <script src="menu.js" defer></script>

@@ -150,8 +150,9 @@ PAGINA = f'''<!DOCTYPE html>
 <link rel="canonical" href="{SITO}/faq" />
 
 <meta name="description" content="{DESCR}"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/cormorant-garamond-v21-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/dm-sans-v17-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/fonts/caratteri-v1.css"/>
 
 <!-- ══ pdlf-dati ══ le stesse domande e le stesse risposte che si leggono qui sotto,
      in una forma che una macchina prende senza doverle ritagliare dalla pagina.

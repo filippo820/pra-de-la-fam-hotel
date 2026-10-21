@@ -89,6 +89,12 @@
   "es": "Aceptar",
   "fr": "Accepter"
  },
+ "Aggiornata al 21 ottobre 2026": {
+  "de": "Stand: 21. Oktober 2026",
+  "en": "Updated 21 October 2026",
+  "es": "Actualizada el 21 de octubre de 2026",
+  "fr": "Mise à jour le 21 octobre 2026"
+ },
  "Al Prà": {
   "de": "Al Prà",
   "en": "Al Prà",
@@ -1013,6 +1019,12 @@
   "en": "we are",
   "es": "estamos",
   "fr": "nous sommes"
+ },
+ "statistiche (solo con consenso)": {
+  "de": "Statistiken (nur mit Einwilligung)",
+  "en": "statistics (only with consent)",
+  "es": "estadísticas (solo con consentimiento)",
+  "fr": "statistiques (uniquement avec consentement)"
  },
  "← Torna al sito": {
   "de": "← Zurück zur Website",

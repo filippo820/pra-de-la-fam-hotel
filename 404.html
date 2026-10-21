@@ -10,8 +10,9 @@
      cercherebbe /it_IT/qualcosa/di/img/logo.png e darebbe un altro 404.
      Niente Analytics e niente banner: la pagina non deposita nulla. -->
 <meta name="robots" content="noindex"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/cormorant-garamond-v21-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/dm-sans-v17-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/fonts/caratteri-v1.css"/>
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--ink:#0b1520;--mid:#2e4a62;--steel:#4a6580;--bone:#f7f4ef;--gold:#b8934a;--white:#fff;
   --gold-testo:#7d6331;    /* 5.17 su crema */
@@ -61,7 +62,7 @@ footer{border-top:1px solid rgba(11,21,32,.1);padding:22px 24px 30px;text-align:
     <p class="contatti"><span data-i18n="t62c39c3b45">Oppure chiamaci:</span> <a href="tel:+390365799890">0365 799890</a> · <a href="mailto:info@alpradelafam.com">info@alpradelafam.com</a></p>
   </main>
 </div>
-<footer>FAM S.r.l. · Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · P.IVA 03375820986</footer>
+<footer data-i18n="t3a91006922">FAM S.r.l. · Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · P.IVA 03375820986</footer>
 <script src="/i18n.js" defer></script>
 </body>
 </html>

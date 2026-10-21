@@ -36,9 +36,9 @@ _i = _cd.index("<!-- ══ pdlf-analytics ══ banner consenso")
 _f = _cd.rindex("</script>", _i, _cd.index('<script src="i18n.js"', _i)) + len("</script>")
 BANNER = _cd[_i:_f]
 
-TITOLO = "Domande frequenti — Prà de la Fam · Hotel sul Lago di Garda · Tignale"
-DESCR = ("Le domande che ci fanno ogni giorno alla reception: come si arriva sulla Gardesana, "
-         "il parcheggio, la spiaggia, i cani, gli orari, la limonaia storica del Prà de la Fam.")
+TITOLO = "Domande frequenti: arrivo, spiaggia, cani | Prà de la Fam"
+DESCR = ("Le domande che ci fanno alla reception: come si arriva sulla Gardesana, il parcheggio, "
+         "la spiaggia, i cani, gli orari e la limonaia storica del Prà de la Fam.")
 
 # ── JSON-LD: FAQPage + il filo verso la struttura e le briciole
 faq_nodi = []

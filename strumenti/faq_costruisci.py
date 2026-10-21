@@ -249,6 +249,7 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 </head>
 <body>
 
+<header>
 <nav>
   <a href="index.html" class="nav-logo">
     <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam"/>
@@ -257,7 +258,9 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
   <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
   <a data-i18n="{k('Prenota →')}" href="{BOOK}" target="_blank" class="nav-cta">Prenota →</a>
 </nav>
+</header>
 
+<main>
 <section class="faq-hero">
   <div class="faq-hbg" style="background-image:url(img/limonaia-aerea.jpg)"></div>
   <div class="faq-hov"></div>
@@ -284,7 +287,9 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
   </div>
 </div>
 
-<div class="room-footer-strip">
+</main>
+
+<footer class="room-footer-strip">
   <p data-i18n="{k('Prà de la Fam —<br><em>Lago di Garda</em>')}" class="rfs-text">Prà de la Fam —<br><em>Lago di Garda</em></p>
   <div class="rfs-links">
     <a data-i18n="{k('Camere')}" href="index.html#hotel" class="rfs-link">Camere</a>
@@ -294,7 +299,7 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
     <a href="faq.html" class="rfs-link">FAQ</a>
   </div>
   <a data-i18n="{k('Prenota ora →')}" href="{BOOK}" target="_blank" class="rfs-book">Prenota ora →</a>
-</div>
+</footer>
 
 <script>
 /* Le schede si aprono da sole se si arriva con l'ancora nella barra

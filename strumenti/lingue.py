@@ -26,6 +26,10 @@ COSA FA, pagina per pagina e lingua per lingua:
     pdlf-lingue, scritto anche nella pagina italiana: e' l'unica modifica
     che questo script fa alle sorgenti. Canonical, og:url, og:locale e gli
     indirizzi del JSON-LD puntano alla pagina nella sua lingua;
+  · sitemap.xml: tutte le pagine indicizzabili nelle cinque lingue, ognuna
+    con le sue alternative. lastmod resta quello di prima finche' la pagina
+    non cambia: una data che si sposta a ogni passata non dice niente a
+    nessuno, e Google smette di crederci;
   · cio' che il dizionario non copre — <title>, description, anteprime
     social, alt, aria-label e i testi del JSON-LD — si traduce da
     trad_meta.json; se li' non c'e', da un frammento gia' tradotto
@@ -38,7 +42,7 @@ COSA FA, pagina per pagina e lingua per lingua:
 Ordine della procedura: marca.py → raccogli.py → riaggancia.py → raccogli.py
 → costruisci.py → lingue.py → kb.py
 """
-import json, re, sys, pathlib, html as H
+import json, re, sys, datetime, pathlib, html as H
 from html.parser import HTMLParser
 
 BASE = pathlib.Path(__file__).resolve().parent.parent
@@ -283,7 +287,38 @@ def pagina(nome, lingua):
     return src, n
 
 
+PRIORITA = {"index": "1.0", "faq": "0.8", "cookie": "0.3", "privacy": "0.3"}   # le altre 0.9
+
+
+def sitemap(cambiate):
+    """Riscrive sitemap.xml. `cambiate`: le (pagina, lingua) riscritte in questa passata."""
+    f = BASE / "sitemap.xml"
+    prima = dict(re.findall(r'<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>', f.read_text(encoding="utf-8")))
+    oggi = datetime.date.today().isoformat()
+    righe = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<!-- Scritta da strumenti/lingue.py: ogni pagina nelle cinque lingue, con le sue alternative. -->',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for nome in ["index"] + [p for p in PAGINE if p != "index"]:
+        if nome == "404":
+            continue
+        # se cambia una traduzione, e' cambiata la pagina in tutte le lingue:
+        # la sorgente e' una sola
+        toccata = any((nome, l) in cambiate for l in TUTTE)
+        for lingua in TUTTE:
+            loc = assoluto(nome, lingua)
+            righe += ["  <url>", f"    <loc>{loc}</loc>",
+                      f"    <lastmod>{oggi if toccata or loc not in prima else prima[loc]}</lastmod>",
+                      f"    <priority>{PRIORITA.get(nome, '0.9')}</priority>"]
+            righe += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{assoluto(nome, l)}"/>' for l in TUTTE]
+            righe += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{assoluto(nome, "it")}"/>',
+                      "  </url>"]
+    righe.append("</urlset>")
+    f.write_text("\n".join(righe) + "\n", encoding="utf-8")
+    return sum(1 for r in righe if r == "  <url>")
+
+
 if __name__ == "__main__":
+    cambiate = set()
     # prima le sorgenti italiane: il blocco hreflang (la 404 non ha versioni da
     # dichiarare: non e' indicizzata e non ha un indirizzo suo)
     for nome in PAGINE:
@@ -294,6 +329,7 @@ if __name__ == "__main__":
         dopo = alternative(prima, nome)
         if dopo != prima:
             f.write_text(dopo, encoding="utf-8")
+            cambiate.add((nome, "it"))
     for lingua in LINGUE:
         cartella = BASE / lingua
         cartella.mkdir(exist_ok=True)
@@ -304,9 +340,13 @@ if __name__ == "__main__":
         totale = 0
         for nome in PAGINE:
             src, n = pagina(nome, lingua)
-            (cartella / f"{nome}.html").write_text(src, encoding="utf-8")
+            dove = cartella / f"{nome}.html"
+            if not dove.exists() or dove.read_text(encoding="utf-8") != src:
+                dove.write_text(src, encoding="utf-8")
+                cambiate.add((nome, lingua))
             totale += n
         print(f"  /{lingua}/  {len(PAGINE)} pagine, {totale} testi tradotti")
+    print(f"  sitemap.xml: {sitemap(cambiate)} indirizzi; pagine riscritte in questa passata: {len(cambiate)}")
     if MANCANTI:
         print(f"\n  ✗ {len(MANCANTI)} testi senza traduzione (restano in italiano):")
         for (t, l), dove in sorted(MANCANTI.items(), key=lambda x: (x[1], x[0][1])):

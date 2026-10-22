@@ -1,68 +1,719 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Scritta da strumenti/lingue.py: ogni pagina nelle cinque lingue, con le sue alternative. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alpradelafam.com/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/appartamento-bergamotto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-bergamotto"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/appartamento-bergamotto</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-bergamotto"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/appartamento-bergamotto</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-bergamotto"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/appartamento-bergamotto</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-bergamotto"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/appartamento-bergamotto</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-bergamotto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-bergamotto"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/appartamento-calamondino</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-calamondino"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/appartamento-calamondino</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-calamondino"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/appartamento-calamondino</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-calamondino"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/appartamento-calamondino</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-calamondino"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/appartamento-calamondino</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-calamondino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-calamondino"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/appartamento-clementina</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-clementina"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/appartamento-clementina</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-clementina"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/appartamento-clementina</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-clementina"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/appartamento-clementina</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-clementina"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/appartamento-clementina</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-clementina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-clementina"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/appartamento-kumquat</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-kumquat"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/appartamento-kumquat</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-kumquat"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/appartamento-kumquat</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-kumquat"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/appartamento-kumquat</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-kumquat"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/appartamento-kumquat</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-kumquat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-kumquat"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/appartamento-pomelo</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-pomelo"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/appartamento-pomelo</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-pomelo"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/appartamento-pomelo</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-pomelo"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/appartamento-pomelo</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-pomelo"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/appartamento-pomelo</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-pomelo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-pomelo"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/camera-doppia</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/camera-doppia</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/camera-doppia</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/camera-doppia</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/camera-doppia</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/camera-doppia-economy</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia-economy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/camera-doppia-economy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia-economy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/camera-doppia-economy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia-economy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/camera-doppia-economy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia-economy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/camera-doppia-economy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-doppia-economy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-doppia-economy"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/camera-familiare</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-familiare"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/camera-familiare</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-familiare"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/camera-familiare</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-familiare"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/camera-familiare</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-familiare"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/camera-familiare</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-familiare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-familiare"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/camera-tripla</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-tripla"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/camera-tripla</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-tripla"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/camera-tripla</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-tripla"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/camera-tripla</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-tripla"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/camera-tripla</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/camera-tripla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/camera-tripla"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/cookie</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/cookie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/cookie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/cookie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/cookie"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/cookie</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/cookie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/cookie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/cookie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/cookie"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/cookie</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/cookie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/cookie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/cookie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/cookie"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/cookie</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/cookie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/cookie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/cookie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/cookie"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/cookie</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/cookie"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/cookie"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/cookie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/cookie"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/cookie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/cookie"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/faq</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/faq"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/faq</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/faq"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/faq</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/faq"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/faq</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/faq"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/faq</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/faq"/>
   </url>
   <url>
     <loc>https://alpradelafam.com/privacy</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/en/privacy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/de/privacy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/fr/privacy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://alpradelafam.com/es/privacy</loc>
+    <lastmod>2026-10-22</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://alpradelafam.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/privacy"/>
   </url>
 </urlset>

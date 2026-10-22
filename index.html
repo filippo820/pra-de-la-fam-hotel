@@ -26,24 +26,35 @@
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Prà de la Fam — Hotel, Appartamenti e Limonaia storica sul Lago di Garda · Tignale</title>
+<!-- l'apertura e' la prima cosa grande che si vede (LCP), ed e' uno sfondo CSS:
+     il browser la scoprirebbe solo dopo aver letto il foglio di stile. Qui la si
+     chiede subito, con la precedenza. WebP: 188 KB contro i 326 del JPG, che resta
+     come ripiego per i browser che non capiscono image-set. -->
+<link rel="preload" as="image" href="img/hero-bg.webp" type="image/webp" fetchpriority="high"/>
+<title>Hotel &amp; Appartamenti Tignale, Lago di Garda | Prà de la Fam</title>
 <!-- ══ pdlf-social ══ anteprima quando il link viene condiviso in chat.
      Chi la genera NON esegue il JavaScript: questi testi restano in italiano
      anche per un visitatore che vede il sito in tedesco. -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prà de la Fam" />
 <meta property="og:locale" content="it_IT" />
-<meta property="og:title" content="Prà de la Fam — Hotel, Appartamenti e Limonaia storica sul Lago di Garda · Tignale" />
-<meta property="og:description" content="Hotel e appartamenti direttamente sul Lago di Garda a Tignale. Spiaggia a venti metri e la limonaia storica più a nord d&#x27;Europa, attiva e visitabile. Prenota ora." />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:title" content="Hotel &amp; Appartamenti Tignale, Lago di Garda | Prà de la Fam" />
+<meta property="og:description" content="Hotel e appartamenti sul Lago di Garda a Tignale: spiaggia a 20 metri, limonaia storica visitabile e colazione in veranda. Prenota direttamente." />
 <meta property="og:url" content="https://alpradelafam.com/" />
 <meta property="og:image" content="https://alpradelafam.com/og/index.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Prà de la Fam — Hotel, Appartamenti e Limonaia storica sul Lago di Garda · Tignale" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Il Prà de la Fam dall&#x27;alto: la spiaggia sul Lago di Garda, l&#x27;hotel sulla Gardesana e le terrazze della limonaia" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Prà de la Fam — Hotel, Appartamenti e Limonaia storica sul Lago di Garda · Tignale" />
-<meta name="twitter:description" content="Hotel e appartamenti direttamente sul Lago di Garda a Tignale. Spiaggia a venti metri e la limonaia storica più a nord d&#x27;Europa, attiva e visitabile. Prenota ora." />
+<meta name="twitter:title" content="Hotel &amp; Appartamenti Tignale, Lago di Garda | Prà de la Fam" />
+<meta name="twitter:description" content="Hotel e appartamenti sul Lago di Garda a Tignale: spiaggia a 20 metri, limonaia storica visitabile e colazione in veranda. Prenota direttamente." />
 <meta name="twitter:image" content="https://alpradelafam.com/og/index.jpg" />
+<meta name="twitter:image:alt" content="Il Prà de la Fam dall&#x27;alto: la spiaggia sul Lago di Garda, l&#x27;hotel sulla Gardesana e le terrazze della limonaia" />
 <link rel="canonical" href="https://alpradelafam.com/" />
 
 <!-- ══ pdlf-dati ══ chi siamo, in una forma che una macchina legge senza doverlo
@@ -138,8 +149,8 @@
       ],
       "sameAs": [
         "https://www.facebook.com/pradelafam/",
-        "http://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html",
-        "http://www.ecomuseopradelafam.com",
+        "https://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html",
+        "https://ecomuseopradelafam.com/",
         "https://pradelafam.shop"
       ],
       "parentOrganization": {
@@ -763,7 +774,7 @@
         "Limonaia di Prà de la Fam"
       ],
       "description": "La limonaia più grande e la più a nord d'Europa, sulla riva bresciana del Lago di Garda, dentro la proprietà dell'hotel Prà de la Fam. Restaurata nel 1985 con l'intervento della Comunità Montana del Parco Alto Garda Bresciano, conta ottanta piante adulte e resta di proprietà della famiglia Parisini. È un ecomuseo visitabile da Pasqua a ottobre: la visita guidata racconta la storia delle limonaie del Garda e si chiude con una degustazione dei prodotti della casa — limoni sotto sale, limoncino, sciroppo di limone e olio agrumato.",
-      "url": "http://www.ecomuseopradelafam.com",
+      "url": "https://ecomuseopradelafam.com/",
       "image": "https://alpradelafam.com/img/limonaia-aerea.jpg",
       "geo": {
         "@type": "GeoCoordinates",
@@ -836,9 +847,10 @@
 }
 </script>
 
-<meta name="description" content="Hotel e appartamenti direttamente sul Lago di Garda a Tignale. Spiaggia a venti metri e la limonaia storica più a nord d'Europa, attiva e visitabile. Prenota ora."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<meta name="description" content="Hotel e appartamenti sul Lago di Garda a Tignale: spiaggia a 20 metri, limonaia storica visitabile e colazione in veranda. Prenota direttamente."/>
+<link rel="preload" href="/fonts/cormorant-garamond-v21-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/dm-sans-v17-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/fonts/caratteri-v1.css"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -969,7 +981,7 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .hl{opacity:0;transform:translateY(40px);animation:fadeup .9s var(--ease) .3s forwards}
 .hr-box{opacity:0;transform:translateY(40px);animation:fadeup .9s var(--ease) .5s forwards;max-width:360px}
 @keyframes fadeup{to{opacity:1;transform:none}}
-.htag{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#ffffff;margin-bottom:1.1rem;display:flex;align-items:center;gap:.65rem}
+.htag{font-weight:400;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#ffffff;margin-bottom:1.1rem;display:flex;align-items:center;gap:.65rem}
 .htag::before{content:'';display:block;width:26px;height:1px;background:var(--gold2)}
 .hh1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.8rem,10vw,8.5rem);font-weight:300;line-height:.91;color:var(--white);letter-spacing:-.018em}
 .hh1 em{font-style:italic;color:var(--gold3)}
@@ -1453,9 +1465,10 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 </div>
 
 <!-- NAV -->
+<header>
 <nav id="nav">
   <a class="nav-logo" href="#hero" style="display:flex;align-items:center;gap:.4rem">
-    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam"/>
+    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
     <sup style="font-size:.55rem;font-family:'DM Sans',sans-serif;color:var(--steel);letter-spacing:.05em;margin-top:-1rem">®</sup><span style="display:block;font-family:'DM Sans',sans-serif;font-size:.6rem;font-weight:400;color:var(--steel);letter-spacing:.08em;text-transform:uppercase;margin-top:.1rem">Hotel &amp; Appartamenti</span>
   </a>
   <div class="nav-center">
@@ -1468,7 +1481,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <a data-i18n="t55de887092" href="#shop">Shop</a>
     <a data-i18n="t1afd65f4cd" href="#contatti">Contatti</a>
     <a data-i18n="t888a00e0c1" href="#come-arrivare">Come arrivare</a>
-    <a href="faq.html">FAQ</a>
+    <a href="/faq">FAQ</a>
   </div>
   <div class="nav-right">
     <button class="lang-btn active" onclick="setLang('it')">IT</button><span class="lang-sep">|</span>
@@ -1479,22 +1492,24 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="nav-cta" id="nav-book">Prenota →</a>
   </div>
 </nav>
+</header>
 
 <!-- HERO -->
+<main>
 <section class="hero" id="hero">
-  <div class="hbg" id="hbg" style="background-image:url('img/hero-bg.jpg')"></div>
+  <div class="hbg" id="hbg" style="background-image:url('img/hero-bg.jpg');background-image:image-set(url('img/hero-bg.webp') type('image/webp'),url('img/hero-bg.jpg') type('image/jpeg'))"></div>
   <div class="hov"></div>
   
   <div class="hc">
     <div class="hl">
-      <p data-i18n="t085726e29d" class="htag">Tignale · Via Gardesana, 7 · Porto di Tignale · Lago di Garda</p>
+      <h1 data-i18n="tb120312d4b" class="htag">Hotel e appartamenti sul Lago di Garda, a Tignale</h1>
       <!-- meteo: riempito da meteo.js dopo il caricamento.
            Sta QUI, subito sotto l'indirizzo, perche' sul telefono deve
            stare nel flusso: appoggiato sopra il titolo urtava le lettere
            in quattro lingue su cinque. Su schermo grande torna assoluto
            e questa posizione non conta. -->
       <div id="pdlf-meteo" hidden role="complementary"></div>
-      <h1 data-i18n="t87da551950" class="hh1">Benvenuti<br><em>Al Prà</em><br>de la Fam.</h1>
+      <p data-i18n="t87da551950" class="hh1">Benvenuti<br><em>Al Prà</em><br>de la Fam.</p>
     </div>
     <div class="hr-box">
       <p data-i18n="te8c99f06b1" class="hdesc" id="hero-desc">Hotel e Appartamenti direttamente sul Lago di Garda, dentro la limonaia storica più a nord d'Europa. Una cascata di roccia alle spalle, il lago blu davanti — dove il tempo si ferma.</p>
@@ -1527,7 +1542,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
             <img src="img/hotel-esterno.jpg"
                  alt="L'Hotel Prà de la Fam sulla Gardesana, con la terrazza affacciata sul lago"
                  style="width:100%;height:100%;object-fit:cover;display:block;border-radius:2px"
-                 loading="lazy"/>
+                 loading="lazy" width="1200" height="800"/>
           </div>
     </div>
     <div class="r d2">
@@ -1545,9 +1560,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   <div style="margin-top:4rem">
     <h3 data-i18n="t5ff2e24a05" class="r" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300;color:var(--ink);margin-bottom:2rem">Le nostre <em style="font-style:italic;color:var(--gold-titolo)">camere</em></h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem" class="r d1">
-      <a href="camera-doppia.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
+      <a href="/camera-doppia" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
         <div style="aspect-ratio:4/3;overflow:hidden;position:relative">
-          <img src="img/camera-doppia.jpg" alt="Camera Doppia" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/>
+          <img src="img/camera-doppia.jpg" alt="Camera Doppia: letto matrimoniale, pareti gialle e due finestre con tende bianche" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="900"/>
         </div>
         <div style="padding:1.4rem 1.6rem 1.7rem">
           <p data-i18n="t4da9c9af96" style="font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);font-weight:500;margin-bottom:.35rem">Camera</p>
@@ -1556,9 +1571,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
           <div data-i18n="t8086d463dc" style="display:flex;gap:.5rem;flex-wrap:wrap"><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">WiFi</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">Bagno privato</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">Colazione</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">A/C</span></div>
         </div>
       </a>
-      <a href="camera-doppia-economy.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
+      <a href="/camera-doppia-economy" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
         <div style="aspect-ratio:4/3;overflow:hidden;position:relative">
-          <img src="img/camera-doppia-economy.jpg" alt="Camera Doppia Economy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/>
+          <img src="img/camera-doppia-economy.jpg" alt="Camera Doppia Economy: letto matrimoniale in ferro battuto e finestra con tenda rosa" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="900"/>
         </div>
         <div style="padding:1.4rem 1.6rem 1.7rem">
           <p data-i18n="t4da9c9af96" style="font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);font-weight:500;margin-bottom:.35rem">Camera</p>
@@ -1567,9 +1582,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
           <div data-i18n="t38b0016ada" style="display:flex;gap:.5rem;flex-wrap:wrap"><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">WiFi</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">Bagno privato</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">Colazione</span></div>
         </div>
       </a>
-      <a href="camera-tripla.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
+      <a href="/camera-tripla" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
         <div style="aspect-ratio:4/3;overflow:hidden;position:relative">
-          <img src="img/camera-tripla.jpg" alt="Camera Tripla" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/>
+          <img src="img/camera-tripla.jpg" alt="Camera Tripla: tre letti, parete azzurra e tende blu a motivi" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="800"/>
         </div>
         <div style="padding:1.4rem 1.6rem 1.7rem">
           <p data-i18n="t4da9c9af96" style="font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo);font-weight:500;margin-bottom:.35rem">Camera</p>
@@ -1578,9 +1593,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
           <div data-i18n="t9363a07ad5" style="display:flex;gap:.5rem;flex-wrap:wrap"><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">WiFi</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">3 posti letto</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">Bagno privato</span><span style="font-size:.6rem;letter-spacing:.08em;background:var(--warm);color:var(--steel);padding:.22rem .65rem">Colazione</span></div>
         </div>
       </a>
-      <a href="camera-familiare.html" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
+      <a href="/camera-familiare" style="display:block;text-decoration:none;color:inherit;background:var(--white);box-shadow:var(--shadow-float);overflow:hidden;border-radius:2px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='var(--shadow-hover)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-float)'">
         <div style="aspect-ratio:4/3;overflow:hidden;position:relative">
-          <img src="img/camera-familiare.jpg" alt="Camera Familiare" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/>
+          <img src="img/camera-familiare.jpg" alt="Camera Familiare: letto matrimoniale e finestra luminosa sul pavimento in graniglia" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="800"/>
           <span style="position:absolute;top:.8rem;left:.8rem;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:.26rem .7rem">Famiglie</span>
         </div>
         <div style="padding:1.4rem 1.6rem 1.7rem">
@@ -1602,45 +1617,45 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   </div>
   <div class="apt-scroll-track r d2" id="apt-track">
       <article class="apt wide">
-        <div class="apt-img" style="overflow:hidden"><img src="img/clementina.jpg" alt="Appartamento Clementina" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
+        <div class="apt-img" style="overflow:hidden"><img src="img/clementina.jpg" alt="Appartamento Clementina: soggiorno con travi in legno, cucina e finestre sulla parete di roccia" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="800"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t73df17558b" href="appartamento-clementina.html">Clementina</a></h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t73df17558b" href="/appartamento-clementina">Clementina</a></h3>
           <p data-i18n="t36cd9798d3" class="apt-desc">Cucina attrezzata, arredamento in legno. Vista lago e giardino.</p>
           <div data-i18n="t6bafccbf5c" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Cucina</span><span class="apt-feat">Giardino</span><span class="apt-feat">A/C</span></div>
           <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
       <article class="apt">
-        <div class="apt-img" style="overflow:hidden"><img src="img/calamondino.jpg" alt="Appartamento Calamondino" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
+        <div class="apt-img" style="overflow:hidden"><img src="img/calamondino.jpg" alt="Appartamento Calamondino: monolocale con muri in pietra, tavolo da pranzo e letto davanti alle vetrate" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="799"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t24e1b918b6" href="appartamento-calamondino.html">Calamondino</a></h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t24e1b918b6" href="/appartamento-calamondino">Calamondino</a></h3>
           <p data-i18n="tb6c4ca4ea6" class="apt-desc">Ampie vetrate sul lago, cucina attrezzata, giardino con scoperto privato. Arredamento in legno.</p>
           <div data-i18n="t6bafccbf5c" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Cucina</span><span class="apt-feat">Giardino</span><span class="apt-feat">A/C</span></div>
           <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
       <article class="apt">
-        <div class="apt-img" style="overflow:hidden"><img src="img/kumquat.jpg" alt="Appartamento Kumquat" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
+        <div class="apt-img" style="overflow:hidden"><img src="img/kumquat.jpg" alt="Appartamento Kumquat: letto matrimoniale e zona pranzo davanti alle vetrate sul lago" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="805"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t0f1cc1941b" href="appartamento-kumquat.html">Kumquat</a></h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t0f1cc1941b" href="/appartamento-kumquat">Kumquat</a></h3>
           <p data-i18n="tf5795ea6fe" class="apt-desc">Vista da Malcesine a Sirmione, giardino privato con sdraio. Angolo cottura, bagno con doccia.</p>
           <div data-i18n="t6bafccbf5c" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Cucina</span><span class="apt-feat">Giardino</span><span class="apt-feat">A/C</span></div>
           <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
       <article class="apt">
-        <div class="apt-img" style="overflow:hidden"><img src="img/pomelo.jpg" alt="Appartamento Pomelo" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge">2 pers.</span></div>
+        <div class="apt-img" style="overflow:hidden"><img src="img/pomelo.jpg" alt="Appartamento Pomelo: camera matrimoniale sotto il soffitto a travi di legno" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="803"/><span class="apt-badge">2 pers.</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="tc8fa544fbc" href="appartamento-pomelo.html">Pomelo</a></h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="tc8fa544fbc" href="/appartamento-pomelo">Pomelo</a></h3>
           <p data-i18n="td122cacdeb" class="apt-desc">L'antica dimora del giardiniere. Ingresso privato, vista lago, angolo cottura. A pochi passi dalla spiaggia.</p>
           <div data-i18n="t8e20ae8c0a" class="apt-feats"><span class="apt-feat">Vista lago</span><span class="apt-feat">Ingresso privato</span><span class="apt-feat">Angolo cottura</span><span class="apt-feat">A/C</span></div>
           <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="apt-book">Prenota →</a>
         </div>
       </article>
       <article class="apt wide" style="cursor:default;opacity:.55;filter:grayscale(.4)">
-        <div class="apt-img" style="overflow:hidden"><img src="img/bergamotto.jpg" alt="Appartamento Bergamotto" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy"/><span class="apt-badge" style="background:var(--steel)">Non disponibile</span></div>
+        <div class="apt-img" style="overflow:hidden"><img src="img/bergamotto.jpg" alt="Appartamento Bergamotto: camera sotto l&#x27;arco in pietra, con la scala in ferro verso la mansarda" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s" loading="lazy" width="1200" height="1801"/><span class="apt-badge" style="background:var(--steel)">Non disponibile</span></div>
         <div class="apt-body">
-          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t3579b6ebf9" href="appartamento-bergamotto.html">Bergamotto</a></h3>
+          <p data-i18n="t7d590f39bd" class="apt-cat">Appartamento</p><h3 class="apt-name"><a class="apt-link" data-i18n="t3579b6ebf9" href="/appartamento-bergamotto">Bergamotto</a></h3>
           <p data-i18n="t861e60c1c5" class="apt-desc">Su due livelli: camera matrimoniale e bagno al piano terra, zona giorno con cucina in mansarda. Interni in pietra a vista con scala a sbalzo caratteristica.</p>
           <div data-i18n="t376351c53f" class="apt-feats"><span class="apt-feat">A/C</span><span class="apt-feat">Cucina</span><span class="apt-feat">WiFi</span><span class="apt-feat">Letto matrimoniale</span></div>
           <span class="apt-book" style="background:var(--steel);cursor:default;opacity:.7">Non disponibile</span>
@@ -1660,12 +1675,12 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       <p data-i18n="te3f65a8ce9" class="lim-text">La Limonaia del Prà de la Fam è stata ristrutturata con l'intervento della Comunità Montana del Parco Alto Garda Bresciano nel 1985. Le 80 piante adulte compongono oggi l'Ecomuseo, visitabile da Pasqua ad Ottobre.</p>
       <p data-i18n="tfe6bf92cf4" class="lim-text">La proprietà resta della famiglia Parisini. Durante le visite guidate potrete conoscere la storia e le particolarità della limonaia e al termine una degustazione vi porterà alla scoperta dei prodotti: limoni sotto sale, limoncino, sciroppo di limone e olio agrumato.</p>
       <p data-i18n="tc63a6303e9" class="lim-text">Non è una limonaia ricostruita per la visita: è viva e in produzione, e dai suoi frutti nascono i limoni sotto sale, il limoncino e lo sciroppo che si assaggiano alla fine del giro.</p>
-      <a data-i18n="t0ce18bb3ab" href="http://www.ecomuseopradelafam.com" target="_blank" class="lim-btn">Visita ecomuseopradelafam.com →</a>
+      <a data-i18n="t0ce18bb3ab" href="https://ecomuseopradelafam.com/" target="_blank" class="lim-btn">Visita ecomuseopradelafam.com →</a>
     </div>
     <div class="r d2">
       <div class="lim-float-img">
         <!-- FOTO LIMONAIA: sostituisci con <img src="img/esterno-01.jpg" alt="Limonaia" loading="lazy"/> -->
-        <img src="img/limonaia-aerea.jpg" alt="Le terrazze della Limonaia del Prà de la Fam viste dall'alto, con il lago di Garda" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:2px" loading="lazy"/>
+        <img src="img/limonaia-aerea.jpg" alt="Le terrazze della Limonaia del Prà de la Fam viste dall'alto, con il lago di Garda" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:2px" loading="lazy" width="1800" height="1012"/>
       </div>
       <div class="lim-products">
         <div class="lim-prod"><div class="lim-prod-ico">🍋</div><div data-i18n="t91922be9e2" class="lim-prod-name">Limoni sotto sale</div><div data-i18n="tbfadec1a86" class="lim-prod-desc">Con peperoncino o pepe. Per insalate, pesce o carni crude</div></div>
@@ -1688,7 +1703,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
         <img src="img/territorio-aerea.jpg"
              alt="Il promontorio del Prà de la Fam sul lago di Garda, con la spiaggia e la strada gardesana"
              style="width:100%;height:clamp(260px,38vw,520px);object-fit:cover;object-position:center 62%;display:block"
-             loading="lazy"/>
+             loading="lazy" width="1800" height="1012"/>
       </div>
       <div class="sport-grid r d1">
     <div class="sport-c"><span class="sport-ico">🏄</span><h3 data-i18n="td0e7331b28" class="sport-name">Windsurf & Kitesurf</h3><p data-i18n="tb3879c037a" class="sport-desc">Il vento caratteristico del luogo permette agli amanti del surf, del kitesurf e della vela di divertirsi tutto il giorno.</p></div>
@@ -1717,9 +1732,9 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   </div>
   <div class="r d1" style="position:relative;border-radius:2px;overflow:visible;box-shadow:var(--shadow-float)" id="mapWrap" style="background-image:url('img/mappa_aerea.jpg');background-size:cover;background-position:center">
     <img src="img/mappa_aerea.jpg"
-         alt="Vista aerea Prà de la Fam"
-         style="width:100%;display:block;border-radius:2px;filter:brightness(0.95) saturate(1.08)"
-         id="mapImg"/>
+         alt="La proprietà del Prà de la Fam vista dall&#x27;alto: hotel, appartamenti, limonaia e spiaggia sul Lago di Garda"
+         style="width:100%;height:auto;display:block;border-radius:2px;filter:brightness(0.95) saturate(1.08)"
+         id="mapImg" width="1800" height="1012" loading="lazy"/>
 
     <!-- HOTEL -->
     <div class="map-pin" style="left:58.54%;top:62.3%;--mp-color:#b8934a"
@@ -1740,7 +1755,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div class="map-pin" style="left:21.87%;top:58.44%;--mp-color:#4a7c59"
          data-name="Limonaia · Ecomuseo" data-detail="L'unica limonaia attiva del Lago di Garda"
          data-cta="Scopri" data-color="#4a7c59"
-         data-href="http://www.ecomuseopradelafam.com" data-tip-side="right">
+         data-href="https://ecomuseopradelafam.com/" data-tip-side="right">
       <div class="map-pin-dot"></div>
     </div>
 
@@ -1748,7 +1763,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div class="map-pin" style="left:48.38%;top:56.46%;--mp-color:#C800B4"
          data-name="Pomelo" data-detail="Bilocale · Vista lago · A due passi dalla spiaggia"
          data-cta="Scopri" data-color="#C800B4"
-         data-href="appartamento-pomelo.html" data-tip-side="left">
+         data-href="/appartamento-pomelo" data-tip-side="left">
       <div class="map-pin-dot"></div>
     </div>
 
@@ -1756,7 +1771,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div class="map-pin" style="left:46.77%;top:33.93%;--mp-color:#E84040"
          data-name="Clementina" data-detail="Monolocale · Vista lago · Giardino"
          data-cta="Scopri" data-color="#E84040"
-         data-href="appartamento-clementina.html" data-tip-side="left">
+         data-href="/appartamento-clementina" data-tip-side="left">
       <div class="map-pin-dot"></div>
     </div>
 
@@ -1764,7 +1779,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div class="map-pin" style="left:46.77%;top:35.91%;--mp-color:#4A90D9"
          data-name="Calamondino" data-detail="Monolocale · Ampie vetrate · Vista lago"
          data-cta="Scopri" data-color="#4A90D9"
-         data-href="appartamento-calamondino.html" data-tip-side="left">
+         data-href="/appartamento-calamondino" data-tip-side="left">
       <div class="map-pin-dot"></div>
     </div>
 
@@ -1772,7 +1787,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div class="map-pin" style="left:46.77%;top:38.87%;--mp-color:#D4B800"
          data-name="Kumquat" data-detail="Monolocale · Vista lago · Giardino"
          data-cta="Scopri" data-color="#D4B800"
-         data-href="appartamento-kumquat.html" data-tip-side="left">
+         data-href="/appartamento-kumquat" data-tip-side="left">
       <div class="map-pin-dot"></div>
     </div>
 
@@ -1780,7 +1795,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <div class="map-pin" style="left:50.3%;top:43.9%;--mp-color:#E07820"
          data-name="Bergamotto" data-detail="Bilocale · Fino a 3 persone · Giardino riservato"
          data-cta="Scopri" data-color="#E07820"
-         data-href="appartamento-bergamotto.html" data-tip-side="left">
+         data-href="/appartamento-bergamotto" data-tip-side="left">
       <div class="map-pin-dot"></div>
     </div>
 
@@ -1902,10 +1917,10 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 <!-- INFO STRIP -->
 <div class="info-strip">
   <div class="info-grid">
-    <div class="info-c r"><span class="info-ico">📍</span><h4 class="info-title"><a class="info-link" data-i18n="t16f921ca52" href="https://maps.google.com/?q=Pra+de+la+Fam+Tignale+Lago+di+Garda" target="_blank" rel="noopener">Dove siamo</a></h4><p data-i18n="ta07451d53c" class="info-text">Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Sponda bresciana</p></div>
-    <div class="info-c r d1"><span class="info-ico">📞</span><h4 data-i18n="t1afd65f4cd" class="info-title">Contatti</h4><p class="info-text">Tel. <a class="info-diretto" href="tel:+390365799890">(+39) 0365 799890</a><br><a class="info-diretto" href="mailto:info@alpradelafam.com">info@alpradelafam.com</a></p></div>
-    <div class="info-c r d2"><span class="info-ico">🚗</span><h4 class="info-title"><a class="info-link" data-i18n="t888a00e0c1" href="#come-arrivare">Come arrivare</a></h4><p data-i18n="ta0fa0d69d8" class="info-text">Strada Gargnano–Riva del Garda. Parcheggio privato gratuito riservato ai clienti.</p></div>
-    <div class="info-c r d3"><span class="info-ico">🌿</span><h4 data-i18n="tf757da1422" class="info-title">La natura</h4><p data-i18n="t838f87a25f" class="info-text">Cascata di roccia alle spalle, lago e Monte Baldo di fronte. Limonaia attiva a due passi.</p></div>
+    <div class="info-c r"><span class="info-ico">📍</span><h3 class="info-title"><a class="info-link" data-i18n="t16f921ca52" href="https://maps.google.com/?q=Pra+de+la+Fam+Tignale+Lago+di+Garda" target="_blank" rel="noopener">Dove siamo</a></h3><p data-i18n="ta07451d53c" class="info-text">Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Sponda bresciana</p></div>
+    <div class="info-c r d1"><span class="info-ico">📞</span><h3 data-i18n="t1afd65f4cd" class="info-title">Contatti</h3><p class="info-text">Tel. <a class="info-diretto" href="tel:+390365799890">(+39) 0365 799890</a><br><a class="info-diretto" href="mailto:info@alpradelafam.com">info@alpradelafam.com</a></p></div>
+    <div class="info-c r d2"><span class="info-ico">🚗</span><h3 class="info-title"><a class="info-link" data-i18n="t888a00e0c1" href="#come-arrivare">Come arrivare</a></h3><p data-i18n="ta0fa0d69d8" class="info-text">Strada Gargnano–Riva del Garda. Parcheggio privato gratuito riservato ai clienti.</p></div>
+    <div class="info-c r d3"><span class="info-ico">🌿</span><h3 data-i18n="tf757da1422" class="info-title">La natura</h3><p data-i18n="t838f87a25f" class="info-text">Cascata di roccia alle spalle, lago e Monte Baldo di fronte. Limonaia attiva a due passi.</p></div>
   </div>
 </div>
 
@@ -1961,7 +1976,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       <div class="r d3"><p data-i18n="td96b889af3" class="cinfo-label">Seguici</p>
         <div class="footer-social">
           <a class="fs" href="https://www.facebook.com/pradelafam/" target="_blank" style="border-color:rgba(11,21,32,.2);color:var(--ink)">f</a>
-          <a class="fs" href="http://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html" target="_blank" style="border-color:rgba(11,21,32,.2);color:var(--ink)">★</a>
+          <a class="fs" href="https://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html" target="_blank" style="border-color:rgba(11,21,32,.2);color:var(--ink)">★</a>
           <a class="fs" href="mailto:info@alpradelafam.com" style="border-color:rgba(11,21,32,.2);color:var(--ink)">✉</a>
         </div>
       </div>
@@ -1981,15 +1996,17 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     
   </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div>
-      <img src="img/logo.png" alt="Prà de la Fam®" style="height:40px;width:auto;display:block;object-fit:contain;margin-bottom:.8rem;filter:brightness(0) invert(1)"/>
+      <img src="img/logo.png" alt="Prà de la Fam®" style="height:40px;width:auto;display:block;object-fit:contain;margin-bottom:.8rem;filter:brightness(0) invert(1)" width="266" height="132" loading="lazy"/>
       <p data-i18n="t96a929601b" class="footer-tagline">Hotel e Appartamenti sul Lago di Garda.<br>Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS)</p>
       <div class="footer-social">
         <a class="fs" href="https://www.facebook.com/pradelafam/" target="_blank">f</a>
-        <a class="fs" href="http://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html" target="_blank">★</a>
+        <a class="fs" href="https://www.tripadvisor.it/Hotel_Review-g664155-d1456982-Reviews-Al_Pra_Hotel_Appartamenti-Tignale_Province_of_Brescia_Lombardy.html" target="_blank">★</a>
         <a class="fs" href="mailto:info@alpradelafam.com">✉</a>
       </div>
     </div>
@@ -1997,18 +2014,18 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
       <p data-i18n="t251c5c5589" class="footer-col-title">Alloggi</p>
       <div class="footer-links">
         <a data-i18n="t294fe37686" href="#hotel">Hotel — 10 Camere</a>
-        <a data-i18n="te292d68d63" href="appartamento-bergamotto.html">App. Bergamotto</a>
-        <a data-i18n="t7494b2bbce" href="appartamento-calamondino.html">App. Calamondino</a>
-        <a data-i18n="t1d07da6684" href="appartamento-clementina.html">App. Clementina</a>
-        <a data-i18n="td1f30cb50f" href="appartamento-kumquat.html">App. Kumquat</a>
-        <a data-i18n="t839b196b5c" href="appartamento-pomelo.html">App. Pomelo</a>
+        <a data-i18n="te292d68d63" href="/appartamento-bergamotto">App. Bergamotto</a>
+        <a data-i18n="t7494b2bbce" href="/appartamento-calamondino">App. Calamondino</a>
+        <a data-i18n="t1d07da6684" href="/appartamento-clementina">App. Clementina</a>
+        <a data-i18n="td1f30cb50f" href="/appartamento-kumquat">App. Kumquat</a>
+        <a data-i18n="t839b196b5c" href="/appartamento-pomelo">App. Pomelo</a>
       </div>
     </div>
     <div>
       <p data-i18n="tb4aad9f0d8" class="footer-col-title">Scopri</p>
       <div class="footer-links">
         <a data-i18n="tabc17b94c9" href="#limonaia">La Limonaia · Ecomuseo</a>
-        <a data-i18n="tbb0ac93490" href="http://www.ecomuseopradelafam.com" target="_blank">ecomuseopradelafam.com</a>
+        <a data-i18n="tbb0ac93490" href="https://ecomuseopradelafam.com/" target="_blank">ecomuseopradelafam.com</a>
         <a data-i18n="t3ba43a112b" href="#territorio">Territorio & Sport</a>
         <a data-i18n="td13b47f57d" href="#shop">Bottega del Prà</a>
         <a data-i18n="t8df01bf440" href="https://www.amazon.it/s?k=pra+de+la+fam" target="_blank">Amazon Merch</a>
@@ -2020,14 +2037,14 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
         <a href="tel:+390365799890">(+39) 0365 799890</a>
         <a href="mailto:info@alpradelafam.com">info@alpradelafam.com</a>
         <a data-i18n="t888a00e0c1" href="#come-arrivare">Come arrivare</a>
-        <a data-i18n="t51b9fc85e9" href="faq.html">Domande frequenti</a>
+        <a data-i18n="t51b9fc85e9" href="/faq">Domande frequenti</a>
         <a data-i18n="tff12d938aa" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank">Prenota online</a>
-        <a data-i18n="te6e178ccc8" href="cookie.html">Cookie Policy</a>
+        <a data-i18n="te6e178ccc8" href="/cookie">Cookie Policy</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy" style="margin-right:14px"><a data-i18n="tcf01481f62" href="privacy.html" style="color:inherit">Privacy</a> · <a data-i18n="te4f81994fe" href="cookie.html" style="color:inherit">Cookie</a></span><span class="footer-copy">© 2026 FAM S.r.l. · Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · P.IVA 03375820986</span><span data-i18n="tcd38f168ec" class="footer-copy" style="flex-basis:100%">Prà de la Fam® è un marchio registrato in Italia da FAM S.r.l.</span>
+    <span class="footer-copy" style="margin-right:14px"><a data-i18n="tcf01481f62" href="/privacy" style="color:inherit">Privacy</a> · <a data-i18n="te4f81994fe" href="/cookie" style="color:inherit">Cookie</a></span><span class="footer-copy">© 2026 FAM S.r.l. · Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · P.IVA 03375820986</span><span data-i18n="tcd38f168ec" class="footer-copy" style="flex-basis:100%">Prà de la Fam® è un marchio registrato in Italia da FAM S.r.l.</span>
     <div class="footer-lang">
       <button class="flb active" onclick="setLang('it')">IT</button>
       <button class="flb" onclick="setLang('en')">EN</button>
@@ -2261,7 +2278,7 @@ document.querySelectorAll('.r').forEach(el=>_io.observe(el));
       <h2 data-i18n="t27c22ff3e6">Cookie &amp; Privacy</h2>
       <p data-i18n="t486b047c5e">Usiamo cookie analitici per capire come viene usato il sito e migliorarlo.
          Nessun dato viene ceduto a terzi per scopi pubblicitari.</p>
-      <p style="margin-top:9px;font-size:.82rem"><a href="privacy.html" data-i18n="tb5f5fd5232">Informativa privacy</a> &nbsp;·&nbsp; <a href="cookie.html" data-i18n="tf36b5f7ed3">Cookie policy</a></p>
+      <p style="margin-top:9px;font-size:.82rem"><a href="/privacy" data-i18n="tb5f5fd5232">Informativa privacy</a> &nbsp;·&nbsp; <a href="/cookie" data-i18n="tf36b5f7ed3">Cookie policy</a></p>
     </div>
     <div class="pdlf-actions">
       <button data-i18n="tab8585e7c5" class="pdlf-btn pdlf-btn-yes" onclick="pdlfConsenso(true)">Accetta</button>

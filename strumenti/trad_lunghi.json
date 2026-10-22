@@ -347,6 +347,12 @@
   "es": "Explora la propiedad: hotel, apartamentos, limonaia, senderos y aparcamiento. Pasa por encima de los puntos para ver los detalles.",
   "fr": "Explorez la propriété : hôtel, appartements, limonaia, sentiers et parking. Survolez les points pour découvrir les détails."
  },
+ "Fino al 21 ottobre 2026 arrivavano dai server di Google, che vedevano anche per questo il tuo indirizzo IP. Ora stanno sul nostro server: per mostrarli non si contatta nessun altro.": {
+  "de": "Bis zum 21. Oktober 2026 kamen sie von den Servern von Google, die dadurch auch Ihre IP-Adresse sahen. Jetzt liegen sie auf unserem Server: Um sie anzuzeigen, wird niemand sonst kontaktiert.",
+  "en": "Until 21 October 2026 they came from Google's servers, which could therefore also see your IP address. Now they are on our own server: nobody else is contacted to display them.",
+  "es": "Hasta el 21 de octubre de 2026 llegaban desde los servidores de Google, que por ello veían también tu dirección IP. Ahora están en nuestro servidor: para mostrarlas no se contacta a nadie más.",
+  "fr": "Jusqu'au 21 octobre 2026, elles provenaient des serveurs de Google, qui voyaient donc aussi votre adresse IP. Elles sont désormais sur notre serveur : aucun autre service n'est contacté pour les afficher."
+ },
  "Fondato nel 1912, 18 buche di grande tradizione tra Gargnano e Toscolano Maderno. Terzo golf club in Italia.": {
   "de": "1912 gegründet, 18 traditionsreiche Löcher zwischen Gargnano und Toscolano Maderno. Der drittälteste Golfclub Italiens.",
   "en": "Founded in 1912, 18 holes of great tradition between Gargnano and Toscolano Maderno. The third golf club in Italy.",
@@ -430,6 +436,12 @@
   "en": "Hotel and Apartments on Lake Garda.",
   "es": "Hotel y apartamentos en el lago de Garda.",
   "fr": "Hôtel et appartements sur le lac de Garde."
+ },
+ "I caratteri tipografici sono serviti dal nostro sito.": {
+  "de": "Die Schriftarten werden von unserer eigenen Website geladen.",
+  "en": "The typefaces are served by our own website.",
+  "es": "Las tipografías se sirven desde nuestro propio sitio.",
+  "fr": "Les polices de caractères sont servies par notre propre site."
  },
  "I sentieri dimenticati": {
   "de": "Die vergessenen Pfade",

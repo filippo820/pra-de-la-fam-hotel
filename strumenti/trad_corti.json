@@ -89,6 +89,12 @@
   "es": "Aceptar",
   "fr": "Accepter"
  },
+ "Aggiornata al 21 ottobre 2026": {
+  "de": "Stand: 21. Oktober 2026",
+  "en": "Updated 21 October 2026",
+  "es": "Actualizada el 21 de octubre de 2026",
+  "fr": "Mise à jour le 21 octobre 2026"
+ },
  "Al Prà": {
   "de": "Al Prà",
   "en": "Al Prà",
@@ -437,6 +443,12 @@
   "es": "Fabuloso",
   "fr": "Fabuleux"
  },
+ "Forse l'indirizzo è cambiato con il nuovo sito, o c'è un errore di battitura. Da qui si torna dove serve.": {
+  "de": "Vielleicht hat sich die Adresse mit der neuen Website geändert, oder es gibt einen Tippfehler. Von hier aus geht es dorthin zurück, wo Sie hinwollten.",
+  "en": "The address may have changed with the new website, or there may be a typo. From here you can get back to what you need.",
+  "es": "Quizá la dirección ha cambiado con la nueva web, o hay un error tipográfico. Desde aquí se vuelve adonde hace falta.",
+  "fr": "L'adresse a peut-être changé avec le nouveau site, ou il y a une faute de frappe. D'ici, vous retrouvez ce qu'il vous faut."
+ },
  "Frigo vuoto a disposizione": {
   "de": "Leerer Kühlschrank verfügbar",
   "en": "Empty fridge available",
@@ -484,6 +496,12 @@
   "en": "Hotel & Apartments",
   "es": "Hotel y apartamentos",
   "fr": "Hôtel & Appartements"
+ },
+ "Hotel e appartamenti sul Lago di Garda, a Tignale": {
+  "de": "Hotel und Ferienwohnungen am Gardasee, in Tignale",
+  "en": "Hotel and apartments on Lake Garda, in Tignale",
+  "es": "Hotel y apartamentos en el lago de Garda, en Tignale",
+  "fr": "Hôtel et appartements sur le lac de Garde, à Tignale"
  },
  "Hotel — 10 Camere": {
   "de": "Hotel — 10 Zimmer",
@@ -635,6 +653,12 @@
   "es": "Aceite de oliva virgen extra del Garda",
   "fr": "Huile d'olive extra vierge du Garda"
  },
+ "Oppure chiamaci:": {
+  "de": "Oder rufen Sie uns an:",
+  "en": "Or call us:",
+  "es": "O llámanos:",
+  "fr": "Ou appelez-nous :"
+ },
  "Ospiti": {
   "de": "Gäste",
   "en": "Guests",
@@ -718,6 +742,12 @@
   "en": "Final cleaning",
   "es": "Limpieza final",
   "fr": "Ménage de fin de séjour"
+ },
+ "Questa pagina": {
+  "de": "Diese Seite",
+  "en": "This page",
+  "es": "Esta página",
+  "fr": "Cette page"
  },
  "Recensioni": {
   "de": "Bewertungen",
@@ -960,6 +990,12 @@
   "es": "del Prà.",
   "fr": "del Prà."
  },
+ "non c'è.": {
+  "de": "gibt es nicht.",
+  "en": "doesn't exist.",
+  "es": "no existe.",
+  "fr": "n'existe pas."
+ },
  "posizione ideale.": {
   "de": "idealer Lage.",
   "en": "the perfect location.",
@@ -983,6 +1019,18 @@
   "en": "we are",
   "es": "estamos",
   "fr": "nous sommes"
+ },
+ "statistiche (solo con consenso)": {
+  "de": "Statistiken (nur mit Einwilligung)",
+  "en": "statistics (only with consent)",
+  "es": "estadísticas (solo con consentimiento)",
+  "fr": "statistiques (uniquement avec consentement)"
+ },
+ "← Torna al sito": {
+  "de": "← Zurück zur Website",
+  "en": "← Back to the website",
+  "es": "← Volver a la web",
+  "fr": "← Retour au site"
  },
  "📋 Booking.com": {
   "de": "📋 Booking.com",

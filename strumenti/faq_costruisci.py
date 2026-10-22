@@ -28,9 +28,17 @@ def k(t):
 def esc(t):
     return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
-TITOLO = "Domande frequenti — Prà de la Fam · Hotel sul Lago di Garda · Tignale"
-DESCR = ("Le domande che ci fanno ogni giorno alla reception: come si arriva sulla Gardesana, "
-         "il parcheggio, la spiaggia, i cani, gli orari, la limonaia storica del Prà de la Fam.")
+# ── il banner del consenso non e' scritto qui: e' lo stesso blocco di tutte le
+# pagine, e lo si prende da una di esse. Prima mancava, e rigenerando la FAQ
+# il banner dei cookie spariva in silenzio.
+_cd = (BASE / "camera-doppia.html").read_text(encoding="utf-8")
+_i = _cd.index("<!-- ══ pdlf-analytics ══ banner consenso")
+_f = _cd.rindex("</script>", _i, _cd.index('<script src="i18n.js"', _i)) + len("</script>")
+BANNER = _cd[_i:_f]
+
+TITOLO = "Domande frequenti: arrivo, spiaggia, cani | Prà de la Fam"
+DESCR = ("Le domande che ci fanno alla reception: come si arriva sulla Gardesana, il parcheggio, "
+         "la spiaggia, i cani, gli orari e la limonaia storica del Prà de la Fam.")
 
 # ── JSON-LD: FAQPage + il filo verso la struttura e le briciole
 faq_nodi = []
@@ -117,26 +125,34 @@ PAGINA = f'''<!DOCTYPE html>
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="preload" as="image" href="img/limonaia-aerea.jpg" fetchpriority="high"/>
 <title>{TITOLO}</title>
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prà de la Fam" />
 <meta property="og:locale" content="it_IT" />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:title" content="{TITOLO}" />
 <meta property="og:description" content="{DESCR}" />
 <meta property="og:url" content="{SITO}/faq" />
 <meta property="og:image" content="{SITO}/og/index.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Prà de la Fam — Hotel e Appartamenti sul Lago di Garda · Tignale" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:alt" content="Il Prà de la Fam dall&#x27;alto: la spiaggia sul Lago di Garda, l&#x27;hotel sulla Gardesana e le terrazze della limonaia" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{TITOLO}" />
 <meta name="twitter:description" content="{DESCR}" />
 <meta name="twitter:image" content="{SITO}/og/index.jpg" />
+<meta name="twitter:image:alt" content="Il Prà de la Fam dall&#x27;alto: la spiaggia sul Lago di Garda, l&#x27;hotel sulla Gardesana e le terrazze della limonaia" />
 <link rel="canonical" href="{SITO}/faq" />
 
 <meta name="description" content="{DESCR}"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="preload" href="/fonts/cormorant-garamond-v21-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/fonts/dm-sans-v17-normal-latin.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/fonts/caratteri-v1.css"/>
 
 <!-- ══ pdlf-dati ══ le stesse domande e le stesse risposte che si leggono qui sotto,
      in una forma che una macchina prende senza doverle ritagliare dalla pagina.
@@ -235,15 +251,18 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 </head>
 <body>
 
+<header>
 <nav>
-  <a href="index.html" class="nav-logo">
-    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam"/>
+  <a href="/" class="nav-logo">
+    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
-  <a data-i18n="{k('Home')}" href="index.html" class="nav-back">Home</a>
+  <a data-i18n="{k('Home')}" href="/" class="nav-back">Home</a>
   <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
   <a data-i18n="{k('Prenota →')}" href="{BOOK}" target="_blank" class="nav-cta">Prenota →</a>
 </nav>
+</header>
 
+<main>
 <section class="faq-hero">
   <div class="faq-hbg" style="background-image:url(img/limonaia-aerea.jpg)"></div>
   <div class="faq-hov"></div>
@@ -270,17 +289,19 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
   </div>
 </div>
 
-<div class="room-footer-strip">
+</main>
+
+<footer class="room-footer-strip">
   <p data-i18n="{k('Prà de la Fam —<br><em>Lago di Garda</em>')}" class="rfs-text">Prà de la Fam —<br><em>Lago di Garda</em></p>
   <div class="rfs-links">
-    <a data-i18n="{k('Camere')}" href="index.html#hotel" class="rfs-link">Camere</a>
-    <a data-i18n="{k('Appartamenti')}" href="index.html#appartamenti" class="rfs-link">Appartamenti</a>
-    <a data-i18n="{k('La Limonaia')}" href="index.html#limonaia" class="rfs-link">La Limonaia</a>
-    <a data-i18n="{k('Contatti')}" href="index.html#contatti" class="rfs-link">Contatti</a>
-    <a href="faq.html" class="rfs-link">FAQ</a>
+    <a data-i18n="{k('Camere')}" href="/#hotel" class="rfs-link">Camere</a>
+    <a data-i18n="{k('Appartamenti')}" href="/#appartamenti" class="rfs-link">Appartamenti</a>
+    <a data-i18n="{k('La Limonaia')}" href="/#limonaia" class="rfs-link">La Limonaia</a>
+    <a data-i18n="{k('Contatti')}" href="/#contatti" class="rfs-link">Contatti</a>
+    <a href="/faq" class="rfs-link">FAQ</a>
   </div>
   <a data-i18n="{k('Prenota ora →')}" href="{BOOK}" target="_blank" class="rfs-book">Prenota ora →</a>
-</div>
+</footer>
 
 <script>
 /* Le schede si aprono da sole se si arriva con l'ancora nella barra
@@ -301,6 +322,8 @@ const io=new IntersectionObserver(entries=>{{
 }},{{threshold:.12,rootMargin:'0px 0px -60px 0px'}});
 document.querySelectorAll('.r').forEach(el=>io.observe(el));
 </script>
+
+{BANNER}
 
 <script src="i18n.js" defer></script>
 <script src="menu.js" defer></script>

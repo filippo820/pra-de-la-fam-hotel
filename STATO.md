@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **27 agosto 2026** — il calendario delle date si apre verso l'alto
+Aggiornato: **21 ottobre 2026** — SEO fase 1 sul ramo `seo-fase-1`, **non ancora pubblicata**
 
 ---
 
@@ -978,6 +978,98 @@ Nomi dei mesi e dei giorni da `Intl` su `<html lang>`: **nessun testo italiano
 nuovo**, quindi nessuna chiave `data-i18n` e nessuna traduzione da rifare.
 Provato in tedesco («September 2026 · Mo Di Mi Do Fr Sa So») e in italiano.
 
+### SEO, fase 1 — 21 ottobre 2026 · ramo `seo-fase-1`, NON su main
+⚠️ **Sta su un ramo, non in produzione.** Il ramo non ha un'anteprima propria
+(su Netlify i branch deploy sono spenti: `seo-fase-1--pradelafam.netlify.app`
+risponde «Not Found»). Per vederla serve una **Deploy Preview**: aprire una
+pull request da `seo-fase-1` verso `main`, e sull'indirizzo dell'anteprima
+lanciare `bash strumenti/prova_anteprima.sh <indirizzo>`. Solo con tutto ✓ si
+fa il merge. Provato contro la produzione di oggi: passano le regole vecchie,
+falliscono — giustamente — le 13 cose nuove.
+
+**Cosa cambia, un commit per cosa:**
+
+| | prima | dopo |
+|---|---|---|
+| title home | 82 caratteri, «Prà de la Fam — Hotel, Appartamenti…» | 59, «Hotel & Appartamenti Tignale, Lago di Garda \| Prà de la Fam» |
+| H1 home | «Benvenuti Al Prà de la Fam.» | «Hotel e appartamenti sul Lago di Garda, a Tignale» — nella riga sottile sopra il titolo grande, **al posto dell'indirizzo** (che resta in Contatti e nel piede); il titolo grande è un `<p>` con la stessa classe |
+| title/description sottopagine | «Kumquat — Prà de la Fam · Lago di Garda», descrizioni 112–130 | ≤60 e 120–160, con tipo, metri, vista; nessun prezzo |
+| anteprime social | og:image:alt = titolo; cookie e privacy senza anteprima | alt che descrive la foto; og:locale:alternate ×4; cookie e privacy complete |
+| JSON-LD | solo in home | HotelRoom/Apartment nella pagina di ogni alloggio + BreadcrumbList su tutte le interne |
+| struttura | nessun `<main>` né `<header>` | uno per pagina; piede delle sottopagine `<footer>`; H4→H3 nelle carte sotto «Porta il lago con te» |
+| immagini | 0 con misure, 42 alt «foto» | 75 con width/height, alt veri; apertura home in WebP precaricata |
+| 404 | quella grigia di Netlify, in inglese | `404.html` del sito, tradotta, noindex |
+| `.html` | 130 link interni con `.html`, `/faq.html` 200 | link puliti; `/x.html → /x 301!` |
+| font | da Google a ogni visita | in casa, `/fonts/`, cache di un anno |
+
+📐 **Misurato, non guardato.** Ogni modifica a struttura, immagini e font è
+stata misurata prima e dopo su tutte e 13 le pagine, a 1440 e a 390, a
+JavaScript spento: posizione e misura di ogni testo e immagine. L'unica
+differenza è quella voluta (il testo della riga sopra il titolo, e i testi
+legali sui font). Lo strumento è in scratchpad, l'idea è semplice: geometria
+di ogni elemento con testo proprio, prima e dopo, animazioni concluse.
+⚠️ La prima versione dava differenze **senza nessuna modifica**: erano le
+animazioni d'entrata dell'apertura. Andavano concluse prima di misurare.
+⚠️ Le misure trovate sulle immagini hanno preso **un** guasto: la mappa aerea
+aveva solo `width:100%` e con `height` dichiarata sarebbe diventata alta 1012px
+invece di 192 sul telefono. Aggiunto `height:auto`.
+
+**Strumenti nuovi in `strumenti/`:**
+- `riaggancia.py` — ricalcola la chiave `data-i18n` degli elementi il cui testo
+  è cambiato. **Non tocca le 8 chiavi storiche** che già non coincidevano (le
+  riconosce perché non coincidevano nemmeno nell'ultima versione in git).
+  Ordine completo: `marca.py → raccogli.py → riaggancia.py → raccogli.py →
+  costruisci.py → kb.py`.
+- `controlla_traduzioni.py` — contro `origin/main`: nessuna chiave orfana,
+  nessun testo che aveva una traduzione e non ce l'ha più (cercato per testo).
+- `dati_strutturati.py` — il JSON-LD delle sottopagine **si genera dalla home**:
+  si cambia lì e si rilancia. Bergamotto ha solo le briciole finché è «Non
+  disponibile».
+- `controlla_seo.mjs` — le regole di questa fase su tutte le pagine, più la
+  console a JavaScript acceso. `NODE_PLAYWRIGHT=… node strumenti/controlla_seo.mjs`
+- `prova_anteprima.sh` — redirect, 404, font, cache e JSON-LD su un'anteprima.
+
+🔴 **Trovati facendolo:**
+- `faq_costruisci.py` **non riproduceva** `faq.html`: il banner dei cookie era
+  stato aggiunto alla pagina a mano. Rigenerando la FAQ spariva. Ora lo
+  prende da `camera-doppia.html` e il risultato coincide byte per byte; tutte
+  le modifiche alla FAQ di questa fase passano dallo script.
+- `kb.py` **non aveva mai letto le risposte della FAQ**: stanno in `<details>`
+  chiusi e `innerText` non legge una scheda chiusa. Il 25/08 non si era visto
+  perché `kb.json` era stato fatto a mano. Ora le schede si aprono prima.
+- ⚠️ **`marca.py` non è idempotente sul sito com'è**: a ogni passata rimarca i
+  link «FAQ» (lasciati senza chiave apposta, la parola è uguale in cinque
+  lingue) e l'`<h1>` della FAQ, che contiene già due elementi marcati. Ogni
+  volta vanno tolti: `t03688ba6aa` e `t83022a5b26`. Da sistemare nello
+  strumento, prima o poi.
+- **Il mio errore, preso dallo script:** il title della home era di 61
+  caratteri, non 60 — avevo scambiato «e» con «&», che sono lunghi uguali.
+- `cookie.html` e `privacy.html`: nel CSS `:root{…}` si chiude **prima** di
+  `--gold-testo` e `--gold-titolo`, che restano fuori da ogni regola e non
+  valgono. Non toccato in questa fase.
+
+📐 **Perché nessuna regola catch-all per la 404.** Netlify serve `404.html` da
+solo. Un `/*  /404.html  404` in fondo a `_redirects` dovrebbe cedere il passo
+alle pagine senza `.html` e alla funzione `/api/chat`: non vale la pena
+scoprire in produzione se lo fa. Scritto anche nel file.
+
+⚠️ **Il `301!` sulle pagine `.html` è la cosa da guardare nell'anteprima.** Il
+`!` è obbligatorio (il file esiste), ma Netlify serve `/faq` leggendo
+`faq.html`: se per qualche motivo la regola scattasse anche lì, sarebbe un
+giro infinito. `prova_anteprima.sh` lo controlla esplicitamente.
+
+⬜ **Dati che mancano per il JSON-LD** (non inventati): fascia di prezzo
+(`priceRange`, tipo «€€»), classificazione ufficiale in stelle, **CIN** (codice
+identificativo nazionale), indirizzo della scheda Google Business, profilo
+Instagram e pagina Booking se ci sono, conferma delle 10 camere di
+`numberOfRooms`, e quando torna disponibile Bergamotto.
+
+⬜ **Fase 2**: pagine vere per lingua (`/en/ /de/ /fr/ /es/`) con hreflang e
+redirect dalle vecchie `/en_GB` ecc. Oggi title, description, alt e JSON-LD
+restano in italiano in tutte le lingue: `i18n.js` traduce solo l'innerHTML.
+
+**22 ottobre 2026, due ritocchi (sempre sul ramo):** description di Pomelo a 153 caratteri (158 nel sorgente, dove l'apostrofo è `&#x27;` e prima ne contava 163); la riga legale «FAM S.r.l. · … · P.IVA …» ora è in `NON_TRADURRE` di `marca.py` e la 404 non ha più la sua chiave, come le altre pagine. Per `controlla_seo.mjs` in locale serve un server che risponda agli indirizzi senza `.html` e dia `404.html` con stato 404: `python3 -m http.server` non lo fa e fa fallire tutte le sottopagine.
+
 ---
 
 ## ⬜ Aperto
@@ -998,9 +1090,9 @@ Provato in tedesco («September 2026 · Mo Di Mi Do Fr Sa So») e in italiano.
      -H 'origin: https://pradelafam.netlify.app' \
      -d '{"messaggi":[{"ruolo":"persona","testo":"Che camere avete?"}]}'
    ```
-2. **Ospitare i caratteri tipografici sul nostro server.** Oggi arrivano da
-   Google e questo espone l'indirizzo IP dei visitatori — è scritto nella cookie
-   policy come miglioramento in programma.
+2. ✅ ~~Ospitare i caratteri tipografici sul nostro server.~~ Fatto sul ramo
+   `seo-fase-1` (21/10), insieme alla cookie policy aggiornata: vale da
+   quando il ramo viene pubblicato.
 3. **Il link della bottega «← Torna al sito principale»** punta ad
    `alpradelafam.com`. Da cambiare **il giorno del passaggio**, non prima.
 
@@ -1010,8 +1102,8 @@ Provato in tedesco («September 2026 · Mo Di Mi Do Fr Sa So») e in italiano.
   il commit di partenza.
 - **`closeLb` è chiamata ma non esiste**, per un lightbox che in home non c'è:
   residuo di codice tolto.
-- **Immagini senza descrizione** (`alt`) nelle gallerie delle sottopagine: 7 per
-  pagina. Accessibilità e Google.
+- ✅ ~~Immagini senza descrizione (`alt`) nelle gallerie~~ — descritte una per
+  una sul ramo `seo-fase-1` (21/10).
 - **Netlify riscrive l'HTML** in fase di pubblicazione: gli attributi
   `onmouseover` arrivano con le virgolette rotte. Da guardare.
 - **Le date mostrano `mm/dd/yyyy`** su un dispositivo in inglese e `gg/mm/aaaa`

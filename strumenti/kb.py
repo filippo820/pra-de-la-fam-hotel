@@ -37,6 +37,9 @@ for (const [nome, url] of Object.entries(PAG)) {
   const p = await c.newPage();
   await p.goto("http://localhost:8911" + url, { waitUntil: "domcontentloaded" });
   out[nome] = await p.evaluate(() => {
+    // le risposte della FAQ stanno in <details> chiusi, e innerText non legge
+    // il contenuto di una scheda chiusa: senza aprirle restano solo le domande
+    document.querySelectorAll(".faq-body details").forEach(d => d.open = true);
     document.querySelectorAll("script,style,#pdlf-overlay,nav,footer").forEach(e => e.remove());
     return document.body.innerText.replace(/\s+/g, " ").trim();
   });

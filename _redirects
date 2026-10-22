@@ -14,6 +14,28 @@
 #
 # Generato: se cambia una pagina, si cambia qui.
 
+# ══ Una pagina, un indirizzo ══
+#
+# Netlify serve la stessa pagina sia come /faq sia come /faq.html: due
+# indirizzi per un contenuto. I canonical dicono gia' quale e' quello buono,
+# ma un 301 lo dice anche a chi non legge l'HTML. Il punto esclamativo e'
+# obbligatorio: senza, Netlify salta la regola perche' il file esiste.
+# ⚠️ Da verificare su un'anteprima prima di pubblicare: /faq deve dare 200
+# e /faq.html un solo 301 verso /faq, senza giri.
+/index.html                           /                               301!
+/appartamento-bergamotto.html         /appartamento-bergamotto        301!
+/appartamento-calamondino.html        /appartamento-calamondino       301!
+/appartamento-clementina.html         /appartamento-clementina        301!
+/appartamento-kumquat.html            /appartamento-kumquat           301!
+/appartamento-pomelo.html             /appartamento-pomelo            301!
+/camera-doppia.html                   /camera-doppia                  301!
+/camera-doppia-economy.html           /camera-doppia-economy          301!
+/camera-familiare.html                /camera-familiare               301!
+/camera-tripla.html                   /camera-tripla                  301!
+/cookie.html                          /cookie                         301!
+/faq.html                             /faq                            301!
+/privacy.html                         /privacy                        301!
+
 /hotel                                /#hotel                         301
 /hotel/                               /#hotel                         301
 /:lingua/hotel                        /#hotel                         301
@@ -92,6 +114,13 @@
 /:lingua/faq                          /faq                            301
 /:lingua/faq/                         /faq                            301
 /:lingua/domande-frequenti            /faq                            301
+
+# La pagina 404. NON serve una regola: Netlify serve da solo /404.html, con
+# stato 404, a ogni indirizzo che non esiste. Una regola «/*  /404.html  404»
+# in fondo sarebbe ridondante e rischiosa: dovrebbe cedere il passo alle
+# pagine senza .html e alla funzione /api/chat, e non vale la pena scoprire
+# in produzione se lo fa. Le righe qui sotto mandano alla home anche le
+# pagine del vecchio sito che non esistono piu': per quelle niente 404.
 
 # Tutto il resto del vecchio sito (allegati, feed, pagine sparite) alla home.
 /it_IT/*                              /                               301

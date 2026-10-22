@@ -30,6 +30,12 @@ COSA FA, pagina per pagina e lingua per lingua:
     scrivono gli href — la stessa pagina nell'altra lingua — e si segna
     quella attiva. Questo e il blocco hreflang sono le sole cose che lo
     script scrive anche nelle sorgenti italiane;
+  · _redirects: fra i segnaposto «lingue» le regole delle pagine nuove — il
+    301! da /de/faq.html a /de/faq, le vecchie URL del WordPress
+    (/de_DE/clementina/) verso la pagina nella lingua giusta, il resto del
+    vecchio sito verso la home della lingua, e la 404 per lingua. Le vecchie
+    pagine si leggono dalle regole «/:lingua/<pagina>» gia' nel file: la
+    mappa resta una sola;
   · sitemap.xml: tutte le pagine indicizzabili nelle cinque lingue, ognuna
     con le sue alternative. lastmod resta quello di prima finche' la pagina
     non cambia: una data che si sposta a ogni passata non dice niente a
@@ -311,6 +317,63 @@ def pagina(nome, lingua):
     return src, n
 
 
+# i prefissi del vecchio WordPress e la lingua nuova che gli corrisponde. Il
+# vecchio sito non aveva lo spagnolo: es_ES non esisteva, ma se qualcuno lo
+# scrive a mano arriva comunque alle pagine in spagnolo.
+VECCHI = {"it_IT": "it", "en_GB": "en", "en_US": "en", "de_DE": "de", "fr_FR": "fr",
+          "es_ES": "es", "wp": "it"}
+INIZIO_RED = "# ══ lingue: generato da strumenti/lingue.py — non modificare a mano ══"
+FINE_RED = "# ══ /lingue ══"
+
+
+def reindirizzi():
+    """Riscrive il blocco delle lingue in _redirects; ne restituisce le righe."""
+    f = BASE / "_redirects"
+    src = f.read_text(encoding="utf-8")
+    vecchie = []                                   # (pagina vecchia, destinazione italiana)
+    for m in re.finditer(r'^/:lingua/(\S+?)\s+(\S+)\s+301\s*$', src, re.M):
+        if (m.group(1), m.group(2)) not in vecchie:
+            vecchie.append((m.group(1), m.group(2)))
+    w = max(len(f"/{v}/{p}") for v in VECCHI for p, _ in vecchie) + 2
+    def riga(da, a, codice):
+        return f"{da:<{w}}{a:<{w}}{codice}"
+    out = [INIZIO_RED, "#",
+           "# Ogni lingua ha le sue pagine: /de/faq e' la FAQ in tedesco. Qui, nell'ordine:",
+           "#  1. un indirizzo solo anche nelle lingue nuove: /de/faq.html → /de/faq",
+           "#     (il ! serve perche' il file esiste, come per l'italiano qui sopra);",
+           "#  2. le vecchie URL del WordPress verso la pagina nella LORO lingua:",
+           "#     /de_DE/clementina/ → /de/appartamento-clementina, non piu' l'italiano;",
+           "#  3. il resto del vecchio sito alla home della lingua, non alla 404;",
+           "#  4. /de/pagina/ con la barra finale → /de/pagina;",
+           "#  5. un indirizzo che non esiste sotto /de/ → la 404 in tedesco, con stato",
+           "#     404. Senza «!»: Netlify la applica solo se il file NON esiste.",
+           "# Stanno PRIMA delle regole «/:lingua/...» qui sotto: Netlify applica la",
+           "# prima che corrisponde, e quelle manderebbero /de_DE/... all'italiano.", ""]
+    for l in LINGUE:
+        out.append(riga(f"/{l}/index.html", f"/{l}/", "301!"))
+        out += [riga(f"/{l}/{p}.html", percorso(p, l), "301!") for p in PAGINE if p in INTERNE]
+        out.append("")
+    for v, l in VECCHI.items():
+        for p, a in vecchie:
+            dest = a if l == "it" else (indirizzo(l, a) or f"/{l}/")
+            out.append(riga(f"/{v}/{p}", dest, "301"))
+        out.append(riga(f"/{v}/*", "/" if l == "it" else f"/{l}/", "301"))
+        out.append("")
+    for l in LINGUE:
+        out.append(riga(f"/{l}/:pagina/", f"/{l}/:pagina", "301"))
+        out.append(riga(f"/{l}/*", f"/{l}/404.html", "404"))
+    out.append(FINE_RED)
+    blocco = "\n".join(out) + "\n"
+    if INIZIO_RED in src:
+        i = src.index(INIZIO_RED); j = src.index(FINE_RED, i) + len(FINE_RED) + 1
+        src = src[:i] + blocco + src[j:]
+    else:
+        i = src.index("\n/hotel ") + 1
+        src = src[:i] + blocco + "\n" + src[i:]
+    f.write_text(src, encoding="utf-8")
+    return sum(1 for r in out if r and not r.startswith("#"))
+
+
 PRIORITA = {"index": "1.0", "faq": "0.8", "cookie": "0.3", "privacy": "0.3"}   # le altre 0.9
 
 
@@ -371,6 +434,7 @@ if __name__ == "__main__":
             totale += n
         print(f"  /{lingua}/  {len(PAGINE)} pagine, {totale} testi tradotti")
     print(f"  sitemap.xml: {sitemap(cambiate)} indirizzi; pagine riscritte in questa passata: {len(cambiate)}")
+    print(f"  _redirects: {reindirizzi()} regole delle lingue")
     if MANCANTI:
         print(f"\n  ✗ {len(MANCANTI)} testi senza traduzione (restano in italiano):")
         for (t, l), dove in sorted(MANCANTI.items(), key=lambda x: (x[1], x[0][1])):

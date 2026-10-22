@@ -36,6 +36,317 @@
 /faq.html                             /faq                            301!
 /privacy.html                         /privacy                        301!
 
+# ══ lingue: generato da strumenti/lingue.py — non modificare a mano ══
+#
+# Ogni lingua ha le sue pagine: /de/faq e' la FAQ in tedesco. Qui, nell'ordine:
+#  1. un indirizzo solo anche nelle lingue nuove: /de/faq.html → /de/faq
+#     (il ! serve perche' il file esiste, come per l'italiano qui sopra);
+#  2. le vecchie URL del WordPress verso la pagina nella LORO lingua:
+#     /de_DE/clementina/ → /de/appartamento-clementina, non piu' l'italiano;
+#  3. il resto del vecchio sito alla home della lingua, non alla 404;
+#  4. /de/pagina/ con la barra finale → /de/pagina;
+#  5. un indirizzo che non esiste sotto /de/ → la 404 in tedesco, con stato
+#     404. Senza «!»: Netlify la applica solo se il file NON esiste.
+# Stanno PRIMA delle regole «/:lingua/...» qui sotto: Netlify applica la
+# prima che corrisponde, e quelle manderebbero /de_DE/... all'italiano.
+
+/en/index.html                     /en/                               301!
+/en/appartamento-bergamotto.html   /en/appartamento-bergamotto        301!
+/en/appartamento-calamondino.html  /en/appartamento-calamondino       301!
+/en/appartamento-clementina.html   /en/appartamento-clementina        301!
+/en/appartamento-kumquat.html      /en/appartamento-kumquat           301!
+/en/appartamento-pomelo.html       /en/appartamento-pomelo            301!
+/en/camera-doppia.html             /en/camera-doppia                  301!
+/en/camera-doppia-economy.html     /en/camera-doppia-economy          301!
+/en/camera-familiare.html          /en/camera-familiare               301!
+/en/camera-tripla.html             /en/camera-tripla                  301!
+/en/cookie.html                    /en/cookie                         301!
+/en/faq.html                       /en/faq                            301!
+/en/privacy.html                   /en/privacy                        301!
+
+/de/index.html                     /de/                               301!
+/de/appartamento-bergamotto.html   /de/appartamento-bergamotto        301!
+/de/appartamento-calamondino.html  /de/appartamento-calamondino       301!
+/de/appartamento-clementina.html   /de/appartamento-clementina        301!
+/de/appartamento-kumquat.html      /de/appartamento-kumquat           301!
+/de/appartamento-pomelo.html       /de/appartamento-pomelo            301!
+/de/camera-doppia.html             /de/camera-doppia                  301!
+/de/camera-doppia-economy.html     /de/camera-doppia-economy          301!
+/de/camera-familiare.html          /de/camera-familiare               301!
+/de/camera-tripla.html             /de/camera-tripla                  301!
+/de/cookie.html                    /de/cookie                         301!
+/de/faq.html                       /de/faq                            301!
+/de/privacy.html                   /de/privacy                        301!
+
+/fr/index.html                     /fr/                               301!
+/fr/appartamento-bergamotto.html   /fr/appartamento-bergamotto        301!
+/fr/appartamento-calamondino.html  /fr/appartamento-calamondino       301!
+/fr/appartamento-clementina.html   /fr/appartamento-clementina        301!
+/fr/appartamento-kumquat.html      /fr/appartamento-kumquat           301!
+/fr/appartamento-pomelo.html       /fr/appartamento-pomelo            301!
+/fr/camera-doppia.html             /fr/camera-doppia                  301!
+/fr/camera-doppia-economy.html     /fr/camera-doppia-economy          301!
+/fr/camera-familiare.html          /fr/camera-familiare               301!
+/fr/camera-tripla.html             /fr/camera-tripla                  301!
+/fr/cookie.html                    /fr/cookie                         301!
+/fr/faq.html                       /fr/faq                            301!
+/fr/privacy.html                   /fr/privacy                        301!
+
+/es/index.html                     /es/                               301!
+/es/appartamento-bergamotto.html   /es/appartamento-bergamotto        301!
+/es/appartamento-calamondino.html  /es/appartamento-calamondino       301!
+/es/appartamento-clementina.html   /es/appartamento-clementina        301!
+/es/appartamento-kumquat.html      /es/appartamento-kumquat           301!
+/es/appartamento-pomelo.html       /es/appartamento-pomelo            301!
+/es/camera-doppia.html             /es/camera-doppia                  301!
+/es/camera-doppia-economy.html     /es/camera-doppia-economy          301!
+/es/camera-familiare.html          /es/camera-familiare               301!
+/es/camera-tripla.html             /es/camera-tripla                  301!
+/es/cookie.html                    /es/cookie                         301!
+/es/faq.html                       /es/faq                            301!
+/es/privacy.html                   /es/privacy                        301!
+
+/it_IT/hotel                       /#hotel                            301
+/it_IT/hotel/                      /#hotel                            301
+/it_IT/bergamotto                  /appartamento-bergamotto           301
+/it_IT/bergamotto/                 /appartamento-bergamotto           301
+/it_IT/calamondino                 /appartamento-calamondino          301
+/it_IT/calamondino/                /appartamento-calamondino          301
+/it_IT/clementina                  /appartamento-clementina           301
+/it_IT/clementina/                 /appartamento-clementina           301
+/it_IT/kumquat                     /appartamento-kumquat              301
+/it_IT/kumquat/                    /appartamento-kumquat              301
+/it_IT/pomelo                      /appartamento-pomelo               301
+/it_IT/pomelo/                     /appartamento-pomelo               301
+/it_IT/la-limonaia                 /#limonaia                         301
+/it_IT/la-limonaia/                /#limonaia                         301
+/it_IT/territorio_sport_prodotti   /#territorio                       301
+/it_IT/territorio_sport_prodotti/  /#territorio                       301
+/it_IT/dove-siamo                  /#come-arrivare                    301
+/it_IT/dove-siamo/                 /#come-arrivare                    301
+/it_IT/contatti                    /#contatti                         301
+/it_IT/contatti/                   /#contatti                         301
+/it_IT/email                       /#contatti                         301
+/it_IT/email/                      /#contatti                         301
+/it_IT/cookie-policy               /cookie                            301
+/it_IT/cookie-policy/              /cookie                            301
+/it_IT/news                        /                                  301
+/it_IT/news/                       /                                  301
+/it_IT/nuovo_sito_web              /                                  301
+/it_IT/nuovo_sito_web/             /                                  301
+/it_IT/faq                         /faq                               301
+/it_IT/faq/                        /faq                               301
+/it_IT/domande-frequenti           /faq                               301
+/it_IT/*                           /                                  301
+
+/en_GB/hotel                       /en/#hotel                         301
+/en_GB/hotel/                      /en/#hotel                         301
+/en_GB/bergamotto                  /en/appartamento-bergamotto        301
+/en_GB/bergamotto/                 /en/appartamento-bergamotto        301
+/en_GB/calamondino                 /en/appartamento-calamondino       301
+/en_GB/calamondino/                /en/appartamento-calamondino       301
+/en_GB/clementina                  /en/appartamento-clementina        301
+/en_GB/clementina/                 /en/appartamento-clementina        301
+/en_GB/kumquat                     /en/appartamento-kumquat           301
+/en_GB/kumquat/                    /en/appartamento-kumquat           301
+/en_GB/pomelo                      /en/appartamento-pomelo            301
+/en_GB/pomelo/                     /en/appartamento-pomelo            301
+/en_GB/la-limonaia                 /en/#limonaia                      301
+/en_GB/la-limonaia/                /en/#limonaia                      301
+/en_GB/territorio_sport_prodotti   /en/#territorio                    301
+/en_GB/territorio_sport_prodotti/  /en/#territorio                    301
+/en_GB/dove-siamo                  /en/#come-arrivare                 301
+/en_GB/dove-siamo/                 /en/#come-arrivare                 301
+/en_GB/contatti                    /en/#contatti                      301
+/en_GB/contatti/                   /en/#contatti                      301
+/en_GB/email                       /en/#contatti                      301
+/en_GB/email/                      /en/#contatti                      301
+/en_GB/cookie-policy               /en/cookie                         301
+/en_GB/cookie-policy/              /en/cookie                         301
+/en_GB/news                        /en/                               301
+/en_GB/news/                       /en/                               301
+/en_GB/nuovo_sito_web              /en/                               301
+/en_GB/nuovo_sito_web/             /en/                               301
+/en_GB/faq                         /en/faq                            301
+/en_GB/faq/                        /en/faq                            301
+/en_GB/domande-frequenti           /en/faq                            301
+/en_GB/*                           /en/                               301
+
+/en_US/hotel                       /en/#hotel                         301
+/en_US/hotel/                      /en/#hotel                         301
+/en_US/bergamotto                  /en/appartamento-bergamotto        301
+/en_US/bergamotto/                 /en/appartamento-bergamotto        301
+/en_US/calamondino                 /en/appartamento-calamondino       301
+/en_US/calamondino/                /en/appartamento-calamondino       301
+/en_US/clementina                  /en/appartamento-clementina        301
+/en_US/clementina/                 /en/appartamento-clementina        301
+/en_US/kumquat                     /en/appartamento-kumquat           301
+/en_US/kumquat/                    /en/appartamento-kumquat           301
+/en_US/pomelo                      /en/appartamento-pomelo            301
+/en_US/pomelo/                     /en/appartamento-pomelo            301
+/en_US/la-limonaia                 /en/#limonaia                      301
+/en_US/la-limonaia/                /en/#limonaia                      301
+/en_US/territorio_sport_prodotti   /en/#territorio                    301
+/en_US/territorio_sport_prodotti/  /en/#territorio                    301
+/en_US/dove-siamo                  /en/#come-arrivare                 301
+/en_US/dove-siamo/                 /en/#come-arrivare                 301
+/en_US/contatti                    /en/#contatti                      301
+/en_US/contatti/                   /en/#contatti                      301
+/en_US/email                       /en/#contatti                      301
+/en_US/email/                      /en/#contatti                      301
+/en_US/cookie-policy               /en/cookie                         301
+/en_US/cookie-policy/              /en/cookie                         301
+/en_US/news                        /en/                               301
+/en_US/news/                       /en/                               301
+/en_US/nuovo_sito_web              /en/                               301
+/en_US/nuovo_sito_web/             /en/                               301
+/en_US/faq                         /en/faq                            301
+/en_US/faq/                        /en/faq                            301
+/en_US/domande-frequenti           /en/faq                            301
+/en_US/*                           /en/                               301
+
+/de_DE/hotel                       /de/#hotel                         301
+/de_DE/hotel/                      /de/#hotel                         301
+/de_DE/bergamotto                  /de/appartamento-bergamotto        301
+/de_DE/bergamotto/                 /de/appartamento-bergamotto        301
+/de_DE/calamondino                 /de/appartamento-calamondino       301
+/de_DE/calamondino/                /de/appartamento-calamondino       301
+/de_DE/clementina                  /de/appartamento-clementina        301
+/de_DE/clementina/                 /de/appartamento-clementina        301
+/de_DE/kumquat                     /de/appartamento-kumquat           301
+/de_DE/kumquat/                    /de/appartamento-kumquat           301
+/de_DE/pomelo                      /de/appartamento-pomelo            301
+/de_DE/pomelo/                     /de/appartamento-pomelo            301
+/de_DE/la-limonaia                 /de/#limonaia                      301
+/de_DE/la-limonaia/                /de/#limonaia                      301
+/de_DE/territorio_sport_prodotti   /de/#territorio                    301
+/de_DE/territorio_sport_prodotti/  /de/#territorio                    301
+/de_DE/dove-siamo                  /de/#come-arrivare                 301
+/de_DE/dove-siamo/                 /de/#come-arrivare                 301
+/de_DE/contatti                    /de/#contatti                      301
+/de_DE/contatti/                   /de/#contatti                      301
+/de_DE/email                       /de/#contatti                      301
+/de_DE/email/                      /de/#contatti                      301
+/de_DE/cookie-policy               /de/cookie                         301
+/de_DE/cookie-policy/              /de/cookie                         301
+/de_DE/news                        /de/                               301
+/de_DE/news/                       /de/                               301
+/de_DE/nuovo_sito_web              /de/                               301
+/de_DE/nuovo_sito_web/             /de/                               301
+/de_DE/faq                         /de/faq                            301
+/de_DE/faq/                        /de/faq                            301
+/de_DE/domande-frequenti           /de/faq                            301
+/de_DE/*                           /de/                               301
+
+/fr_FR/hotel                       /fr/#hotel                         301
+/fr_FR/hotel/                      /fr/#hotel                         301
+/fr_FR/bergamotto                  /fr/appartamento-bergamotto        301
+/fr_FR/bergamotto/                 /fr/appartamento-bergamotto        301
+/fr_FR/calamondino                 /fr/appartamento-calamondino       301
+/fr_FR/calamondino/                /fr/appartamento-calamondino       301
+/fr_FR/clementina                  /fr/appartamento-clementina        301
+/fr_FR/clementina/                 /fr/appartamento-clementina        301
+/fr_FR/kumquat                     /fr/appartamento-kumquat           301
+/fr_FR/kumquat/                    /fr/appartamento-kumquat           301
+/fr_FR/pomelo                      /fr/appartamento-pomelo            301
+/fr_FR/pomelo/                     /fr/appartamento-pomelo            301
+/fr_FR/la-limonaia                 /fr/#limonaia                      301
+/fr_FR/la-limonaia/                /fr/#limonaia                      301
+/fr_FR/territorio_sport_prodotti   /fr/#territorio                    301
+/fr_FR/territorio_sport_prodotti/  /fr/#territorio                    301
+/fr_FR/dove-siamo                  /fr/#come-arrivare                 301
+/fr_FR/dove-siamo/                 /fr/#come-arrivare                 301
+/fr_FR/contatti                    /fr/#contatti                      301
+/fr_FR/contatti/                   /fr/#contatti                      301
+/fr_FR/email                       /fr/#contatti                      301
+/fr_FR/email/                      /fr/#contatti                      301
+/fr_FR/cookie-policy               /fr/cookie                         301
+/fr_FR/cookie-policy/              /fr/cookie                         301
+/fr_FR/news                        /fr/                               301
+/fr_FR/news/                       /fr/                               301
+/fr_FR/nuovo_sito_web              /fr/                               301
+/fr_FR/nuovo_sito_web/             /fr/                               301
+/fr_FR/faq                         /fr/faq                            301
+/fr_FR/faq/                        /fr/faq                            301
+/fr_FR/domande-frequenti           /fr/faq                            301
+/fr_FR/*                           /fr/                               301
+
+/es_ES/hotel                       /es/#hotel                         301
+/es_ES/hotel/                      /es/#hotel                         301
+/es_ES/bergamotto                  /es/appartamento-bergamotto        301
+/es_ES/bergamotto/                 /es/appartamento-bergamotto        301
+/es_ES/calamondino                 /es/appartamento-calamondino       301
+/es_ES/calamondino/                /es/appartamento-calamondino       301
+/es_ES/clementina                  /es/appartamento-clementina        301
+/es_ES/clementina/                 /es/appartamento-clementina        301
+/es_ES/kumquat                     /es/appartamento-kumquat           301
+/es_ES/kumquat/                    /es/appartamento-kumquat           301
+/es_ES/pomelo                      /es/appartamento-pomelo            301
+/es_ES/pomelo/                     /es/appartamento-pomelo            301
+/es_ES/la-limonaia                 /es/#limonaia                      301
+/es_ES/la-limonaia/                /es/#limonaia                      301
+/es_ES/territorio_sport_prodotti   /es/#territorio                    301
+/es_ES/territorio_sport_prodotti/  /es/#territorio                    301
+/es_ES/dove-siamo                  /es/#come-arrivare                 301
+/es_ES/dove-siamo/                 /es/#come-arrivare                 301
+/es_ES/contatti                    /es/#contatti                      301
+/es_ES/contatti/                   /es/#contatti                      301
+/es_ES/email                       /es/#contatti                      301
+/es_ES/email/                      /es/#contatti                      301
+/es_ES/cookie-policy               /es/cookie                         301
+/es_ES/cookie-policy/              /es/cookie                         301
+/es_ES/news                        /es/                               301
+/es_ES/news/                       /es/                               301
+/es_ES/nuovo_sito_web              /es/                               301
+/es_ES/nuovo_sito_web/             /es/                               301
+/es_ES/faq                         /es/faq                            301
+/es_ES/faq/                        /es/faq                            301
+/es_ES/domande-frequenti           /es/faq                            301
+/es_ES/*                           /es/                               301
+
+/wp/hotel                          /#hotel                            301
+/wp/hotel/                         /#hotel                            301
+/wp/bergamotto                     /appartamento-bergamotto           301
+/wp/bergamotto/                    /appartamento-bergamotto           301
+/wp/calamondino                    /appartamento-calamondino          301
+/wp/calamondino/                   /appartamento-calamondino          301
+/wp/clementina                     /appartamento-clementina           301
+/wp/clementina/                    /appartamento-clementina           301
+/wp/kumquat                        /appartamento-kumquat              301
+/wp/kumquat/                       /appartamento-kumquat              301
+/wp/pomelo                         /appartamento-pomelo               301
+/wp/pomelo/                        /appartamento-pomelo               301
+/wp/la-limonaia                    /#limonaia                         301
+/wp/la-limonaia/                   /#limonaia                         301
+/wp/territorio_sport_prodotti      /#territorio                       301
+/wp/territorio_sport_prodotti/     /#territorio                       301
+/wp/dove-siamo                     /#come-arrivare                    301
+/wp/dove-siamo/                    /#come-arrivare                    301
+/wp/contatti                       /#contatti                         301
+/wp/contatti/                      /#contatti                         301
+/wp/email                          /#contatti                         301
+/wp/email/                         /#contatti                         301
+/wp/cookie-policy                  /cookie                            301
+/wp/cookie-policy/                 /cookie                            301
+/wp/news                           /                                  301
+/wp/news/                          /                                  301
+/wp/nuovo_sito_web                 /                                  301
+/wp/nuovo_sito_web/                /                                  301
+/wp/faq                            /faq                               301
+/wp/faq/                           /faq                               301
+/wp/domande-frequenti              /faq                               301
+/wp/*                              /                                  301
+
+/en/:pagina/                       /en/:pagina                        301
+/en/*                              /en/404.html                       404
+/de/:pagina/                       /de/:pagina                        301
+/de/*                              /de/404.html                       404
+/fr/:pagina/                       /fr/:pagina                        301
+/fr/*                              /fr/404.html                       404
+/es/:pagina/                       /es/:pagina                        301
+/es/*                              /es/404.html                       404
+# ══ /lingue ══
+
 /hotel                                /#hotel                         301
 /hotel/                               /#hotel                         301
 /:lingua/hotel                        /#hotel                         301
@@ -115,17 +426,14 @@
 /:lingua/faq/                         /faq                            301
 /:lingua/domande-frequenti            /faq                            301
 
-# La pagina 404. NON serve una regola: Netlify serve da solo /404.html, con
-# stato 404, a ogni indirizzo che non esiste. Una regola «/*  /404.html  404»
-# in fondo sarebbe ridondante e rischiosa: dovrebbe cedere il passo alle
-# pagine senza .html e alla funzione /api/chat, e non vale la pena scoprire
-# in produzione se lo fa. Le righe qui sotto mandano alla home anche le
-# pagine del vecchio sito che non esistono piu': per quelle niente 404.
-
-# Tutto il resto del vecchio sito (allegati, feed, pagine sparite) alla home.
-/it_IT/*                              /                               301
-/de_DE/*                              /                               301
-/fr_FR/*                              /                               301
-/en_GB/*                              /                               301
-/en_US/*                              /                               301
-/wp/*                                 /                               301
+# La pagina 404. Per l'italiano NON serve una regola: Netlify serve da solo
+# /404.html, con stato 404, a ogni indirizzo che non esiste. Una regola
+# «/*  /404.html  404» in fondo sarebbe ridondante e rischiosa: dovrebbe
+# cedere il passo alle pagine senza .html e alla funzione /api/chat. Le
+# lingue hanno la loro 404 nel blocco «lingue» qui sopra, limitata a /en/*,
+# /de/*, /fr/*, /es/*.
+#
+# Il resto del vecchio sito (allegati, feed, pagine sparite) va alla home
+# della sua lingua: quelle regole (/it_IT/*, /de_DE/* ...) stanno anch'esse
+# nel blocco «lingue», che viene prima. Qui sotto stavano le stesse verso la
+# home italiana: sono state tolte, non sarebbero mai state raggiunte.

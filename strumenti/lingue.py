@@ -33,7 +33,9 @@ COSA FA, pagina per pagina e lingua per lingua:
   · _redirects: fra i segnaposto «lingue» le regole delle pagine nuove — il
     301! da /de/faq.html a /de/faq, le vecchie URL del WordPress
     (/de_DE/clementina/) verso la pagina nella lingua giusta, il resto del
-    vecchio sito verso la home della lingua, e la 404 per lingua. Le vecchie
+    vecchio sito verso la home della lingua, e la 404 per lingua. Nessuna
+    regola per la barra finale: Netlify la toglie da solo, e una regola
+    «/de/:pagina/» faceva un giro infinito sulle pagine che non esistono. Le vecchie
     pagine si leggono dalle regole «/:lingua/<pagina>» gia' nel file: la
     mappa resta una sola;
   · sitemap.xml: tutte le pagine indicizzabili nelle cinque lingue, ognuna
@@ -344,9 +346,12 @@ def reindirizzi():
            "#  2. le vecchie URL del WordPress verso la pagina nella LORO lingua:",
            "#     /de_DE/clementina/ → /de/appartamento-clementina, non piu' l'italiano;",
            "#  3. il resto del vecchio sito alla home della lingua, non alla 404;",
-           "#  4. /de/pagina/ con la barra finale → /de/pagina;",
-           "#  5. un indirizzo che non esiste sotto /de/ → la 404 in tedesco, con stato",
+           "#  4. un indirizzo che non esiste sotto /de/ → la 404 in tedesco, con stato",
            "#     404. Senza «!»: Netlify la applica solo se il file NON esiste.",
+           "# /de/pagina/ con la barra finale lo porta Netlify da solo a /de/pagina.",
+           "# NON aggiungere una regola «/de/:pagina/ → /de/:pagina»: Netlify confronta",
+           "# le regole ignorando la barra finale, e per una pagina che non esiste",
+           "# rimandava a se' stessa all'infinito (visto sull'anteprima del 22/10).",
            "# Stanno PRIMA delle regole «/:lingua/...» qui sotto: Netlify applica la",
            "# prima che corrisponde, e quelle manderebbero /de_DE/... all'italiano.", ""]
     for l in LINGUE:
@@ -360,7 +365,6 @@ def reindirizzi():
         out.append(riga(f"/{v}/*", "/" if l == "it" else f"/{l}/", "301"))
         out.append("")
     for l in LINGUE:
-        out.append(riga(f"/{l}/:pagina/", f"/{l}/:pagina", "301"))
         out.append(riga(f"/{l}/*", f"/{l}/404.html", "404"))
     out.append(FINE_RED)
     blocco = "\n".join(out) + "\n"

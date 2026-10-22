@@ -44,9 +44,12 @@
 #  2. le vecchie URL del WordPress verso la pagina nella LORO lingua:
 #     /de_DE/clementina/ → /de/appartamento-clementina, non piu' l'italiano;
 #  3. il resto del vecchio sito alla home della lingua, non alla 404;
-#  4. /de/pagina/ con la barra finale → /de/pagina;
-#  5. un indirizzo che non esiste sotto /de/ → la 404 in tedesco, con stato
+#  4. un indirizzo che non esiste sotto /de/ → la 404 in tedesco, con stato
 #     404. Senza «!»: Netlify la applica solo se il file NON esiste.
+# /de/pagina/ con la barra finale lo porta Netlify da solo a /de/pagina.
+# NON aggiungere una regola «/de/:pagina/ → /de/:pagina»: Netlify confronta
+# le regole ignorando la barra finale, e per una pagina che non esiste
+# rimandava a se' stessa all'infinito (visto sull'anteprima del 22/10).
 # Stanno PRIMA delle regole «/:lingua/...» qui sotto: Netlify applica la
 # prima che corrisponde, e quelle manderebbero /de_DE/... all'italiano.
 
@@ -337,13 +340,9 @@
 /wp/domande-frequenti              /faq                               301
 /wp/*                              /                                  301
 
-/en/:pagina/                       /en/:pagina                        301
 /en/*                              /en/404.html                       404
-/de/:pagina/                       /de/:pagina                        301
 /de/*                              /de/404.html                       404
-/fr/:pagina/                       /fr/:pagina                        301
 /fr/*                              /fr/404.html                       404
-/es/:pagina/                       /es/:pagina                        301
 /es/*                              /es/404.html                       404
 # ══ /lingue ══
 

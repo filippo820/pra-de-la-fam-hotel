@@ -1122,7 +1122,11 @@ selettore.
 `/de/faq.html` → `/de/faq` (301!), le vecchie URL nella **loro** lingua
 (`/de_DE/clementina/` → `/de/appartamento-clementina`; la mappa la legge dalle
 regole `/:lingua/<pagina>` esistenti), il resto del vecchio sito alla home della
-lingua, `/de/pagina/` → `/de/pagina`, `/de/*` → la 404 tedesca con stato 404.
+lingua, `/de/*` → la 404 tedesca con stato 404. Nessuna regola per la barra
+finale: `/de/faq/` → `/de/faq` lo fa Netlify da solo. ⚠️ Una regola
+`/de/:pagina/ → /de/:pagina` c'era, ed era un **giro infinito** sulle pagine
+che non esistono: Netlify confronta le regole ignorando la barra finale.
+Trovato dall'anteprima, tolto.
 
 ⚠️ **Da guardare sulla Deploy Preview, perché in locale non si può:** che
 Netlify consideri `/de/faq` servita dal file `de/faq.html` e quindi non le

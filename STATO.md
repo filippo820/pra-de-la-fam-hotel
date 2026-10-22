@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **22 ottobre 2026** — SEO fase 1 pubblicata; **SEO fase 2 (pagine per lingua) sul ramo `seo-fase-2`, PR aperta, non ancora pubblicata**
+Aggiornato: **22 ottobre 2026** — SEO fase 1 e **SEO fase 2 (pagine per lingua) pubblicate** (merge `76fe88d` e `5d0aa6e`)
 
 ---
 
@@ -1076,7 +1076,7 @@ restano in italiano in tutte le lingue: `i18n.js` traduce solo l'innerHTML.
 
 ✅ **22 ottobre 2026, pubblicata.** PR #1 verificata sulla Deploy Preview (`prova_anteprima.sh` 27/27 e controllo a occhio di Filippo), unita con merge commit **`76fe88d`**; il ramo `seo-fase-1` resta. In produzione su `https://alpradelafam.com`: `/faq.html` → un solo 301 a `/faq`, `/faq` 200, `/xyz-inesistente` 404 con la nostra pagina, font con cache immutable, title e H1 nuovi in home; `prova_anteprima.sh https://alpradelafam.com` 27/27.
 
-### SEO, fase 2 — pagine vere per lingua · 22 ottobre 2026 · ramo `seo-fase-2`, NON su main
+### SEO, fase 2 — pagine vere per lingua · 22 ottobre 2026 · ramo `seo-fase-2`, pubblicata il 22 ottobre 2026 (merge `5d0aa6e`)
 
 **Prima** le quattro lingue esistevano solo nel browser: `i18n.js` (165 KB su
 ogni pagina) sostituiva il testo dopo il caricamento, scegliendo la lingua da
@@ -1170,6 +1170,8 @@ tutto in regola. ⚠️ Sull'anteprima Netlify, dopo una raffica di richieste da
 un browser automatico, risponde **403 con una sua pagina di protezione** (in
 inglese): non è il sito. `controlla_seo.mjs` ora riprova con pause crescenti.
 **Prima del merge resta il controllo a occhio** delle pagine tradotte.
+
+✅ **22 ottobre 2026, pubblicata.** PR #2 verificata sulla Deploy Preview (`prova_anteprima.sh` 70/70 e controllo a occhio di Filippo), unita con merge commit **`5d0aa6e`** (17:35); il ramo `seo-fase-2` resta. In produzione su `https://alpradelafam.com`: `prova_anteprima.sh` **70/70**; `controlla_seo.mjs` **tutto in regola** (70 pagine, una per tipo e lingua con JavaScript acceso: 0 errori, selettore e assistente funzionanti); `/de/faq.html` → un solo 301 a `/de/faq` (200); `/de_DE/clementina/` → un solo 301 a `/de/appartamento-clementina` (200); `/en/xyz` 404 con la pagina inglese; `sitemap.xml` 65 URL, 390 `xhtml:link` (5 lingue + x-default ciascuno), identica al repo; `/i18n.js` 404. Da fare: inviare di nuovo la sitemap in Search Console e seguire il rapporto hreflang.
 
 ---
 

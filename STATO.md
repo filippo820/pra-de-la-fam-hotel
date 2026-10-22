@@ -978,7 +978,7 @@ Nomi dei mesi e dei giorni da `Intl` su `<html lang>`: **nessun testo italiano
 nuovo**, quindi nessuna chiave `data-i18n` e nessuna traduzione da rifare.
 Provato in tedesco («September 2026 · Mo Di Mi Do Fr Sa So») e in italiano.
 
-### SEO, fase 1 — 21 ottobre 2026 · ramo `seo-fase-1`, NON su main
+### SEO, fase 1 — 21 ottobre 2026 · ramo `seo-fase-1`, pubblicata il 22 ottobre 2026 (merge `76fe88d`)
 ⚠️ **Sta su un ramo, non in produzione.** Il ramo non ha un'anteprima propria
 (su Netlify i branch deploy sono spenti: `seo-fase-1--pradelafam.netlify.app`
 risponde «Not Found»). Per vederla serve una **Deploy Preview**: aprire una
@@ -1069,6 +1069,8 @@ redirect dalle vecchie `/en_GB` ecc. Oggi title, description, alt e JSON-LD
 restano in italiano in tutte le lingue: `i18n.js` traduce solo l'innerHTML.
 
 **22 ottobre 2026, due ritocchi (sempre sul ramo):** description di Pomelo a 153 caratteri (158 nel sorgente, dove l'apostrofo è `&#x27;` e prima ne contava 163); la riga legale «FAM S.r.l. · … · P.IVA …» ora è in `NON_TRADURRE` di `marca.py` e la 404 non ha più la sua chiave, come le altre pagine. Per `controlla_seo.mjs` in locale serve un server che risponda agli indirizzi senza `.html` e dia `404.html` con stato 404: `python3 -m http.server` non lo fa e fa fallire tutte le sottopagine.
+
+✅ **22 ottobre 2026, pubblicata.** PR #1 verificata sulla Deploy Preview (`prova_anteprima.sh` 27/27 e controllo a occhio di Filippo), unita con merge commit **`76fe88d`**; il ramo `seo-fase-1` resta. In produzione su `https://alpradelafam.com`: `/faq.html` → un solo 301 a `/faq`, `/faq` 200, `/xyz-inesistente` 404 con la nostra pagina, font con cache immutable, title e H1 nuovi in home; `prova_anteprima.sh https://alpradelafam.com` 27/27.
 
 ---
 

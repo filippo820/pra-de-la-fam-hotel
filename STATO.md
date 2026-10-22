@@ -1068,6 +1068,8 @@ Instagram e pagina Booking se ci sono, conferma delle 10 camere di
 redirect dalle vecchie `/en_GB` ecc. Oggi title, description, alt e JSON-LD
 restano in italiano in tutte le lingue: `i18n.js` traduce solo l'innerHTML.
 
+**22 ottobre 2026, due ritocchi (sempre sul ramo):** description di Pomelo a 153 caratteri (158 nel sorgente, dove l'apostrofo è `&#x27;` e prima ne contava 163); la riga legale «FAM S.r.l. · … · P.IVA …» ora è in `NON_TRADURRE` di `marca.py` e la 404 non ha più la sua chiave, come le altre pagine. Per `controlla_seo.mjs` in locale serve un server che risponda agli indirizzi senza `.html` e dia `404.html` con stato 404: `python3 -m http.server` non lo fa e fa fallire tutte le sottopagine.
+
 ---
 
 ## ⬜ Aperto

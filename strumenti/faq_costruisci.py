@@ -11,8 +11,10 @@ Le chiavi data-i18n si calcolano qui come le calcola marca.py — impronta sha1
 del testo italiano, primi 10 caratteri — perche' marca.py NON marca dentro un
 <summary>, e le domande stanno tutte li'.
 
-Dopo averlo lanciato: raccogli.py e poi costruisci.py, altrimenti le traduzioni
-delle frasi nuove non entrano in i18n.js.
+Dopo averlo lanciato: raccogli.py, costruisci.py e lingue.py, altrimenti le
+frasi nuove non arrivano nelle pagine /en/ /de/ /fr/ /es/ — e la FAQ italiana
+resta senza il blocco hreflang e senza gli indirizzi del selettore di lingua,
+che scrive lingue.py.
 """
 import sys, json, hashlib, re, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))

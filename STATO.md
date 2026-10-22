@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **21 ottobre 2026** — SEO fase 1 sul ramo `seo-fase-1`, **non ancora pubblicata**
+Aggiornato: **22 ottobre 2026** — SEO fase 1 pubblicata; **SEO fase 2 (pagine per lingua) sul ramo `seo-fase-2`, PR aperta, non ancora pubblicata**
 
 ---
 
@@ -180,6 +180,8 @@ defined`, e non c'era un solo marcatore di traduzione. Ora:
   misure, indirizzi e nomi propri, che restano in italiano di proposito)
 - selettore lingua aggiunto alle 9 sottopagine, che non l'avevano
 - la lingua si ricorda, e al primo arrivo si prende da quella del browser
+  ⚠️ *Superato dalla fase SEO 2 (22/10): ogni lingua ha le sue pagine, il
+  browser non decide più niente e `i18n.js` non c'è più. Vedi «SEO, fase 2».*
 - i 36 pulsanti Prenota passano al motore la lingua del sito (era fisso su `it`)
 
 ### Analytics
@@ -205,6 +207,8 @@ Verificato **con il JavaScript spento**, che è come lo vedono WhatsApp e Facebo
 
 ⚠️ **L'anteprima resta in italiano** anche per chi vede il sito in tedesco: chi la
 genera non esegue il JavaScript. Tradurla richiederebbe una pagina per lingua.
+*Risolto dalla fase SEO 2: le pagine /en/ /de/ /fr/ /es/ hanno title,
+description e og:* nella loro lingua (stessa immagine: non contiene testo).*
 
 ### Privacy e cookie
 Quattro pagine nuove (due per sito). **Ogni cookie elencato è stato osservato in un
@@ -1064,13 +1068,96 @@ identificativo nazionale), indirizzo della scheda Google Business, profilo
 Instagram e pagina Booking se ci sono, conferma delle 10 camere di
 `numberOfRooms`, e quando torna disponibile Bergamotto.
 
-⬜ **Fase 2**: pagine vere per lingua (`/en/ /de/ /fr/ /es/`) con hreflang e
+🔄 **Fase 2** (fatta sul ramo `seo-fase-2`, vedi sotto): pagine vere per lingua (`/en/ /de/ /fr/ /es/`) con hreflang e
 redirect dalle vecchie `/en_GB` ecc. Oggi title, description, alt e JSON-LD
 restano in italiano in tutte le lingue: `i18n.js` traduce solo l'innerHTML.
 
 **22 ottobre 2026, due ritocchi (sempre sul ramo):** description di Pomelo a 153 caratteri (158 nel sorgente, dove l'apostrofo è `&#x27;` e prima ne contava 163); la riga legale «FAM S.r.l. · … · P.IVA …» ora è in `NON_TRADURRE` di `marca.py` e la 404 non ha più la sua chiave, come le altre pagine. Per `controlla_seo.mjs` in locale serve un server che risponda agli indirizzi senza `.html` e dia `404.html` con stato 404: `python3 -m http.server` non lo fa e fa fallire tutte le sottopagine.
 
 ✅ **22 ottobre 2026, pubblicata.** PR #1 verificata sulla Deploy Preview (`prova_anteprima.sh` 27/27 e controllo a occhio di Filippo), unita con merge commit **`76fe88d`**; il ramo `seo-fase-1` resta. In produzione su `https://alpradelafam.com`: `/faq.html` → un solo 301 a `/faq`, `/faq` 200, `/xyz-inesistente` 404 con la nostra pagina, font con cache immutable, title e H1 nuovi in home; `prova_anteprima.sh https://alpradelafam.com` 27/27.
+
+### SEO, fase 2 — pagine vere per lingua · 22 ottobre 2026 · ramo `seo-fase-2`, NON su main
+
+**Prima** le quattro lingue esistevano solo nel browser: `i18n.js` (165 KB su
+ogni pagina) sostituiva il testo dopo il caricamento, scegliendo la lingua da
+`localStorage` o dal browser. Google, WhatsApp e chiunque legga l'HTML vedeva
+solo l'italiano; title, description, alt e JSON-LD non erano mai tradotti.
+**Ora** ogni pagina italiana ha quattro gemelle statiche: `/en/`, `/de/`,
+`/fr/`, `/es/` + il nome della pagina, che **non si traduce**
+(`/de/appartamento-clementina`). L'italiano resta alla radice.
+
+📐 **La sorgente resta l'italiano. Le pagine in `/en/` ecc. non si toccano mai
+a mano**: le riscrive `strumenti/lingue.py` a ogni passata, e un ritocco fatto
+lì sparisce in silenzio. Hanno in testa un commento che lo dice.
+
+**Procedura, dopo aver cambiato un testo italiano** (ordine completo):
+`marca.py` → togliere `t03688ba6aa` e `t83022a5b26` → `raccogli.py` →
+`riaggancia.py` → `raccogli.py` → `costruisci.py` → **`lingue.py`** → `kb.py`.
+Se cambia la FAQ: `faq_costruisci.py` prima di tutto. Se cambia il JSON-LD
+della home: `dati_strutturati.py` prima di `lingue.py`. Per provarlo in
+locale: `python3 strumenti/servi.py`, poi `controlla_seo.mjs` e
+`controlla_traduzioni.py`.
+
+**Cosa fa `lingue.py`** (legge `strumenti/dizionario.json`, che ora scrive
+`costruisci.py` al posto di `i18n.js`):
+- il testo di ogni `[data-i18n]` dalla stessa traduzione che prima applicava il
+  browser — verificato su tutte le 56 pagine, chiave per chiave, contro
+  `setLang()`;
+- `<html lang>`, link interni nella stessa lingua, `lang=` del motore di
+  prenotazione;
+- title, description, og/twitter, alt, aria-label, etichette della mappa e
+  testi del JSON-LD da **`strumenti/trad_meta.json`** (nuovo: chiave = testo
+  italiano esatto). Le risposte della FAQ nel JSON-LD si ricompongono dai
+  paragrafi tradotti. Un testo che non trova lo elenca ed esce con errore;
+- hreflang reciproci (5 lingue + x-default → italiano) in un blocco
+  `pdlf-lingue`, canonical/og:url/og:locale della lingua, url del JSON-LD;
+- il selettore IT/EN/DE/FR/ES: sono **link veri** (`<a hreflang>`), lo script
+  ne scrive gli href e segna la lingua attiva;
+- `sitemap.xml` (65 indirizzi con le alternative; lastmod si sposta solo se la
+  pagina cambia) e il blocco «lingue» di `_redirects`.
+Nelle sorgenti italiane scrive solo il blocco hreflang e gli href del
+selettore.
+
+**`_redirects`**, blocco «lingue» prima delle regole `/:lingua/...`:
+`/de/faq.html` → `/de/faq` (301!), le vecchie URL nella **loro** lingua
+(`/de_DE/clementina/` → `/de/appartamento-clementina`; la mappa la legge dalle
+regole `/:lingua/<pagina>` esistenti), il resto del vecchio sito alla home della
+lingua, `/de/pagina/` → `/de/pagina`, `/de/*` → la 404 tedesca con stato 404.
+
+⚠️ **Da guardare sulla Deploy Preview, perché in locale non si può:** che
+Netlify consideri `/de/faq` servita dal file `de/faq.html` e quindi non le
+applichi né la 404 di `/de/*` né la vecchia `/:lingua/faq → /faq`.
+`prova_anteprima.sh` lo controlla per ogni lingua.
+
+**Analytics**: la lingua viene da `<html lang>`; la vecchia `pdlf_lang` si
+cancella; `/de/` conta come «home». Il clic su una lingua resta `cambio_lingua`.
+**Assistente**: non toccato. Riceveva già la lingua da `<html lang>`.
+
+🔴 **Trovati facendolo (c'erano già in produzione):**
+- **cookie e privacy non erano tradotte**: marcate, ma senza traduzioni nel
+  dizionario e senza `i18n.js`. Tradotte ora, frammento per frammento. Il
+  testo legale tradotto porta la stessa nota dell'italiano («va fatta
+  rivedere»): **farlo rivedere**, come l'italiano.
+- **`marca.py` salta** i paragrafi con un link o un `<code>` dentro e gli
+  `<span>` isolati: «Scorri», «Non disponibile», «Verifica disponibilità», la
+  legenda della mappa erano in italiano in tutte le lingue. Marcati a mano con
+  la stessa impronta. Le etichette dei punti della mappa (`data-name`,
+  `data-detail`) non erano mai state tradotte.
+- il titolo del banner diceva **«Cookies &amp;amp; Privacy»** in en/de/fr:
+  `costruisci.py` codificava due volte. Corretto.
+- il JSON-LD indicava per quattro appartamenti **immagini inesistenti**
+  (`img/appartamento-pomelo.jpg` invece di `img/pomelo.jpg`), dal 25 agosto.
+- la cookie policy dichiarava `pdlf_lang`: tolto (non esiste più) e aggiunta la
+  cache del meteo in `sessionStorage` (mezz'ora), che non era dichiarata.
+
+**Verificato**: `controlla_seo.mjs` su 70 pagine — tutto in regola (title e
+description unici e nella misura in ogni lingua, hreflang, canonical,
+JSON-LD, nessun link verso un'altra lingua, **nessun testo rimasto in
+italiano** a parte nomi e riga legale; il controllo l'ho provato lasciando
+apposta una parola italiana). Con Playwright, in ogni lingua: home, camera,
+FAQ, 404 senza errori in console, selettore che porta alla pagina giusta,
+assistente che si apre nella lingua. Geometria del selettore identica al pixel
+dopo il passaggio da `<button>` a `<a>`.
 
 ---
 
@@ -1143,12 +1230,13 @@ dell'archivio.
 
 ```bash
 cd ~/Documents/Fam_S.r.l./Sito\ Prà/pradelafam
-python3 -m http.server 8911        # anteprima su http://localhost:8911
+python3 strumenti/servi.py         # anteprima su http://localhost:8911 (indirizzi senza .html, 404 per lingua)
 git add -A && git commit -m "…" && git push
 ```
 
 Il push pubblica da solo su `pradelafam.netlify.app` in meno di un minuto.
 
 **Dopo aver cambiato un testo italiano** in una pagina, la sua chiave `data-i18n`
-cambia e la traduzione va rifatta: gli script sono in
-`scratchpad/` (`marca.py` per le chiavi, `costruisci.py` per `i18n.js`).
+cambia e la traduzione va rifatta: gli script sono in `strumenti/`, e l'ordine
+completo è in «SEO, fase 2». Le pagine in `/en/ /de/ /fr/ /es/` **non si
+modificano a mano**: le riscrive `lingue.py`.

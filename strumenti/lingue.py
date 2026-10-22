@@ -21,6 +21,11 @@ COSA FA, pagina per pagina e lingua per lingua:
     «/#hotel» → «/de/#hotel». Le risorse (/img, /fonts, /i18n.js) hanno gia'
     percorsi assoluti nelle pagine italiane, e valgono da qualsiasi cartella;
   · il motore di prenotazione riceve lang= della pagina;
+  · ogni pagina, italiana compresa, dichiara le sue cinque versioni
+    (hreflang, piu' x-default verso l'italiano) in un blocco fra i segnaposto
+    pdlf-lingue, scritto anche nella pagina italiana: e' l'unica modifica
+    che questo script fa alle sorgenti. Canonical, og:url, og:locale e gli
+    indirizzi del JSON-LD puntano alla pagina nella sua lingua;
   · cio' che il dizionario non copre — <title>, description, anteprime
     social, alt, aria-label e i testi del JSON-LD — si traduce da
     trad_meta.json; se li' non c'e', da un frammento gia' tradotto
@@ -39,6 +44,9 @@ from html.parser import HTMLParser
 BASE = pathlib.Path(__file__).resolve().parent.parent
 S = BASE / "strumenti"
 LINGUE = ["en", "de", "fr", "es"]
+TUTTE = ["it"] + LINGUE
+SITO = "https://alpradelafam.com"
+LOCALE = {"it": "it_IT", "en": "en_GB", "de": "de_DE", "fr": "fr_FR", "es": "es_ES"}
 
 DIZ = json.loads((S / "dizionario.json").read_text(encoding="utf-8"))
 PAGINE = sorted(p.stem for p in BASE.glob("*.html"))          # index, faq, 404, ...
@@ -111,7 +119,9 @@ def dati(src, lingua, nome):
     """Traduce i testi dentro i blocchi JSON-LD."""
     def giro(o, chiave=None):
         if isinstance(o, dict):
-            return {k: (lingua if k == "inLanguage" else v if k in NON_TESTO else giro(v, k))
+            return {k: (lingua if k == "inLanguage" else
+                        nella_lingua(v, lingua) if k in ("url", "item") else
+                        v if k in NON_TESTO else giro(v, k))
                     for k, v in o.items()}
         if isinstance(o, list):
             return [giro(v, chiave) for v in o]
@@ -208,6 +218,49 @@ def indirizzo(lingua, percorso):
     return None
 
 
+def nella_lingua(url, lingua):
+    """https://alpradelafam.com/faq → https://alpradelafam.com/de/faq (solo le pagine)."""
+    if not isinstance(url, str) or not url.startswith(SITO + "/"):
+        return url
+    nuovo = indirizzo(lingua, url[len(SITO):])
+    return SITO + nuovo if nuovo else url
+
+
+def assoluto(nome, lingua):
+    """L'indirizzo canonico della pagina nella lingua, senza .html."""
+    percorso = "" if nome == "index" else nome
+    return f"{SITO}/{percorso}" if lingua == "it" else f"{SITO}/{lingua}/{percorso}"
+
+
+INIZIO_ALT = "<!-- ══ pdlf-lingue ══"
+FINE_ALT = "<!-- ══ /pdlf-lingue ══ -->"
+
+
+def alternative(src, nome):
+    """Il blocco hreflang (uguale in tutte e cinque le versioni) subito dopo il canonical."""
+    righe = [f'<link rel="alternate" hreflang="{l}" href="{assoluto(nome, l)}" />' for l in TUTTE]
+    righe.append(f'<link rel="alternate" hreflang="x-default" href="{assoluto(nome, "it")}" />')
+    blocco = (f"{INIZIO_ALT} la stessa pagina nelle cinque lingue: lo scrive strumenti/lingue.py -->\n"
+              + "\n".join(righe) + f"\n{FINE_ALT}\n")
+    if INIZIO_ALT in src:
+        i = src.index(INIZIO_ALT); j = src.index(FINE_ALT, i) + len(FINE_ALT) + 1
+        return src[:i] + blocco + src[j:]
+    m = re.search(r'<link rel="canonical"[^>]*>\n', src)
+    return src[:m.end()] + blocco + src[m.end():]
+
+
+def indirizzi(src, nome, lingua):
+    """canonical, og:url e og:locale della pagina nella sua lingua."""
+    qui = assoluto(nome, lingua)
+    src = re.sub(r'(<link rel="canonical" href=")[^"]*"', rf'\g<1>{qui}"', src)
+    src = re.sub(r'(<meta property="og:url" content=")[^"]*"', rf'\g<1>{qui}"', src)
+    altre = "".join(f'<meta property="og:locale:alternate" content="{LOCALE[l]}" />\n'
+                    for l in TUTTE if l != lingua)
+    return re.sub(r'<meta property="og:locale" content="[^"]*" />\n'
+                  r'(?:<meta property="og:locale:alternate" content="[^"]*" />\n)*',
+                  f'<meta property="og:locale" content="{LOCALE[lingua]}" />\n{altre}', src)
+
+
 def collegamenti(src, lingua):
     def sost(m):
         nuovo = indirizzo(lingua, m.group(2))
@@ -224,12 +277,23 @@ def pagina(nome, lingua):
     src = collegamenti(src, lingua)
     src = attributi(src, lingua, f"{lingua}/{nome}")
     src = dati(src, lingua, f"{lingua}/{nome}")
+    src = indirizzi(src, nome, lingua)
     src = src.replace('<html lang="it">', f'<html lang="{lingua}">', 1)
     src = src.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + AVVISO, 1)
     return src, n
 
 
 if __name__ == "__main__":
+    # prima le sorgenti italiane: il blocco hreflang (la 404 non ha versioni da
+    # dichiarare: non e' indicizzata e non ha un indirizzo suo)
+    for nome in PAGINE:
+        if nome == "404":
+            continue
+        f = BASE / f"{nome}.html"
+        prima = f.read_text(encoding="utf-8")
+        dopo = alternative(prima, nome)
+        if dopo != prima:
+            f.write_text(dopo, encoding="utf-8")
     for lingua in LINGUE:
         cartella = BASE / lingua
         cartella.mkdir(exist_ok=True)

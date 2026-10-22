@@ -3,7 +3,7 @@
 
 Due domande, contro una versione di riferimento in git (di solito origin/main):
 
-1. CHIAVI ORFANE. Ogni chiave del dizionario in i18n.js deve stare ancora in
+1. CHIAVI ORFANE. Ogni chiave del dizionario deve stare ancora in
    qualche pagina, e ogni data-i18n delle pagine deve stare in it.json. Una
    chiave del dizionario senza pagina e' una traduzione che non verra' mai
    mostrata; un data-i18n senza voce in it.json e' un testo che costruisci.py
@@ -25,14 +25,22 @@ def dizionario(js):
     m = re.search(r'window\.PDLF_T = (\{.*?\});\n', js, re.S)
     return json.loads(m.group(1))
 
+def dizionario_in(leggi):
+    """Dalla fase SEO 2 il dizionario sta in strumenti/dizionario.json (lo legge
+    lingue.py); prima stava dentro i18n.js. Il riferimento puo' essere l'uno o l'altro."""
+    try:
+        return json.loads(leggi("strumenti/dizionario.json"))
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return dizionario(leggi("i18n.js"))
+
 def git(percorso):
     return subprocess.run(["git", "show", f"{RIF}:{percorso}"], cwd=BASE,
                           capture_output=True, text=True, check=True).stdout
 
 it = json.loads((BASE / "strumenti/it.json").read_text(encoding="utf-8"))
-diz = dizionario((BASE / "i18n.js").read_text(encoding="utf-8"))
+diz = dizionario_in(lambda p: (BASE / p).read_text(encoding="utf-8"))
 it_rif = json.loads(git("strumenti/it.json"))
-diz_rif = dizionario(git("i18n.js"))
+diz_rif = dizionario_in(git)
 
 pagine = set()
 for f in BASE.glob("*.html"):

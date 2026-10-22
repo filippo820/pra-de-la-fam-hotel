@@ -34,6 +34,26 @@
   [headers.values]
     X-Robots-Tag = "noindex"
 
+[[headers]]
+  for = "/en/404.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/de/404.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/fr/404.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/es/404.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 # I caratteri tipografici stanno in casa: la versione e' nel nome del file
 # (cormorant-garamond-v21-…, caratteri-v1.css), quindi un cambio e' sempre
 # un file nuovo e la cache puo' durare un anno.

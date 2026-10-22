@@ -15,9 +15,11 @@
 <script>
   gtag('js', new Date());
   (function(){
-    var lang = 'it';
-    try { lang = localStorage.getItem('pdlf_lang') || document.documentElement.lang || 'it'; } catch(e){}
-    var slug = location.pathname.replace(/\/+$/,'').split('/').pop() || 'home';
+    // la lingua e' quella della pagina (/de/faq e' tedesco), non una preferenza salvata
+    var lang = document.documentElement.lang || 'it';
+    // la versione precedente ricordava la lingua nel browser: non serve piu'
+    try { localStorage.removeItem('pdlf_lang'); } catch(e){}
+    var slug = location.pathname.replace(/^\/(en|de|fr|es)(?=\/|$)/,'').replace(/\/+$/,'').split('/').pop() || 'home';
     slug = slug.replace(/\.html$/,'') || 'home';
     gtag('config', 'G-M29PYB9NDX', { pdlf_lang: lang, pdlf_pagina: slug });
     window.__pdlf = { lang: lang, slug: slug };
@@ -26,7 +28,7 @@
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="preload" as="image" href="img/kumquat.jpg" fetchpriority="high"/>
+<link rel="preload" as="image" href="/img/kumquat.jpg" fetchpriority="high"/>
 <title>Appartamento Kumquat, giardino vista lago | Prà de la Fam</title>
 <!-- ══ pdlf-social ══ anteprima quando il link viene condiviso in chat.
      Chi la genera NON esegue il JavaScript: questi testi restano in italiano
@@ -52,6 +54,14 @@
 <meta name="twitter:image" content="https://alpradelafam.com/og/appartamento-kumquat.jpg" />
 <meta name="twitter:image:alt" content="Appartamento Kumquat: tavolo da pranzo davanti alle vetrate sul Lago di Garda" />
 <link rel="canonical" href="https://alpradelafam.com/appartamento-kumquat" />
+<!-- ══ pdlf-lingue ══ la stessa pagina nelle cinque lingue: lo scrive strumenti/lingue.py -->
+<link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-kumquat" />
+<link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-kumquat" />
+<link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-kumquat" />
+<link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-kumquat" />
+<link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-kumquat" />
+<link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-kumquat" />
+<!-- ══ /pdlf-lingue ══ -->
 <!-- ══ pdlf-dati ══ generato da strumenti/dati_strutturati.py dal JSON-LD della home:
      non modificarlo qui, cambia la home e rilancia lo script. -->
 <script type="application/ld+json">
@@ -64,7 +74,7 @@
       "name": "Appartamento Kumquat",
       "url": "https://alpradelafam.com/appartamento-kumquat",
       "description": "Vista che va da Malcesine a Sirmione, giardino privato con sdraio, angolo cottura e bagno con doccia.",
-      "image": "https://alpradelafam.com/img/appartamento-kumquat.jpg",
+      "image": "https://alpradelafam.com/img/kumquat.jpg",
       "floorSize": {
         "@type": "QuantitativeValue",
         "value": 35,
@@ -195,7 +205,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 
 /* HERO */
 .room-hero{position:relative;height:72vh;min-height:480px;overflow:hidden;display:grid;place-items:end}
-.room-hbg{position:absolute;inset:-8%;background:url('img/kumquat.jpg') center/cover no-repeat;will-change:transform}
+.room-hbg{position:absolute;inset:-8%;background:url('/img/kumquat.jpg') center/cover no-repeat;will-change:transform}
 .room-hov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,21,32,.08) 0%,rgba(11,21,32,.04) 40%,rgba(11,21,32,.75) 100%)}
 .room-hc{position:relative;z-index:2;width:100%;padding:0 clamp(1.5rem,5vw,5rem) clamp(3rem,6vh,6rem);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem}
 .room-hl{opacity:0;animation:fadeup .8s var(--ease) .2s forwards}
@@ -377,17 +387,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 <header>
 <nav>
   <a href="/" class="nav-logo">
-    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
+    <img class="nav-logo-img" src="/img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
   <a data-i18n="tafb272106a" href="/#appartamenti" class="nav-back">Appartamenti</a>
-  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
+  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><a class="lang-btn active" href="/appartamento-kumquat" hreflang="it" lang="it" aria-current="true" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">IT</a><span style="opacity:.35">|</span><a class="lang-btn" href="/en/appartamento-kumquat" hreflang="en" lang="en" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">EN</a><span style="opacity:.35">|</span><a class="lang-btn" href="/de/appartamento-kumquat" hreflang="de" lang="de" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">DE</a><span style="opacity:.35">|</span><a class="lang-btn" href="/fr/appartamento-kumquat" hreflang="fr" lang="fr" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">FR</a><span style="opacity:.35">|</span><a class="lang-btn" href="/es/appartamento-kumquat" hreflang="es" lang="es" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">ES</a></div>
   <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="nav-cta">Prenota →</a>
 </nav>
 </header>
 
 <main>
 <section class="room-hero">
-  <div class="room-hbg" id="rhbg" style="background-image:url(img/kumquat.jpg)"></div>
+  <div class="room-hbg" id="rhbg" style="background-image:url(/img/kumquat.jpg)"></div>
   <div class="room-hov"></div>
   <div class="room-hc">
     <div class="room-hl">
@@ -423,38 +433,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
         <p data-i18n="t0a1b390212" class="pdf-gallery__title">Galleria foto</p>
         <div class="pdf-gallery__grid">
 
-          <div class="pdf-gallery__item" data-src="img/kumquat-01.jpg" data-caption="">
-            <img src="img/kumquat-01.jpg" alt="Kumquat: letto matrimoniale e zona pranzo davanti alle vetrate sul lago" loading="eager" width="1500" height="1006">
+          <div class="pdf-gallery__item" data-src="/img/kumquat-01.jpg" data-caption="">
+            <img src="/img/kumquat-01.jpg" alt="Kumquat: letto matrimoniale e zona pranzo davanti alle vetrate sul lago" loading="eager" width="1500" height="1006">
             <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
           </div>
 
-          <div class="pdf-gallery__item" data-src="img/kumquat-02.jpg" data-caption="">
-            <img src="img/kumquat-02.jpg" alt="Kumquat: angolo cottura con microonde e tavolo davanti alle finestre" loading="lazy" width="1500" height="1000">
+          <div class="pdf-gallery__item" data-src="/img/kumquat-02.jpg" data-caption="">
+            <img src="/img/kumquat-02.jpg" alt="Kumquat: angolo cottura con microonde e tavolo davanti alle finestre" loading="lazy" width="1500" height="1000">
             <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
           </div>
 
-          <div class="pdf-gallery__item" data-src="img/kumquat-03.jpg" data-caption="">
-            <img src="img/kumquat-03.jpg" alt="Bagno del Kumquat con lavabo bianco e pareti in pietra" loading="lazy" width="1500" height="1000">
+          <div class="pdf-gallery__item" data-src="/img/kumquat-03.jpg" data-caption="">
+            <img src="/img/kumquat-03.jpg" alt="Bagno del Kumquat con lavabo bianco e pareti in pietra" loading="lazy" width="1500" height="1000">
             <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
           </div>
 
-          <div class="pdf-gallery__item" data-src="img/kumquat-04.jpg" data-caption="">
-            <img src="img/kumquat-04.jpg" alt="Colazione sul tavolo del Kumquat davanti alla finestra aperta sul lago e sui monti innevati" loading="lazy" width="1500" height="1000">
+          <div class="pdf-gallery__item" data-src="/img/kumquat-04.jpg" data-caption="">
+            <img src="/img/kumquat-04.jpg" alt="Colazione sul tavolo del Kumquat davanti alla finestra aperta sul lago e sui monti innevati" loading="lazy" width="1500" height="1000">
             <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
           </div>
 
-          <div class="pdf-gallery__item" data-src="img/kumquat-05.jpg" data-caption="">
-            <img src="img/kumquat-05.jpg" alt="Kumquat: tavolo da pranzo e poltrone davanti alle vetrate sul Lago di Garda" loading="lazy" width="1500" height="1000">
+          <div class="pdf-gallery__item" data-src="/img/kumquat-05.jpg" data-caption="">
+            <img src="/img/kumquat-05.jpg" alt="Kumquat: tavolo da pranzo e poltrone davanti alle vetrate sul Lago di Garda" loading="lazy" width="1500" height="1000">
             <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
           </div>
 
-          <div class="pdf-gallery__item" data-src="img/kumquat-06.jpg" data-caption="">
-            <img src="img/kumquat-06.jpg" alt="Kumquat: letto matrimoniale accanto alla porta ad arco aperta sul giardino" loading="lazy" width="1500" height="1006">
+          <div class="pdf-gallery__item" data-src="/img/kumquat-06.jpg" data-caption="">
+            <img src="/img/kumquat-06.jpg" alt="Kumquat: letto matrimoniale accanto alla porta ad arco aperta sul giardino" loading="lazy" width="1500" height="1006">
             <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
           </div>
 
-          <div class="pdf-gallery__item" data-src="img/kumquat-07.jpg" data-caption="">
-            <img src="img/kumquat-07.jpg" alt="Bagno del Kumquat con doccia, finestra e pavimento in legno" loading="lazy" width="1500" height="1000">
+          <div class="pdf-gallery__item" data-src="/img/kumquat-07.jpg" data-caption="">
+            <img src="/img/kumquat-07.jpg" alt="Bagno del Kumquat con doccia, finestra e pavimento in legno" loading="lazy" width="1500" height="1000">
             <span class="pdf-gallery__zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
           </div>
         </div>
@@ -686,13 +696,12 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
     var cerca = document.querySelector('.searchbar button, #searchbar button, [class*=search] button');
     if (cerca) cerca.addEventListener('click', function(){ ev('cerca_disponibilita', { secondi:secondi() }); });
 
-    // 6. CAMBIO LINGUA (quando tornera' a funzionare: oggi setLang non e' definita)
-    document.querySelectorAll('[onclick*="setLang"]').forEach(function(b){
-      b.addEventListener('click', function(){
-        var m = (b.getAttribute('onclick')||'').match(/setLang\('(\w+)'\)/);
-        if (m) ev('cambio_lingua', { nuova: m[1] });
-      });
-    });
+    // 6. CAMBIO LINGUA: i pulsanti delle lingue sono link alla stessa pagina
+    //    nell'altra lingua (anche quelli del menu del telefono)
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[hreflang]') : null;
+      if (a) ev('cambio_lingua', { nuova: a.getAttribute('hreflang') });
+    }, true);
 
     // 7. ALL'USCITA: quanto e' durata e fin dove era arrivato
     document.addEventListener('visibilitychange', function(){
@@ -754,9 +763,7 @@ function pdlfApplica(ok){
   else { var el = document.getElementById('pdlf-overlay'); if (el) el.hidden = false; }
 })();
 </script>
-<!-- ══ pdlf-i18n ══ le cinque lingue -->
-<script src="i18n.js" defer></script>
-<script src="menu.js" defer></script>
-<script src="chat.js" defer></script>
+<script src="/menu.js" defer></script>
+<script src="/chat.js" defer></script>
 </body>
 </html>

@@ -11,8 +11,10 @@ Le chiavi data-i18n si calcolano qui come le calcola marca.py — impronta sha1
 del testo italiano, primi 10 caratteri — perche' marca.py NON marca dentro un
 <summary>, e le domande stanno tutte li'.
 
-Dopo averlo lanciato: raccogli.py e poi costruisci.py, altrimenti le traduzioni
-delle frasi nuove non entrano in i18n.js.
+Dopo averlo lanciato: raccogli.py, costruisci.py e lingue.py, altrimenti le
+frasi nuove non arrivano nelle pagine /en/ /de/ /fr/ /es/ — e la FAQ italiana
+resta senza il blocco hreflang e senza gli indirizzi del selettore di lingua,
+che scrive lingue.py.
 """
 import sys, json, hashlib, re, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -33,7 +35,7 @@ def esc(t):
 # il banner dei cookie spariva in silenzio.
 _cd = (BASE / "camera-doppia.html").read_text(encoding="utf-8")
 _i = _cd.index("<!-- ══ pdlf-analytics ══ banner consenso")
-_f = _cd.rindex("</script>", _i, _cd.index('<script src="i18n.js"', _i)) + len("</script>")
+_f = _cd.rindex("</script>", _i, _cd.index('<script src="/menu.js"', _i)) + len("</script>")
 BANNER = _cd[_i:_f]
 
 TITOLO = "Domande frequenti: arrivo, spiaggia, cani | Prà de la Fam"
@@ -114,9 +116,11 @@ PAGINA = f'''<!DOCTYPE html>
 <script>
   gtag('js', new Date());
   (function(){{
-    var lang = 'it';
-    try {{ lang = localStorage.getItem('pdlf_lang') || document.documentElement.lang || 'it'; }} catch(e){{}}
-    var slug = location.pathname.replace(/\\/+$/,'').split('/').pop() || 'home';
+    // la lingua e' quella della pagina (/de/faq e' tedesco), non una preferenza salvata
+    var lang = document.documentElement.lang || 'it';
+    // la versione precedente ricordava la lingua nel browser: non serve piu'
+    try {{ localStorage.removeItem('pdlf_lang'); }} catch(e){{}}
+    var slug = location.pathname.replace(/^\\/(en|de|fr|es)(?=\\/|$)/,'').replace(/\\/+$/,'').split('/').pop() || 'home';
     slug = slug.replace(/\\.html$/,'') || 'home';
     gtag('config', 'G-M29PYB9NDX', {{ pdlf_lang: lang, pdlf_pagina: slug }});
     window.__pdlf = {{ lang: lang, slug: slug }};
@@ -125,7 +129,7 @@ PAGINA = f'''<!DOCTYPE html>
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="preload" as="image" href="img/limonaia-aerea.jpg" fetchpriority="high"/>
+<link rel="preload" as="image" href="/img/limonaia-aerea.jpg" fetchpriority="high"/>
 <title>{TITOLO}</title>
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prà de la Fam" />
@@ -254,17 +258,17 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 <header>
 <nav>
   <a href="/" class="nav-logo">
-    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
+    <img class="nav-logo-img" src="/img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
   <a data-i18n="{k('Home')}" href="/" class="nav-back">Home</a>
-  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
+  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><a class="lang-btn active" href="/" hreflang="it" lang="it" aria-current="true" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">IT</a><span style="opacity:.35">|</span><a class="lang-btn" href="/" hreflang="en" lang="en" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">EN</a><span style="opacity:.35">|</span><a class="lang-btn" href="/" hreflang="de" lang="de" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">DE</a><span style="opacity:.35">|</span><a class="lang-btn" href="/" hreflang="fr" lang="fr" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">FR</a><span style="opacity:.35">|</span><a class="lang-btn" href="/" hreflang="es" lang="es" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">ES</a></div>
   <a data-i18n="{k('Prenota →')}" href="{BOOK}" target="_blank" class="nav-cta">Prenota →</a>
 </nav>
 </header>
 
 <main>
 <section class="faq-hero">
-  <div class="faq-hbg" style="background-image:url(img/limonaia-aerea.jpg)"></div>
+  <div class="faq-hbg" style="background-image:url(/img/limonaia-aerea.jpg)"></div>
   <div class="faq-hov"></div>
   <div class="faq-hc">
     <p data-i18n="{k(OCCHIELLO)}" class="faq-eyebrow">{OCCHIELLO}</p>
@@ -325,9 +329,8 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
 
 {BANNER}
 
-<script src="i18n.js" defer></script>
-<script src="menu.js" defer></script>
-<script src="chat.js" defer></script>
+<script src="/menu.js" defer></script>
+<script src="/chat.js" defer></script>
 </body>
 </html>
 '''

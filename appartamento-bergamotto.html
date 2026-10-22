@@ -15,9 +15,11 @@
 <script>
   gtag('js', new Date());
   (function(){
-    var lang = 'it';
-    try { lang = localStorage.getItem('pdlf_lang') || document.documentElement.lang || 'it'; } catch(e){}
-    var slug = location.pathname.replace(/\/+$/,'').split('/').pop() || 'home';
+    // la lingua e' quella della pagina (/de/faq e' tedesco), non una preferenza salvata
+    var lang = document.documentElement.lang || 'it';
+    // la versione precedente ricordava la lingua nel browser: non serve piu'
+    try { localStorage.removeItem('pdlf_lang'); } catch(e){}
+    var slug = location.pathname.replace(/^\/(en|de|fr|es)(?=\/|$)/,'').replace(/\/+$/,'').split('/').pop() || 'home';
     slug = slug.replace(/\.html$/,'') || 'home';
     gtag('config', 'G-M29PYB9NDX', { pdlf_lang: lang, pdlf_pagina: slug });
     window.__pdlf = { lang: lang, slug: slug };
@@ -26,7 +28,7 @@
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="preload" as="image" href="img/bergamotto.jpg" fetchpriority="high"/>
+<link rel="preload" as="image" href="/img/bergamotto.jpg" fetchpriority="high"/>
 <title>Appartamento Bergamotto su due livelli | Prà de la Fam</title>
 <!-- ══ pdlf-social ══ anteprima quando il link viene condiviso in chat.
      Chi la genera NON esegue il JavaScript: questi testi restano in italiano
@@ -52,6 +54,14 @@
 <meta name="twitter:image" content="https://alpradelafam.com/og/appartamento-bergamotto.jpg" />
 <meta name="twitter:image:alt" content="Appartamento Bergamotto: camera sotto la volta in pietra a vista, accanto alla scala a sbalzo" />
 <link rel="canonical" href="https://alpradelafam.com/appartamento-bergamotto" />
+<!-- ══ pdlf-lingue ══ la stessa pagina nelle cinque lingue: lo scrive strumenti/lingue.py -->
+<link rel="alternate" hreflang="it" href="https://alpradelafam.com/appartamento-bergamotto" />
+<link rel="alternate" hreflang="en" href="https://alpradelafam.com/en/appartamento-bergamotto" />
+<link rel="alternate" hreflang="de" href="https://alpradelafam.com/de/appartamento-bergamotto" />
+<link rel="alternate" hreflang="fr" href="https://alpradelafam.com/fr/appartamento-bergamotto" />
+<link rel="alternate" hreflang="es" href="https://alpradelafam.com/es/appartamento-bergamotto" />
+<link rel="alternate" hreflang="x-default" href="https://alpradelafam.com/appartamento-bergamotto" />
+<!-- ══ /pdlf-lingue ══ -->
 <!-- ══ pdlf-dati ══ generato da strumenti/dati_strutturati.py dal JSON-LD della home:
      non modificarlo qui, cambia la home e rilancia lo script. -->
 <script type="application/ld+json">
@@ -116,7 +126,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 
 /* HERO */
 .room-hero{position:relative;height:72vh;min-height:480px;overflow:hidden;display:grid;place-items:end}
-.room-hbg{position:absolute;inset:-8%;background:url('img/bergamotto.jpg') center/cover no-repeat;will-change:transform}
+.room-hbg{position:absolute;inset:-8%;background:url('/img/bergamotto.jpg') center/cover no-repeat;will-change:transform}
 .room-hov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,21,32,.08) 0%,rgba(11,21,32,.04) 40%,rgba(11,21,32,.75) 100%)}
 .room-hc{position:relative;z-index:2;width:100%;padding:0 clamp(1.5rem,5vw,5rem) clamp(3rem,6vh,6rem);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem}
 .room-hl{opacity:0;animation:fadeup .8s var(--ease) .2s forwards}
@@ -265,17 +275,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 <header>
 <nav>
   <a href="/" class="nav-logo">
-    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
+    <img class="nav-logo-img" src="/img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
   <a data-i18n="tafb272106a" href="/#appartamenti" class="nav-back">Appartamenti</a>
-  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
+  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><a class="lang-btn active" href="/appartamento-bergamotto" hreflang="it" lang="it" aria-current="true" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">IT</a><span style="opacity:.35">|</span><a class="lang-btn" href="/en/appartamento-bergamotto" hreflang="en" lang="en" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">EN</a><span style="opacity:.35">|</span><a class="lang-btn" href="/de/appartamento-bergamotto" hreflang="de" lang="de" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">DE</a><span style="opacity:.35">|</span><a class="lang-btn" href="/fr/appartamento-bergamotto" hreflang="fr" lang="fr" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">FR</a><span style="opacity:.35">|</span><a class="lang-btn" href="/es/appartamento-bergamotto" hreflang="es" lang="es" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">ES</a></div>
   <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=it" target="_blank" class="nav-cta">Prenota →</a>
 </nav>
 </header>
 
 <main>
 <section class="room-hero">
-  <div class="room-hbg" id="rhbg" style="background-image:url(img/bergamotto.jpg)"></div>
+  <div class="room-hbg" id="rhbg" style="background-image:url(/img/bergamotto.jpg)"></div>
   <div class="room-hov"></div>
   <div class="room-hc">
     <div class="room-hl">
@@ -309,19 +319,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
     <div>
       <div class="room-gallery r">
         <div class="room-gallery-main">
-          <img src="img/bergamotto-01.jpg" alt="Bergamotto — camera con l'arco in pietra" loading="eager" width="1279" height="1920"/>
+          <img src="/img/bergamotto-01.jpg" alt="Bergamotto — camera con l'arco in pietra" loading="eager" width="1279" height="1920"/>
         </div>
         <div class="room-gallery-thumb">
-          <img src="img/bergamotto-02.jpg" alt="Bergamotto — la camera dall'alto" loading="lazy" width="1500" height="999"/>
+          <img src="/img/bergamotto-02.jpg" alt="Bergamotto — la camera dall'alto" loading="lazy" width="1500" height="999"/>
         </div>
         <div class="room-gallery-thumb">
-          <img src="img/bergamotto-03.jpg" alt="Bergamotto — bagno con parete in pietra" loading="lazy" width="1500" height="1000"/>
+          <img src="/img/bergamotto-03.jpg" alt="Bergamotto — bagno con parete in pietra" loading="lazy" width="1500" height="1000"/>
         </div>
         <div class="room-gallery-thumb">
-          <img src="img/bergamotto-04.jpg" alt="Bergamotto — soggiorno con travi a vista" loading="lazy" width="1500" height="1000"/>
+          <img src="/img/bergamotto-04.jpg" alt="Bergamotto — soggiorno con travi a vista" loading="lazy" width="1500" height="1000"/>
         </div>
         <div class="room-gallery-thumb">
-          <img src="img/bergamotto-05.jpg" alt="Bergamotto — la seconda camera" loading="lazy" width="1500" height="1000"/>
+          <img src="/img/bergamotto-05.jpg" alt="Bergamotto — la seconda camera" loading="lazy" width="1500" height="1000"/>
         </div>
       </div>
 
@@ -399,7 +409,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
           <div data-i18n="t36f6028b9b" class="bcs"><span class="bcs-val">65 m²</span><span class="bcs-lbl">Superficie</span></div>
           <div data-i18n="tc5f475fec9" class="bcs"><span class="bcs-val">3 pers.</span><span class="bcs-lbl">Capacità</span></div>
         </div>
-        <span class="book-btn" style="opacity:.4;cursor:not-allowed;pointer-events:none">Non disponibile</span>
+        <span data-i18n="tec0c0a3ed5" class="book-btn" style="opacity:.4;cursor:not-allowed;pointer-events:none">Non disponibile</span>
         <a data-i18n="t3e3e2e7ec7" href="tel:+390365799890" class="book-btn-secondary">📞 Chiama: 0365 799890</a>
       </div>
     </div>
@@ -507,13 +517,12 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
     var cerca = document.querySelector('.searchbar button, #searchbar button, [class*=search] button');
     if (cerca) cerca.addEventListener('click', function(){ ev('cerca_disponibilita', { secondi:secondi() }); });
 
-    // 6. CAMBIO LINGUA (quando tornera' a funzionare: oggi setLang non e' definita)
-    document.querySelectorAll('[onclick*="setLang"]').forEach(function(b){
-      b.addEventListener('click', function(){
-        var m = (b.getAttribute('onclick')||'').match(/setLang\('(\w+)'\)/);
-        if (m) ev('cambio_lingua', { nuova: m[1] });
-      });
-    });
+    // 6. CAMBIO LINGUA: i pulsanti delle lingue sono link alla stessa pagina
+    //    nell'altra lingua (anche quelli del menu del telefono)
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[hreflang]') : null;
+      if (a) ev('cambio_lingua', { nuova: a.getAttribute('hreflang') });
+    }, true);
 
     // 7. ALL'USCITA: quanto e' durata e fin dove era arrivato
     document.addEventListener('visibilitychange', function(){
@@ -575,9 +584,7 @@ function pdlfApplica(ok){
   else { var el = document.getElementById('pdlf-overlay'); if (el) el.hidden = false; }
 })();
 </script>
-<!-- ══ pdlf-i18n ══ le cinque lingue -->
-<script src="i18n.js" defer></script>
-<script src="menu.js" defer></script>
-<script src="chat.js" defer></script>
+<script src="/menu.js" defer></script>
+<script src="/chat.js" defer></script>
 </body>
 </html>

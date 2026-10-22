@@ -1161,7 +1161,15 @@ italiano** a parte nomi e riga legale; il controllo l'ho provato lasciando
 apposta una parola italiana). Con Playwright, in ogni lingua: home, camera,
 FAQ, 404 senza errori in console, selettore che porta alla pagina giusta,
 assistente che si apre nella lingua. Geometria del selettore identica al pixel
-dopo il passaggio da `<button>` a `<a>`.
+dopo il passaggio da `<button>` a `<a>`. Nessuna delle 140 pagine (70 × 2
+larghezze) scorre di lato.
+
+**Deploy Preview** (PR #2, `https://deploy-preview-2--pradelafam.netlify.app`):
+`prova_anteprima.sh` **70/70**; `controlla_seo.mjs` lanciato sull'anteprima:
+tutto in regola. ⚠️ Sull'anteprima Netlify, dopo una raffica di richieste da
+un browser automatico, risponde **403 con una sua pagina di protezione** (in
+inglese): non è il sito. `controlla_seo.mjs` ora riprova con pause crescenti.
+**Prima del merge resta il controllo a occhio** delle pagine tradotte.
 
 ---
 

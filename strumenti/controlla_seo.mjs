@@ -41,6 +41,20 @@ for (const f of [leggi("trad_corti.json"), leggi("trad_lunghi.json"), meta])
     for (const l of LINGUE) if (v[l] && norm(v[l].replace(/ /g, " ")) === norm(k)) UGUALI[l].add(norm(k));
 const NON_PAROLA = /^(?:[\d\s.,:;€%°/–—\-+()×′″²m]*|.*@.*\..*|[\w.-]+\.(?:com|it|cloud|shop)(?:\/\S*)?|GPS .*|P\.IVA.*|.*P\.IVA \d+|© \d{4} .*|\S*[\p{Extended_Pictographic}\p{Regional_Indicator}].*|App\. \w+)$/u;
 
+// Su un'anteprima Netlify, dopo una raffica di richieste da un browser
+// automatico, arriva un 403 con la pagina di protezione di Netlify (in
+// inglese, senza niente del sito): non e' un errore del sito. Si aspetta e si
+// riprova, con pause sempre piu' lunghe.
+async function vai(p, url, opz) {
+  let r;
+  for (const pausa of [0, 5000, 15000, 30000, 60000]) {
+    if (pausa) await p.waitForTimeout(pausa);
+    r = await p.goto(url, opz);
+    if (![403, 429].includes(r.status())) return r;
+  }
+  return r;
+}
+
 const b = await chromium.launch();
 const ctx = await b.newContext({ javaScriptEnabled: false });
 let guai = 0;
@@ -52,7 +66,7 @@ console.log("Pagine (JavaScript spento):");
 for (const { l, n, file } of pagine) {
   const p = await ctx.newPage();
   const url = SITO + (n === "404" ? "/" + file : percorso(n, l));
-  await p.goto(url, { waitUntil: "domcontentloaded" });
+  await vai(p, url, { waitUntil: "domcontentloaded" });
   const d = await p.evaluate(() => {
     const m = n => document.querySelector(`meta[name="${n}"],meta[property="${n}"]`)?.content;
     const testi = [];
@@ -170,7 +184,7 @@ for (const l of LINGUE) for (const n of ["index", "camera-doppia", "faq", "pagin
   p.on("pageerror", e => err.push("eccezione: " + e.message));
   p.on("console", m => { if (m.type() === "error" && !/status of 404|ERR_FAILED/.test(m.text())) err.push(m.text()); });
   p.on("response", r => { if (r.status() >= 400 && !r.request().isNavigationRequest() && r.url().startsWith(SITO)) err.push(`${r.status()} ${r.url()}`); });
-  const r = await p.goto(SITO + pg, { waitUntil: "networkidle" });
+  const r = await vai(p, SITO + pg, { waitUntil: "networkidle" });
   const info = await p.evaluate(() => ({ lang: document.documentElement.lang, h1: document.querySelector("h1")?.textContent.replace(/\s+/g, " ").trim().slice(0, 44) }));
   if (info.lang !== l) err.push(`lang della pagina ${info.lang}`);
   if (n === "pagina-che-non-esiste" && r.status() !== 404) err.push(`stato ${r.status()} invece di 404`);
@@ -182,7 +196,7 @@ for (const l of LINGUE) for (const n of ["index", "camera-doppia", "faq", "pagin
     const arrivo = new URL(p.url()).pathname;
     if (arrivo !== percorso(n, altra)) err.push(`il selettore porta a ${arrivo} invece di ${percorso(n, altra)}`);
     extra = ` → ${altra}: ${arrivo}`;
-    await p.goto(SITO + pg, { waitUntil: "networkidle" });
+    await vai(p, SITO + pg, { waitUntil: "networkidle" });
     // l'assistente si apre, nella lingua della pagina
     await p.click("#pdlf-chat-btn");
     const chat = await p.evaluate(() => { const x = [...document.querySelectorAll("[id^=pdlf-chat]")].find(e => e.id !== "pdlf-chat-btn" && e.offsetHeight > 100); return x ? x.innerText.replace(/\s+/g, " ").slice(0, 34) : null; });

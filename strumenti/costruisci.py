@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Costruisce il dizionario per lingua e lo scrive in i18n.js.
+"""Costruisce il dizionario per lingua e lo scrive in strumenti/dizionario.json.
 
 COME FUNZIONA. Ogni elemento traducibile ha gia' un data-i18n con l'impronta
 del suo testo italiano. Qui, per ciascuna chiave, si ricostruisce l'HTML
@@ -41,7 +41,9 @@ def traduci(html, lingua):
         # &amp; nell'HTML vs & nelle traduzioni: si confronta il testo decodificato
         voce = trad.get(nudo) or trad.get(H.unescape(nudo))
         t = (voce or {}).get(lingua)
-        if t and "&amp;" in nudo: t = t.replace("&", "&amp;")
+        # una traduzione puo' essere scritta con «&» o gia' con «&amp;»: si
+        # codifica una volta sola (prima il banner diceva «Cookies &amp;amp;»)
+        if t and "&amp;" in nudo: t = t.replace("&amp;", "&").replace("&", "&amp;")
         fuori.append(pezzo.replace(nudo, t) if t else pezzo)
     return "".join(fuori)
 
@@ -65,80 +67,10 @@ print(f"\n  frammenti lasciati in italiano: {len(non_tradotti)}")
 for n in sorted(non_tradotti)[:24]:
     print(f"    · {n[:78]}")
 
-JS = """/* ══════════════════════════════════════════════════════════════════════
-   Prà de la Fam — cinque lingue.
-
-   Fino a oggi i dieci pulsanti IT/EN/DE/FR/ES non facevano niente: setLang
-   non era definita da nessuna parte e la console diceva «setLang is not
-   defined». Non era codice rotto, era una funzione mai costruita — non
-   c'era un solo marcatore di traduzione in tutto il sito.
-
-   Ogni elemento traducibile ha un data-i18n con l'impronta del suo testo
-   italiano. L'italiano non sta qui: sta nell'HTML, ed e' la sorgente. Qui
-   ci sono solo le altre quattro lingue, e quello che manca resta in
-   italiano — meglio una parola non tradotta che una inventata.
-   ══════════════════════════════════════════════════════════════════════ */
-window.PDLF_T = __DIZ__;
-
-(function () {
-  var LINGUE = ['it', 'en', 'de', 'fr', 'es'];
-  var originale = null;            // l'italiano com'era al caricamento
-
-  function raccogliOriginale() {
-    if (originale) return;
-    originale = {};
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      originale[el.getAttribute('data-i18n')] = el.innerHTML;
-    });
-  }
-
-  window.setLang = function (l) {
-    if (LINGUE.indexOf(l) < 0) l = 'it';
-    raccogliOriginale();
-    var d = (l === 'it') ? null : (window.PDLF_T[l] || {});
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var k = el.getAttribute('data-i18n');
-      var t = d ? d[k] : originale[k];
-      // senza traduzione si torna all'italiano: mai una casella vuota
-      el.innerHTML = (t !== undefined && t !== null) ? t : originale[k];
-    });
-    document.documentElement.lang = l;
-    document.querySelectorAll('.lang-btn, .flb').forEach(function (b) {
-      var suo = (b.getAttribute('onclick') || '').match(/setLang\\('(\\w+)'\\)/);
-      b.classList.toggle('active', !!suo && suo[1] === l);
-    });
-    try { localStorage.setItem('pdlf_lang', l); } catch (e) {}
-    // il motore di prenotazione riceve la stessa lingua del sito: era
-    // fisso su 'it', quindi un tedesco atterrava in italiano proprio nel
-    // momento in cui non deve esitare
-    document.querySelectorAll('a[href*="secure-reservation"]').forEach(function (a) {
-      a.href = a.href.replace(/([?&]lang=)\\w+/, '$1' + l);
-    });
-    try { if (typeof gtag === 'function') gtag('event', 'cambio_lingua', { nuova: l }); } catch (e) {}
-  };
-
-  function iniziale() {
-    var l = null;
-    try { l = localStorage.getItem('pdlf_lang'); } catch (e) {}
-    if (!l) {
-      var b = (navigator.languages && navigator.languages[0]) || navigator.language || 'it';
-      b = b.slice(0, 2).toLowerCase();
-      l = LINGUE.indexOf(b) > -1 ? b : 'it';
-    }
-    raccogliOriginale();
-    if (l !== 'it') window.setLang(l);
-    else document.documentElement.lang = 'it';
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniziale);
-  else iniziale();
-})();
-"""
-# il dizionario serve anche a strumenti/lingue.py, che scrive le pagine vere
-# per lingua: lo legge da qui, non da i18n.js
+# Il dizionario lo legge strumenti/lingue.py, che scrive le pagine vere per
+# lingua (/en/, /de/, /fr/, /es/). Fino alla fase SEO 2 finiva anche in
+# i18n.js e il browser lo applicava dopo il caricamento: non serve piu', e il
+# file pesava 165 KB su ogni pagina.
 (S / "dizionario.json").write_text(
     json.dumps(diz, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
-(BASE / "i18n.js").write_text(
-    JS.replace("__DIZ__", json.dumps(diz, ensure_ascii=False, separators=(",", ":"))),
-    encoding="utf-8")
-kb = (BASE / "i18n.js").stat().st_size // 1024
-print(f"\n  i18n.js scritto ({kb} KB)")
+print("\n  strumenti/dizionario.json scritto")

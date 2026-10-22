@@ -51,7 +51,7 @@
     '.pm-lingue{padding:1.5rem clamp(1.5rem,6vw,2.5rem) .4rem}',
     '.pm-tit{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-testo,#846934);margin-bottom:.9rem}',
     '.pm-riga{display:flex;flex-wrap:wrap;gap:.5rem}',
-    '.pm-l{font:inherit;font-size:.8rem;letter-spacing:.1em;padding:.55rem 1rem;cursor:pointer;',
+    '.pm-l{font:inherit;font-size:.8rem;letter-spacing:.1em;padding:.55rem 1rem;cursor:pointer;text-decoration:none;display:inline-block;',
     'background:none;border:1px solid rgba(11,21,32,.18);color:var(--ink,#0b1520);border-radius:2px}',
     '.pm-l[aria-current="true"]{background:var(--ink,#0b1520);color:var(--bone,#f7f4ef);border-color:var(--ink,#0b1520)}',
     '.pm-contatti{padding:1.6rem clamp(1.5rem,6vw,2.5rem) 0;display:flex;flex-direction:column;gap:.55rem}',
@@ -92,9 +92,16 @@
              a.textContent.trim().replace(/[<>&]/g, '') + '</a>';
     }).join('');
     var attuale = document.documentElement.lang || 'it';
+    /* Ogni lingua e' una pagina: il link porta alla stessa pagina nell'altra
+       lingua. L'indirizzo e' gia' scritto nel selettore della barra (anche
+       quando sul telefono e' nascosto) o nei <link hreflang> della testa;
+       se non c'e' nessuno dei due, la home di quella lingua. */
     var lingue = L.map(function (l) {
-      return '<button type="button" class="pm-l" data-l="' + l + '"' +
-             (l === attuale ? ' aria-current="true"' : '') + '>' + l.toUpperCase() + '</button>';
+      var a = document.querySelector('a[hreflang="' + l + '"]:not(.pm-l)');
+      var alt = document.querySelector('link[rel="alternate"][hreflang="' + l + '"]');
+      var href = a ? a.getAttribute('href') : alt ? new URL(alt.href).pathname : (l === 'it' ? '/' : '/' + l + '/');
+      return '<a class="pm-l" href="' + href + '" hreflang="' + l + '" lang="' + l + '"' +
+             (l === attuale ? ' aria-current="true"' : '') + '>' + l.toUpperCase() + '</a>';
     }).join('');
     pan.innerHTML = voci +
       '<div class="pm-lingue"><p class="pm-tit">' + d('lingua') + '</p><div class="pm-riga">' + lingue + '</div></div>' +
@@ -121,15 +128,7 @@
     pan.classList.contains('aperto') ? chiudi() : apri();
   });
   pan.addEventListener('click', function (e) {
-    var l = e.target.closest('.pm-l');
-    if (l) {
-      // la lingua si cambia e il menu resta aperto: si vede il cambio,
-      // e chi ha sbagliato lingua non deve riaprire tutto
-      if (typeof window.setLang === 'function') window.setLang(l.dataset.l);
-      riempi();
-      return;
-    }
-    if (e.target.closest('a')) chiudi();     // scelta una voce, via il pannello
+    if (e.target.closest('a')) chiudi();     // scelta una voce o una lingua, via il pannello
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && pan.classList.contains('aperto')) { chiudi(); btn.focus(); }

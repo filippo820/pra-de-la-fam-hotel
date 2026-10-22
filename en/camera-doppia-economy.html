@@ -17,9 +17,11 @@
 <script>
   gtag('js', new Date());
   (function(){
-    var lang = 'it';
-    try { lang = localStorage.getItem('pdlf_lang') || document.documentElement.lang || 'it'; } catch(e){}
-    var slug = location.pathname.replace(/\/+$/,'').split('/').pop() || 'home';
+    // la lingua e' quella della pagina (/de/faq e' tedesco), non una preferenza salvata
+    var lang = document.documentElement.lang || 'it';
+    // la versione precedente ricordava la lingua nel browser: non serve piu'
+    try { localStorage.removeItem('pdlf_lang'); } catch(e){}
+    var slug = location.pathname.replace(/^\/(en|de|fr|es)(?=\/|$)/,'').replace(/\/+$/,'').split('/').pop() || 'home';
     slug = slug.replace(/\.html$/,'') || 'home';
     gtag('config', 'G-M29PYB9NDX', { pdlf_lang: lang, pdlf_pagina: slug });
     window.__pdlf = { lang: lang, slug: slug };
@@ -392,7 +394,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
     <img class="nav-logo-img" src="/img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
   <a data-i18n="tf946f40316" href="/en/#hotel" class="nav-back">Rooms</a>
-  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
+  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><a class="lang-btn" href="/camera-doppia-economy" hreflang="it" lang="it" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">IT</a><span style="opacity:.35">|</span><a class="lang-btn active" href="/en/camera-doppia-economy" hreflang="en" lang="en" aria-current="true" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">EN</a><span style="opacity:.35">|</span><a class="lang-btn" href="/de/camera-doppia-economy" hreflang="de" lang="de" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">DE</a><span style="opacity:.35">|</span><a class="lang-btn" href="/fr/camera-doppia-economy" hreflang="fr" lang="fr" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">FR</a><span style="opacity:.35">|</span><a class="lang-btn" href="/es/camera-doppia-economy" hreflang="es" lang="es" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">ES</a></div>
   <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=en" target="_blank" class="nav-cta">Book →</a>
 </nav>
 </header>
@@ -684,13 +686,12 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
     var cerca = document.querySelector('.searchbar button, #searchbar button, [class*=search] button');
     if (cerca) cerca.addEventListener('click', function(){ ev('cerca_disponibilita', { secondi:secondi() }); });
 
-    // 6. CAMBIO LINGUA (quando tornera' a funzionare: oggi setLang non e' definita)
-    document.querySelectorAll('[onclick*="setLang"]').forEach(function(b){
-      b.addEventListener('click', function(){
-        var m = (b.getAttribute('onclick')||'').match(/setLang\('(\w+)'\)/);
-        if (m) ev('cambio_lingua', { nuova: m[1] });
-      });
-    });
+    // 6. CAMBIO LINGUA: i pulsanti delle lingue sono link alla stessa pagina
+    //    nell'altra lingua (anche quelli del menu del telefono)
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[hreflang]') : null;
+      if (a) ev('cambio_lingua', { nuova: a.getAttribute('hreflang') });
+    }, true);
 
     // 7. ALL'USCITA: quanto e' durata e fin dove era arrivato
     document.addEventListener('visibilitychange', function(){
@@ -721,7 +722,7 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
 <div id="pdlf-overlay" hidden>
   <div id="pdlf-banner" role="dialog" aria-label="Cookie consent">
     <div style="flex:1">
-      <h2 data-i18n="t27c22ff3e6">Cookies &amp;amp; Privacy</h2>
+      <h2 data-i18n="t27c22ff3e6">Cookies &amp; Privacy</h2>
       <p data-i18n="t486b047c5e">We use analytics cookies to understand how the site is used and to improve it. No data is shared with third parties for advertising.</p>
       <p style="margin-top:9px;font-size:.82rem"><a href="/en/privacy" data-i18n="tb5f5fd5232">Privacy policy</a> &nbsp;·&nbsp; <a href="/en/cookie" data-i18n="tf36b5f7ed3">Cookie policy</a></p>
     </div>
@@ -751,8 +752,6 @@ function pdlfApplica(ok){
   else { var el = document.getElementById('pdlf-overlay'); if (el) el.hidden = false; }
 })();
 </script>
-<!-- ══ pdlf-i18n ══ le cinque lingue -->
-<script src="/i18n.js" defer></script>
 <script src="/menu.js" defer></script>
 <script src="/chat.js" defer></script>
 </body>

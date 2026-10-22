@@ -23,9 +23,13 @@ COSA FA, pagina per pagina e lingua per lingua:
   · il motore di prenotazione riceve lang= della pagina;
   · ogni pagina, italiana compresa, dichiara le sue cinque versioni
     (hreflang, piu' x-default verso l'italiano) in un blocco fra i segnaposto
-    pdlf-lingue, scritto anche nella pagina italiana: e' l'unica modifica
-    che questo script fa alle sorgenti. Canonical, og:url, og:locale e gli
-    indirizzi del JSON-LD puntano alla pagina nella sua lingua;
+    pdlf-lingue, scritto anche nella pagina italiana. Canonical, og:url,
+    og:locale e gli indirizzi del JSON-LD puntano alla pagina nella sua
+    lingua;
+  · il selettore IT/EN/DE/FR/ES sono link veri (<a hreflang>): qui se ne
+    scrivono gli href — la stessa pagina nell'altra lingua — e si segna
+    quella attiva. Questo e il blocco hreflang sono le sole cose che lo
+    script scrive anche nelle sorgenti italiane;
   · sitemap.xml: tutte le pagine indicizzabili nelle cinque lingue, ognuna
     con le sue alternative. lastmod resta quello di prima finche' la pagina
     non cambia: una data che si sposta a ogni passata non dice niente a
@@ -253,6 +257,25 @@ def alternative(src, nome):
     return src[:m.end()] + blocco + src[m.end():]
 
 
+def percorso(nome, lingua):
+    """Come assoluto(), ma dalla radice del sito: vale anche su un'anteprima Netlify."""
+    return assoluto(nome, lingua)[len(SITO):]
+
+
+def selettore(src, nome, lingua):
+    """I link del selettore di lingua: href giusto, e la lingua della pagina attiva."""
+    def sost(m):
+        tag, l = m.group(0), m.group(1)
+        tag = re.sub(r' href="[^"]*"', f' href="{percorso(nome, l)}"', tag)
+        tag = re.sub(r' aria-current="true"', '', tag)
+        tag = re.sub(r'class="([\w-]+)(?: active)?"',
+                     lambda c: f'class="{c.group(1)} active"' if l == lingua else f'class="{c.group(1)}"', tag)
+        if l == lingua:
+            tag = tag.replace(f' lang="{l}"', f' lang="{l}" aria-current="true"', 1)
+        return tag
+    return re.sub(r'<a\b[^>]*\bhreflang="(\w\w)"[^>]*>', sost, src)
+
+
 def indirizzi(src, nome, lingua):
     """canonical, og:url e og:locale della pagina nella sua lingua."""
     qui = assoluto(nome, lingua)
@@ -282,6 +305,7 @@ def pagina(nome, lingua):
     src = attributi(src, lingua, f"{lingua}/{nome}")
     src = dati(src, lingua, f"{lingua}/{nome}")
     src = indirizzi(src, nome, lingua)
+    src = selettore(src, nome, lingua)
     src = src.replace('<html lang="it">', f'<html lang="{lingua}">', 1)
     src = src.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + AVVISO, 1)
     return src, n
@@ -326,7 +350,7 @@ if __name__ == "__main__":
             continue
         f = BASE / f"{nome}.html"
         prima = f.read_text(encoding="utf-8")
-        dopo = alternative(prima, nome)
+        dopo = selettore(alternative(prima, nome), nome, "it")
         if dopo != prima:
             f.write_text(dopo, encoding="utf-8")
             cambiate.add((nome, "it"))

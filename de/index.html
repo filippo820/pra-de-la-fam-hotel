@@ -17,9 +17,11 @@
 <script>
   gtag('js', new Date());
   (function(){
-    var lang = 'it';
-    try { lang = localStorage.getItem('pdlf_lang') || document.documentElement.lang || 'it'; } catch(e){}
-    var slug = location.pathname.replace(/\/+$/,'').split('/').pop() || 'home';
+    // la lingua e' quella della pagina (/de/faq e' tedesco), non una preferenza salvata
+    var lang = document.documentElement.lang || 'it';
+    // la versione precedente ricordava la lingua nel browser: non serve piu'
+    try { localStorage.removeItem('pdlf_lang'); } catch(e){}
+    var slug = location.pathname.replace(/^\/(en|de|fr|es)(?=\/|$)/,'').replace(/\/+$/,'').split('/').pop() || 'home';
     slug = slug.replace(/\.html$/,'') || 'home';
     gtag('config', 'G-M29PYB9NDX', { pdlf_lang: lang, pdlf_pagina: slug });
     window.__pdlf = { lang: lang, slug: slug };
@@ -950,7 +952,7 @@ nav.scrolled{background:rgba(247,244,239,.99)}
 .nav-center a:hover::after{width:100%}
 .nav-center a:hover{color:var(--ink)}
 .nav-right{display:flex;gap:.4rem;align-items:center}
-.lang-btn{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);background:none;border:none;padding:.18rem .35rem;font-family:'DM Sans',sans-serif;transition:color .2s}
+.lang-btn{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);background:none;border:none;padding:.18rem .35rem;font-family:'DM Sans',sans-serif;transition:color .2s;text-decoration:none;display:inline-block;cursor:pointer}
 .lang-btn:hover,.lang-btn.active{color:var(--gold-testo)}
 .lang-sep{color:rgba(11,21,32,.18);font-size:.58rem}
 .nav-cta{display:inline-flex;align-items:center;gap:.4rem;background:var(--ink);color:var(--bone);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.3rem;border-radius:2px;text-decoration:none;transition:background .2s;margin-left:.6rem}
@@ -1278,7 +1280,7 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-copy{font-size:.62rem;letter-spacing:.06em;color:rgba(247,244,239,.5)}
 .footer-lang{display:flex;gap:.4rem;flex-wrap:wrap}
-.flb{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,244,239,.25);background:none;border:1px solid rgba(247,244,239,.1);padding:.22rem .6rem;border-radius:0;transition:all .2s;font-family:'DM Sans',sans-serif}
+.flb{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,244,239,.25);background:none;border:1px solid rgba(247,244,239,.1);padding:.22rem .6rem;border-radius:0;transition:all .2s;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-block;cursor:pointer}
 .flb:hover,.flb.active{color:var(--gold2);border-color:rgba(184,147,74,.3)}
 
 /* ── REVEAL ── */
@@ -1488,11 +1490,11 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
     <a href="/de/faq">FAQ</a>
   </div>
   <div class="nav-right">
-    <button class="lang-btn active" onclick="setLang('it')">IT</button><span class="lang-sep">|</span>
-    <button class="lang-btn" onclick="setLang('en')">EN</button><span class="lang-sep">|</span>
-    <button class="lang-btn" onclick="setLang('de')">DE</button><span class="lang-sep">|</span>
-    <button class="lang-btn" onclick="setLang('fr')">FR</button><span class="lang-sep">|</span>
-    <button class="lang-btn" onclick="setLang('es')">ES</button>
+    <a class="lang-btn" href="/" hreflang="it" lang="it">IT</a><span class="lang-sep">|</span>
+    <a class="lang-btn" href="/en/" hreflang="en" lang="en">EN</a><span class="lang-sep">|</span>
+    <a class="lang-btn active" href="/de/" hreflang="de" lang="de" aria-current="true">DE</a><span class="lang-sep">|</span>
+    <a class="lang-btn" href="/fr/" hreflang="fr" lang="fr">FR</a><span class="lang-sep">|</span>
+    <a class="lang-btn" href="/es/" hreflang="es" lang="es">ES</a>
     <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=de" target="_blank" class="nav-cta" id="nav-book">Buchen →</a>
   </div>
 </nav>
@@ -2047,11 +2049,11 @@ footer{background:var(--ink);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,5re
   <div class="footer-bottom">
     <span class="footer-copy" style="margin-right:14px"><a data-i18n="tcf01481f62" href="/de/privacy" style="color:inherit">Datenschutz</a> · <a data-i18n="te4f81994fe" href="/de/cookie" style="color:inherit">Cookies</a></span><span class="footer-copy">© 2026 FAM S.r.l. · Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · P.IVA 03375820986</span><span data-i18n="tcd38f168ec" class="footer-copy" style="flex-basis:100%">Prà de la Fam® ist eine in Italien eingetragene Marke der FAM S.r.l.</span>
     <div class="footer-lang">
-      <button class="flb active" onclick="setLang('it')">IT</button>
-      <button class="flb" onclick="setLang('en')">EN</button>
-      <button class="flb" onclick="setLang('de')">DE</button>
-      <button class="flb" onclick="setLang('fr')">FR</button>
-      <button class="flb" onclick="setLang('es')">ES</button>
+      <a class="flb" href="/" hreflang="it" lang="it">IT</a>
+      <a class="flb" href="/en/" hreflang="en" lang="en">EN</a>
+      <a class="flb active" href="/de/" hreflang="de" lang="de" aria-current="true">DE</a>
+      <a class="flb" href="/fr/" hreflang="fr" lang="fr">FR</a>
+      <a class="flb" href="/es/" hreflang="es" lang="es">ES</a>
     </div>
   </div>
 </footer>
@@ -2182,13 +2184,12 @@ document.querySelectorAll('.r').forEach(el=>_io.observe(el));
     var cerca = document.querySelector('.searchbar button, #searchbar button, [class*=search] button');
     if (cerca) cerca.addEventListener('click', function(){ ev('cerca_disponibilita', { secondi:secondi() }); });
 
-    // 6. CAMBIO LINGUA (quando tornera' a funzionare: oggi setLang non e' definita)
-    document.querySelectorAll('[onclick*="setLang"]').forEach(function(b){
-      b.addEventListener('click', function(){
-        var m = (b.getAttribute('onclick')||'').match(/setLang\('(\w+)'\)/);
-        if (m) ev('cambio_lingua', { nuova: m[1] });
-      });
-    });
+    // 6. CAMBIO LINGUA: i pulsanti delle lingue sono link alla stessa pagina
+    //    nell'altra lingua (anche quelli del menu del telefono)
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[hreflang]') : null;
+      if (a) ev('cambio_lingua', { nuova: a.getAttribute('hreflang') });
+    }, true);
 
     // 7. ALL'USCITA: quanto e' durata e fin dove era arrivato
     document.addEventListener('visibilitychange', function(){
@@ -2276,7 +2277,7 @@ document.querySelectorAll('.r').forEach(el=>_io.observe(el));
 <div id="pdlf-overlay" hidden>
   <div id="pdlf-banner" role="dialog" aria-label="Cookie-Einwilligung">
     <div style="flex:1">
-      <h2 data-i18n="t27c22ff3e6">Cookies &amp;amp; Datenschutz</h2>
+      <h2 data-i18n="t27c22ff3e6">Cookies &amp; Datenschutz</h2>
       <p data-i18n="t486b047c5e">Wir verwenden Analyse-Cookies, um zu verstehen, wie die Seite genutzt wird, und sie zu verbessern. Es werden keine Daten zu Werbezwecken an Dritte weitergegeben.</p>
       <p style="margin-top:9px;font-size:.82rem"><a href="/de/privacy" data-i18n="tb5f5fd5232">Datenschutzerklärung</a> &nbsp;·&nbsp; <a href="/de/cookie" data-i18n="tf36b5f7ed3">Cookie-Richtlinie</a></p>
     </div>
@@ -2306,8 +2307,6 @@ function pdlfApplica(ok){
   else { var el = document.getElementById('pdlf-overlay'); if (el) el.hidden = false; }
 })();
 </script>
-<!-- ══ pdlf-i18n ══ le cinque lingue -->
-<script src="/i18n.js" defer></script>
 <script src="/menu.js" defer></script>
 <script src="/meteo.js" defer></script>
 <script src="/cerca.js" defer></script>

@@ -17,9 +17,11 @@
 <script>
   gtag('js', new Date());
   (function(){
-    var lang = 'it';
-    try { lang = localStorage.getItem('pdlf_lang') || document.documentElement.lang || 'it'; } catch(e){}
-    var slug = location.pathname.replace(/\/+$/,'').split('/').pop() || 'home';
+    // la lingua e' quella della pagina (/de/faq e' tedesco), non una preferenza salvata
+    var lang = document.documentElement.lang || 'it';
+    // la versione precedente ricordava la lingua nel browser: non serve piu'
+    try { localStorage.removeItem('pdlf_lang'); } catch(e){}
+    var slug = location.pathname.replace(/^\/(en|de|fr|es)(?=\/|$)/,'').replace(/\/+$/,'').split('/').pop() || 'home';
     slug = slug.replace(/\.html$/,'') || 'home';
     gtag('config', 'G-M29PYB9NDX', { pdlf_lang: lang, pdlf_pagina: slug });
     window.__pdlf = { lang: lang, slug: slug };
@@ -357,7 +359,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
     <img class="nav-logo-img" src="/img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
   <a data-i18n="tafb272106a" href="/es/#appartamenti" class="nav-back">Apartamentos</a>
-  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
+  <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><a class="lang-btn" href="/appartamento-clementina" hreflang="it" lang="it" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">IT</a><span style="opacity:.35">|</span><a class="lang-btn" href="/en/appartamento-clementina" hreflang="en" lang="en" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">EN</a><span style="opacity:.35">|</span><a class="lang-btn" href="/de/appartamento-clementina" hreflang="de" lang="de" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">DE</a><span style="opacity:.35">|</span><a class="lang-btn" href="/fr/appartamento-clementina" hreflang="fr" lang="fr" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">FR</a><span style="opacity:.35">|</span><a class="lang-btn active" href="/es/appartamento-clementina" hreflang="es" lang="es" aria-current="true" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px;text-decoration:none;display:inline-block">ES</a></div>
   <a data-i18n="t908bad1849" href="https://www.secure-reservation.cloud/booking-engine/?portal=pradelafam-tignale&lang=es" target="_blank" class="nav-cta">Reservar →</a>
 </nav>
 </header>
@@ -600,13 +602,12 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
     var cerca = document.querySelector('.searchbar button, #searchbar button, [class*=search] button');
     if (cerca) cerca.addEventListener('click', function(){ ev('cerca_disponibilita', { secondi:secondi() }); });
 
-    // 6. CAMBIO LINGUA (quando tornera' a funzionare: oggi setLang non e' definita)
-    document.querySelectorAll('[onclick*="setLang"]').forEach(function(b){
-      b.addEventListener('click', function(){
-        var m = (b.getAttribute('onclick')||'').match(/setLang\('(\w+)'\)/);
-        if (m) ev('cambio_lingua', { nuova: m[1] });
-      });
-    });
+    // 6. CAMBIO LINGUA: i pulsanti delle lingue sono link alla stessa pagina
+    //    nell'altra lingua (anche quelli del menu del telefono)
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[hreflang]') : null;
+      if (a) ev('cambio_lingua', { nuova: a.getAttribute('hreflang') });
+    }, true);
 
     // 7. ALL'USCITA: quanto e' durata e fin dove era arrivato
     document.addEventListener('visibilitychange', function(){
@@ -667,8 +668,6 @@ function pdlfApplica(ok){
   else { var el = document.getElementById('pdlf-overlay'); if (el) el.hidden = false; }
 })();
 </script>
-<!-- ══ pdlf-i18n ══ le cinque lingue -->
-<script src="/i18n.js" defer></script>
 <script src="/menu.js" defer></script>
 <script src="/chat.js" defer></script>
 </body>

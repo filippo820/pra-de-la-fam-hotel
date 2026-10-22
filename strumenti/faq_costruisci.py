@@ -33,7 +33,7 @@ def esc(t):
 # il banner dei cookie spariva in silenzio.
 _cd = (BASE / "camera-doppia.html").read_text(encoding="utf-8")
 _i = _cd.index("<!-- ══ pdlf-analytics ══ banner consenso")
-_f = _cd.rindex("</script>", _i, _cd.index('<script src="i18n.js"', _i)) + len("</script>")
+_f = _cd.rindex("</script>", _i, _cd.index('<script src="/i18n.js"', _i)) + len("</script>")
 BANNER = _cd[_i:_f]
 
 TITOLO = "Domande frequenti: arrivo, spiaggia, cani | Prà de la Fam"
@@ -125,7 +125,7 @@ PAGINA = f'''<!DOCTYPE html>
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="preload" as="image" href="img/limonaia-aerea.jpg" fetchpriority="high"/>
+<link rel="preload" as="image" href="/img/limonaia-aerea.jpg" fetchpriority="high"/>
 <title>{TITOLO}</title>
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prà de la Fam" />
@@ -254,7 +254,7 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 <header>
 <nav>
   <a href="/" class="nav-logo">
-    <img class="nav-logo-img" src="img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
+    <img class="nav-logo-img" src="/img/logo.png" alt="Prà de la Fam" width="266" height="132"/>
   </a>
   <a data-i18n="{k('Home')}" href="/" class="nav-back">Home</a>
   <div class="lang-switcher" style="display:flex;align-items:center;gap:.1rem;margin-left:auto;margin-right:1rem"><button class="lang-btn active" onclick="setLang('it')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">IT</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('en')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">EN</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('de')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">DE</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('fr')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">FR</button><span style="opacity:.35">|</span><button class="lang-btn" onclick="setLang('es')" style="background:none;border:none;font:inherit;font-size:.62rem;letter-spacing:.08em;color:var(--steel,#4a6580);cursor:pointer;padding:2px 5px">ES</button></div>
@@ -264,7 +264,7 @@ nav{{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:ce
 
 <main>
 <section class="faq-hero">
-  <div class="faq-hbg" style="background-image:url(img/limonaia-aerea.jpg)"></div>
+  <div class="faq-hbg" style="background-image:url(/img/limonaia-aerea.jpg)"></div>
   <div class="faq-hov"></div>
   <div class="faq-hc">
     <p data-i18n="{k(OCCHIELLO)}" class="faq-eyebrow">{OCCHIELLO}</p>
@@ -325,9 +325,9 @@ document.querySelectorAll('.r').forEach(el=>io.observe(el));
 
 {BANNER}
 
-<script src="i18n.js" defer></script>
-<script src="menu.js" defer></script>
-<script src="chat.js" defer></script>
+<script src="/i18n.js" defer></script>
+<script src="/menu.js" defer></script>
+<script src="/chat.js" defer></script>
 </body>
 </html>
 '''

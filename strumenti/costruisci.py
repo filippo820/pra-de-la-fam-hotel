@@ -133,6 +133,10 @@ window.PDLF_T = __DIZ__;
   else iniziale();
 })();
 """
+# il dizionario serve anche a strumenti/lingue.py, che scrive le pagine vere
+# per lingua: lo legge da qui, non da i18n.js
+(S / "dizionario.json").write_text(
+    json.dumps(diz, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 (BASE / "i18n.js").write_text(
     JS.replace("__DIZ__", json.dumps(diz, ensure_ascii=False, separators=(",", ":"))),
     encoding="utf-8")

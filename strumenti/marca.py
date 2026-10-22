@@ -28,7 +28,10 @@ INLINE = {"em", "strong", "b", "i", "br", "span", "small", "sup", "sub", "u"}
 SALTA  = {"script", "style", "title", "noscript", "head", "meta", "link"}
 NON_TRADURRE = re.compile(
     r'^(?:[\d\s.,:;€%°/–—-]+|IT|EN|DE|FR|ES|\||·|→|←|✕|✓|™|®|'
-    r'Pr[àa] de la Fam|AlPraDeLaFam\.com|P\.IVA.*|.*@.*\..*|\+?\d[\d\s./-]*)$', re.I)
+    r'Pr[àa] de la Fam|AlPraDeLaFam\.com|P\.IVA.*|.*@.*\..*|\+?\d[\d\s./-]*|'
+    # la riga legale dei piedi («FAM S.r.l. · Via Gardesana, 7 · … · P.IVA …»):
+    # ragione sociale, indirizzo e partita IVA restano uguali in ogni lingua
+    r'(?:©\s*\d{4}\s*)?FAM S\.r\.l\.\s·.*P\.IVA.*)$', re.I)
 
 def chiave(testo):
     t = re.sub(r'\s+', ' ', testo).strip()

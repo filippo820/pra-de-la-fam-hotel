@@ -47,11 +47,23 @@
   "es": "08 — Ven a visitarnos",
   "fr": "08 — Venez nous voir"
  },
+ "1. Dati di navigazione": {
+  "de": "1. Nutzungsdaten",
+  "en": "1. Browsing data",
+  "es": "1. Datos de navegación",
+  "fr": "1. Données de navigation"
+ },
  "2 pers.": {
   "de": "2 Pers.",
   "en": "2 guests",
   "es": "2 pers.",
   "fr": "2 pers."
+ },
+ "2. Statistiche di visita — solo se acconsenti": {
+  "de": "2. Besuchsstatistiken — nur mit Ihrer Einwilligung",
+  "en": "2. Visit statistics — only if you consent",
+  "es": "2. Estadísticas de visita — solo si das tu consentimiento",
+  "fr": "2. Statistiques de visite — seulement si vous y consentez"
  },
  "2025 · Polonia": {
   "de": "2025 · Polen",
@@ -77,11 +89,35 @@
   "es": "3 camas",
   "fr": "3 couchages"
  },
+ "3. Prenotazioni": {
+  "de": "3. Buchungen",
+  "en": "3. Bookings",
+  "es": "3. Reservas",
+  "fr": "3. Réservations"
+ },
  "4 pers.": {
   "de": "4 Pers.",
   "en": "4 guests",
   "es": "4 pers.",
   "fr": "4 pers."
+ },
+ "4. Se ci scrivi": {
+  "de": "4. Wenn Sie uns schreiben",
+  "en": "4. If you write to us",
+  "es": "4. Si nos escribes",
+  "fr": "4. Si vous nous écrivez"
+ },
+ "400 giorni": {
+  "de": "400 Tage",
+  "en": "400 days",
+  "es": "400 días",
+  "fr": "400 jours"
+ },
+ "A cosa serve": {
+  "de": "Zweck",
+  "en": "Purpose",
+  "es": "Para qué sirve",
+  "fr": "À quoi il sert"
  },
  "Accetta": {
   "de": "Akzeptieren",
@@ -95,6 +131,12 @@
   "es": "Actualizada el 21 de octubre de 2026",
   "fr": "Mise à jour le 21 octobre 2026"
  },
+ "Aggiornata al 22 ottobre 2026": {
+  "de": "Stand: 22. Oktober 2026",
+  "en": "Updated 22 October 2026",
+  "es": "Actualizada el 22 de octubre de 2026",
+  "fr": "Mise à jour le 22 octobre 2026"
+ },
  "Al Prà": {
   "de": "Al Prà",
   "en": "Al Prà",
@@ -106,6 +148,12 @@
   "en": "Accommodation",
   "es": "Alojamientos",
   "fr": "Hébergements"
+ },
+ "Altro": {
+  "de": "Weiteres",
+  "en": "More",
+  "es": "Más información",
+  "fr": "Autres informations"
  },
  "Amazon Merch": {
   "de": "Amazon Merch",
@@ -227,6 +275,12 @@
   "es": "Baño privado",
   "fr": "Salle de bain privée"
  },
+ "Base giuridica:": {
+  "de": "Rechtsgrundlage:",
+  "en": "Legal basis:",
+  "es": "Base jurídica:",
+  "fr": "Base juridique :"
+ },
  "Benvenuti": {
   "de": "Willkommen",
   "en": "Welcome",
@@ -305,6 +359,30 @@
   "es": "Buscar →",
   "fr": "Rechercher →"
  },
+ "Chi": {
+  "de": "Wer",
+  "en": "Who",
+  "es": "Quién",
+  "fr": "Qui"
+ },
+ "Chi altro vede questi dati": {
+  "de": "Wer diese Daten noch sieht",
+  "en": "Who else sees this data",
+  "es": "Quién más ve estos datos",
+  "fr": "Qui d'autre voit ces données"
+ },
+ "Chi lo mette": {
+  "de": "Gesetzt von",
+  "en": "Set by",
+  "es": "Quién la instala",
+  "fr": "Déposé par"
+ },
+ "Chi tratta i tuoi dati": {
+  "de": "Wer Ihre Daten verarbeitet",
+  "en": "Who processes your data",
+  "es": "Quién trata tus datos",
+  "fr": "Qui traite vos données"
+ },
  "Colazione": {
   "de": "Frühstück",
   "en": "Breakfast",
@@ -322,6 +400,12 @@
   "en": "How to get here",
   "es": "Cómo llegar",
   "fr": "Comment venir"
+ },
+ "Come cambiare idea": {
+  "de": "So ändern Sie Ihre Entscheidung",
+  "en": "How to change your mind",
+  "es": "Cómo cambiar de opinión",
+  "fr": "Comment changer d'avis"
  },
  "Comfort essenziale, posizione imbattibile": {
   "de": "Das Wesentliche, unschlagbare Lage",
@@ -341,6 +425,12 @@
   "es": "Ver disponibilidad →",
   "fr": "Vérifier les disponibilités →"
  },
+ "Cookie": {
+  "de": "Cookies",
+  "en": "Cookies",
+  "es": "Cookies",
+  "fr": "Cookies"
+ },
  "Cookie &amp; Privacy": {
   "de": "Cookies &amp; Datenschutz",
   "en": "Cookies &amp; Privacy",
@@ -359,6 +449,18 @@
   "es": "Política de cookies",
   "fr": "Politique de cookies"
  },
+ "Cookie policy →": {
+  "de": "Cookie-Richtlinie →",
+  "en": "Cookie policy →",
+  "es": "Política de cookies →",
+  "fr": "Politique de cookies →"
+ },
+ "Cosa puoi chiederci": {
+  "de": "Was Sie von uns verlangen können",
+  "en": "What you can ask us",
+  "es": "Qué puedes pedirnos",
+  "fr": "Ce que vous pouvez nous demander"
+ },
  "Cucina": {
   "de": "Küche",
   "en": "Kitchen",
@@ -370,6 +472,12 @@
   "en": "Fully equipped kitchen",
   "es": "Cocina equipada",
   "fr": "Cuisine équipée"
+ },
+ "Dati di prenotazione e fatturazione:": {
+  "de": "Buchungs- und Rechnungsdaten:",
+  "en": "Booking and invoicing data:",
+  "es": "Datos de reserva y facturación:",
+  "fr": "Données de réservation et de facturation :"
  },
  "Doccia": {
   "de": "Dusche",
@@ -401,6 +509,18 @@
   "es": "Dónde estamos",
   "fr": "Où nous sommes"
  },
+ "Due cose che vale la pena sapere": {
+  "de": "Zwei Dinge, die man wissen sollte",
+  "en": "Two things worth knowing",
+  "es": "Dos cosas que vale la pena saber",
+  "fr": "Deux choses à savoir"
+ },
+ "Durata": {
+  "de": "Dauer",
+  "en": "Duration",
+  "es": "Duración",
+  "fr": "Durée"
+ },
  "Eccezionale.": {
   "de": "Außergewöhnlich.",
   "en": "Exceptional.",
@@ -418,6 +538,12 @@
   "en": "Email",
   "es": "Correo",
   "fr": "E-mail"
+ },
+ "Email:": {
+  "de": "E-Mail:",
+  "en": "Email:",
+  "es": "Correo electrónico:",
+  "fr": "E-mail :"
  },
  "Famiglia Parisini": {
   "de": "Familie Parisini",
@@ -443,6 +569,18 @@
   "es": "Fabuloso",
   "fr": "Fabuleux"
  },
+ "Finché non premi «Accetta», il sito": {
+  "de": "Solange Sie nicht auf „Akzeptieren“ klicken,",
+  "en": "Until you press “Accept”, the site",
+  "es": "Hasta que pulses «Aceptar», el sitio",
+  "fr": "Tant que vous n'appuyez pas sur « Accepter », le site"
+ },
+ "Fornitore del motore di prenotazione": {
+  "de": "Anbieter der Buchungssoftware",
+  "en": "Booking engine provider",
+  "es": "Proveedor del motor de reservas",
+  "fr": "Fournisseur du moteur de réservation"
+ },
  "Forse l'indirizzo è cambiato con il nuovo sito, o c'è un errore di battitura. Da qui si torna dove serve.": {
   "de": "Vielleicht hat sich die Adresse mit der neuen Website geändert, oder es gibt einen Tippfehler. Von hier aus geht es dorthin zurück, wo Sie hinwollten.",
   "en": "The address may have changed with the new website, or there may be a typo. From here you can get back to what you need.",
@@ -467,6 +605,12 @@
   "es": "Galería de fotos",
   "fr": "Galerie photos"
  },
+ "Garante per la protezione dei dati personali": {
+  "de": "Garante per la protezione dei dati personali",
+  "en": "Garante per la protezione dei dati personali",
+  "es": "Garante per la protezione dei dati personali",
+  "fr": "Garante per la protezione dei dati personali"
+ },
  "Giardino": {
   "de": "Garten",
   "en": "Garden",
@@ -484,6 +628,12 @@
   "en": "Bogliaco Golf",
   "es": "Golf Bogliaco",
   "fr": "Golf de Bogliaco"
+ },
+ "Google viene contattato anche prima del consenso.": {
+  "de": "Google wird schon vor der Einwilligung kontaktiert.",
+  "en": "Google is contacted even before consent.",
+  "es": "Google recibe una conexión incluso antes del consentimiento.",
+  "fr": "Google est contacté même avant le consentement."
  },
  "Hotel": {
   "de": "Hotel",
@@ -509,11 +659,23 @@
   "es": "Hotel — 10 habitaciones",
   "fr": "Hôtel — 10 chambres"
  },
+ "I cookie che usiamo": {
+  "de": "Die Cookies, die wir verwenden",
+  "en": "The cookies we use",
+  "es": "Las cookies que usamos",
+  "fr": "Les cookies que nous utilisons"
+ },
  "I nostri": {
   "de": "Unsere",
   "en": "Our",
   "es": "Nuestros",
   "fr": "Nos"
+ },
+ "Il tasto «Prenota» ti porta su un sistema esterno,": {
+  "de": "Die Schaltfläche „Buchen“ führt Sie zu einem externen System,",
+  "en": "The “Book” button takes you to an external system,",
+  "es": "El botón «Reservar» te lleva a un sistema externo,",
+  "fr": "Le bouton « Réserver » vous mène vers un système externe,"
  },
  "In hotel → Scopri": {
   "de": "Im Hotel → Entdecken",
@@ -532,6 +694,12 @@
   "en": "Privacy policy",
   "es": "Política de privacidad",
   "fr": "Politique de confidentialité"
+ },
+ "Informativa privacy →": {
+  "de": "Datenschutzerklärung →",
+  "en": "Privacy policy →",
+  "es": "Política de privacidad →",
+  "fr": "Politique de confidentialité →"
  },
  "Ingresso privato": {
   "de": "Separater Eingang",
@@ -593,6 +761,12 @@
   "es": "Nuestras",
   "fr": "Nos"
  },
+ "Le statistiche partono": {
+  "de": "Die Statistik beginnt",
+  "en": "Statistics start",
+  "es": "Las estadísticas empiezan",
+  "fr": "Les statistiques ne démarrent"
+ },
  "Letto matrimoniale": {
   "de": "Doppelbett",
   "en": "Double bed",
@@ -617,6 +791,12 @@
   "es": "Limones en sal",
   "fr": "Citrons au sel"
  },
+ "Log del server:": {
+  "de": "Server-Protokolle:",
+  "en": "Server logs:",
+  "es": "Registros del servidor:",
+  "fr": "Journaux du serveur :"
+ },
  "Marmellate bio": {
   "de": "Bio-Marmeladen",
   "en": "Organic jams",
@@ -635,11 +815,35 @@
   "es": "En la histórica limonaia",
   "fr": "Dans la limonaia historique"
  },
+ "Nome": {
+  "de": "Name",
+  "en": "Name",
+  "es": "Nombre",
+  "fr": "Nom"
+ },
+ "Non disponibile": {
+  "de": "Nicht verfügbar",
+  "en": "Not available",
+  "es": "No disponible",
+  "fr": "Non disponible"
+ },
  "Non fumatore": {
   "de": "Nichtraucher",
   "en": "Non-smoking",
   "es": "No fumadores",
   "fr": "Non-fumeur"
+ },
+ "Non sono cookie, ma è giusto dirlo": {
+  "de": "Keine Cookies, aber erwähnenswert",
+  "en": "Not cookies, but worth saying",
+  "es": "No son cookies, pero conviene decirlo",
+  "fr": "Ce ne sont pas des cookies, mais il faut le dire"
+ },
+ "Nota onesta.": {
+  "de": "Ein ehrlicher Hinweis.",
+  "en": "An honest note.",
+  "es": "Nota sincera.",
+  "fr": "Note honnête."
  },
  "Olio EVO biologico": {
   "de": "Bio-Olivenöl extra vergine",
@@ -671,6 +875,12 @@
   "es": "Huéspedes máx.",
   "fr": "Personnes max"
  },
+ "Parcheggio": {
+  "de": "Parkplatz",
+  "en": "Parking",
+  "es": "Aparcamiento",
+  "fr": "Parking"
+ },
  "Parcheggio gratuito": {
   "de": "Kostenlose Parkplätze",
   "en": "Free parking",
@@ -682,6 +892,18 @@
   "en": "Check-out",
   "es": "Salida",
   "fr": "Départ"
+ },
+ "Per quanto li teniamo": {
+  "de": "Wie lange wir sie aufbewahren",
+  "en": "How long we keep it",
+  "es": "Cuánto tiempo los conservamos",
+  "fr": "Combien de temps nous les conservons"
+ },
+ "Perché": {
+  "de": "Warum",
+  "en": "Why",
+  "es": "Por qué",
+  "fr": "Pourquoi"
  },
  "Porta il lago": {
   "de": "Nimm den See",
@@ -719,11 +941,23 @@
   "es": "Reservar →",
   "fr": "Réserver →"
  },
+ "Prima che tu scelga: nessun cookie": {
+  "de": "Bevor Sie wählen: keine Cookies",
+  "en": "Before you choose: no cookies",
+  "es": "Antes de que elijas: ninguna cookie",
+  "fr": "Avant votre choix : aucun cookie"
+ },
  "Primo e secondo piano": {
   "de": "Erster und zweiter Stock",
   "en": "First and second floor",
   "es": "Primera y segunda planta",
   "fr": "Premier et deuxième étage"
+ },
+ "Privacy": {
+  "de": "Datenschutz",
+  "en": "Privacy",
+  "es": "Privacidad",
+  "fr": "Confidentialité"
  },
  "Pronto a": {
   "de": "Bereit zu",
@@ -742,6 +976,12 @@
   "en": "Final cleaning",
   "es": "Limpieza final",
   "fr": "Ménage de fin de séjour"
+ },
+ "Quali dati raccogliamo, e perché": {
+  "de": "Welche Daten wir erheben, und warum",
+  "en": "What data we collect, and why",
+  "es": "Qué datos recogemos, y por qué",
+  "fr": "Quelles données nous collectons, et pourquoi"
  },
  "Questa pagina": {
   "de": "Diese Seite",
@@ -785,11 +1025,23 @@
   "es": "Descubre la Bottega →",
   "fr": "Découvrir la Bottega →"
  },
+ "Scorri": {
+  "de": "Scrollen",
+  "en": "Scroll",
+  "es": "Desliza",
+  "fr": "Défiler"
+ },
  "Seguici": {
   "de": "Folgen Sie uns",
   "en": "Follow us",
   "es": "Síguenos",
   "fr": "Suivez-nous"
+ },
+ "Sentiero": {
+  "de": "Wanderweg",
+  "en": "Footpath",
+  "es": "Sendero",
+  "fr": "Sentier"
  },
  "Servizi inclusi": {
   "de": "Inklusivleistungen",
@@ -803,6 +1055,12 @@
   "es": "Tienda",
   "fr": "Boutique"
  },
+ "Sito": {
+  "de": "Website",
+  "en": "Website",
+  "es": "Sitio web",
+  "fr": "Site"
+ },
  "Solo necessari": {
   "de": "Nur notwendige",
   "en": "Essential only",
@@ -814,6 +1072,12 @@
   "en": "Outdoor space",
   "es": "Espacio exterior",
   "fr": "Espace extérieur"
+ },
+ "Statistiche:": {
+  "de": "Statistiken:",
+  "en": "Statistics:",
+  "es": "Estadísticas:",
+  "fr": "Statistiques :"
  },
  "Strada Gargnano–Riva del Garda": {
   "de": "Straße Gargnano–Riva del Garda",
@@ -881,6 +1145,12 @@
   "es": "Territorio y deporte",
   "fr": "Région & Sport"
  },
+ "Trasferimenti fuori dall'Unione Europea": {
+  "de": "Übermittlungen außerhalb der Europäischen Union",
+  "en": "Transfers outside the European Union",
+  "es": "Transferencias fuera de la Unión Europea",
+  "fr": "Transferts hors de l'Union européenne"
+ },
  "Trekking & MTB": {
   "de": "Wandern & MTB",
   "en": "Hiking & MTB",
@@ -893,11 +1163,35 @@
   "es": "Triple",
   "fr": "Triple"
  },
+ "UE": {
+  "de": "EU",
+  "en": "EU",
+  "es": "UE",
+  "fr": "UE"
+ },
+ "UE / USA": {
+  "de": "EU / USA",
+  "en": "EU / USA",
+  "es": "UE / EE. UU.",
+  "fr": "UE / États-Unis"
+ },
+ "USA / UE": {
+  "de": "USA / EU",
+  "en": "USA / EU",
+  "es": "EE. UU. / UE",
+  "fr": "États-Unis / UE"
+ },
  "Un albergo con": {
   "de": "Ein Hotel mit",
   "en": "A hotel with",
   "es": "Un hotel con",
   "fr": "Un hôtel avec"
+ },
+ "Usiamo": {
+  "de": "Wir verwenden",
+  "en": "We use",
+  "es": "Usamos",
+  "fr": "Nous utilisons"
  },
  "Vela": {
   "de": "Segeln",
@@ -905,11 +1199,29 @@
   "es": "Vela",
   "fr": "Voile"
  },
+ "Vengono installati": {
+  "de": "Sie werden",
+  "en": "They are set",
+  "es": "Se instalan",
+  "fr": "Ils ne sont installés"
+ },
+ "Verifica disponibilità": {
+  "de": "Verfügbarkeit prüfen",
+  "en": "Check availability",
+  "es": "Ver disponibilidad",
+  "fr": "Vérifier les disponibilités"
+ },
  "Verifica disponibilità →": {
   "de": "Verfügbarkeit prüfen →",
   "en": "Check availability →",
   "es": "Ver disponibilidad →",
   "fr": "Vérifier les disponibilités →"
+ },
+ "Via Gardesana, 7 · Sponda bresciana": {
+  "de": "Via Gardesana, 7 · Brescianer Ufer",
+  "en": "Via Gardesana, 7 · Brescia shore",
+  "es": "Via Gardesana, 7 · Orilla de Brescia",
+  "fr": "Via Gardesana, 7 · Rive de Brescia"
  },
  "Visita ecomuseopradelafam.com →": {
   "de": "Besuchen Sie ecomuseopradelafam.com →",
@@ -990,11 +1302,77 @@
   "es": "del Prà.",
   "fr": "del Prà."
  },
+ "distingue un visitatore da un altro, in forma anonima": {
+  "de": "unterscheidet anonym einen Besucher vom anderen",
+  "en": "tells one visitor from another, anonymously",
+  "es": "distingue a un visitante de otro, de forma anónima",
+  "fr": "distingue un visiteur d'un autre, de façon anonyme"
+ },
+ "fino a 14 mesi, in forma aggregata.": {
+  "de": "bis zu 14 Monate, in zusammengefasster Form.",
+  "en": "up to 14 months, in aggregate form.",
+  "es": "hasta 14 meses, de forma agregada.",
+  "fr": "jusqu'à 14 mois, sous forme agrégée."
+ },
+ "gestisce le prenotazioni": {
+  "de": "verwaltet die Buchungen",
+  "en": "handles bookings",
+  "es": "gestiona las reservas",
+  "fr": "gère les réservations"
+ },
+ "il tempo necessario a gestire la richiesta.": {
+  "de": "so lange, wie es für die Bearbeitung der Anfrage nötig ist.",
+  "en": "as long as needed to handle the request.",
+  "es": "el tiempo necesario para gestionar la solicitud.",
+  "fr": "le temps nécessaire pour traiter la demande."
+ },
+ "il tempo tecnico necessario, in genere pochi giorni.": {
+  "de": "so lange wie technisch nötig, in der Regel wenige Tage.",
+  "en": "the technically necessary time, usually a few days.",
+  "es": "el tiempo técnico necesario, por lo general unos pocos días.",
+  "fr": "le temps techniquement nécessaire, en général quelques jours."
+ },
+ "il tuo consenso, revocabile in qualsiasi momento.": {
+  "de": "Ihre Einwilligung, die Sie jederzeit widerrufen können.",
+  "en": "your consent, which you can withdraw at any time.",
+  "es": "tu consentimiento, revocable en cualquier momento.",
+  "fr": "votre consentement, révocable à tout moment."
+ },
+ "informativa privacy": {
+  "de": "Datenschutzerklärung",
+  "en": "privacy policy",
+  "es": "política de privacidad",
+  "fr": "politique de confidentialité"
+ },
+ "legittimo interesse a erogare e proteggere il servizio.": {
+  "de": "berechtigtes Interesse an der Bereitstellung und dem Schutz des Dienstes.",
+  "en": "legitimate interest in providing and protecting the service.",
+  "es": "interés legítimo en prestar y proteger el servicio.",
+  "fr": "intérêt légitime à fournir et à protéger le service."
+ },
+ "mantiene lo stato della sessione": {
+  "de": "speichert den Sitzungsstatus",
+  "en": "keeps the session state",
+  "es": "mantiene el estado de la sesión",
+  "fr": "conserve l'état de la session"
+ },
  "non c'è.": {
   "de": "gibt es nicht.",
   "en": "doesn't exist.",
   "es": "no existe.",
   "fr": "n'existe pas."
+ },
+ "non installa alcun cookie": {
+  "de": "setzt die Website keine Cookies",
+  "en": "does not set any cookies",
+  "es": "no instala ninguna cookie",
+  "fr": "n'installe aucun cookie"
+ },
+ "ospita il sito": {
+  "de": "hostet die Website",
+  "en": "hosts the site",
+  "es": "aloja el sitio",
+  "fr": "héberge le site"
  },
  "posizione ideale.": {
   "de": "idealer Lage.",
@@ -1019,6 +1397,18 @@
   "en": "we are",
   "es": "estamos",
   "fr": "nous sommes"
+ },
+ "solo dopo il consenso": {
+  "de": "erst nach der Einwilligung",
+  "en": "only after consent",
+  "es": "solo después del consentimiento",
+  "fr": "qu'après le consentement"
+ },
+ "solo dopo il tuo consenso": {
+  "de": "erst nach Ihrer Einwilligung",
+  "en": "only after your consent",
+  "es": "solo después de tu consentimiento",
+  "fr": "qu'après votre consentement"
  },
  "statistiche (solo con consenso)": {
   "de": "Statistiken (nur mit Einwilligung)",

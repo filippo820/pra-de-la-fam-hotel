@@ -1,4 +1,28 @@
 {
+ "), per non chiederle di nuovo a ogni pagina, e spariscono quando la chiudi.": {
+  "de": "), damit sie nicht auf jeder Seite neu abgefragt wird, und verschwindet, wenn Sie ihn schließen.",
+  "en": "), so they are not requested again on every page, and disappear when you close it.",
+  "es": "), para no pedirla de nuevo en cada página, y desaparece cuando la cierras.",
+  "fr": "), pour ne pas les redemander à chaque page, et disparaissent quand vous le fermez."
+ },
+ ", gestito dal nostro fornitore del motore di prenotazione. I dati che inserisci lì (nome, contatti, date, eventuali dati di pagamento) sono raccolti su quel sistema e regolati dalla sua informativa, oltre che dalla presente per la parte che ci riguarda come struttura ricettiva.": {
+  "de": ", das von unserem Anbieter der Buchungssoftware betrieben wird. Die Daten, die Sie dort eingeben (Name, Kontaktdaten, Daten des Aufenthalts, ggf. Zahlungsdaten), werden in diesem System erhoben und unterliegen dessen Datenschutzerklärung sowie dieser hier, soweit sie uns als Beherbergungsbetrieb betrifft.",
+  "en": ", run by our booking engine provider. The data you enter there (name, contact details, dates, any payment details) are collected on that system and governed by its privacy policy, as well as by this one for the part that concerns us as an accommodation provider.",
+  "es": ", gestionado por nuestro proveedor del motor de reservas. Los datos que introduces allí (nombre, datos de contacto, fechas, posibles datos de pago) se recogen en ese sistema y se rigen por su política de privacidad, además de por esta en la parte que nos corresponde como establecimiento de alojamiento.",
+  "fr": ", géré par notre fournisseur de moteur de réservation. Les données que vous y saisissez (nom, coordonnées, dates, éventuelles données de paiement) sont collectées sur ce système et régies par sa politique de confidentialité, ainsi que par la présente pour la partie qui nous concerne en tant qu'établissement d'hébergement."
+ },
+ ", la scelta che hai fatto su questo banner. Resta sul tuo dispositivo, non viene inviata a nessuno e serve a non richiederti la stessa cosa a ogni visita. Le previsioni del meteo restano al massimo mezz’ora nella memoria della scheda (": {
+  "de": ", Ihre Entscheidung in diesem Banner. Sie bleibt auf Ihrem Gerät, wird an niemanden gesendet und erspart Ihnen dieselbe Frage bei jedem Besuch. Die Wettervorhersage bleibt höchstens eine halbe Stunde im Speicher des Tabs (",
+  "en": ", the choice you made on this banner. It stays on your device, is sent to no one and saves us asking you the same thing on every visit. The weather forecast stays for at most half an hour in the tab's memory (",
+  "es": ", la elección que hiciste en este aviso. Se queda en tu dispositivo, no se envía a nadie y sirve para no volver a preguntarte lo mismo en cada visita. La previsión del tiempo se queda como mucho media hora en la memoria de la pestaña (",
+  "fr": ", le choix que vous avez fait sur ce bandeau. Elle reste sur votre appareil, n'est envoyée à personne et évite de vous redemander la même chose à chaque visite. Les prévisions météo restent au maximum une demi-heure dans la mémoire de l'onglet ("
+ },
+ ". Finché non accetti, nessun cookie viene installato — lo trovi verificato nella": {
+  "de": ". Solange Sie nicht zustimmen, wird kein Cookie gesetzt — nachgeprüft in der",
+  "en": ". Until you accept, no cookie is set — you will find this checked in the",
+  "es": ". Mientras no aceptes, no se instala ninguna cookie — lo encontrarás comprobado en la",
+  "fr": ". Tant que vous n'acceptez pas, aucun cookie n'est installé — vous le trouverez vérifié dans la"
+ },
  "01 — La strada e l'arrivo": {
   "de": "01 — Anfahrt und Straße",
   "en": "01 — Getting here",
@@ -40,6 +64,12 @@
   "en": "August 2024 · Double Room",
   "es": "Agosto 2024 · Habitación Doble",
   "fr": "Août 2024 · Chambre Double"
+ },
+ "Alcuni di questi fornitori sono società statunitensi o hanno server fuori dall'UE. I trasferimenti avvengono sulla base delle decisioni di adeguatezza della Commissione Europea o delle clausole contrattuali standard.": {
+  "de": "Einige dieser Anbieter sind US-Unternehmen oder haben Server außerhalb der EU. Die Übermittlungen erfolgen auf Grundlage der Angemessenheitsbeschlüsse der Europäischen Kommission oder der Standardvertragsklauseln.",
+  "en": "Some of these providers are US companies or have servers outside the EU. Transfers take place on the basis of the European Commission's adequacy decisions or of standard contractual clauses.",
+  "es": "Algunos de estos proveedores son empresas estadounidenses o tienen servidores fuera de la UE. Las transferencias se basan en las decisiones de adecuación de la Comisión Europea o en las cláusulas contractuales tipo.",
+  "fr": "Certains de ces fournisseurs sont des sociétés américaines ou ont des serveurs hors de l'UE. Les transferts se fondent sur les décisions d'adéquation de la Commission européenne ou sur les clauses contractuelles types."
  },
  "Ampie vetrate sul lago, cucina attrezzata, giardino con scoperto privato. Arredamento in legno.": {
   "de": "Große Fenster zum See, voll ausgestattete Küche, Garten mit privater Freifläche. Holzmöbel.",
@@ -89,6 +119,12 @@
   "es": "Apartamento de dos ambientes en dos niveles, piedra vista, escalera voladiza y jardín reservado. El más espacioso de la propiedad.",
   "fr": "Deux-pièces sur deux niveaux, pierre apparente, escalier en porte-à-faux et jardin réservé. Le plus spacieux de la propriété."
  },
+ "Bloccare questi cookie non impedisce di usare il sito: nessuna funzione dipende da loro.": {
+  "de": "Wer diese Cookies blockiert, kann die Website trotzdem nutzen: Keine Funktion hängt von ihnen ab.",
+  "en": "Blocking these cookies does not stop you using the site: no feature depends on them.",
+  "es": "Bloquear estas cookies no impide usar el sitio: ninguna función depende de ellas.",
+  "fr": "Bloquer ces cookies n'empêche pas d'utiliser le site : aucune fonction n'en dépend."
+ },
  "C'è il parcheggio? Si paga?": {
   "de": "Gibt es Parkplätze? Kosten sie etwas?",
   "en": "Is there parking? Is it paid?",
@@ -130,6 +166,12 @@
   "en": "Airy, comfortable double rooms on the first or second floor of the hotel. Some look out exclusively over Lake Garda, others combine a beautiful view of the lake with the surrounding mountains, depending on their position in the building. The furnishing is modern and welcoming. Included: air conditioning, free Wi-Fi, TV, empty fridge and free reserved parking. Bathrooms have a shower, hairdryer, towel set, shower gel and toiletries.",
   "es": "Habitaciones dobles amplias y confortables, en la primera o segunda planta del hotel. Algunas ofrecen vista exclusiva al lago de Garda, otras combinan una espléndida vista al lago y a las montañas circundantes, según su posición en el edificio. El mobiliario es moderno y acogedor. Incluye: aire acondicionado, Wi-Fi gratuito, TV, nevera vacía y aparcamiento reservado gratuito. Los baños cuentan con ducha, secador, juego de toallas, gel y kit de aseo.",
   "fr": "Chambres doubles lumineuses et confortables, au premier ou au deuxième étage de l'hôtel. Certaines offrent une vue exclusive sur le lac de Garde, d'autres associent une belle vue sur le lac et les montagnes environnantes, selon leur position dans le bâtiment. Le mobilier est moderne et accueillant. Inclus : climatisation, Wi-Fi gratuit, TV, réfrigérateur vide et parking réservé gratuit. Les salles de bain disposent d'une douche, d'un sèche-cheveux, d'un jeu de serviettes, de gel douche et de produits d'accueil."
+ },
+ "Cancella i dati del sito dalle impostazioni del browser: il banner ricomparirà e potrai scegliere di nuovo.": {
+  "de": "Löschen Sie die Daten der Website in den Browsereinstellungen: Das Banner erscheint wieder und Sie können neu wählen.",
+  "en": "Delete the site's data in your browser settings: the banner will appear again and you can choose again.",
+  "es": "Borra los datos del sitio en los ajustes del navegador: el aviso volverá a aparecer y podrás elegir de nuevo.",
+  "fr": "Effacez les données du site dans les réglages du navigateur : le bandeau réapparaîtra et vous pourrez choisir à nouveau."
  },
  "Canyon Adventures — specialisti del Canyoning sul Garda da oltre 20 anni. Canyon del Garda e Valle di Ledro.": {
   "de": "Canyon Adventures — seit über 20 Jahren Canyoning-Spezialisten am Gardasee. Garda-Schluchten und Valle di Ledro.",
@@ -209,6 +251,12 @@
   "es": "Cómo llegar",
   "fr": "Comment venir"
  },
+ "Come ogni sito, il server che ospita queste pagine registra le richieste che riceve: indirizzo IP, data e ora, pagina richiesta, tipo di browser. Servono a far funzionare il sito e a difenderlo da abusi. Il sito è ospitato da": {
+  "de": "Wie jede Website protokolliert der Server, auf dem diese Seiten liegen, die eingehenden Anfragen: IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp. Das dient dem Betrieb der Website und ihrem Schutz vor Missbrauch. Die Website wird gehostet von",
+  "en": "Like every website, the server hosting these pages logs the requests it receives: IP address, date and time, page requested, browser type. This is needed to run the site and protect it from abuse. The site is hosted by",
+  "es": "Como cualquier sitio, el servidor que aloja estas páginas registra las solicitudes que recibe: dirección IP, fecha y hora, página solicitada, tipo de navegador. Sirven para que el sitio funcione y para protegerlo de abusos. El sitio está alojado en",
+  "fr": "Comme tout site, le serveur qui héberge ces pages enregistre les requêtes qu'il reçoit : adresse IP, date et heure, page demandée, type de navigateur. Elles servent à faire fonctionner le site et à le protéger des abus. Le site est hébergé par"
+ },
  "Come si arriva in auto?": {
   "de": "Wie komme ich mit dem Auto her?",
   "en": "How do I get here by car?",
@@ -220,6 +268,12 @@
   "en": "How do I book? Is it better to book on your website?",
   "es": "¿Cómo se reserva? ¿Conviene reservar desde la web?",
   "fr": "Comment réserver ? Vaut-il mieux réserver sur le site ?"
+ },
+ "Con il consenso negato, Google Analytics invia comunque un segnale tecnico senza cookie e senza identificarti. Nessun dato viene salvato sul tuo dispositivo, ma il tuo indirizzo IP raggiunge comunque i server di Google.": {
+  "de": "Auch ohne Einwilligung sendet Google Analytics ein technisches Signal, ohne Cookies und ohne Sie zu identifizieren. Auf Ihrem Gerät wird nichts gespeichert, aber Ihre IP-Adresse erreicht trotzdem die Server von Google.",
+  "en": "With consent refused, Google Analytics still sends a technical signal without cookies and without identifying you. No data is saved on your device, but your IP address still reaches Google's servers.",
+  "es": "Con el consentimiento denegado, Google Analytics envía igualmente una señal técnica sin cookies y sin identificarte. No se guarda ningún dato en tu dispositivo, pero tu dirección IP llega igualmente a los servidores de Google.",
+  "fr": "Avec le consentement refusé, Google Analytics envoie quand même un signal technique, sans cookie et sans vous identifier. Aucune donnée n'est enregistrée sur votre appareil, mais votre adresse IP atteint tout de même les serveurs de Google."
  },
  "Con peperoncino o pepe. Per insalate, pesce o carni crude": {
   "de": "Mit Chili oder Pfeffer. Für Salate, Fisch oder rohes Fleisch",
@@ -413,6 +467,18 @@
   "es": "Los apartamentos están dentro del antiguo limonar: Clementina, Calamondino, Kumquat y Pomelo son de unos 35 m² para dos personas, con cocina equipada o rincón de cocina, espacio exterior y vistas al lago; Bergamotto está en dos niveles, 65 m², pero por ahora no está disponible.",
   "fr": "Les appartements sont aménagés dans l'ancienne limonaia : Clementina, Calamondino, Kumquat et Pomelo font environ 35 m² pour deux personnes, avec cuisine équipée ou coin cuisine, espace extérieur et vue sur le lac ; Bergamotto se développe sur deux niveaux, 65 m², mais n'est pas disponible actuellement."
  },
+ "Google mette a disposizione un componente aggiuntivo per disattivare Analytics su tutti i siti:": {
+  "de": "Google bietet ein Browser-Add-on an, mit dem sich Analytics auf allen Websites deaktivieren lässt:",
+  "en": "Google offers a browser add-on to turn off Analytics on all websites:",
+  "es": "Google ofrece un complemento para desactivar Analytics en todos los sitios:",
+  "fr": "Google propose un module complémentaire pour désactiver Analytics sur tous les sites :"
+ },
+ "Hai diritto di sapere quali dati abbiamo su di te, di ottenerne copia, di farli correggere o cancellare, di limitarne o opporti al trattamento, e di revocare il consenso in qualsiasi momento senza che questo pregiudichi quanto fatto prima. Scrivi a": {
+  "de": "Sie haben das Recht zu erfahren, welche Daten wir über Sie haben, eine Kopie zu erhalten, sie berichtigen oder löschen zu lassen, die Verarbeitung einzuschränken oder ihr zu widersprechen und Ihre Einwilligung jederzeit zu widerrufen, ohne dass dies das zuvor Geschehene berührt. Schreiben Sie an",
+  "en": "You have the right to know what data we hold about you, to obtain a copy, to have it corrected or deleted, to restrict or object to its processing, and to withdraw your consent at any time without affecting what was done before. Write to",
+  "es": "Tienes derecho a saber qué datos tenemos sobre ti, a obtener una copia, a que se corrijan o se borren, a limitar su tratamiento u oponerte a él, y a retirar tu consentimiento en cualquier momento sin que esto afecte a lo hecho antes. Escribe a",
+  "fr": "Vous avez le droit de savoir quelles données nous détenons sur vous, d'en obtenir une copie, de les faire rectifier ou effacer, d'en limiter le traitement ou de vous y opposer, et de retirer votre consentement à tout moment sans que cela remette en cause ce qui a été fait auparavant. Écrivez à"
+ },
  "Home": {
   "de": "Startseite",
   "en": "Home",
@@ -442,6 +508,12 @@
   "en": "The typefaces are served by our own website.",
   "es": "Las tipografías se sirven desde nuestro propio sitio.",
   "fr": "Les polices de caractères sont servies par notre propre site."
+ },
+ "I cookie sono piccoli file che un sito salva sul tuo dispositivo. Qui trovi esattamente quelli che usiamo — controllati aprendo il sito in un browser, prima e dopo il consenso — e come cambiare idea.": {
+  "de": "Cookies sind kleine Dateien, die eine Website auf Ihrem Gerät speichert. Hier finden Sie genau die, die wir verwenden — überprüft, indem wir die Website in einem Browser vor und nach der Einwilligung geöffnet haben — und wie Sie Ihre Entscheidung ändern können.",
+  "en": "Cookies are small files that a website saves on your device. Here you will find exactly the ones we use — checked by opening the site in a browser, before and after consent — and how to change your mind.",
+  "es": "Las cookies son pequeños archivos que un sitio guarda en tu dispositivo. Aquí encontrarás exactamente las que usamos — comprobadas abriendo el sitio en un navegador, antes y después del consentimiento — y cómo cambiar de opinión.",
+  "fr": "Les cookies sont de petits fichiers qu'un site enregistre sur votre appareil. Vous trouverez ici exactement ceux que nous utilisons — vérifiés en ouvrant le site dans un navigateur, avant et après le consentement — et comment changer d'avis."
  },
  "I sentieri dimenticati": {
   "de": "Die vergessenen Pfade",
@@ -701,6 +773,12 @@
   "es": "Estudio con cama de matrimonio, cocina y jardín privado con vista panorámica al lago.",
   "fr": "Studio avec lit double, cuisine et jardin privé avec vue panoramique sur le lac."
  },
+ "Nella memoria locale del browser salviamo una sola informazione tecnica:": {
+  "de": "Im lokalen Speicher des Browsers legen wir nur eine technische Angabe ab:",
+  "en": "In the browser's local storage we save a single technical item:",
+  "es": "En la memoria local del navegador guardamos un solo dato técnico:",
+  "fr": "Dans la mémoire locale du navigateur, nous enregistrons une seule information technique :"
+ },
  "Nella stessa proprietà c'è la Limonaia del Prà de la Fam: la più grande e la più a nord d'Europa, ottanta piante ancora in produzione, visitabile da Pasqua a ottobre. È quello che qui non ha nessun altro albergo del Garda — e i cinque appartamenti sono ricavati proprio lì, nella vecchia limonaia.": {
   "de": "Auf demselben Grundstück liegt die Limonaia del Prà de la Fam: die größte und nördlichste Europas, achtzig Bäume, die noch tragen, von Ostern bis Oktober zu besichtigen. Das hat kein anderes Hotel am Gardasee — und die fünf Apartments sind genau dort entstanden, in der alten Limonaia.",
   "en": "On the same property stands the Limonaia del Prà de la Fam: the largest and northernmost in Europe, eighty trees still in production, open to visitors from Easter to October. It is the one thing no other hotel on Lake Garda has — and the five apartments are built right there, inside the old lemon house.",
@@ -724,6 +802,12 @@
   "en": "There is no need to book it or mention it in advance: there is room for every guest.",
   "es": "No hace falta reservarlo ni avisar con antelación: hay sitio para todos los huéspedes.",
   "fr": "Inutile de le réserver ou de le signaler à l'avance : il y a de la place pour tous les clients."
+ },
+ "Non vendiamo i tuoi dati e non li cediamo a terzi per scopi pubblicitari.": {
+  "de": "Wir verkaufen Ihre Daten nicht und geben sie nicht zu Werbezwecken an Dritte weiter.",
+  "en": "We do not sell your data or pass it on to third parties for advertising purposes.",
+  "es": "No vendemos tus datos ni los cedemos a terceros con fines publicitarios.",
+  "fr": "Nous ne vendons pas vos données et ne les cédons pas à des tiers à des fins publicitaires."
  },
  "Non è una limonaia ricostruita per la visita: è viva e in produzione, e dai suoi frutti nascono i limoni sotto sale, il limoncino e lo sciroppo che si assaggiano alla fine del giro.": {
   "de": "Das ist keine für Besucher wiederaufgebaute Limonaia: Sie lebt und trägt Früchte, aus denen die in Salz eingelegten Zitronen, der Limoncino und der Sirup entstehen, die man am Ende der Führung probiert.",
@@ -767,6 +851,12 @@
   "es": "Para los apartamentos no, porque tienen cocina: quien quiera puede añadirlo pagando. Basta con decirlo al reservar, o incluso el día antes en recepción.",
   "fr": "Pas pour les appartements, puisqu'ils disposent d'une cuisine : ceux qui le souhaitent peuvent l'ajouter en supplément. Il suffit de le dire à la réservation, ou même la veille à la réception."
  },
+ "Per il quadro completo su quali dati trattiamo e perché, vedi l'": {
+  "de": "Das vollständige Bild, welche Daten wir verarbeiten und warum, gibt die ",
+  "en": "For the full picture of what data we process and why, see the ",
+  "es": "Para ver en detalle qué datos tratamos y por qué, consulta la ",
+  "fr": "Pour savoir en détail quelles données nous traitons et pourquoi, consultez la "
+ },
  "Per informazioni siamo a tua disposizione.": {
   "de": "Für Fragen stehen wir Ihnen gern zur Verfügung.",
   "en": "We are here for any question.",
@@ -778,6 +868,12 @@
   "en": "For quieter days: Gargnano a few kilometres away, Limone sul Garda and Riva del Garda to the north, and the sanctuary of Montecastello above Tignale.",
   "es": "Para los días tranquilos: Gargnano a pocos kilómetros, Limone sul Garda y Riva del Garda hacia el norte, y el santuario de Montecastello sobre Tignale.",
   "fr": "Pour les journées tranquilles : Gargnano à quelques kilomètres, Limone sul Garda et Riva del Garda vers le nord, le sanctuaire de Montecastello au-dessus de Tignale."
+ },
+ "Per qualunque domanda su questa informativa o sui tuoi dati puoi scrivere a quell'indirizzo: risponde una persona, non un modulo.": {
+  "de": "Bei Fragen zu dieser Erklärung oder zu Ihren Daten können Sie an diese Adresse schreiben: Es antwortet ein Mensch, kein Formular.",
+  "en": "For any question about this policy or about your data you can write to that address: a person answers, not a form.",
+  "es": "Para cualquier pregunta sobre esta política o sobre tus datos puedes escribir a esa dirección: responde una persona, no un formulario.",
+  "fr": "Pour toute question sur cette politique ou sur vos données, vous pouvez écrire à cette adresse : c'est une personne qui répond, pas un formulaire."
  },
  "Piano terra + mansarda · Ingresso dal sentiero Oldesio": {
   "de": "Erdgeschoss + Dachgeschoss · Eingang vom Oldesio-Weg",
@@ -845,11 +941,29 @@
   "es": "Prà de la Fam® es una marca registrada en Italia por FAM S.r.l.",
   "fr": "Prà de la Fam® est une marque déposée en Italie par FAM S.r.l."
  },
+ "Puoi bloccare o eliminare i cookie dalle impostazioni del tuo browser (Chrome, Safari, Firefox ed Edge hanno tutti una sezione dedicata).": {
+  "de": "Sie können Cookies in den Einstellungen Ihres Browsers blockieren oder löschen (Chrome, Safari, Firefox und Edge haben alle einen eigenen Bereich dafür).",
+  "en": "You can block or delete cookies in your browser settings (Chrome, Safari, Firefox and Edge all have a dedicated section).",
+  "es": "Puedes bloquear o eliminar las cookies en los ajustes de tu navegador (Chrome, Safari, Firefox y Edge tienen todos una sección dedicada).",
+  "fr": "Vous pouvez bloquer ou supprimer les cookies dans les réglages de votre navigateur (Chrome, Safari, Firefox et Edge ont tous une section dédiée)."
+ },
  "Quello che si chiede al banco prima di prenotare.": {
   "de": "Was man vor der Buchung an der Rezeption fragt.",
   "en": "What people ask at the desk before booking.",
   "es": "Lo que se pregunta en recepción antes de reservar.",
   "fr": "Ce que l'on demande à la réception avant de réserver."
+ },
+ "Questa informativa descrive quello che il sito fa davvero: i cookie elencati nella": {
+  "de": "Diese Erklärung beschreibt, was die Website tatsächlich tut: Die in der",
+  "en": "This policy describes what the site really does: the cookies listed in the",
+  "es": "Esta política describe lo que el sitio hace de verdad: las cookies indicadas en la",
+  "fr": "Cette politique décrit ce que le site fait réellement : les cookies énumérés dans la"
+ },
+ "Questa pagina spiega quali dati raccogliamo quando visiti il sito, perché, per quanto tempo li teniamo e cosa puoi chiederci. È scritta in modo che si capisca: se qualcosa non è chiaro, scrivici.": {
+  "de": "Diese Seite erklärt, welche Daten wir erheben, wenn Sie die Website besuchen, warum, wie lange wir sie aufbewahren und was Sie von uns verlangen können. Sie ist so geschrieben, dass man sie versteht: Wenn etwas unklar ist, schreiben Sie uns.",
+  "en": "This page explains what data we collect when you visit the site, why, how long we keep it and what you can ask us. It is written to be understood: if anything is unclear, write to us.",
+  "es": "Esta página explica qué datos recogemos cuando visitas el sitio, por qué, durante cuánto tiempo los conservamos y qué puedes pedirnos. Está escrita para que se entienda: si algo no está claro, escríbenos.",
+  "fr": "Cette page explique quelles données nous collectons lorsque vous visitez le site, pourquoi, combien de temps nous les conservons et ce que vous pouvez nous demander. Elle est écrite pour être comprise : si quelque chose n'est pas clair, écrivez-nous."
  },
  "Queste sono le domande che ci arrivano davvero al telefono e al banco, con la risposta per esteso — la stessa che daremmo di persona. Se quello che cercate non c'è, chiamateci: rispondiamo noi, non un centralino.": {
   "de": "Das sind die Fragen, die uns wirklich am Telefon und an der Rezeption gestellt werden, ausführlich beantwortet — genauso, wie wir es persönlich täten. Wenn Ihre Frage fehlt, rufen Sie an: Sie erreichen uns, keine Telefonzentrale.",
@@ -875,11 +989,23 @@
   "es": "Si llega más tarde de las 20:00, llámenos: el alojamiento es de gestión familiar y nos organizamos, solo hace falta saberlo antes. Y si llega antes de hora, normalmente puede dejar ya el coche en el aparcamiento y usar el jardín y la playa mientras terminamos de preparar la habitación.",
   "fr": "Si vous arrivez après 20h00, appelez-nous : l'établissement est familial et nous nous organisons, il suffit de le savoir à l'avance. Et si vous arrivez en avance, vous pouvez en général laisser la voiture au parking et profiter du jardin et de la plage pendant que nous terminons la chambre."
  },
+ "Se ci mandi una mail o ci telefoni, conserviamo quello che ci scrivi per il tempo necessario a risponderti e a gestire l'eventuale soggiorno.": {
+  "de": "Wenn Sie uns eine E-Mail schicken oder anrufen, bewahren wir Ihre Nachricht so lange auf, wie es für die Antwort und einen eventuellen Aufenthalt nötig ist.",
+  "en": "If you email or phone us, we keep what you write for as long as needed to reply and to manage any stay.",
+  "es": "Si nos envías un correo o nos llamas, conservamos lo que nos escribes durante el tiempo necesario para responderte y gestionar tu posible estancia.",
+  "fr": "Si vous nous envoyez un e-mail ou nous téléphonez, nous conservons ce que vous nous écrivez le temps nécessaire pour vous répondre et gérer un éventuel séjour."
+ },
  "Se preferite andare sul sicuro, impostate direttamente le coordinate 45°43.684′N · 10°43.176′E, o aprite la nostra posizione su Google Maps dalla pagina dei contatti.": {
   "de": "Wer ganz sichergehen will, gibt direkt die Koordinaten 45°43.684′N · 10°43.176′E ein oder öffnet unsere Position über die Kontaktseite in Google Maps.",
   "en": "If you would rather play safe, enter the coordinates 45°43.684′N · 10°43.176′E directly, or open our position on Google Maps from the contacts page.",
   "es": "Si prefiere ir sobre seguro, introduzca directamente las coordenadas 45°43.684′N · 10°43.176′E, o abra nuestra ubicación en Google Maps desde la página de contactos.",
   "fr": "Si vous préférez la sécurité, entrez directement les coordonnées 45°43.684′N · 10°43.176′E, ou ouvrez notre position sur Google Maps depuis la page contacts."
+ },
+ "Se ritieni che i tuoi dati siano trattati in modo scorretto puoi rivolgerti al": {
+  "de": "Wenn Sie meinen, dass Ihre Daten nicht korrekt verarbeitet werden, können Sie sich an die italienische Datenschutzbehörde wenden, den",
+  "en": "If you believe your data is being processed improperly you can contact the Italian data protection authority, the",
+  "es": "Si consideras que tus datos se tratan de forma incorrecta puedes dirigirte a la autoridad italiana de protección de datos, el",
+  "fr": "Si vous estimez que vos données sont traitées de manière incorrecte, vous pouvez vous adresser à l'autorité italienne de protection des données, le"
  },
  "Senza coloranti né conservanti, antica distilleria locale": {
   "de": "Ohne Farb- und Konservierungsstoffe, aus einer alten örtlichen Brennerei",
@@ -1091,6 +1217,12 @@
   "es": "Solo le pedimos que lo indique al reservar, así podemos asignarle el alojamiento más cómodo. Alrededor está el jardín, la playa es libre y los senderos del parque salen de la puerta: para un perro es un sitio fácil.",
   "fr": "Nous vous demandons simplement de le signaler à la réservation, afin de vous attribuer le logement le plus pratique. Tout autour il y a le jardin, la plage est libre et les sentiers du parc partent de la porte : pour un chien, c'est un endroit facile."
  },
+ "Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Sponda bresciana": {
+  "de": "Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Brescianer Ufer",
+  "en": "Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Brescia shore",
+  "es": "Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Orilla de Brescia",
+  "fr": "Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS) · Rive de Brescia"
+ },
  "Vista da Malcesine a Sirmione, giardino privato": {
   "de": "Blick von Malcesine bis Sirmione, Privatgarten",
   "en": "View from Malcesine to Sirmione, private garden",
@@ -1116,6 +1248,42 @@
   "es": "desde la recepción.",
   "fr": "posées à la réception."
  },
+ "e non salva nulla sul tuo dispositivo. Se scegli «Solo necessari», l'unica cosa che restiamo a ricordare è la tua scelta.": {
+  "de": "und speichert nichts auf Ihrem Gerät. Wenn Sie „Nur notwendige“ wählen, merken wir uns nur diese Entscheidung.",
+  "en": "and saves nothing on your device. If you choose “Necessary only”, the only thing we remember is your choice.",
+  "es": "y no guarda nada en tu dispositivo. Si eliges «Solo necesarias», lo único que recordamos es tu elección.",
+  "fr": "et n'enregistre rien sur votre appareil. Si vous choisissez « Nécessaires uniquement », la seule chose que nous retenons est votre choix."
+ },
+ "e servono unicamente a produrre statistiche aggregate. Non li usiamo per pubblicità né per profilazione.": {
+  "de": "gesetzt und dienen ausschließlich zu zusammengefassten Statistiken. Wir verwenden sie weder für Werbung noch für Profilbildung.",
+  "en": "and serve only to produce aggregate statistics. We do not use them for advertising or profiling.",
+  "es": "y sirven únicamente para elaborar estadísticas agregadas. No las usamos para publicidad ni para elaborar perfiles.",
+  "fr": "et servent uniquement à produire des statistiques agrégées. Nous ne les utilisons ni pour la publicité ni pour le profilage."
+ },
+ "esecuzione del contratto e obblighi di legge (comunicazione alloggiati alla Questura, adempimenti fiscali).": {
+  "de": "Vertragserfüllung und gesetzliche Pflichten (Meldung der Gäste an die Polizeibehörde, steuerliche Pflichten).",
+  "en": "performance of the contract and legal obligations (reporting guests to the police, tax requirements).",
+  "es": "ejecución del contrato y obligaciones legales (comunicación de huéspedes a la policía, obligaciones fiscales).",
+  "fr": "exécution du contrat et obligations légales (déclaration des clients à la Questura, obligations fiscales)."
+ },
+ "per capire quali pagine vengono lette, quanto a lungo, e da dove arrivano i visitatori. Ci serve a migliorare il sito, non a profilarti né a mostrarti pubblicità.": {
+  "de": "zur Auswertung, welche Seiten gelesen werden, wie lange und woher die Besucher kommen. Das hilft uns, die Website zu verbessern, nicht, ein Profil von Ihnen zu erstellen oder Ihnen Werbung zu zeigen.",
+  "en": "to understand which pages are read, for how long, and where visitors come from. We use it to improve the site, not to profile you or show you advertising.",
+  "es": "para entender qué páginas se leen, durante cuánto tiempo y de dónde llegan los visitantes. Nos sirve para mejorar el sitio, no para elaborar tu perfil ni para mostrarte publicidad.",
+  "fr": "pour comprendre quelles pages sont lues, combien de temps, et d'où viennent les visiteurs. Cela nous sert à améliorer le site, pas à vous profiler ni à vous montrer de la publicité."
+ },
+ "per il tempo previsto dalla legge (10 anni per i documenti fiscali).": {
+  "de": "so lange, wie es das Gesetz vorschreibt (10 Jahre für Steuerunterlagen).",
+  "en": "for the period required by law (10 years for tax documents).",
+  "es": "durante el tiempo previsto por la ley (10 años para los documentos fiscales).",
+  "fr": "pendant la durée prévue par la loi (10 ans pour les documents fiscaux)."
+ },
+ "sono stati osservati in un browser, non copiati da un modello. Resta comunque un testo redazionale: per un uso legale pieno va fatta rivedere da chi si occupa di protezione dei dati, soprattutto per la parte sulle prenotazioni, che dipende dal contratto con il fornitore.": {
+  "de": "aufgeführten Cookies wurden in einem Browser beobachtet, nicht aus einer Vorlage kopiert. Es bleibt dennoch ein redaktioneller Text: Für eine vollständige rechtliche Verwendung sollte ihn eine Fachperson für Datenschutz prüfen, vor allem den Teil über die Buchungen, der vom Vertrag mit dem Anbieter abhängt.",
+  "en": "were observed in a browser, not copied from a template. It is still an editorial text: for full legal use it should be reviewed by a data protection professional, especially the part on bookings, which depends on the contract with the provider.",
+  "es": "se han observado en un navegador, no se han copiado de un modelo. Aun así es un texto redaccional: para un uso legal pleno debe revisarlo un especialista en protección de datos, sobre todo la parte de las reservas, que depende del contrato con el proveedor.",
+  "fr": "ont été observés dans un navigateur, pas copiés d'un modèle. Cela reste un texte rédactionnel : pour un usage juridique complet, il doit être relu par un spécialiste de la protection des données, surtout pour la partie sur les réservations, qui dépend du contrat avec le fournisseur."
+ },
  "È come tornare a casa. Il luogo è incantevole, immerso nella natura e il lago è splendido.": {
   "de": "Es fühlt sich an wie Nachhausekommen. Der Ort ist bezaubernd, mitten in der Natur, und der See ist herrlich.",
   "en": "It feels like coming home. The place is enchanting, surrounded by nature, and the lake is splendid.",
@@ -1133,6 +1301,12 @@
   "en": "It is true, and it is also why the journey is worth it. The Gardesana Occidentale is carved into the rock above the lake: narrow, with many tunnels, some of which open straight onto the water. It is one of the most scenic roads in Italy.",
   "es": "Es cierto, y es también el motivo por el que vale la pena el viaje. La Gardesana Occidentale está excavada en la roca sobre el lago: estrecha, con muchos túneles, algunos de los cuales se abren al agua. Es una de las carreteras más panorámicas de Italia.",
   "fr": "C'est vrai, et c'est aussi ce qui rend le trajet mémorable. La Gardesana Occidentale est taillée dans la roche au-dessus du lac : étroite, avec de nombreux tunnels, dont certains s'ouvrent sur l'eau. C'est l'une des routes les plus panoramiques d'Italie."
+ },
+ "— Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS), Italia": {
+  "de": "— Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS), Italien",
+  "en": "— Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS), Italy",
+  "es": "— Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS), Italia",
+  "fr": "— Via Gardesana, 7 · Porto di Tignale · 25080 Tignale (BS), Italie"
  },
  "⚠️ Appartamento temporaneamente non disponibile": {
   "de": "⚠️ Apartment vorübergehend nicht verfügbar",

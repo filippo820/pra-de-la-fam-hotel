@@ -1,0 +1,838 @@
+{
+ "_nota": "Traduzioni di cio' che NON passa dal dizionario: <title>, meta description, anteprime social, alt delle immagini, aria-label e i testi del JSON-LD. La chiave e' il testo italiano esatto (con & e apostrofi semplici, non &amp; o &#x27;). Lo usa strumenti/lingue.py; se un testo italiano cambia, va cambiata anche la chiave qui, altrimenti lingue.py lo segnala come non tradotto. I nomi degli appartamenti (Pomelo, Clementina, Calamondino, Kumquat, Bergamotto) non si traducono; i tipi di camera si', come nel testo visibile (Camera Doppia → Double Room).",
+ "_invariati": [
+  "Prà de la Fam",
+  "Prà de la Fam®",
+  "FAM S.r.l.",
+  "Al Prà de la Fam",
+  "Hotel Prà de la Fam",
+  "Al Prà Hotel & Appartamenti",
+  "Prà de la Fam Tignale",
+  "Limonaia del Prà de la Fam",
+  "Ecomuseo Limonaia del Prà de la Fam",
+  "Limonaia di Prà de la Fam",
+  "Italiano",
+  "English",
+  "Deutsch",
+  "Français",
+  "Español",
+  "it", "en", "de", "fr", "es",
+  "Pomelo", "Clementina", "Calamondino", "Kumquat", "Bergamotto"
+ ],
+
+ "Hotel & Appartamenti Tignale, Lago di Garda | Prà de la Fam": {
+  "en": "Hotel & Apartments in Tignale, Lake Garda | Prà de la Fam",
+  "de": "Hotel & Apartments in Tignale am Gardasee | Prà de la Fam",
+  "fr": "Hôtel & appartements à Tignale, lac de Garde | Prà de la Fam",
+  "es": "Hotel & apartamentos Tignale, Lago de Garda | Prà de la Fam"
+ },
+ "Hotel e appartamenti sul Lago di Garda a Tignale: spiaggia a 20 metri, limonaia storica visitabile e colazione in veranda. Prenota direttamente.": {
+  "en": "Hotel and apartments on Lake Garda in Tignale: a beach 20 metres away, a historic lemon house you can visit and breakfast on the veranda. Book direct.",
+  "de": "Hotel und Apartments am Gardasee in Tignale: Strand in 20 Metern, eine historische Limonaia zum Besichtigen und Frühstück auf der Veranda. Direkt buchen.",
+  "fr": "Hôtel et appartements sur le lac de Garde à Tignale : plage à 20 mètres, limonaia historique à visiter et petit-déjeuner sous la véranda. Réservez en direct.",
+  "es": "Hotel y apartamentos en el Lago de Garda, en Tignale: playa a 20 metros, una limonaia histórica que se puede visitar y desayuno en la veranda. Reserva directa."
+ },
+
+ "Camera Doppia sul Lago di Garda a Tignale | Prà de la Fam": {
+  "en": "Double Room on Lake Garda in Tignale | Prà de la Fam",
+  "de": "Doppelzimmer am Gardasee in Tignale | Prà de la Fam",
+  "fr": "Chambre Double au bord du lac de Garde | Prà de la Fam",
+  "es": "Habitación Doble en Tignale, Lago de Garda | Prà de la Fam"
+ },
+ "Camera doppia di 18 m² al primo o secondo piano, vista sul Lago di Garda e sui monti, aria condizionata, Wi-Fi e colazione inclusa. Spiaggia a 20 metri.": {
+  "en": "Double room of 18 m² on the first or second floor, with views of Lake Garda and the mountains, air conditioning, Wi-Fi and breakfast included. Beach 20 m away.",
+  "de": "Doppelzimmer mit 18 m² im ersten oder zweiten Stock, Blick auf den Gardasee und die Berge, Klimaanlage, WLAN und Frühstück inklusive. Strand in 20 Metern.",
+  "fr": "Chambre double de 18 m² au premier ou deuxième étage, vue sur le lac de Garde et les montagnes, climatisation, Wi-Fi et petit-déjeuner inclus. Plage à 20 m.",
+  "es": "Habitación doble de 18 m² en la primera o segunda planta, vista al Lago de Garda y a los montes, aire acondicionado, Wi-Fi y desayuno incluido. Playa a 20 m."
+ },
+
+ "Camera Doppia Economy vista lago, Tignale | Prà de la Fam": {
+  "en": "Economy Double Room, lake view, Tignale | Prà de la Fam",
+  "de": "Doppelzimmer Economy mit Seeblick, Tignale | Prà de la Fam",
+  "fr": "Chambre Double Economy vue lac, Tignale | Prà de la Fam",
+  "es": "Habitación Doble Economy con vista al lago | Prà de la Fam"
+ },
+ "Camera doppia economy di 16 m² con vista sul Lago di Garda, bagno rinnovato, aria condizionata e colazione inclusa. Parcheggio privato gratuito a Tignale.": {
+  "en": "Economy double room of 16 m² with a view of Lake Garda, renovated bathroom, air conditioning and breakfast included. Free private parking in Tignale.",
+  "de": "Doppelzimmer Economy mit 16 m² und Blick auf den Gardasee, renoviertes Bad, Klimaanlage und Frühstück inklusive. Kostenloser Privatparkplatz in Tignale.",
+  "fr": "Chambre double economy de 16 m² avec vue sur le lac de Garde, salle de bain rénovée, climatisation et petit-déjeuner inclus. Parking privé gratuit à Tignale.",
+  "es": "Habitación doble economy de 16 m² con vista al Lago de Garda, baño renovado, aire acondicionado y desayuno incluido. Aparcamiento privado gratuito en Tignale."
+ },
+
+ "Camera Tripla vista lago a Tignale, Garda | Prà de la Fam": {
+  "en": "Triple Room with lake view, Tignale, Garda | Prà de la Fam",
+  "de": "Dreibettzimmer mit Seeblick in Tignale | Prà de la Fam",
+  "fr": "Chambre Triple vue lac à Tignale, Garde | Prà de la Fam",
+  "es": "Habitación Triple con vista al lago, Tignale | Prà de la Fam"
+ },
+ "Camera tripla di 23 m² rinnovata, con vista sul Lago di Garda, bagno nuovo e spazioso, aria condizionata e colazione inclusa. Parcheggio gratuito a Tignale.": {
+  "en": "Renovated 23 m² triple room with a view of Lake Garda, a new and spacious bathroom, air conditioning and breakfast included. Free parking in Tignale.",
+  "de": "Renoviertes Dreibettzimmer mit 23 m² und Blick auf den Gardasee, neues, geräumiges Bad, Klimaanlage und Frühstück inklusive. Kostenlos parken in Tignale.",
+  "fr": "Chambre triple rénovée de 23 m² avec vue sur le lac de Garde, salle de bain neuve et spacieuse, climatisation et petit-déjeuner inclus. Parking gratuit.",
+  "es": "Habitación triple renovada de 23 m² con vista al Lago de Garda, baño nuevo y amplio, aire acondicionado y desayuno incluido. Aparcamiento gratuito en Tignale."
+ },
+
+ "Camera Familiare per 4 sul Lago di Garda | Prà de la Fam": {
+  "en": "Family Room for 4 on Lake Garda | Prà de la Fam",
+  "de": "Familienzimmer für 4 am Gardasee | Prà de la Fam",
+  "fr": "Chambre Familiale pour 4 au lac de Garde | Prà de la Fam",
+  "es": "Habitación Familiar para 4, Lago de Garda | Prà de la Fam"
+ },
+ "Camera familiare di 29 m² per 4: doppia vista lago comunicante con una stanza a castello per i bambini. Colazione inclusa e parcheggio gratuito, a Tignale.": {
+  "en": "Family room of 29 m² for 4: a lake-view double connected to a bunk-bed room for the children. Breakfast included and free parking, in Tignale.",
+  "de": "Familienzimmer mit 29 m² für 4: Doppelzimmer mit Seeblick, verbunden mit einem Raum mit Etagenbett für die Kinder. Frühstück inklusive, Parken kostenlos.",
+  "fr": "Chambre familiale de 29 m² pour 4 : une double vue lac communiquant avec une chambre à lits superposés pour les enfants. Petit-déjeuner et parking inclus.",
+  "es": "Habitación familiar de 29 m² para 4: una doble con vista al lago comunicada con un cuarto con litera para los niños. Desayuno incluido y aparcamiento gratis."
+ },
+
+ "Appartamento Pomelo con vista lago, Tignale | Prà de la Fam": {
+  "en": "Pomelo Apartment with lake view, Tignale | Prà de la Fam",
+  "de": "Apartment Pomelo mit Seeblick, Tignale | Prà de la Fam",
+  "fr": "Appartement Pomelo vue lac, Tignale | Prà de la Fam",
+  "es": "Apartamento Pomelo con vista al lago | Prà de la Fam"
+ },
+ "Appartamento di 35 m² nell'antica casa del giardiniere delle limonaie: ingresso privato, angolo cottura, camera matrimoniale vista lago, spiaggia vicina.": {
+  "en": "A 35 m² apartment in the old lemon-house gardener's cottage: private entrance, kitchenette, double bedroom with lake view, the beach close by.",
+  "de": "Apartment mit 35 m² im alten Haus des Gärtners der Limonaia: separater Eingang, Kochnische, Doppelzimmer mit Seeblick, der Strand ganz in der Nähe.",
+  "fr": "Appartement de 35 m² dans l'ancienne maison du jardinier des limonaie : entrée privée, coin cuisine, chambre double vue lac, plage toute proche.",
+  "es": "Apartamento de 35 m² en la antigua casa del jardinero de las limonaie: entrada privada, cocina americana, dormitorio doble con vista al lago, playa cerca."
+ },
+
+ "Appartamento Clementina, limonaia sul Garda | Prà de la Fam": {
+  "en": "Clementina Apartment, lemon house on Garda | Prà de la Fam",
+  "de": "Apartment Clementina, Limonaia am Gardasee | Prà de la Fam",
+  "fr": "Appartement Clementina, limonaia du Garda | Prà de la Fam",
+  "es": "Apartamento Clementina, limonaia del Garda | Prà de la Fam"
+ },
+ "Monolocale di 35 m² nella limonaia storica di Tignale: letto matrimoniale, cucina attrezzata, arredi in legno e grande giardino privato con vista sul lago.": {
+  "en": "A 35 m² studio in the historic lemon house of Tignale: double bed, fully equipped kitchen, wooden furniture and a large private garden with a lake view.",
+  "de": "Studio mit 35 m² in der historischen Limonaia von Tignale: Doppelbett, voll ausgestattete Küche, Holzmöbel und ein großer Privatgarten mit Seeblick.",
+  "fr": "Studio de 35 m² dans la limonaia historique de Tignale : lit double, cuisine équipée, mobilier en bois et grand jardin privé avec vue sur le lac.",
+  "es": "Estudio de 35 m² en la limonaia histórica de Tignale: cama de matrimonio, cocina equipada, muebles de madera y un gran jardín privado con vista al lago."
+ },
+
+ "Appartamento Calamondino, vetrate sul lago | Prà de la Fam": {
+  "en": "Calamondino Apartment, windows on the lake | Prà de la Fam",
+  "de": "Apartment Calamondino, Fenster zum See | Prà de la Fam",
+  "fr": "Appartement Calamondino, baies sur le lac | Prà de la Fam",
+  "es": "Apartamento Calamondino, ventanales al lago | Prà de la Fam"
+ },
+ "Monolocale di 35 m² nella limonaia storica con ampie vetrate sul Lago di Garda, angolo cottura, letto matrimoniale e giardino privato con sdraio, a Tignale.": {
+  "en": "A 35 m² studio in the historic lemon house with large windows onto Lake Garda, kitchenette, double bed and a private garden with deckchairs, in Tignale.",
+  "de": "Studio mit 35 m² in der historischen Limonaia, große Fenster zum Gardasee, Kochnische, Doppelbett und Privatgarten mit Liegestühlen, in Tignale.",
+  "fr": "Studio de 35 m² dans la limonaia historique, grandes baies vitrées sur le lac de Garde, coin cuisine, lit double et jardin privé avec transats, à Tignale.",
+  "es": "Estudio de 35 m² en la limonaia histórica con grandes ventanales al Lago de Garda, cocina americana, cama de matrimonio y jardín privado con tumbonas."
+ },
+
+ "Appartamento Kumquat, giardino vista lago | Prà de la Fam": {
+  "en": "Kumquat Apartment, garden with lake view | Prà de la Fam",
+  "de": "Apartment Kumquat, Garten mit Seeblick | Prà de la Fam",
+  "fr": "Appartement Kumquat, jardin vue lac | Prà de la Fam",
+  "es": "Apartamento Kumquat, jardín y vista al lago | Prà de la Fam"
+ },
+ "Monolocale di 35 m² nella limonaia storica con giardino privato e vista sul lago da Malcesine a Sirmione. Letto matrimoniale e angolo cottura, a Tignale.": {
+  "en": "A 35 m² studio in the historic lemon house with a private garden and a lake view from Malcesine to Sirmione. Double bed and kitchenette, in Tignale.",
+  "de": "Studio mit 35 m² in der historischen Limonaia, Privatgarten und Seeblick von Malcesine bis Sirmione. Doppelbett und Kochnische, in Tignale.",
+  "fr": "Studio de 35 m² dans la limonaia historique, jardin privé et vue sur le lac de Malcesine à Sirmione. Lit double et coin cuisine, à Tignale.",
+  "es": "Estudio de 35 m² en la limonaia histórica con jardín privado y vista al lago de Malcesine a Sirmione. Cama de matrimonio y cocina americana, en Tignale."
+ },
+
+ "Appartamento Bergamotto su due livelli | Prà de la Fam": {
+  "en": "Bergamotto Apartment on two levels | Prà de la Fam",
+  "de": "Apartment Bergamotto auf zwei Ebenen | Prà de la Fam",
+  "fr": "Appartement Bergamotto sur deux niveaux | Prà de la Fam",
+  "es": "Apartamento Bergamotto en dos niveles | Prà de la Fam"
+ },
+ "Appartamento di 65 m² su due livelli con pietra a vista e scala a sbalzo: camera matrimoniale, bagno con doccia, zona giorno in mansarda con angolo cucina.": {
+  "en": "A 65 m² apartment on two levels with exposed stone and a cantilevered staircase: double bedroom, bathroom with shower, attic living area with kitchenette.",
+  "de": "Apartment mit 65 m² auf zwei Ebenen, Sichtstein und freitragende Treppe: Doppelzimmer, Bad mit Dusche, Wohnbereich im Dachgeschoss mit Kochnische.",
+  "fr": "Appartement de 65 m² sur deux niveaux, pierre apparente et escalier en porte-à-faux : chambre double, salle d'eau, séjour sous les toits avec coin cuisine.",
+  "es": "Apartamento de 65 m² en dos niveles con piedra vista y escalera volada: dormitorio doble, baño con ducha y zona de día en la buhardilla con cocina americana."
+ },
+
+ "Domande frequenti: arrivo, spiaggia, cani | Prà de la Fam": {
+  "en": "FAQ: getting here, the beach, dogs | Prà de la Fam",
+  "de": "Häufige Fragen: Anreise, Strand, Hunde | Prà de la Fam",
+  "fr": "Questions fréquentes : accès, plage, chiens | Prà de la Fam",
+  "es": "Preguntas frecuentes: llegada, playa, perros | Prà de la Fam"
+ },
+ "Le domande che ci fanno alla reception: come si arriva sulla Gardesana, il parcheggio, la spiaggia, i cani, gli orari e la limonaia storica del Prà de la Fam.": {
+  "en": "The questions we get at reception: how to reach us on the Gardesana road, parking, the beach, dogs, opening times and the historic Prà de la Fam lemon house.",
+  "de": "Was man uns an der Rezeption fragt: Anreise über die Gardesana, Parkplatz, Strand, Hunde, Zeiten und die historische Limonaia des Prà de la Fam.",
+  "fr": "Les questions qu'on nous pose à la réception : l'accès par la Gardesana, le parking, la plage, les chiens, les horaires et la limonaia historique du Prà.",
+  "es": "Lo que nos preguntan en recepción: cómo se llega por la Gardesana, el aparcamiento, la playa, los perros, los horarios y la limonaia histórica del Prà."
+ },
+
+ "Cookie policy | Prà de la Fam": {
+  "en": "Cookie Policy | Prà de la Fam, Lake Garda",
+  "de": "Cookie-Richtlinie | Prà de la Fam",
+  "fr": "Politique de cookies | Prà de la Fam",
+  "es": "Política de cookies | Prà de la Fam"
+ },
+ "Quali cookie usa alpradelafam.com: nessuno prima del consenso, quelli di Google Analytics solo se accetti. A cosa servono, quanto durano, come cambiare idea.": {
+  "en": "Which cookies alpradelafam.com uses: none before you consent, Google Analytics only if you accept. What they do, how long they last, how to change your mind.",
+  "de": "Welche Cookies alpradelafam.com verwendet: keine vor der Einwilligung, die von Google Analytics nur, wenn Sie zustimmen. Wozu, wie lange, wie Sie es ändern.",
+  "fr": "Les cookies utilisés par alpradelafam.com : aucun avant votre accord, ceux de Google Analytics seulement si vous acceptez. À quoi ils servent, combien de temps.",
+  "es": "Qué cookies usa alpradelafam.com: ninguna antes del consentimiento, las de Google Analytics solo si aceptas. Para qué sirven, cuánto duran, cómo revocarlo."
+ },
+
+ "Informativa privacy | Prà de la Fam": {
+  "en": "Privacy Policy | Prà de la Fam",
+  "de": "Datenschutzerklärung | Prà de la Fam",
+  "fr": "Politique de confidentialité | Prà de la Fam",
+  "es": "Política de privacidad | Prà de la Fam"
+ },
+ "Informativa privacy del sito alpradelafam.com: quali dati raccogliamo, perché, per quanto tempo e come esercitare i tuoi diritti.": {
+  "en": "Privacy policy of the alpradelafam.com website: what data we collect, why, for how long and how you can exercise your rights.",
+  "de": "Datenschutzerklärung der Website alpradelafam.com: welche Daten wir erheben, warum, wie lange und wie Sie Ihre Rechte ausüben können.",
+  "fr": "Politique de confidentialité du site alpradelafam.com : quelles données nous collectons, pourquoi, pour combien de temps et comment exercer vos droits.",
+  "es": "Política de privacidad del sitio alpradelafam.com: qué datos recogemos, por qué, durante cuánto tiempo y cómo ejercer tus derechos."
+ },
+
+ "Pagina non trovata | Prà de la Fam": {
+  "en": "Page not found | Prà de la Fam",
+  "de": "Seite nicht gefunden | Prà de la Fam",
+  "fr": "Page introuvable | Prà de la Fam",
+  "es": "Página no encontrada | Prà de la Fam"
+ },
+
+ "Il Prà de la Fam dall'alto: la spiaggia sul Lago di Garda, l'hotel sulla Gardesana e le terrazze della limonaia": {
+  "en": "Prà de la Fam from above: the beach on Lake Garda, the hotel on the Gardesana road and the terraces of the lemon house",
+  "de": "Das Prà de la Fam von oben: der Strand am Gardasee, das Hotel an der Gardesana und die Terrassen der Limonaia",
+  "fr": "Le Prà de la Fam vu d'en haut : la plage sur le lac de Garde, l'hôtel sur la Gardesana et les terrasses de la limonaia",
+  "es": "El Prà de la Fam desde arriba: la playa en el Lago de Garda, el hotel junto a la Gardesana y las terrazas de la limonaia"
+ },
+ "Camera Doppia del Prà de la Fam: letto matrimoniale in legno scuro e finestra luminosa": {
+  "en": "Double Room at Prà de la Fam: dark wooden double bed and a bright window",
+  "de": "Doppelzimmer im Prà de la Fam: Doppelbett aus dunklem Holz und helles Fenster",
+  "fr": "Chambre Double du Prà de la Fam : lit double en bois foncé et fenêtre lumineuse",
+  "es": "Habitación Doble del Prà de la Fam: cama de matrimonio de madera oscura y ventana luminosa"
+ },
+ "Camera Doppia Economy: letto matrimoniale in ferro battuto fra due finestre luminose": {
+  "en": "Economy Double Room: wrought-iron double bed between two bright windows",
+  "de": "Doppelzimmer Economy: schmiedeeisernes Doppelbett zwischen zwei hellen Fenstern",
+  "fr": "Chambre Double Economy : lit double en fer forgé entre deux fenêtres lumineuses",
+  "es": "Habitación Doble Economy: cama de matrimonio de hierro forjado entre dos ventanas luminosas"
+ },
+ "Camera Tripla: parete azzurra, letti e finestra aperta sul Lago di Garda": {
+  "en": "Triple Room: light-blue wall, beds and a window open onto Lake Garda",
+  "de": "Dreibettzimmer: hellblaue Wand, Betten und ein offenes Fenster zum Gardasee",
+  "fr": "Chambre Triple : mur bleu clair, lits et fenêtre ouverte sur le lac de Garde",
+  "es": "Habitación Triple: pared azul claro, camas y una ventana abierta al Lago de Garda"
+ },
+ "Camera Familiare: letto matrimoniale in legno chiaro, comodini con lampade e finestra": {
+  "en": "Family Room: light wooden double bed, bedside tables with lamps and a window",
+  "de": "Familienzimmer: Doppelbett aus hellem Holz, Nachttische mit Lampen und Fenster",
+  "fr": "Chambre Familiale : lit double en bois clair, tables de chevet avec lampes et fenêtre",
+  "es": "Habitación Familiar: cama de matrimonio de madera clara, mesillas con lámparas y ventana"
+ },
+ "Appartamento Pomelo: camera matrimoniale sotto il soffitto a travi di legno": {
+  "en": "Pomelo Apartment: double bedroom under a wooden-beamed ceiling",
+  "de": "Apartment Pomelo: Doppelzimmer unter der Holzbalkendecke",
+  "fr": "Appartement Pomelo : chambre double sous le plafond à poutres en bois",
+  "es": "Apartamento Pomelo: dormitorio doble bajo el techo de vigas de madera"
+ },
+ "Appartamento Clementina: soggiorno con travi a vista, tavolo da pranzo, cucina e finestre sul lago": {
+  "en": "Clementina Apartment: living room with exposed beams, dining table, kitchen and windows on the lake",
+  "de": "Apartment Clementina: Wohnraum mit sichtbaren Balken, Esstisch, Küche und Fenstern zum See",
+  "fr": "Appartement Clementina : séjour aux poutres apparentes, table à manger, cuisine et fenêtres sur le lac",
+  "es": "Apartamento Clementina: salón con vigas vistas, mesa de comedor, cocina y ventanas al lago"
+ },
+ "Appartamento Calamondino: muri in pietra, letto matrimoniale e ampie vetrate sul lago": {
+  "en": "Calamondino Apartment: stone walls, double bed and large windows onto the lake",
+  "de": "Apartment Calamondino: Steinmauern, Doppelbett und große Fenster zum See",
+  "fr": "Appartement Calamondino : murs en pierre, lit double et grandes baies vitrées sur le lac",
+  "es": "Apartamento Calamondino: muros de piedra, cama de matrimonio y grandes ventanales al lago"
+ },
+ "Appartamento Kumquat: tavolo da pranzo davanti alle vetrate sul Lago di Garda": {
+  "en": "Kumquat Apartment: dining table in front of the windows onto Lake Garda",
+  "de": "Apartment Kumquat: Esstisch vor den Fenstern zum Gardasee",
+  "fr": "Appartement Kumquat : table à manger devant les baies vitrées sur le lac de Garde",
+  "es": "Apartamento Kumquat: mesa de comedor frente a los ventanales al Lago de Garda"
+ },
+ "Appartamento Bergamotto: camera sotto la volta in pietra a vista, accanto alla scala a sbalzo": {
+  "en": "Bergamotto Apartment: bedroom under the exposed stone vault, next to the cantilevered staircase",
+  "de": "Apartment Bergamotto: Schlafzimmer unter dem Gewölbe aus Sichtstein, neben der freitragenden Treppe",
+  "fr": "Appartement Bergamotto : chambre sous la voûte en pierre apparente, à côté de l'escalier en porte-à-faux",
+  "es": "Apartamento Bergamotto: dormitorio bajo la bóveda de piedra vista, junto a la escalera volada"
+ },
+
+ "Consenso cookie": {
+  "en": "Cookie consent",
+  "de": "Cookie-Einwilligung",
+  "fr": "Consentement aux cookies",
+  "es": "Consentimiento de cookies"
+ },
+ "Chiudi": {"en": "Close", "de": "Schließen", "fr": "Fermer", "es": "Cerrar"},
+ "Precedente": {"en": "Previous", "de": "Zurück", "fr": "Précédente", "es": "Anterior"},
+ "Successiva": {"en": "Next", "de": "Weiter", "fr": "Suivante", "es": "Siguiente"},
+
+ "L'Hotel Prà de la Fam sulla Gardesana, con la terrazza affacciata sul lago": {
+  "en": "Hotel Prà de la Fam on the Gardesana road, with its terrace overlooking the lake",
+  "de": "Das Hotel Prà de la Fam an der Gardesana, mit der Terrasse über dem See",
+  "fr": "L'Hôtel Prà de la Fam sur la Gardesana, avec sa terrasse donnant sur le lac",
+  "es": "El Hotel Prà de la Fam junto a la Gardesana, con la terraza asomada al lago"
+ },
+ "Camera Doppia: letto matrimoniale, pareti gialle e due finestre con tende bianche": {
+  "en": "Double Room: double bed, yellow walls and two windows with white curtains",
+  "de": "Doppelzimmer: Doppelbett, gelbe Wände und zwei Fenster mit weißen Vorhängen",
+  "fr": "Chambre Double : lit double, murs jaunes et deux fenêtres aux rideaux blancs",
+  "es": "Habitación Doble: cama de matrimonio, paredes amarillas y dos ventanas con cortinas blancas"
+ },
+ "Camera Doppia Economy: letto matrimoniale in ferro battuto e finestra con tenda rosa": {
+  "en": "Economy Double Room: wrought-iron double bed and a window with a pink curtain",
+  "de": "Doppelzimmer Economy: schmiedeeisernes Doppelbett und Fenster mit rosa Vorhang",
+  "fr": "Chambre Double Economy : lit double en fer forgé et fenêtre au rideau rose",
+  "es": "Habitación Doble Economy: cama de matrimonio de hierro forjado y ventana con cortina rosa"
+ },
+ "Camera Tripla: tre letti, parete azzurra e tende blu a motivi": {
+  "en": "Triple Room: three beds, a light-blue wall and patterned blue curtains",
+  "de": "Dreibettzimmer: drei Betten, hellblaue Wand und gemusterte blaue Vorhänge",
+  "fr": "Chambre Triple : trois lits, mur bleu clair et rideaux bleus à motifs",
+  "es": "Habitación Triple: tres camas, pared azul claro y cortinas azules estampadas"
+ },
+ "Camera Familiare: letto matrimoniale e finestra luminosa sul pavimento in graniglia": {
+  "en": "Family Room: double bed and a bright window above the terrazzo floor",
+  "de": "Familienzimmer: Doppelbett und helles Fenster über dem Terrazzoboden",
+  "fr": "Chambre Familiale : lit double et fenêtre lumineuse au-dessus du sol en granito",
+  "es": "Habitación Familiar: cama de matrimonio y ventana luminosa sobre el suelo de terrazo"
+ },
+ "Appartamento Clementina: soggiorno con travi in legno, cucina e finestre sulla parete di roccia": {
+  "en": "Clementina Apartment: living room with wooden beams, kitchen and windows facing the rock face",
+  "de": "Apartment Clementina: Wohnraum mit Holzbalken, Küche und Fenstern zur Felswand",
+  "fr": "Appartement Clementina : séjour aux poutres en bois, cuisine et fenêtres sur la paroi rocheuse",
+  "es": "Apartamento Clementina: salón con vigas de madera, cocina y ventanas hacia la pared de roca"
+ },
+ "Appartamento Calamondino: monolocale con muri in pietra, tavolo da pranzo e letto davanti alle vetrate": {
+  "en": "Calamondino Apartment: studio with stone walls, dining table and bed in front of the windows",
+  "de": "Apartment Calamondino: Studio mit Steinmauern, Esstisch und Bett vor den Fenstern",
+  "fr": "Appartement Calamondino : studio aux murs en pierre, table à manger et lit devant les baies vitrées",
+  "es": "Apartamento Calamondino: estudio con muros de piedra, mesa de comedor y cama frente a los ventanales"
+ },
+ "Appartamento Kumquat: letto matrimoniale e zona pranzo davanti alle vetrate sul lago": {
+  "en": "Kumquat Apartment: double bed and dining area in front of the windows onto the lake",
+  "de": "Apartment Kumquat: Doppelbett und Essbereich vor den Fenstern zum See",
+  "fr": "Appartement Kumquat : lit double et coin repas devant les baies vitrées sur le lac",
+  "es": "Apartamento Kumquat: cama de matrimonio y zona de comedor frente a los ventanales al lago"
+ },
+ "Appartamento Bergamotto: camera sotto l'arco in pietra, con la scala in ferro verso la mansarda": {
+  "en": "Bergamotto Apartment: bedroom under the stone arch, with the iron staircase up to the attic",
+  "de": "Apartment Bergamotto: Schlafzimmer unter dem Steinbogen, mit der Eisentreppe zum Dachgeschoss",
+  "fr": "Appartement Bergamotto : chambre sous l'arc en pierre, avec l'escalier en fer vers les combles",
+  "es": "Apartamento Bergamotto: dormitorio bajo el arco de piedra, con la escalera de hierro hacia la buhardilla"
+ },
+ "Le terrazze della Limonaia del Prà de la Fam viste dall'alto, con il lago di Garda": {
+  "en": "The terraces of the Limonaia del Prà de la Fam seen from above, with Lake Garda",
+  "de": "Die Terrassen der Limonaia del Prà de la Fam von oben, mit dem Gardasee",
+  "fr": "Les terrasses de la Limonaia del Prà de la Fam vues d'en haut, avec le lac de Garde",
+  "es": "Las terrazas de la Limonaia del Prà de la Fam vistas desde arriba, con el Lago de Garda"
+ },
+ "Il promontorio del Prà de la Fam sul lago di Garda, con la spiaggia e la strada gardesana": {
+  "en": "The Prà de la Fam headland on Lake Garda, with the beach and the Gardesana road",
+  "de": "Die Landzunge des Prà de la Fam am Gardasee, mit dem Strand und der Gardesana",
+  "fr": "Le promontoire du Prà de la Fam sur le lac de Garde, avec la plage et la route Gardesana",
+  "es": "El promontorio del Prà de la Fam en el Lago de Garda, con la playa y la carretera Gardesana"
+ },
+ "La proprietà del Prà de la Fam vista dall'alto: hotel, appartamenti, limonaia e spiaggia sul Lago di Garda": {
+  "en": "The Prà de la Fam property from above: hotel, apartments, lemon house and beach on Lake Garda",
+  "de": "Das Anwesen des Prà de la Fam von oben: Hotel, Apartments, Limonaia und Strand am Gardasee",
+  "fr": "La propriété du Prà de la Fam vue d'en haut : hôtel, appartements, limonaia et plage sur le lac de Garde",
+  "es": "La propiedad del Prà de la Fam desde arriba: hotel, apartamentos, limonaia y playa en el Lago de Garda"
+ },
+
+ "Camera Doppia con pareti gialle, letto matrimoniale, poltrona e aria condizionata": {
+  "en": "Double Room with yellow walls, double bed, armchair and air conditioning",
+  "de": "Doppelzimmer mit gelben Wänden, Doppelbett, Sessel und Klimaanlage",
+  "fr": "Chambre Double aux murs jaunes, lit double, fauteuil et climatisation",
+  "es": "Habitación Doble con paredes amarillas, cama de matrimonio, sillón y aire acondicionado"
+ },
+ "Camera Doppia: scrivania, armadio in legno antico e porta del bagno": {
+  "en": "Double Room: desk, antique wooden wardrobe and the bathroom door",
+  "de": "Doppelzimmer: Schreibtisch, antiker Holzschrank und die Badezimmertür",
+  "fr": "Chambre Double : bureau, armoire ancienne en bois et porte de la salle de bain",
+  "es": "Habitación Doble: escritorio, armario antiguo de madera y la puerta del baño"
+ },
+ "Bagno della Camera Doppia con lavabo d'appoggio e doccia a piastrelle arancioni": {
+  "en": "Double Room bathroom with a countertop basin and an orange-tiled shower",
+  "de": "Bad des Doppelzimmers mit Aufsatzwaschbecken und orange gefliester Dusche",
+  "fr": "Salle de bain de la Chambre Double avec vasque à poser et douche carrelée orange",
+  "es": "Baño de la Habitación Doble con lavabo sobre encimera y ducha de azulejos naranjas"
+ },
+ "Ramo di limoni in un vaso di vetro sul davanzale, con il lago e i monti sullo sfondo": {
+  "en": "A sprig of lemons in a glass vase on the windowsill, with the lake and the mountains behind",
+  "de": "Ein Zitronenzweig in einer Glasvase auf dem Fensterbrett, dahinter der See und die Berge",
+  "fr": "Une branche de citrons dans un vase en verre sur le rebord de la fenêtre, avec le lac et les montagnes",
+  "es": "Una rama de limones en un jarrón de cristal en el alféizar, con el lago y los montes al fondo"
+ },
+ "Camera Doppia con letto in legno scuro e finestra aperta sul verde": {
+  "en": "Double Room with a dark wooden bed and a window open onto the greenery",
+  "de": "Doppelzimmer mit Bett aus dunklem Holz und offenem Fenster ins Grüne",
+  "fr": "Chambre Double avec lit en bois foncé et fenêtre ouverte sur la verdure",
+  "es": "Habitación Doble con cama de madera oscura y ventana abierta al verde"
+ },
+ "Camera Doppia: letto matrimoniale in legno scuro, comodini e moquette verde": {
+  "en": "Double Room: dark wooden double bed, bedside tables and green carpet",
+  "de": "Doppelzimmer: Doppelbett aus dunklem Holz, Nachttische und grüner Teppichboden",
+  "fr": "Chambre Double : lit double en bois foncé, tables de chevet et moquette verte",
+  "es": "Habitación Doble: cama de matrimonio de madera oscura, mesillas y moqueta verde"
+ },
+ "Bagno della Camera Doppia con lavabo d'appoggio, asciugacapelli e piastrelle verdi": {
+  "en": "Double Room bathroom with a countertop basin, hairdryer and green tiles",
+  "de": "Bad des Doppelzimmers mit Aufsatzwaschbecken, Haartrockner und grünen Fliesen",
+  "fr": "Salle de bain de la Chambre Double avec vasque à poser, sèche-cheveux et carrelage vert",
+  "es": "Baño de la Habitación Doble con lavabo sobre encimera, secador de pelo y azulejos verdes"
+ },
+
+ "Camera Doppia Economy: letto in ferro battuto, comodini rossi e finestra con tenda rosa": {
+  "en": "Economy Double Room: wrought-iron bed, red bedside tables and a window with a pink curtain",
+  "de": "Doppelzimmer Economy: schmiedeeisernes Bett, rote Nachttische und Fenster mit rosa Vorhang",
+  "fr": "Chambre Double Economy : lit en fer forgé, tables de chevet rouges et fenêtre au rideau rose",
+  "es": "Habitación Doble Economy: cama de hierro forjado, mesillas rojas y ventana con cortina rosa"
+ },
+ "Camera Doppia Economy con armadio rosso, televisore e scrivania": {
+  "en": "Economy Double Room with a red wardrobe, television and desk",
+  "de": "Doppelzimmer Economy mit rotem Schrank, Fernseher und Schreibtisch",
+  "fr": "Chambre Double Economy avec armoire rouge, télévision et bureau",
+  "es": "Habitación Doble Economy con armario rojo, televisor y escritorio"
+ },
+ "Bagno della Camera Doppia Economy con lavabo d'appoggio e scaffale in legno": {
+  "en": "Economy Double Room bathroom with a countertop basin and wooden shelf",
+  "de": "Bad des Doppelzimmers Economy mit Aufsatzwaschbecken und Holzregal",
+  "fr": "Salle de bain de la Chambre Double Economy avec vasque à poser et étagère en bois",
+  "es": "Baño de la Habitación Doble Economy con lavabo sobre encimera y estante de madera"
+ },
+ "Camera Doppia Economy: letto in ferro battuto davanti alla finestra con tenda azzurra": {
+  "en": "Economy Double Room: wrought-iron bed in front of the window with a light-blue curtain",
+  "de": "Doppelzimmer Economy: schmiedeeisernes Bett vor dem Fenster mit hellblauem Vorhang",
+  "fr": "Chambre Double Economy : lit en fer forgé devant la fenêtre au rideau bleu clair",
+  "es": "Habitación Doble Economy: cama de hierro forjado delante de la ventana con cortina azul claro"
+ },
+ "Camera Doppia Economy con letto in ferro battuto e tenda blu a motivi": {
+  "en": "Economy Double Room with a wrought-iron bed and a patterned blue curtain",
+  "de": "Doppelzimmer Economy mit schmiedeeisernem Bett und gemustertem blauem Vorhang",
+  "fr": "Chambre Double Economy avec lit en fer forgé et rideau bleu à motifs",
+  "es": "Habitación Doble Economy con cama de hierro forjado y cortina azul estampada"
+ },
+ "Camera Doppia Economy con parete azzurra e porta aperta sul bagno": {
+  "en": "Economy Double Room with a light-blue wall and the door open to the bathroom",
+  "de": "Doppelzimmer Economy mit hellblauer Wand und offener Tür zum Bad",
+  "fr": "Chambre Double Economy avec mur bleu clair et porte ouverte sur la salle de bain",
+  "es": "Habitación Doble Economy con pared azul claro y la puerta del baño abierta"
+ },
+ "Bagno rinnovato della Camera Doppia Economy con doccia in vetro e piastrelle blu": {
+  "en": "Renovated Economy Double Room bathroom with a glass shower and blue tiles",
+  "de": "Renoviertes Bad des Doppelzimmers Economy mit Glasdusche und blauen Fliesen",
+  "fr": "Salle de bain rénovée de la Chambre Double Economy avec douche vitrée et carrelage bleu",
+  "es": "Baño renovado de la Habitación Doble Economy con ducha de cristal y azulejos azules"
+ },
+
+ "Camera Tripla con parete azzurra, tre letti e finestra sul lago": {
+  "en": "Triple Room with a light-blue wall, three beds and a window on the lake",
+  "de": "Dreibettzimmer mit hellblauer Wand, drei Betten und Fenster zum See",
+  "fr": "Chambre Triple avec mur bleu clair, trois lits et fenêtre sur le lac",
+  "es": "Habitación Triple con pared azul claro, tres camas y ventana al lago"
+ },
+ "Camera Tripla: letto matrimoniale, armadio bianco e lampade sui comodini": {
+  "en": "Triple Room: double bed, white wardrobe and lamps on the bedside tables",
+  "de": "Dreibettzimmer: Doppelbett, weißer Schrank und Lampen auf den Nachttischen",
+  "fr": "Chambre Triple : lit double, armoire blanche et lampes sur les tables de chevet",
+  "es": "Habitación Triple: cama de matrimonio, armario blanco y lámparas en las mesillas"
+ },
+ "Bagno nuovo della Camera Tripla con doccia, lavabo in vetro e piastrelle blu": {
+  "en": "New Triple Room bathroom with shower, glass basin and blue tiles",
+  "de": "Neues Bad des Dreibettzimmers mit Dusche, Glaswaschbecken und blauen Fliesen",
+  "fr": "Salle de bain neuve de la Chambre Triple avec douche, vasque en verre et carrelage bleu",
+  "es": "Baño nuevo de la Habitación Triple con ducha, lavabo de cristal y azulejos azules"
+ },
+ "Finestra della Camera Tripla aperta sul Lago di Garda e sul porticciolo": {
+  "en": "Triple Room window open onto Lake Garda and the little harbour",
+  "de": "Fenster des Dreibettzimmers, offen zum Gardasee und zum kleinen Hafen",
+  "fr": "Fenêtre de la Chambre Triple ouverte sur le lac de Garde et le petit port",
+  "es": "Ventana de la Habitación Triple abierta al Lago de Garda y al pequeño puerto"
+ },
+ "Camera Tripla con tende blu a motivi, scrivania e televisore": {
+  "en": "Triple Room with patterned blue curtains, desk and television",
+  "de": "Dreibettzimmer mit gemusterten blauen Vorhängen, Schreibtisch und Fernseher",
+  "fr": "Chambre Triple avec rideaux bleus à motifs, bureau et télévision",
+  "es": "Habitación Triple con cortinas azules estampadas, escritorio y televisor"
+ },
+ "Camera Tripla: letto matrimoniale e letto singolo con lampade accese": {
+  "en": "Triple Room: double bed and single bed with the lamps on",
+  "de": "Dreibettzimmer: Doppelbett und Einzelbett bei eingeschalteten Lampen",
+  "fr": "Chambre Triple : lit double et lit simple, lampes allumées",
+  "es": "Habitación Triple: cama de matrimonio y cama individual con las lámparas encendidas"
+ },
+ "Bagno della Camera Tripla con specchio, lavabo in vetro e kit cortesia": {
+  "en": "Triple Room bathroom with mirror, glass basin and toiletries",
+  "de": "Bad des Dreibettzimmers mit Spiegel, Glaswaschbecken und Pflegeset",
+  "fr": "Salle de bain de la Chambre Triple avec miroir, vasque en verre et produits d'accueil",
+  "es": "Baño de la Habitación Triple con espejo, lavabo de cristal y kit de aseo"
+ },
+
+ "Camera Familiare: letto matrimoniale e finestra aperta sulla luce del lago": {
+  "en": "Family Room: double bed and a window open to the light of the lake",
+  "de": "Familienzimmer: Doppelbett und ein Fenster, offen zum Licht des Sees",
+  "fr": "Chambre Familiale : lit double et fenêtre ouverte sur la lumière du lac",
+  "es": "Habitación Familiar: cama de matrimonio y ventana abierta a la luz del lago"
+ },
+ "Camera Familiare: armadio bianco, scrivania e asciugamani sul letto": {
+  "en": "Family Room: white wardrobe, desk and towels on the bed",
+  "de": "Familienzimmer: weißer Schrank, Schreibtisch und Handtücher auf dem Bett",
+  "fr": "Chambre Familiale : armoire blanche, bureau et serviettes sur le lit",
+  "es": "Habitación Familiar: armario blanco, escritorio y toallas sobre la cama"
+ },
+ "Bagno della Camera Familiare con doccia in vetro e piastrelle verdi": {
+  "en": "Family Room bathroom with a glass shower and green tiles",
+  "de": "Bad des Familienzimmers mit Glasdusche und grünen Fliesen",
+  "fr": "Salle de bain de la Chambre Familiale avec douche vitrée et carrelage vert",
+  "es": "Baño de la Habitación Familiar con ducha de cristal y azulejos verdes"
+ },
+ "Camera Familiare: parete verde, armadio, scrivania e televisore": {
+  "en": "Family Room: green wall, wardrobe, desk and television",
+  "de": "Familienzimmer: grüne Wand, Schrank, Schreibtisch und Fernseher",
+  "fr": "Chambre Familiale : mur vert, armoire, bureau et télévision",
+  "es": "Habitación Familiar: pared verde, armario, escritorio y televisor"
+ },
+ "Seconda stanza della Camera Familiare con letto a castello per i bambini": {
+  "en": "Second room of the Family Room with a bunk bed for the children",
+  "de": "Zweiter Raum des Familienzimmers mit Etagenbett für die Kinder",
+  "fr": "Seconde pièce de la Chambre Familiale avec lits superposés pour les enfants",
+  "es": "Segundo cuarto de la Habitación Familiar con litera para los niños"
+ },
+ "Camera Familiare: letto matrimoniale in legno con comodini e lampade": {
+  "en": "Family Room: wooden double bed with bedside tables and lamps",
+  "de": "Familienzimmer: Doppelbett aus Holz mit Nachttischen und Lampen",
+  "fr": "Chambre Familiale : lit double en bois avec tables de chevet et lampes",
+  "es": "Habitación Familiar: cama de matrimonio de madera con mesillas y lámparas"
+ },
+ "Bagno della Camera Familiare con ampia doccia e piastrelle blu": {
+  "en": "Family Room bathroom with a large shower and blue tiles",
+  "de": "Bad des Familienzimmers mit großer Dusche und blauen Fliesen",
+  "fr": "Salle de bain de la Chambre Familiale avec grande douche et carrelage bleu",
+  "es": "Baño de la Habitación Familiar con ducha amplia y azulejos azules"
+ },
+
+ "Appartamento Pomelo — camera da letto": {
+  "en": "Pomelo Apartment — bedroom",
+  "de": "Apartment Pomelo — Schlafzimmer",
+  "fr": "Appartement Pomelo — chambre",
+  "es": "Apartamento Pomelo — dormitorio"
+ },
+ "Appartamento Pomelo — la camera": {
+  "en": "Pomelo Apartment — the bedroom",
+  "de": "Apartment Pomelo — das Zimmer",
+  "fr": "Appartement Pomelo — la chambre",
+  "es": "Apartamento Pomelo — el dormitorio"
+ },
+ "Appartamento Pomelo — bagno": {
+  "en": "Pomelo Apartment — bathroom",
+  "de": "Apartment Pomelo — Bad",
+  "fr": "Appartement Pomelo — salle de bain",
+  "es": "Apartamento Pomelo — baño"
+ },
+ "Appartamento Pomelo — dettaglio della camera": {
+  "en": "Pomelo Apartment — bedroom detail",
+  "de": "Apartment Pomelo — Detail des Zimmers",
+  "fr": "Appartement Pomelo — détail de la chambre",
+  "es": "Apartamento Pomelo — detalle del dormitorio"
+ },
+ "Appartamento Pomelo — soggiorno": {
+  "en": "Pomelo Apartment — living room",
+  "de": "Apartment Pomelo — Wohnraum",
+  "fr": "Appartement Pomelo — séjour",
+  "es": "Apartamento Pomelo — salón"
+ },
+ "Appartamento Pomelo — cucina": {
+  "en": "Pomelo Apartment — kitchen",
+  "de": "Apartment Pomelo — Küche",
+  "fr": "Appartement Pomelo — cuisine",
+  "es": "Apartamento Pomelo — cocina"
+ },
+ "Appartamento Pomelo — doccia": {
+  "en": "Pomelo Apartment — shower",
+  "de": "Apartment Pomelo — Dusche",
+  "fr": "Appartement Pomelo — douche",
+  "es": "Apartamento Pomelo — ducha"
+ },
+
+ "Clementina — il soggiorno con travi a vista": {
+  "en": "Clementina — the living room with exposed beams",
+  "de": "Clementina — der Wohnraum mit sichtbaren Balken",
+  "fr": "Clementina — le séjour aux poutres apparentes",
+  "es": "Clementina — el salón con vigas vistas"
+ },
+ "Clementina — tavolo da pranzo e cucina": {
+  "en": "Clementina — dining table and kitchen",
+  "de": "Clementina — Esstisch und Küche",
+  "fr": "Clementina — table à manger et cuisine",
+  "es": "Clementina — mesa de comedor y cocina"
+ },
+ "Clementina — bagno con doccia": {
+  "en": "Clementina — bathroom with shower",
+  "de": "Clementina — Bad mit Dusche",
+  "fr": "Clementina — salle d'eau avec douche",
+  "es": "Clementina — baño con ducha"
+ },
+ "Clementina — la zona notte": {
+  "en": "Clementina — the sleeping area",
+  "de": "Clementina — der Schlafbereich",
+  "fr": "Clementina — le coin nuit",
+  "es": "Clementina — la zona de noche"
+ },
+ "Clementina — la finestra sul lago": {
+  "en": "Clementina — the window on the lake",
+  "de": "Clementina — das Fenster zum See",
+  "fr": "Clementina — la fenêtre sur le lac",
+  "es": "Clementina — la ventana al lago"
+ },
+ "Clementina — le colonne della limonaia e il lago": {
+  "en": "Clementina — the columns of the lemon house and the lake",
+  "de": "Clementina — die Säulen der Limonaia und der See",
+  "fr": "Clementina — les colonnes de la limonaia et le lac",
+  "es": "Clementina — las columnas de la limonaia y el lago"
+ },
+ "Clementina — bagno, doccia tonda": {
+  "en": "Clementina — bathroom, round shower",
+  "de": "Clementina — Bad, runde Dusche",
+  "fr": "Clementina — salle d'eau, douche ronde",
+  "es": "Clementina — baño, ducha redonda"
+ },
+
+ "Calamondino: monolocale con muri in pietra, cucina, tavolo e letto davanti alle vetrate": {
+  "en": "Calamondino: studio with stone walls, kitchen, table and bed in front of the windows",
+  "de": "Calamondino: Studio mit Steinmauern, Küche, Tisch und Bett vor den Fenstern",
+  "fr": "Calamondino : studio aux murs en pierre, cuisine, table et lit devant les baies vitrées",
+  "es": "Calamondino: estudio con muros de piedra, cocina, mesa y cama frente a los ventanales"
+ },
+ "Calamondino: poltrona e tavolo davanti alle vetrate con vista sul lago e sui monti": {
+  "en": "Calamondino: armchair and table in front of the windows, with views of the lake and the mountains",
+  "de": "Calamondino: Sessel und Tisch vor den Fenstern mit Blick auf See und Berge",
+  "fr": "Calamondino : fauteuil et table devant les baies vitrées avec vue sur le lac et les montagnes",
+  "es": "Calamondino: sillón y mesa frente a los ventanales con vista al lago y a los montes"
+ },
+ "Bagno del Calamondino con doccia in vetro e scaldasalviette": {
+  "en": "Calamondino bathroom with a glass shower and heated towel rail",
+  "de": "Bad des Calamondino mit Glasdusche und Handtuchwärmer",
+  "fr": "Salle d'eau du Calamondino avec douche vitrée et sèche-serviettes",
+  "es": "Baño del Calamondino con ducha de cristal y toallero térmico"
+ },
+ "Calamondino: letto matrimoniale davanti alle vetrate sul Lago di Garda": {
+  "en": "Calamondino: double bed in front of the windows onto Lake Garda",
+  "de": "Calamondino: Doppelbett vor den Fenstern zum Gardasee",
+  "fr": "Calamondino : lit double devant les baies vitrées sur le lac de Garde",
+  "es": "Calamondino: cama de matrimonio frente a los ventanales al Lago de Garda"
+ },
+ "Calamondino: letto, armadio e tavolo da pranzo sotto il soffitto in legno": {
+  "en": "Calamondino: bed, wardrobe and dining table under the wooden ceiling",
+  "de": "Calamondino: Bett, Schrank und Esstisch unter der Holzdecke",
+  "fr": "Calamondino : lit, armoire et table à manger sous le plafond en bois",
+  "es": "Calamondino: cama, armario y mesa de comedor bajo el techo de madera"
+ },
+ "Il Lago di Garda e la parete di roccia visti dal giardino del Calamondino, sopra i pilastri della limonaia": {
+  "en": "Lake Garda and the rock face seen from the Calamondino garden, above the pillars of the lemon house",
+  "de": "Der Gardasee und die Felswand vom Garten des Calamondino aus, über den Pfeilern der Limonaia",
+  "fr": "Le lac de Garde et la paroi rocheuse vus du jardin du Calamondino, au-dessus des piliers de la limonaia",
+  "es": "El Lago de Garda y la pared de roca vistos desde el jardín del Calamondino, sobre los pilares de la limonaia"
+ },
+ "Bagno del Calamondino con pavimento in legno, sanitari e scaldasalviette": {
+  "en": "Calamondino bathroom with wooden floor, sanitary fittings and heated towel rail",
+  "de": "Bad des Calamondino mit Holzboden, Sanitärobjekten und Handtuchwärmer",
+  "fr": "Salle d'eau du Calamondino avec parquet, sanitaires et sèche-serviettes",
+  "es": "Baño del Calamondino con suelo de madera, sanitarios y toallero térmico"
+ },
+
+ "Kumquat: letto matrimoniale e zona pranzo davanti alle vetrate sul lago": {
+  "en": "Kumquat: double bed and dining area in front of the windows onto the lake",
+  "de": "Kumquat: Doppelbett und Essbereich vor den Fenstern zum See",
+  "fr": "Kumquat : lit double et coin repas devant les baies vitrées sur le lac",
+  "es": "Kumquat: cama de matrimonio y zona de comedor frente a los ventanales al lago"
+ },
+ "Kumquat: angolo cottura con microonde e tavolo davanti alle finestre": {
+  "en": "Kumquat: kitchenette with microwave and a table in front of the windows",
+  "de": "Kumquat: Kochnische mit Mikrowelle und Tisch vor den Fenstern",
+  "fr": "Kumquat : coin cuisine avec micro-ondes et table devant les fenêtres",
+  "es": "Kumquat: cocina americana con microondas y mesa frente a las ventanas"
+ },
+ "Bagno del Kumquat con lavabo bianco e pareti in pietra": {
+  "en": "Kumquat bathroom with a white basin and stone walls",
+  "de": "Bad des Kumquat mit weißem Waschbecken und Steinwänden",
+  "fr": "Salle d'eau du Kumquat avec lavabo blanc et murs en pierre",
+  "es": "Baño del Kumquat con lavabo blanco y paredes de piedra"
+ },
+ "Colazione sul tavolo del Kumquat davanti alla finestra aperta sul lago e sui monti innevati": {
+  "en": "Breakfast on the Kumquat table by the window open onto the lake and the snow-capped mountains",
+  "de": "Frühstück auf dem Tisch des Kumquat am offenen Fenster zum See und zu den verschneiten Bergen",
+  "fr": "Petit-déjeuner sur la table du Kumquat devant la fenêtre ouverte sur le lac et les montagnes enneigées",
+  "es": "Desayuno en la mesa del Kumquat junto a la ventana abierta al lago y a los montes nevados"
+ },
+ "Kumquat: tavolo da pranzo e poltrone davanti alle vetrate sul Lago di Garda": {
+  "en": "Kumquat: dining table and armchairs in front of the windows onto Lake Garda",
+  "de": "Kumquat: Esstisch und Sessel vor den Fenstern zum Gardasee",
+  "fr": "Kumquat : table à manger et fauteuils devant les baies vitrées sur le lac de Garde",
+  "es": "Kumquat: mesa de comedor y sillones frente a los ventanales al Lago de Garda"
+ },
+ "Kumquat: letto matrimoniale accanto alla porta ad arco aperta sul giardino": {
+  "en": "Kumquat: double bed beside the arched door open onto the garden",
+  "de": "Kumquat: Doppelbett neben der Bogentür, offen zum Garten",
+  "fr": "Kumquat : lit double à côté de la porte cintrée ouverte sur le jardin",
+  "es": "Kumquat: cama de matrimonio junto a la puerta en arco abierta al jardín"
+ },
+ "Bagno del Kumquat con doccia, finestra e pavimento in legno": {
+  "en": "Kumquat bathroom with shower, window and wooden floor",
+  "de": "Bad des Kumquat mit Dusche, Fenster und Holzboden",
+  "fr": "Salle d'eau du Kumquat avec douche, fenêtre et parquet",
+  "es": "Baño del Kumquat con ducha, ventana y suelo de madera"
+ },
+
+ "Bergamotto — camera con l'arco in pietra": {
+  "en": "Bergamotto — bedroom with the stone arch",
+  "de": "Bergamotto — Schlafzimmer mit dem Steinbogen",
+  "fr": "Bergamotto — chambre avec l'arc en pierre",
+  "es": "Bergamotto — dormitorio con el arco de piedra"
+ },
+ "Bergamotto — la camera dall'alto": {
+  "en": "Bergamotto — the bedroom from above",
+  "de": "Bergamotto — das Schlafzimmer von oben",
+  "fr": "Bergamotto — la chambre vue d'en haut",
+  "es": "Bergamotto — el dormitorio desde arriba"
+ },
+ "Bergamotto — bagno con parete in pietra": {
+  "en": "Bergamotto — bathroom with a stone wall",
+  "de": "Bergamotto — Bad mit Steinwand",
+  "fr": "Bergamotto — salle d'eau avec mur en pierre",
+  "es": "Bergamotto — baño con pared de piedra"
+ },
+ "Bergamotto — soggiorno con travi a vista": {
+  "en": "Bergamotto — living room with exposed beams",
+  "de": "Bergamotto — Wohnraum mit sichtbaren Balken",
+  "fr": "Bergamotto — séjour aux poutres apparentes",
+  "es": "Bergamotto — salón con vigas vistas"
+ },
+ "Bergamotto — la seconda camera": {
+  "en": "Bergamotto — the second bedroom",
+  "de": "Bergamotto — das zweite Schlafzimmer",
+  "fr": "Bergamotto — la seconde chambre",
+  "es": "Bergamotto — el segundo dormitorio"
+ },
+
+ "Appartamento Pomelo": {"en": "Pomelo Apartment", "de": "Apartment Pomelo", "fr": "Appartement Pomelo", "es": "Apartamento Pomelo"},
+ "Appartamento Clementina": {"en": "Clementina Apartment", "de": "Apartment Clementina", "fr": "Appartement Clementina", "es": "Apartamento Clementina"},
+ "Appartamento Calamondino": {"en": "Calamondino Apartment", "de": "Apartment Calamondino", "fr": "Appartement Calamondino", "es": "Apartamento Calamondino"},
+ "Appartamento Kumquat": {"en": "Kumquat Apartment", "de": "Apartment Kumquat", "fr": "Appartement Kumquat", "es": "Apartamento Kumquat"},
+ "Appartamento Bergamotto": {"en": "Bergamotto Apartment", "de": "Apartment Bergamotto", "fr": "Appartement Bergamotto", "es": "Apartamento Bergamotto"},
+
+ "persone": {"en": "people", "de": "Personen", "fr": "personnes", "es": "personas"},
+ "Bagno privato con doccia": {"en": "Private bathroom with shower", "de": "Eigenes Bad mit Dusche", "fr": "Salle de bain privée avec douche", "es": "Baño privado con ducha"},
+ "Parcheggio privato gratuito": {"en": "Free private parking", "de": "Kostenloser Privatparkplatz", "fr": "Parking privé gratuit", "es": "Aparcamiento privado gratuito"},
+ "Frigo a disposizione": {"en": "Fridge available", "de": "Kühlschrank verfügbar", "fr": "Réfrigérateur à disposition", "es": "Nevera a disposición"},
+
+ "Camera doppia al primo o secondo piano, bagno privato, vista lago o montagna, colazione inclusa.": {
+  "en": "Double room on the first or second floor, private bathroom, lake or mountain view, breakfast included.",
+  "de": "Doppelzimmer im ersten oder zweiten Stock, eigenes Bad, See- oder Bergblick, Frühstück inklusive.",
+  "fr": "Chambre double au premier ou deuxième étage, salle de bain privée, vue lac ou montagne, petit-déjeuner inclus.",
+  "es": "Habitación doble en la primera o segunda planta, baño privado, vista al lago o a la montaña, desayuno incluido."
+ },
+ "Camera doppia essenziale con bagno privato: il miglior rapporto qualità prezzo per stare sul lago.": {
+  "en": "A simple double room with private bathroom: the best value for staying on the lake.",
+  "de": "Schlichtes Doppelzimmer mit eigenem Bad: das beste Preis-Leistungs-Verhältnis direkt am See.",
+  "fr": "Chambre double simple avec salle de bain privée : le meilleur rapport qualité-prix pour séjourner au bord du lac.",
+  "es": "Habitación doble sencilla con baño privado: la mejor relación calidad-precio para alojarse junto al lago."
+ },
+ "Tre posti letto e bagno privato, con accesso diretto al giardino e alla spiaggia.": {
+  "en": "Three beds and a private bathroom, with direct access to the garden and the beach.",
+  "de": "Drei Betten und eigenes Bad, mit direktem Zugang zum Garten und zum Strand.",
+  "fr": "Trois couchages et salle de bain privée, avec accès direct au jardin et à la plage.",
+  "es": "Tres camas y baño privado, con acceso directo al jardín y a la playa."
+ },
+ "Camera spaziosa per famiglie con bambini, bagno privato ampio con doccia grande, vista sul giardino.": {
+  "en": "A spacious room for families with children, large private bathroom with a big shower, garden view.",
+  "de": "Geräumiges Zimmer für Familien mit Kindern, großes eigenes Bad mit großer Dusche, Gartenblick.",
+  "fr": "Chambre spacieuse pour les familles avec enfants, grande salle de bain privée avec large douche, vue sur le jardin.",
+  "es": "Habitación amplia para familias con niños, baño privado grande con ducha amplia, vista al jardín."
+ },
+ "L'antica dimora del giardiniere della limonaia: ingresso privato, vista lago, angolo cottura, a pochi passi dalla spiaggia.": {
+  "en": "The old home of the lemon-house gardener: private entrance, lake view, kitchenette, a few steps from the beach.",
+  "de": "Das alte Haus des Gärtners der Limonaia: separater Eingang, Seeblick, Kochnische, wenige Schritte vom Strand.",
+  "fr": "L'ancienne demeure du jardinier de la limonaia : entrée privée, vue lac, coin cuisine, à quelques pas de la plage.",
+  "es": "La antigua casa del jardinero de la limonaia: entrada privada, vista al lago, cocina americana, a pocos pasos de la playa."
+ },
+ "Bilocale nella vecchia limonaia, cucina attrezzata, arredamento in legno, vista lago e giardino.": {
+  "en": "Two-room apartment in the old lemon house, fully equipped kitchen, wooden furniture, lake view and garden.",
+  "de": "Zweizimmer-Apartment in der alten Limonaia, voll ausgestattete Küche, Holzmöbel, Seeblick und Garten.",
+  "fr": "Deux-pièces dans l'ancienne limonaia, cuisine équipée, mobilier en bois, vue lac et jardin.",
+  "es": "Apartamento de dos ambientes en la antigua limonaia, cocina equipada, muebles de madera, vista al lago y jardín."
+ },
+ "Ampie vetrate sul lago, cucina attrezzata e scoperto privato in giardino.": {
+  "en": "Large windows onto the lake, fully equipped kitchen and a private outdoor area in the garden.",
+  "de": "Große Fenster zum See, voll ausgestattete Küche und private Freifläche im Garten.",
+  "fr": "Grandes baies vitrées sur le lac, cuisine équipée et espace extérieur privé dans le jardin.",
+  "es": "Grandes ventanales al lago, cocina equipada y espacio exterior privado en el jardín."
+ },
+ "Vista che va da Malcesine a Sirmione, giardino privato con sdraio, angolo cottura e bagno con doccia.": {
+  "en": "A view stretching from Malcesine to Sirmione, private garden with deckchairs, kitchenette and bathroom with shower.",
+  "de": "Blick von Malcesine bis Sirmione, Privatgarten mit Liegestühlen, Kochnische und Bad mit Dusche.",
+  "fr": "Une vue qui va de Malcesine à Sirmione, jardin privé avec transats, coin cuisine et salle d'eau avec douche.",
+  "es": "Una vista que va de Malcesine a Sirmione, jardín privado con tumbonas, cocina americana y baño con ducha."
+ },
+
+ "Hotel e appartamenti direttamente sul Lago di Garda, a Tignale, sulla sponda bresciana fra Gargnano e Riva del Garda. La spiaggia è a meno di venti metri, alle spalle si alza un muro di roccia con una cascata e davanti la vista arriva al Monte Baldo. Sulla stessa proprietà si trova la Limonaia del Prà de la Fam, la limonaia più grande e più a nord d'Europa: ottanta piante adulte, ancora attive, visitabili da Pasqua a ottobre. La famiglia Parisini gestisce direttamente la struttura da generazioni.": {
+  "en": "Hotel and apartments right on Lake Garda, in Tignale, on the Brescia shore between Gargnano and Riva del Garda. The beach is less than twenty metres away, behind rises a rock face with a waterfall and in front the view reaches Monte Baldo. On the same property stands the Limonaia del Prà de la Fam, the largest and northernmost lemon house in Europe: eighty mature trees, still productive, open to visitors from Easter to October. The Parisini family has run the property directly for generations.",
+  "de": "Hotel und Apartments direkt am Gardasee, in Tignale, am Brescianer Ufer zwischen Gargnano und Riva del Garda. Der Strand ist weniger als zwanzig Meter entfernt, dahinter erhebt sich eine Felswand mit einem Wasserfall, und vorne reicht der Blick bis zum Monte Baldo. Auf demselben Anwesen liegt die Limonaia del Prà de la Fam, die größte und nördlichste Limonaia Europas: achtzig ausgewachsene Bäume, noch in Ertrag, von Ostern bis Oktober zu besichtigen. Die Familie Parisini führt das Haus seit Generationen selbst.",
+  "fr": "Hôtel et appartements directement sur le lac de Garde, à Tignale, sur la rive de Brescia entre Gargnano et Riva del Garda. La plage est à moins de vingt mètres, derrière s'élève une paroi rocheuse avec une cascade et devant la vue porte jusqu'au Monte Baldo. Sur la même propriété se trouve la Limonaia del Prà de la Fam, la plus grande et la plus septentrionale d'Europe : quatre-vingts arbres adultes, toujours en production, à visiter de Pâques à octobre. La famille Parisini gère elle-même la maison depuis des générations.",
+  "es": "Hotel y apartamentos directamente sobre el Lago de Garda, en Tignale, en la orilla de Brescia entre Gargnano y Riva del Garda. La playa está a menos de veinte metros, detrás se alza una pared de roca con una cascada y delante la vista llega hasta el Monte Baldo. En la misma propiedad se encuentra la Limonaia del Prà de la Fam, la limonaia más grande y más septentrional de Europa: ochenta árboles adultos, todavía en producción, que se pueden visitar de Pascua a octubre. La familia Parisini gestiona directamente la casa desde hace generaciones."
+ },
+ "L'hotel della limonaia più a nord d'Europa.": {
+  "en": "The hotel of Europe's northernmost lemon house.",
+  "de": "Das Hotel der nördlichsten Limonaia Europas.",
+  "fr": "L'hôtel de la limonaia la plus au nord d'Europe.",
+  "es": "El hotel de la limonaia más septentrional de Europa."
+ },
+ "Parcheggio privato gratuito e chiuso": {"en": "Free, enclosed private parking", "de": "Kostenloser, geschlossener Privatparkplatz", "fr": "Parking privé gratuit et fermé", "es": "Aparcamiento privado gratuito y cerrado"},
+ "Spiaggia a meno di venti metri": {"en": "Beach less than twenty metres away", "de": "Strand weniger als zwanzig Meter entfernt", "fr": "Plage à moins de vingt mètres", "es": "Playa a menos de veinte metros"},
+ "Accesso diretto al lago": {"en": "Direct access to the lake", "de": "Direkter Zugang zum See", "fr": "Accès direct au lac", "es": "Acceso directo al lago"},
+ "Colazione in veranda inclusa nelle camere": {"en": "Breakfast on the veranda included for rooms", "de": "Frühstück auf der Veranda für Zimmergäste inklusive", "fr": "Petit-déjeuner sous la véranda inclus pour les chambres", "es": "Desayuno en la veranda incluido en las habitaciones"},
+ "Bagno privato in ogni camera": {"en": "Private bathroom in every room", "de": "Eigenes Bad in jedem Zimmer", "fr": "Salle de bain privée dans chaque chambre", "es": "Baño privado en cada habitación"},
+ "Appartamenti con cucina attrezzata": {"en": "Apartments with a fully equipped kitchen", "de": "Apartments mit voll ausgestatteter Küche", "fr": "Appartements avec cuisine équipée", "es": "Apartamentos con cocina equipada"},
+ "Animali domestici ammessi (10 € a notte per animale in hotel, 50 € a soggiorno in appartamento)": {
+  "en": "Pets allowed (€10 per night per pet in the hotel, €50 per stay in the apartments)",
+  "de": "Haustiere erlaubt (10 € pro Nacht und Tier im Hotel, 50 € pro Aufenthalt in den Apartments)",
+  "fr": "Animaux acceptés (10 € par nuit et par animal à l'hôtel, 50 € par séjour dans les appartements)",
+  "es": "Se admiten mascotas (10 € por noche y animal en el hotel, 50 € por estancia en los apartamentos)"
+ },
+ "Limonaia storica visitabile sulla proprietà": {"en": "Historic lemon house on the property, open to visitors", "de": "Historische Limonaia auf dem Anwesen, zu besichtigen", "fr": "Limonaia historique à visiter sur la propriété", "es": "Limonaia histórica visitable en la propiedad"},
+ "Struttura per non fumatori": {"en": "Non-smoking property", "de": "Nichtraucherhaus", "fr": "Établissement non-fumeur", "es": "Establecimiento para no fumadores"},
+ "Verifica disponibilità e prenota": {"en": "Check availability and book", "de": "Verfügbarkeit prüfen und buchen", "fr": "Vérifier les disponibilités et réserver", "es": "Ver disponibilidad y reservar"},
+ "Prenotazione al Prà de la Fam": {"en": "Booking at Prà de la Fam", "de": "Buchung im Prà de la Fam", "fr": "Réservation au Prà de la Fam", "es": "Reserva en el Prà de la Fam"},
+ "La limonaia più grande e la più a nord d'Europa, sulla riva bresciana del Lago di Garda, dentro la proprietà dell'hotel Prà de la Fam. Restaurata nel 1985 con l'intervento della Comunità Montana del Parco Alto Garda Bresciano, conta ottanta piante adulte e resta di proprietà della famiglia Parisini. È un ecomuseo visitabile da Pasqua a ottobre: la visita guidata racconta la storia delle limonaie del Garda e si chiude con una degustazione dei prodotti della casa — limoni sotto sale, limoncino, sciroppo di limone e olio agrumato.": {
+  "en": "The largest and northernmost lemon house in Europe, on the Brescia shore of Lake Garda, within the grounds of the Prà de la Fam hotel. Restored in 1985 with the help of the Comunità Montana del Parco Alto Garda Bresciano, it has eighty mature trees and still belongs to the Parisini family. It is an ecomuseum open from Easter to October: the guided tour tells the story of the Garda lemon houses and ends with a tasting of the house products — salted lemons, limoncino, lemon syrup and citrus oil.",
+  "de": "Die größte und nördlichste Limonaia Europas, am Brescianer Ufer des Gardasees, auf dem Anwesen des Hotels Prà de la Fam. 1985 mit Unterstützung der Comunità Montana del Parco Alto Garda Bresciano restauriert, zählt sie achtzig ausgewachsene Bäume und gehört weiterhin der Familie Parisini. Sie ist ein Ökomuseum, von Ostern bis Oktober zu besichtigen: Die Führung erzählt die Geschichte der Limonaie am Gardasee und endet mit einer Verkostung der hauseigenen Produkte — Salzzitronen, Limoncino, Zitronensirup und Zitrusöl.",
+  "fr": "La plus grande limonaia d'Europe et la plus septentrionale, sur la rive de Brescia du lac de Garde, dans la propriété de l'hôtel Prà de la Fam. Restaurée en 1985 avec le concours de la Comunità Montana del Parco Alto Garda Bresciano, elle compte quatre-vingts arbres adultes et appartient toujours à la famille Parisini. C'est un écomusée ouvert de Pâques à octobre : la visite guidée raconte l'histoire des limonaie du Garda et se termine par une dégustation des produits de la maison — citrons au sel, limoncino, sirop de citron et huile aux agrumes.",
+  "es": "La limonaia más grande y más septentrional de Europa, en la orilla de Brescia del Lago de Garda, dentro de la propiedad del hotel Prà de la Fam. Restaurada en 1985 con la intervención de la Comunità Montana del Parco Alto Garda Bresciano, cuenta con ochenta árboles adultos y sigue siendo propiedad de la familia Parisini. Es un ecomuseo visitable de Pascua a octubre: la visita guiada cuenta la historia de las limonaie del Garda y termina con una degustación de los productos de la casa — limones en sal, limoncino, sirope de limón y aceite de cítricos."
+ },
+ "Visitabile da Pasqua a ottobre, con visita guidata e degustazione.": {
+  "en": "Open from Easter to October, with a guided tour and tasting.",
+  "de": "Von Ostern bis Oktober zu besichtigen, mit Führung und Verkostung.",
+  "fr": "Ouverte de Pâques à octobre, avec visite guidée et dégustation.",
+  "es": "Visitable de Pascua a octubre, con visita guiada y degustación."
+ },
+ "Prà de la Fam — Hotel e Appartamenti sul Lago di Garda": {
+  "en": "Prà de la Fam — Hotel and Apartments on Lake Garda",
+  "de": "Prà de la Fam — Hotel und Apartments am Gardasee",
+  "fr": "Prà de la Fam — Hôtel et Appartements sur le lac de Garde",
+  "es": "Prà de la Fam — Hotel y Apartamentos en el Lago de Garda"
+ },
+
+ "Hotel · Bar · Ristorante": {"en": "Hotel · Bar · Restaurant", "de": "Hotel · Bar · Restaurant", "fr": "Hôtel · Bar · Restaurant", "es": "Hotel · Bar · Restaurante"},
+ "10 camere · Direttamente a lago": {"en": "10 rooms · Right on the lake", "de": "10 Zimmer · Direkt am See", "fr": "10 chambres · Directement sur le lac", "es": "10 habitaciones · Directamente sobre el lago"},
+ "Sentiero Tignale": {"en": "Tignale footpath", "de": "Wanderweg Tignale", "fr": "Sentier de Tignale", "es": "Sendero de Tignale"},
+ "Percorso panoramico verso il paese": {"en": "Scenic path up to the village", "de": "Panoramaweg hinauf ins Dorf", "fr": "Chemin panoramique vers le village", "es": "Camino panorámico hacia el pueblo"},
+ "Limonaia · Ecomuseo": {"en": "Limonaia · Ecomuseum", "de": "Limonaia · Ökomuseum", "fr": "Limonaia · Écomusée", "es": "Limonaia · Ecomuseo"},
+ "L'unica limonaia attiva del Lago di Garda": {"en": "The only working lemon house on Lake Garda", "de": "Die einzige aktive Limonaia am Gardasee", "fr": "La seule limonaia en activité du lac de Garde", "es": "La única limonaia activa del Lago de Garda"},
+ "Scopri": {"en": "Discover", "de": "Entdecken", "fr": "Découvrir", "es": "Descubrir"},
+ "Prenota ora": {"en": "Book now", "de": "Jetzt buchen", "fr": "Réserver", "es": "Reservar ahora"},
+ "Bilocale · Fino a 3 persone · Giardino riservato": {"en": "Two-room apartment · Up to 3 people · Private garden", "de": "Zweizimmer-Apartment · Bis zu 3 Personen · Privatgarten", "fr": "Deux-pièces · Jusqu'à 3 personnes · Jardin privé", "es": "Dos ambientes · Hasta 3 personas · Jardín privado"},
+ "Bilocale · Vista lago · A due passi dalla spiaggia": {"en": "Two-room apartment · Lake view · A short walk from the beach", "de": "Zweizimmer-Apartment · Seeblick · Wenige Schritte zum Strand", "fr": "Deux-pièces · Vue lac · À deux pas de la plage", "es": "Dos ambientes · Vista al lago · A dos pasos de la playa"},
+ "Monolocale · Ampie vetrate · Vista lago": {"en": "Studio · Large windows · Lake view", "de": "Studio · Große Fenster · Seeblick", "fr": "Studio · Grandes baies vitrées · Vue lac", "es": "Estudio · Grandes ventanales · Vista al lago"},
+ "Monolocale · Vista lago · Giardino": {"en": "Studio · Lake view · Garden", "de": "Studio · Seeblick · Garten", "fr": "Studio · Vue lac · Jardin", "es": "Estudio · Vista al lago · Jardín"},
+ "Privato · Gratuito per gli ospiti": {"en": "Private · Free for guests", "de": "Privat · Kostenlos für Gäste", "fr": "Privé · Gratuit pour les clients", "es": "Privado · Gratuito para los huéspedes"}
+}

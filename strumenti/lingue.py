@@ -20,12 +20,20 @@ COSA FA, pagina per pagina e lingua per lingua:
   · i link interni restano nella stessa lingua: «/faq» → «/de/faq»,
     «/#hotel» → «/de/#hotel». Le risorse (/img, /fonts, /i18n.js) hanno gia'
     percorsi assoluti nelle pagine italiane, e valgono da qualsiasi cartella;
-  · il motore di prenotazione riceve lang= della pagina.
+  · il motore di prenotazione riceve lang= della pagina;
+  · cio' che il dizionario non copre — <title>, description, anteprime
+    social, alt, aria-label e i testi del JSON-LD — si traduce da
+    trad_meta.json; se li' non c'e', da un frammento gia' tradotto
+    (trad_corti/trad_lunghi) o da un testo visibile identico. Le risposte
+    della FAQ nel JSON-LD sono i paragrafi visibili uniti da uno spazio
+    (faq_costruisci.py): si ricompongono dai paragrafi tradotti.
+    Un testo che non si trova da nessuna parte resta in italiano, e lo
+    script lo elenca ed esce con errore: meglio saperlo che pubblicarlo.
 
 Ordine della procedura: marca.py → raccogli.py → riaggancia.py → raccogli.py
 → costruisci.py → lingue.py → kb.py
 """
-import json, re, pathlib
+import json, re, sys, pathlib, html as H
 from html.parser import HTMLParser
 
 BASE = pathlib.Path(__file__).resolve().parent.parent
@@ -35,6 +43,112 @@ LINGUE = ["en", "de", "fr", "es"]
 DIZ = json.loads((S / "dizionario.json").read_text(encoding="utf-8"))
 PAGINE = sorted(p.stem for p in BASE.glob("*.html"))          # index, faq, 404, ...
 INTERNE = {p for p in PAGINE if p not in ("index", "404")}      # indirizzi /<pagina>
+
+# ── le traduzioni fuori dal dizionario
+def piano(t):
+    """Il testo come lo legge chi guarda: senza tag, entita' risolte, spazi normali."""
+    return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', t))).strip()
+
+_meta = json.loads((S / "trad_meta.json").read_text(encoding="utf-8"))
+INVARIATI = set(_meta.get("_invariati", []))
+META = {piano(k): v for k, v in _meta.items() if not k.startswith("_")}
+FRAMMENTI = {}
+for _f in ("trad_corti.json", "trad_lunghi.json"):
+    for k, v in json.loads((S / _f).read_text(encoding="utf-8")).items():
+        if not k.startswith("_"):
+            FRAMMENTI[piano(k)] = {l: piano(t) for l, t in v.items()}
+_it = json.loads((S / "it.json").read_text(encoding="utf-8"))
+VISIBILI = {l: {} for l in LINGUE}          # testo italiano visibile → tradotto
+for k, v in _it.items():
+    for l in LINGUE:
+        if k in DIZ[l]:
+            VISIBILI[l].setdefault(piano(v), piano(DIZ[l][k]))
+MANCANTI = {}                               # (testo, lingua) → dove
+
+
+def traduci(testo, lingua, dove=""):
+    """Il testo tradotto (piano), o None se non c'e' — e allora lo si annota."""
+    n = piano(testo)
+    if not re.search(r'[A-Za-zÀ-ÿ]', n) or n in INVARIATI:
+        return n
+    for fonte in (META, FRAMMENTI):
+        if lingua in fonte.get(n, {}):
+            return fonte[n][lingua]
+    if n in VISIBILI[lingua]:
+        return VISIBILI[lingua][n]
+    composto = ricomponi(n, lingua)
+    if composto:
+        return composto
+    MANCANTI.setdefault((n, lingua), dove)
+    return None
+
+
+def ricomponi(n, lingua):
+    """«par1 par2 par3» → i tre paragrafi tradotti, se ognuno e' un testo visibile."""
+    v = VISIBILI[lingua]
+    tagli = [0] + [m.end() for m in re.finditer(r' ', n)] + [len(n) + 1]
+    migliore = {0: []}
+    for i in tagli:
+        if i not in migliore:
+            continue
+        for j in tagli:
+            if j > i and j - 1 > i and (n[i:j - 1] in v) and j not in migliore:
+                migliore[j] = migliore[i] + [v[n[i:j - 1]]]
+    fine = len(n) + 1
+    return " ".join(migliore[fine]) if fine in migliore and len(migliore[fine]) > 1 else None
+
+
+# chiavi del JSON-LD che non sono testo da leggere
+NON_TESTO = {"@id", "@type", "@context", "url", "item", "image", "logo", "telephone", "email",
+             "sameAs", "streetAddress", "postalCode", "addressRegion", "addressCountry",
+             "addressLocality", "latitude", "longitude", "priceCurrency", "unitCode", "hasMap",
+             "urlTemplate", "checkinTime", "checkoutTime", "inLanguage", "actionPlatform",
+             "additionalType", "contentUrl", "encodingFormat", "currenciesAccepted",
+             "paymentAccepted", "openingHours", "vatID", "taxID", "foundingDate", "areaServed"}
+
+
+def dati(src, lingua, nome):
+    """Traduce i testi dentro i blocchi JSON-LD."""
+    def giro(o, chiave=None):
+        if isinstance(o, dict):
+            return {k: (lingua if k == "inLanguage" else v if k in NON_TESTO else giro(v, k))
+                    for k, v in o.items()}
+        if isinstance(o, list):
+            return [giro(v, chiave) for v in o]
+        if isinstance(o, str):
+            t = traduci(o, lingua, f"{nome}: JSON-LD «{chiave}»")
+            return t if t is not None else o
+        return o
+    def blocco(m):
+        g = giro(json.loads(m.group(2).replace("<\\/", "</")))
+        corpo = json.dumps(g, ensure_ascii=False, indent=2).replace("</", "<\\/")
+        return f"{m.group(1)}\n{corpo}\n{m.group(3)}"
+    return re.sub(r'(<script type="application/ld\+json">)\s*(.*?)\s*(</script>)', blocco, src, flags=re.S)
+
+
+def attributi(src, lingua, nome):
+    """<title>, meta delle anteprime, alt, aria-label e le etichette della mappa."""
+    def sost(t, dove, quote):
+        if not t.strip():
+            return None
+        r = traduci(t, lingua, f"{nome}: {dove}")
+        return None if r is None else H.escape(r, quote=quote)
+    m = re.search(r'<title>(.*?)</title>', src, re.S)
+    r = sost(m.group(1), "title", False)
+    if r is not None:
+        src = src[:m.start(1)] + r + src[m.end(1):]
+    def meta(m):
+        r = sost(m.group(3), m.group(2), True)
+        return m.group(0) if r is None else f'{m.group(1)}{r}"'
+    src = re.sub(r'(<meta (?:name|property)="(description|og:title|og:description|og:image:alt|'
+                 r'twitter:title|twitter:description|twitter:image:alt)" content=")([^"]*)"', meta, src)
+    def attr(m):
+        r = sost(m.group(3), m.group(2), True)
+        return m.group(0) if r is None else f'{m.group(1)}{r}"'
+    # data-name/-detail/-cta: le etichette dei punti sulla mappa della home,
+    # che lo script della mappa mostra al passaggio
+    return re.sub(r'(\b(alt|aria-label|placeholder|data-name|data-detail|data-cta)=")([^"]*)"', attr, src)
+
 
 AVVISO = ("<!-- Generata da strumenti/lingue.py dalla pagina italiana: NON modificarla qui,\n"
           "     cambia la pagina italiana o le traduzioni e rilancia la procedura (STATO.md). -->\n")
@@ -108,6 +222,8 @@ def pagina(nome, lingua):
     src = (BASE / f"{nome}.html").read_text(encoding="utf-8")
     src, n = testi(src, lingua)
     src = collegamenti(src, lingua)
+    src = attributi(src, lingua, f"{lingua}/{nome}")
+    src = dati(src, lingua, f"{lingua}/{nome}")
     src = src.replace('<html lang="it">', f'<html lang="{lingua}">', 1)
     src = src.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + AVVISO, 1)
     return src, n
@@ -127,3 +243,8 @@ if __name__ == "__main__":
             (cartella / f"{nome}.html").write_text(src, encoding="utf-8")
             totale += n
         print(f"  /{lingua}/  {len(PAGINE)} pagine, {totale} testi tradotti")
+    if MANCANTI:
+        print(f"\n  ✗ {len(MANCANTI)} testi senza traduzione (restano in italiano):")
+        for (t, l), dove in sorted(MANCANTI.items(), key=lambda x: (x[1], x[0][1])):
+            print(f"    {l} · {dove} · {t[:90]}")
+        sys.exit(1)

@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **22 ottobre 2026** — SEO fase 1 e **SEO fase 2 (pagine per lingua) pubblicate** (merge `76fe88d` e `5d0aa6e`)
+Aggiornato: **23 ottobre 2026** — SEO fase 1 e **SEO fase 2 (pagine per lingua) pubblicate** (merge `76fe88d` e `5d0aa6e`); **correzioni di contenuto sul ramo `contenuti-correzioni`, PR aperta, non ancora pubblicate**
 
 ---
 
@@ -1173,6 +1173,43 @@ inglese): non è il sito. `controlla_seo.mjs` ora riprova con pause crescenti.
 
 ✅ **22 ottobre 2026, pubblicata.** PR #2 verificata sulla Deploy Preview (`prova_anteprima.sh` 70/70 e controllo a occhio di Filippo), unita con merge commit **`5d0aa6e`** (17:35); il ramo `seo-fase-2` resta. In produzione su `https://alpradelafam.com`: `prova_anteprima.sh` **70/70**; `controlla_seo.mjs` **tutto in regola** (70 pagine, una per tipo e lingua con JavaScript acceso: 0 errori, selettore e assistente funzionanti); `/de/faq.html` → un solo 301 a `/de/faq` (200); `/de_DE/clementina/` → un solo 301 a `/de/appartamento-clementina` (200); `/en/xyz` 404 con la pagina inglese; `sitemap.xml` 65 URL, 390 `xhtml:link` (5 lingue + x-default ciascuno), identica al repo; `/i18n.js` 404. Da fare: inviare di nuovo la sitemap in Search Console e seguire il rapporto hreflang.
 
+### Correzioni di contenuto — 23 ottobre 2026 · ramo `contenuti-correzioni`, NON su main
+
+Le quattro domande lasciate aperte dalla fase 2, decise da Filippo:
+
+1. **Clementina è un monolocale.** L'unico punto che diceva «bilocale» era la
+   description del JSON-LD (`appartamento-clementina.html` e il grafo della
+   home): ora «Monolocale nella vecchia limonaia, …», tradotta come gli altri
+   monolocali (Studio / Studio / Studio / Estudio). Pagina, meta, mappa e
+   kb.json dicevano già monolocale. `numberOfBedrooms: 1` **non** l'ho toccato:
+   ce l'hanno uguale anche Kumquat e Calamondino, che sono monolocali anche
+   loro. Se va a 0, va cambiato per tutti e tre.
+2. **Mappa della home**: «L'unica limonaia attiva del Lago di Garda» è diventata
+   **«La più grande e la più a nord d'Europa»**, cioè la formula del sito
+   senza la parola «limonaia», che sta già nel titolo del tooltip
+   («Limonaia · Ecomuseo»). La forma intera, «La limonaia più grande e la più
+   a nord d'Europa», usciva dallo schermo del telefono in inglese (21 px),
+   francese (56 px) e spagnolo (25 px): il tooltip è `white-space:nowrap`.
+   Inglese, tedesco e francese sono identici alla frase già tradotta in home
+   (`t3e730c4314`). In spagnolo la home dice «el limonar más grande…», ma qui
+   ho scritto «La más grande y más septentrional de Europa», al femminile
+   come «Limonaia». Nessun'altra «unica limonaia» nel sito, in kb.json o nelle
+   traduzioni; resta solo in `TESTI-VECCHIO-SITO.md`, che è l'archivio del
+   vecchio sito.
+3. «Hotel · Bar · Ristorante» resta com'è.
+4. **Cookie e privacy tradotte** hanno in cima, fra il titolo e la data, la riga
+   «In caso di difformità fa fede la versione italiana», in corsivo piccolo:
+   *In the event of any discrepancy, the Italian version shall prevail* ·
+   *Im Falle von Abweichungen ist die italienische Fassung maßgebend* ·
+   *En cas de divergence, la version italienne fait foi* · *En caso de
+   discrepancia, prevalecerá la versión italiana*. La pagina italiana non ce
+   l'ha: la riga la aggiunge `lingue.py` (`LEGALI`, `FA_FEDE`) e la traduzione
+   sta in `trad_meta.json`.
+
+Nessun testo visibile italiano è cambiato, quindi nessuna chiave i18n e
+niente marca/raccogli/costruisci: bastano `trad_meta.json` e `lingue.py`.
+`kb.py` rigenerato: kb.json è identico.
+
 ---
 
 ## ⬜ Aperto
@@ -1207,6 +1244,10 @@ inglese): non è il sito. `controlla_seo.mjs` ora riprova con pause crescenti.
   residuo di codice tolto.
 - ✅ ~~Immagini senza descrizione (`alt`) nelle gallerie~~ — descritte una per
   una sul ramo `seo-fase-1` (21/10).
+- **Il tooltip della mappa esce dallo schermo del telefono** se il dettaglio è
+  lungo (`.map-tooltip{white-space:nowrap}`): oggi capita a Bergamotto in
+  inglese (20 px) e in tedesco (33 px). Si risolve permettendo di andare a
+  capo, oppure accorciando il testo.
 - **Netlify riscrive l'HTML** in fase di pubblicazione: gli attributi
   `onmouseover` arrivano con le virgolette rotte. Da guardare.
 - **Le date mostrano `mm/dd/yyyy`** su un dispositivo in inglese e `gg/mm/aaaa`

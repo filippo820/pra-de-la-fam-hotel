@@ -1,6 +1,6 @@
 # Sito Prà de la Fam — a che punto siamo
 
-Aggiornato: **23 ottobre 2026** — SEO fase 1 e **SEO fase 2 (pagine per lingua) pubblicate** (merge `76fe88d` e `5d0aa6e`); **correzioni di contenuto sul ramo `contenuti-correzioni`, PR aperta, non ancora pubblicate**
+Aggiornato: **23 ottobre 2026** — SEO fase 1 e **SEO fase 2 (pagine per lingua) pubblicate** (merge `76fe88d` e `5d0aa6e`); correzioni di contenuto pubblicate (merge `dad85ed`)
 
 ---
 
@@ -1173,7 +1173,7 @@ inglese): non è il sito. `controlla_seo.mjs` ora riprova con pause crescenti.
 
 ✅ **22 ottobre 2026, pubblicata.** PR #2 verificata sulla Deploy Preview (`prova_anteprima.sh` 70/70 e controllo a occhio di Filippo), unita con merge commit **`5d0aa6e`** (17:35); il ramo `seo-fase-2` resta. In produzione su `https://alpradelafam.com`: `prova_anteprima.sh` **70/70**; `controlla_seo.mjs` **tutto in regola** (70 pagine, una per tipo e lingua con JavaScript acceso: 0 errori, selettore e assistente funzionanti); `/de/faq.html` → un solo 301 a `/de/faq` (200); `/de_DE/clementina/` → un solo 301 a `/de/appartamento-clementina` (200); `/en/xyz` 404 con la pagina inglese; `sitemap.xml` 65 URL, 390 `xhtml:link` (5 lingue + x-default ciascuno), identica al repo; `/i18n.js` 404. Da fare: inviare di nuovo la sitemap in Search Console e seguire il rapporto hreflang.
 
-### Correzioni di contenuto — 23 ottobre 2026 · ramo `contenuti-correzioni`, NON su main
+### Correzioni di contenuto — 23 ottobre 2026 · ramo `contenuti-correzioni`, pubblicate il 23 ottobre 2026 (merge `dad85ed`)
 
 Le quattro domande lasciate aperte dalla fase 2, decise da Filippo:
 
@@ -1209,6 +1209,8 @@ Le quattro domande lasciate aperte dalla fase 2, decise da Filippo:
 Nessun testo visibile italiano è cambiato, quindi nessuna chiave i18n e
 niente marca/raccogli/costruisci: bastano `trad_meta.json` e `lingue.py`.
 `kb.py` rigenerato: kb.json è identico.
+
+✅ **23 ottobre 2026, pubblicate.** PR #3: `prova_anteprima.sh` sulla Deploy Preview tutto ✓. Unita con merge commit **`dad85ed`** (18:57); il ramo `contenuti-correzioni` resta. In produzione su `https://alpradelafam.com`: `controlla_seo.mjs` **tutto in regola** (70 pagine, sitemap 65 indirizzi). `prova_anteprima.sh`: i primi due giri hanno dato **un ✗ ciascuno, ogni volta su una riga diversa** (`/es/index.html` poi `/de/`), mentre ripetute a mano quelle richieste rispondevano giuste (5/5 e 12/12); il terzo e il quarto giro sono stati puliti, 70/70. Lo script non ripete le richieste, quindi un solo curl andato a vuoto basta a dare ✗: se ricapita, ripetere la riga a mano prima di allarmarsi. Riga «fa fede» presente nelle 8 pagine legali tradotte e assente nell'italiana; Clementina «Monolocale» nel JSON-LD; tooltip nuovo; nessuna «unica limonaia» in home.
 
 ---
 

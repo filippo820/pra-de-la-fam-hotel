@@ -49,7 +49,9 @@ COSA FA, pagina per pagina e lingua per lingua:
     della FAQ nel JSON-LD sono i paragrafi visibili uniti da uno spazio
     (faq_costruisci.py): si ricompongono dai paragrafi tradotti.
     Un testo che non si trova da nessuna parte resta in italiano, e lo
-    script lo elenca ed esce con errore: meglio saperlo che pubblicarlo.
+    script lo elenca ed esce con errore: meglio saperlo che pubblicarlo;
+  · cookie e privacy tradotte: in cima la riga «fa fede la versione
+    italiana», che la pagina italiana non ha (vedi LEGALI).
 
 Ordine della procedura: marca.py → raccogli.py → riaggancia.py → raccogli.py
 → costruisci.py → lingue.py → kb.py
@@ -306,9 +308,32 @@ def collegamenti(src, lingua):
     return src
 
 
+# Le pagine legali tradotte dicono in cima che vale il testo italiano (decisione
+# di Filippo, 23/10/2026). Sulla pagina italiana non serve, quindi la riga non
+# sta nella sorgente: la aggiunge solo questo script, prima della data. La
+# traduzione e' in trad_meta.json come le altre.
+LEGALI = ("cookie", "privacy")
+FA_FEDE = "In caso di difformità fa fede la versione italiana."
+
+
+def fa_fede(src, lingua, nome):
+    riga = traduci(FA_FEDE, lingua, f"{lingua}/{nome}")
+    if riga is None:
+        return src
+    src, n = re.subn(r'(\n *)(<p data-i18n="[^"]+" class="agg">)',
+                     lambda m: (f'{m.group(1)}<p class="fede" style="font-size:.85rem;font-style:italic;'
+                                f'color:var(--steel);margin-bottom:6px">{H.escape(riga, quote=False)}</p>'
+                                f'{m.group(1)}{m.group(2)}'), src, count=1)
+    if n != 1:
+        sys.exit(f"lingue.py: in {nome}.html manca la data (class=\"agg\") sotto cui va «{FA_FEDE}»")
+    return src
+
+
 def pagina(nome, lingua):
     src = (BASE / f"{nome}.html").read_text(encoding="utf-8")
     src, n = testi(src, lingua)
+    if nome in LEGALI:
+        src = fa_fede(src, lingua, nome)
     src = collegamenti(src, lingua)
     src = attributi(src, lingua, f"{lingua}/{nome}")
     src = dati(src, lingua, f"{lingua}/{nome}")

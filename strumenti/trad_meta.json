@@ -789,11 +789,11 @@
   "fr": "L'ancienne demeure du jardinier de la limonaia : entrée privée, vue lac, coin cuisine, à quelques pas de la plage.",
   "es": "La antigua casa del jardinero de la limonaia: entrada privada, vista al lago, cocina americana, a pocos pasos de la playa."
  },
- "Bilocale nella vecchia limonaia, cucina attrezzata, arredamento in legno, vista lago e giardino.": {
-  "en": "Two-room apartment in the old lemon house, fully equipped kitchen, wooden furniture, lake view and garden.",
-  "de": "Zweizimmer-Apartment in der alten Limonaia, voll ausgestattete Küche, Holzmöbel, Seeblick und Garten.",
-  "fr": "Deux-pièces dans l'ancienne limonaia, cuisine équipée, mobilier en bois, vue lac et jardin.",
-  "es": "Apartamento de dos ambientes en la antigua limonaia, cocina equipada, muebles de madera, vista al lago y jardín."
+ "Monolocale nella vecchia limonaia, cucina attrezzata, arredamento in legno, vista lago e giardino.": {
+  "en": "Studio in the old lemon house, fully equipped kitchen, wooden furniture, lake view and garden.",
+  "de": "Studio in der alten Limonaia, voll ausgestattete Küche, Holzmöbel, Seeblick und Garten.",
+  "fr": "Studio dans l'ancienne limonaia, cuisine équipée, mobilier en bois, vue lac et jardin.",
+  "es": "Estudio en la antigua limonaia, cocina equipada, muebles de madera, vista al lago y jardín."
  },
  "Ampie vetrate sul lago, cucina attrezzata e scoperto privato in giardino.": {
   "en": "Large windows onto the lake, fully equipped kitchen and a private outdoor area in the garden.",
@@ -860,12 +860,13 @@
  "Sentiero Tignale": {"en": "Tignale footpath", "de": "Wanderweg Tignale", "fr": "Sentier de Tignale", "es": "Sendero de Tignale"},
  "Percorso panoramico verso il paese": {"en": "Scenic path up to the village", "de": "Panoramaweg hinauf ins Dorf", "fr": "Chemin panoramique vers le village", "es": "Camino panorámico hacia el pueblo"},
  "Limonaia · Ecomuseo": {"en": "Limonaia · Ecomuseum", "de": "Limonaia · Ökomuseum", "fr": "Limonaia · Écomusée", "es": "Limonaia · Ecomuseo"},
- "L'unica limonaia attiva del Lago di Garda": {"en": "The only working lemon house on Lake Garda", "de": "Die einzige aktive Limonaia am Gardasee", "fr": "La seule limonaia en activité du lac de Garde", "es": "La única limonaia activa del Lago de Garda"},
+ "La più grande e la più a nord d'Europa": {"en": "The largest and northernmost in Europe", "de": "Die größte und nördlichste Europas", "fr": "La plus grande et la plus septentrionale d'Europe", "es": "La más grande y más septentrional de Europa"},
  "Scopri": {"en": "Discover", "de": "Entdecken", "fr": "Découvrir", "es": "Descubrir"},
  "Prenota ora": {"en": "Book now", "de": "Jetzt buchen", "fr": "Réserver", "es": "Reservar ahora"},
  "Bilocale · Fino a 3 persone · Giardino riservato": {"en": "Two-room apartment · Up to 3 people · Private garden", "de": "Zweizimmer-Apartment · Bis zu 3 Personen · Privatgarten", "fr": "Deux-pièces · Jusqu'à 3 personnes · Jardin privé", "es": "Dos ambientes · Hasta 3 personas · Jardín privado"},
  "Bilocale · Vista lago · A due passi dalla spiaggia": {"en": "Two-room apartment · Lake view · A short walk from the beach", "de": "Zweizimmer-Apartment · Seeblick · Wenige Schritte zum Strand", "fr": "Deux-pièces · Vue lac · À deux pas de la plage", "es": "Dos ambientes · Vista al lago · A dos pasos de la playa"},
  "Monolocale · Ampie vetrate · Vista lago": {"en": "Studio · Large windows · Lake view", "de": "Studio · Große Fenster · Seeblick", "fr": "Studio · Grandes baies vitrées · Vue lac", "es": "Estudio · Grandes ventanales · Vista al lago"},
  "Monolocale · Vista lago · Giardino": {"en": "Studio · Lake view · Garden", "de": "Studio · Seeblick · Garten", "fr": "Studio · Vue lac · Jardin", "es": "Estudio · Vista al lago · Jardín"},
+ "In caso di difformità fa fede la versione italiana.": {"en": "In the event of any discrepancy, the Italian version shall prevail.", "de": "Im Falle von Abweichungen ist die italienische Fassung maßgebend.", "fr": "En cas de divergence, la version italienne fait foi.", "es": "En caso de discrepancia, prevalecerá la versión italiana."},
  "Privato · Gratuito per gli ospiti": {"en": "Private · Free for guests", "de": "Privat · Kostenlos für Gäste", "fr": "Privé · Gratuit pour les clients", "es": "Privado · Gratuito para los huéspedes"}
 }
